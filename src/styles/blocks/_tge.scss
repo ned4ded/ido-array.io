@@ -1,0 +1,74 @@
+.tge {
+  display: inline-flex;
+  flex-flow: column nowrap;
+
+  @mixin left-group() {
+    .tge__data-group--left & {
+      @content;
+    }
+  }
+
+  &__text {
+    margin-bottom: 5px;
+  }
+
+  &__data {
+    display: inline-flex;
+    flex-flow: row nowrap;
+    border-radius: 6px;
+    border: solid 1px $blue-contrast-300;
+    margin: 0;
+
+    &-group {
+      padding: 10px 10px;
+      display: flex;
+      flex-flow: column nowrap;
+      text-align: left;
+
+      &--left {
+        justify-content: space-between;
+        padding-right: 15px;
+        border-top-left-radius: 4px;
+        border-bottom-left-radius: 4px;
+        background-image: $gradient-contrast-green;
+      }
+
+      &--right {
+        padding-left: 24px;
+        padding-right: 25px;
+      }
+    }
+
+    &-heading {
+      font-weight: 400;
+
+      @include left-group() {
+        color: $lightest;
+      }
+    }
+
+    &-value {
+      font-weight: bold;
+      margin: 0;
+
+      @include left-group() {
+        color: $lightest;
+      }
+
+      &--price {
+        font-size: $fz-lg;
+        line-height: 1;
+      }
+    }
+  }
+
+  &.jumbo__tge {
+    @include respond-to(tablet) {
+      text-align: right;
+
+      & .tge {
+
+      }
+    }
+  }
+}

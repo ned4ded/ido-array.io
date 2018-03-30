@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html class="no-js" lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Array.io</title>
+
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width">
+
+  <!-- <link rel="shortcut icon" href="assets/imgs/favicon.ico"> -->
+
+  <!-- Core CSS -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/vendor/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous"> -->
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i|Play:400,700&amp;subset=latin-ext" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/main.css" rel="stylesheet">
+
+</head>
+
+<body>
+  <!--[if lte IE 9]>
+      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+  <![endif]-->
+
+  <header id="header" class="container-fluid fixed-top header">
+    <div class="row">
+      <div class="col-12">
+        <nav class="container navbar navbar-expand-lg header__navbar">
+          <div class="navbar-brand">
+            <a href="index.html" class="header__logo">
+              <img src="assets/imgs/logo-white.png" alt="Arrio.io logotype" width="127" height="39">
+            </a>
+          </div>
+          <button id="menu-toggler" class="navbar-toggler navbar-toggler-right header__toggler" type="button" aria-expanded="false">
+            <svg class="icon icon__burger">
+              <use href="assets/sprite.svg#icon__burger"></use>
+            </svg>
+          </button>
+
+          <div id="headerMenu" class="collapse navbar-collapse">
+            <ul class="header__menu">
+              <li class="header__menu-item">
+                <a href="#" class="header__link">About IDO</a>
+              </li>
+              <li class="header__menu-item">
+                <a href="#" class="header__link">Current status</a>
+              </li>
+              <li class="header__menu-item">
+                <a href="#" class="header__link">Smart contract</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12 main-info">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 jumbo">
+              <h1 class="heading-1 jumbo__heading">
+                  <span>Initial</span>
+                  <span>Development</span>
+                  <span>Offering</span>
+                </h1>
+              <p class="text text--light jumbo__text">An elastic approach to funding blockchain projects.</p>
+
+              <div class="row">
+                <div class="col-12 col-md-6">
+                  <div class="eray jumbo__eray">
+                    <p class="text text--light text--dimmed eray__desc">eRAY total supply</p>
+                    <p class="text text--light eray__value">
+                      <span data-total-eray-supply>866.2893</span>
+                    </p>
+                    <p class="text text--light eray__desc">Backed 1:1 by ETH</p>
+                  </div>
+                </div>
+                <div class="col-12 col-md-6 text-md-right">
+                  <div class="tge jumbo__tge">
+                    <p class="text text--light text--dimmed tge__text">Token generation event</p>
+                    <dl class="tge__data">
+                      <div class="tge__data-group tge__data-group--left">
+                        <dt class="text text--light tge__data-heading">Status</dt>
+                        <dd class="text text--light tge__data-value" data-tge-status>Live</dd>
+                      </div>
+                      <div class="tge__data-group tge__data-group--right">
+                        <dt class="text text--light tge__data-heading">Actual price</dt>
+                        <dd class="text text--light tge__data-value tge__data-value--price" data-tge-actual-price>1.5 ETH</dd>
+                      </div>
+                    </dl>
+                  </div>
+                </div>
+              </div>
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 infographic">
+              <div class="row">
+
+                <div class="col-12 col-md-6">
+                  <div class="eray infographic__eray">
+                    <p class="text text--dimmed eray__desc">eRAY total supply</p>
+                    <p class="text eray__value">
+                      <span data-total-eray-supply>866.2893</span>
+                    </p>
+                    <p class="text eray__desc">Backed 1:1 by ETH</p>
+                  </div>
+                </div>
+
+                <div class="col-12 col-md-6 text-md-right">
+                  <div class="tge infographic__tge">
+                    <p class="text text--dimmed tge__text">Token generation event</p>
+                    <dl class="tge__data">
+                      <div class="tge__data-group tge__data-group--left">
+                        <dt class="text tge__data-heading">Status</dt>
+                        <dd class="text tge__data-value" data-tge-status>Live</dd>
+                      </div>
+                      <div class="tge__data-group tge__data-group--right">
+                        <dt class="text tge__data-heading">Actual price</dt>
+                        <dd class="text tge__data-value tge__data-value--price" data-tge-actual-price>1.5 ETH</dd>
+                      </div>
+                    </dl>
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="infographic-content">
+                <ul class="row justify-content-between justify-content-md-start nav infographic-content__tabs" role="tablist">
+
+                  <li class="col-4 col-md-auto infographic-content__tab">
+                    <a class="infographic-content__tab-link active" data-toggle="pill" href="#coinbase">Coinbase</a>
+                  </li>
+
+                  <li class="col-4 col-md-auto infographic-content__tab">
+                    <a class="infographic-content__tab-link" data-toggle="pill" href="#cryptonet">Cryptonet</a>
+                  </li>
+
+                  <li class="col-4 col-md-auto infographic-content__tab">
+                    <a class="infographic-content__tab-link" data-toggle="pill" href="#prostocoin">Prostocoin</a>
+                  </li>
+
+                </ul>
+
+                <div class="tab-content infographic-content__content">
+
+                  <div id="coinbase" class="tab-pane active" role="tabpanel">
+
+                    <div class="row justify-content-center align-items-start">
+                      <div class="col-12">
+
+                        <div class="diagramm">
+                          <ul class="diagramm__timescale">
+                            <li class="diagramm__timescale-item">
+                              <button class="diagramm__timescale-btn active" type="button" name="hours">1H</button>
+                            </li>
+                            <li class="diagramm__timescale-item">
+                              <button class="diagramm__timescale-btn" type="button" name="days">1D</button>
+                            </li>
+                            <li class="diagramm__timescale-item">
+                              <button class="diagramm__timescale-btn" type="button" name="weeks">1W</button>
+                            </li>
+                            <li class="diagramm__timescale-item">
+                              <button class="diagramm__timescale-btn" type="button" name="month">1M</button>
+                            </li>
+                            <li class="diagramm__timescale-item">
+                              <button class="diagramm__timescale-btn" type="button" name="year">1Y</button>
+                            </li>
+                            <li class="diagramm__timescale-item">
+                              <button class="diagramm__timescale-btn" type="button" name="all">All</button>
+                            </li>
+
+                          </ul>
+
+                          <div class="row">
+                            <div class="col-12 col-md-3">
+                              <dl class="diagramm__data">
+                                <dt class="text text--dimmed diagramm__data-heading">Token price</dt>
+                                <dd class="text diagramm__data-value diagramm__data-value--postfix" data-postfix="ETH">356.28</dd>
+                              </dl>
+                            </div>
+                            <div class="col-12 col-md-3">
+                              <dl class="diagramm__data">
+                                <dt class="text text--dimmed diagramm__data-heading">Since last month</dt>
+                                <dd class="text diagramm__data-value" data-prefix="+" data-postfix="ETH">35.57</dd>
+                              </dl>
+                            </div>
+                            <div class="col-12 col-md-3">
+                              <dl class="diagramm__data">
+                                <dt class="text text--dimmed diagramm__data-heading">Since last month (%)</dt>
+                                <dd class="text diagramm__data-value" data-prefix="+" data-postfix="%">11.57</dd>
+                              </dl>
+                            </div>
+                          </div>
+
+                        </div>
+
+                        <div class="line-chart diagramm__line-chart">
+                          <p class="text line-chart__current" data-postfix="ETH">567.43</p>
+                          <div class="line-chart__view">
+
+                          </div>
+                          <ul class="line-chart__timescale">
+                            <li class="text line-chart__timescale-item">Feb 26</li>
+                            <li class="text line-chart__timescale-item">Feb 27</li>
+                            <li class="text line-chart__timescale-item">Feb 28</li>
+                            <li class="text line-chart__timescale-item">Mar 1</li>
+                            <li class="text line-chart__timescale-item">Mar 2</li>
+                          </ul>
+                        </div>
+
+                      </div>
+                    </div>
+
+                  </div>
+
+                  <div id="cryptonet" class="tab-pane" role="tabpanel">
+
+                    <div class="row justify-content-center align-items-start">
+                      <div class="col-12">
+
+                        <div class="diagramm">
+                          <ul class="diagramm__timescale">
+                            <li class="diagramm__timescale-item">
+                              <button class="diagramm__timescale-btn active" type="button" name="hours">1H</button>
+                            </li>
+                            <li class="diagramm__timescale-item">
+                              <button class="diagramm__timescale-btn" type="button" name="days">1D</button>
+                            </li>
+                            <li class="diagramm__timescale-item">
+                              <button class="diagramm__timescale-btn" type="button" name="weeks">1W</button>
+                            </li>
+                            <li class="diagramm__timescale-item">
+                              <button class="diagramm__timescale-btn" type="button" name="month">1M</button>
+                            </li>
+                            <li class="diagramm__timescale-item">
+                              <button class="diagramm__timescale-btn" type="button" name="year">1Y</button>
+                            </li>
+                            <li class="diagramm__timescale-item">
+                              <button class="diagramm__timescale-btn" type="button" name="all">All</button>
+                            </li>
+
+                          </ul>
+
+                          <dl class="diagramm__data">
+                            <dt class="text text--dimmed diagramm__data-heading">Token price</dt>
+                            <dd class="text diagramm__data-value diagramm__data-value--postfix" data-postfix="ETH">356.28</dd>
+                          </dl>
+                          <dl class="diagramm__data">
+                            <dt class="text text--dimmed diagramm__data-heading">Since last month</dt>
+                            <dd class="text diagramm__data-value" data-prefix="+" data-postfix="ETH">35.57</dd>
+                          </dl>
+                          <dl class="diagramm__data">
+                            <dt class="text text--dimmed diagramm__data-heading">Since last month (%)</dt>
+                            <dd class="text diagramm__data-value" data-prefix="+" data-postfix="%">11.57</dd>
+                          </dl>
+                        </div>
+
+                        <div class="line-chart diagramm__line-chart">
+                          <p class="text line-chart__current" data-postfix="ETH">567.43</p>
+                          <img class="line-chart__view" src="assets/imgs/chart-mobile.png" alt="Diagramm placeholder" width="289" height="317">
+                          <ul class="line-chart__timescale">
+                            <li class="text line-chart__timescale-item">Feb 26</li>
+                            <li class="text line-chart__timescale-item">Feb 27</li>
+                            <li class="text line-chart__timescale-item">Feb 28</li>
+                            <li class="text line-chart__timescale-item">Mar 1</li>
+                            <li class="text line-chart__timescale-item">Mar 2</li>
+                          </ul>
+                        </div>
+
+                      </div>
+                    </div>
+
+                  </div>
+
+                  <div id="prostocoin" class="tab-pane" role="tabpanel">
+                    <div class="row justify-content-center align-items-start">
+                      <div class="col-12" style="text-transform: capitalize;">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                        in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="container-fluid">
+    <div class="row">
+      <div class="col-12 footer">
+        <div class="container">
+          <div class="row">
+            <ul class="col-12 col-md-6 socials footer__socials">
+
+              <li class="socials__item">
+                <a href="#" class="text text--light socials__link">
+                  Facebook
+                  <svg class="icon icon__fb">
+                    <use href="assets/sprite.svg#icon__fb"></use>
+                  </svg>
+                </a>
+              </li>
+
+              <li class="socials__item">
+                <a href="#" class="text text--light socials__link">
+                  Twitter
+                  <svg class="icon icon__tw">
+                    <use href="assets/sprite.svg#icon__tw"></use>
+                  </svg>
+                </a>
+              </li>
+
+              <li class="socials__item">
+                <a href="#" class="text text--light socials__link">
+                  Google+
+                  <svg class="icon icon__ggl">
+                    <use href="assets/sprite.svg#icon__ggl"></use>
+                  </svg>
+                </a>
+              </li>
+
+              <li class="socials__item">
+                <a href="#" class="text text--light socials__link">
+                  LinkedIn
+                  <svg class="icon icon__in">
+                    <use href="assets/sprite.svg#icon__in"></use>
+                  </svg>
+                </a>
+              </li>
+
+              <li class="socials__item">
+                <a href="#" class="text text--light socials__link">
+                  GitHub
+                  <svg class="icon icon__git">
+                    <use href="assets/sprite.svg#icon__git"></use>
+                  </svg>
+                </a>
+              </li>
+
+            </ul>
+            <p class="col-12 col-md-6 text text--light copyright footer__copyright">
+              © 2018 Array - All Rights Reserved
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script>
+    window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\/script>')
+  </script>
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script>
+    (typeof Popper) == 'function' || document.write('<script src="js/vendor/popper.min.js"><\/script>')
+  </script>
+
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script>
+    (typeof $().modal) == 'function' || document.write('<script src="js/vendor/bootstrap.min.js"><\/script>')
+  </script>
+
+  <script type="text/javascript" src="js/main.js"></script>
+</body>
+
+</html>

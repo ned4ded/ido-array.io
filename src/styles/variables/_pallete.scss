@@ -1,0 +1,43 @@
+// THEME COLOR PALETTE
+// CONTRAST
+$pacific-blue: rgb(0, 158, 221);
+$deep-sky-blue: rgb(0, 170, 255);
+$deep-sky-blue-2: rgb(0, 181, 254);
+$deep-sky-blue-3: rgb(0, 198, 255);
+$deep-sky-blue-4: rgb(0, 181, 225);
+$deep-sky-blue-5: rgb(0, 198, 225);
+$bright-turquoise: rgb(0, 255, 220);
+$medium-spring-green: rgb(0, 255, 146);
+$electric-purple: rgb(151, 0, 255);
+$medium-blue: rgb(3, 0, 181);
+
+// NUANCE
+$black-russian: rgb(30, 30, 32);
+$midnight-express: rgb(7, 22, 57);
+$sapphire: rgb(0, 20, 79);
+$sapphire-2: rgb(0, 24, 92);
+$sapphire-light: rgb(2, 32, 110);
+$smalt: rgb(0, 38, 133);
+$egyptian-blue: rgb(12, 57, 169);
+$persian-blue: rgb(20, 73, 219);
+$cerulean-blue: rgb(42, 84, 165);
+$solitude: rgb(234, 238, 246);
+$alice-blue: rgb(244, 249, 255);
+
+$gradient-dark-blue: linear-gradient(62deg, $smalt 0%, $sapphire 95%);
+$gradient-dark-blue-reverse: linear-gradient(230deg, $smalt 0%, $sapphire 95%);
+$gradient-contrast-blue: linear-gradient(221deg, $deep-sky-blue, $persian-blue);
+$gradient-contrast-green: linear-gradient(221deg, $deep-sky-blue-2, $bright-turquoise);
+
+$lightest: rgb(255, 255, 255);
+
+$blue-dark-100: $sapphire-2;
+$blue-dark-300: $midnight-express;
+$blue-100: $sapphire-light;
+$blue-200: $smalt;
+$blue-400: $persian-blue;
+$blue-contrast-200: $deep-sky-blue-2;
+$blue-contrast-300: $deep-sky-blue-2;
+$blue-contrast-400: $deep-sky-blue-3;
+
+$green-contrast: $medium-spring-green;

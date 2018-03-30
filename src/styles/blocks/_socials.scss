@@ -1,0 +1,38 @@
+.socials {
+  display: flex;
+  flex-flow: row nowrap;
+
+  margin: 0;
+
+  list-style: none;
+
+  &__item {
+
+    &:not(:last-child) {
+      margin-right: 10px;
+
+      @include respond-to(tablet) {
+        margin-right: 0;
+      }
+    }
+
+    @include respond-to(tablet) {
+      &:not(:first-child) {
+        margin-left: 20px;
+      }
+    }
+  }
+
+  &__link {
+    font-size: 0;
+    display: block;
+
+    & use {
+      fill: $lightest;
+    }
+
+    &:hover use {
+      fill: $blue-contrast-400;
+    }
+  }
+}

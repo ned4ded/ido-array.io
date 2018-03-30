@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="19px" viewBox="0 0 32 19" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.1 (51147) - http://www.bohemiancoding.com/sketch -->
+    <title>Combined Shape</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="100%" y1="0%" x2="0%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#00B5FF" offset="0%"></stop>
+            <stop stop-color="#00FFDB" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="ui" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="array_ui_phones_open" transform="translate(-272.000000, -21.000000)" fill="url(#linearGradient-1)">
+            <g id="Group-2" transform="translate(-10.000000, 0.000000)">
+                <g id="heder" transform="translate(7.000000, 0.000000)">
+                    <path d="M275,21 L307,21 L307,24 L275,24 L275,21 Z M275,29 L307,29 L307,32 L275,32 L275,29 Z M275,37 L307,37 L307,40 L275,40 L275,37 Z" id="Combined-Shape"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

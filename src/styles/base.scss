@@ -1,0 +1,55 @@
+@import './variables.scss';
+@import 'bootfix.scss';
+@import './svg-sprite/base.scss';
+
+body {
+  background-color: $lightest;
+}
+
+.heading-1 {
+  text-transform: capitalize;
+
+  color: $lightest;
+
+  font-family: $ff-play;
+  font-size: $fz-xl;
+  font-weight: bold;
+  line-height: 1.17;
+
+  @include respond-to(tablet) {
+    font-size: $fz-xl * 1.66;
+    line-height: 1.45;
+  }
+}
+
+.text {
+  color: $blue-100;
+
+  font-family: $ff-sans;
+  font-size: $fz-md;
+
+  &--light {
+    color: $lightest;
+  }
+
+  &--dimmed {
+    color: rgba($blue-dark-300, .5);
+
+    &.text--light {
+      color: rgba($lightest, .5);
+    }
+  }
+}
+
+//blocks
+@import './blocks/header.scss';
+@import './blocks/footer.scss';
+@import './blocks/eray.scss';
+@import './blocks/tge.scss';
+@import './blocks/diagramm.scss';
+@import './blocks/line-chart.scss';
+@import './blocks/socials.scss';
+@import './blocks/copyright.scss';
+
+//pages
+@import './pages/index/base.scss';

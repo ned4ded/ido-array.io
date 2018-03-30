@@ -1,0 +1,71 @@
+.line-chart {
+  position: relative;
+
+  &:after {
+    position: absolute;
+    bottom: 0;
+
+    width: 100%;
+    height: 2px;
+
+    content: '';
+
+    background-image: $gradient-contrast-green;
+  }
+
+  &__current {
+    margin-bottom: $flow-m-xs / 2;
+
+    text-align: right;
+
+    color: rgba($blue-100, .3);
+
+    font-size: $fz-sm;
+
+    &:after {
+      content: ' ' attr(data-postfix);
+    }
+  }
+
+  &__view {
+    margin: auto;
+    width: 289px;
+    height: 317px;
+    background-image: url('../assets/imgs/chart-mobile.png');
+
+    @include respond-to(tablet) {
+      width: 721px;
+      height: 332px;
+      background-image: url('../assets/imgs/chart-tablet.png');
+    }
+
+    @include respond-to(medium) {
+      width: 942px;
+      height: 332px;
+      background-image: url('../assets/imgs/chart-medium-wide.png');
+    }
+
+  }
+
+  &__timescale {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+
+    width: 90%;
+    margin: 0;
+    margin: auto;
+    padding: 0;
+
+    list-style: none;
+
+    &-item {
+      padding-bottom: 7px;
+
+      color: $blue-100;
+
+      font-size: $fz-sm;
+      line-height: 1.3;
+    }
+  }
+}

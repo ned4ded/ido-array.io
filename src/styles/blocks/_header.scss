@@ -1,0 +1,40 @@
+.header {
+  background-image: $gradient-dark-blue;
+
+  &__logo {
+    width: 100%;
+    display: block;
+  }
+
+  &__navbar {
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+
+  &__toggler {
+    padding: 0;
+  }
+
+  &__menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    @include respond-to(medium) {
+      display: flex;
+      justify-content: flex-end;
+      flex-flow: row nowrap;
+      width: 100%;
+    }
+
+    &-item {
+      @include respond-to(medium) {
+        margin-left: 30px;
+      }
+    }
+  }
+
+  &__link {
+    color: $lightest;
+  }
+}

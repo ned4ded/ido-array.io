@@ -1,0 +1,32 @@
+.eray {
+  &__desc {
+    margin: 0;
+  }
+
+  &__value {
+    margin: 0;
+    font-weight: bold;
+    font-size: $fz-xl;
+    line-height: 1;
+  }
+
+  &.jumbo__eray {
+    @include respond-to(tablet) {
+      & .eray {
+        &__desc:first-child {
+          margin-bottom: $flow-m-lg;
+        }
+      }
+    }
+  }
+
+  &.infographic__eray {
+    @include respond-to(tablet) {
+      & .eray {
+        &__desc:first-child {
+          margin-bottom: $flow-m-lg;
+        }
+      }
+    }
+  }
+}

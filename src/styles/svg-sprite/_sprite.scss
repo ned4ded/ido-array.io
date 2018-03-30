@@ -1,0 +1,42 @@
+.icon {
+	display: inline-block;
+	height: 1em;
+	width: 1em;
+	fill: inherit;
+	stroke: inherit;
+}
+
+@mixin get-em-width($width, $height) {
+	width: ($width / $height)+em;
+}
+
+.icon__burger {
+	font-size: 19px;
+	@include get-em-width(32, 19);
+}
+
+.icon__fb {
+	font-size: 32px;
+	@include get-em-width(32, 32);
+}
+
+.icon__ggl {
+	font-size: 32px;
+	@include get-em-width(32, 32);
+}
+
+.icon__git {
+	font-size: 32px;
+	@include get-em-width(32, 32);
+}
+
+.icon__in {
+	font-size: 32px;
+	@include get-em-width(32, 32);
+}
+
+.icon__tw {
+	font-size: 32px;
+	@include get-em-width(32, 32);
+}
+

@@ -1,0 +1,51 @@
+.jumbo {
+  padding-top: $block-p-md;
+  padding-bottom: $block-p-md;
+
+  @include respond-to(tablet) {
+    padding-top: $block-p-md * 4.25;
+    padding-bottom: $block-p-md * 4;
+  }
+
+  &__heading {
+    margin-bottom: 15px;
+
+    & span {
+      display: block;
+
+      @include respond-to(tablet) {
+        display: inline;
+      }
+    }
+  }
+
+  &__text {
+    text-align: left;
+
+    line-height: 1.75;
+    margin-bottom: $flow-m-sm * 2.35;
+
+    @include respond-to(tablet) {
+      max-width: 420px;
+      font-size: $fz-lg;
+      line-height: 1.5;
+      margin-bottom: $flow-m-sm * 6;
+    }
+  }
+
+  &__eray {
+    margin-bottom: $flow-m-sm;
+
+    @include respond-to(medium) {
+      display: none;
+    }
+  }
+
+  &__tge {
+    margin-bottom: $flow-m-sm;
+
+    @include respond-to(medium) {
+      display: none;
+    }
+  }
+}
