@@ -1,0 +1,26 @@
+.terms {
+  padding-top: $block-p-lg * 1.5;
+  padding-bottom: $block-p-lg;
+
+  @include respond-to(medium) {
+    padding-top: $block-p-lg * 2.5;
+  }
+
+  &__text {
+    
+  }
+
+  &__heading {
+    margin-bottom: $flow-m-md;
+
+    @include respond-to(tablet) {
+      margin-bottom: $flow-m-lg * 2;
+    }
+  }
+
+  &__aspects {
+    @include respond-to(tablet) {
+      margin-bottom: $flow-m-lg * 1.5;
+    };
+  }
+}

@@ -1,8 +1,13 @@
+$breakpoint-sm: 780px;
+$breakpoint-md: 1000px;
+$breakpoint-lg: 1210px;
+
 @import './variables/pallete.scss';
 @import './variables/breakpoints.scss';
 
 $ff-play: 'Play', sans-serif;
 $ff-sans: 'Open Sans', sans-serif;
+$ff-promto: 'Open Sans', sans-serif;
 
 $fz-xl: 36px;
 $fz-lg: 26px;

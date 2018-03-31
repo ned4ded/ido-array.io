@@ -25,6 +25,17 @@
       & .eray {
         &__desc:first-child {
           margin-bottom: $flow-m-lg;
+
+          @include respond-to(large) { margin-bottom: $flow-m-xs;}
+        }
+      }
+    }
+
+    @include respond-to(large) {
+      & .eray {
+
+        &__value {
+          font-size: $fz-xl * 1.385;
         }
       }
     }

@@ -1,18 +1,60 @@
 .jumbo {
   @include gradient-contrast-blue()
+  padding-top: 60px;
+
+  @include respond-to(tablet) {
+    padding-top: 0;
+  }
+
+  @include respond-to(medium) {
+    background-image: none;
+
+    position: relative;
+
+    &:before {
+      @include gradient-contrast-blue($angle: 216deg);
+
+      position: absolute;
+      top: 0;
+      right: 15px;
+
+      display: block;
+
+      width: calc(50vw - 15px);
+      height: 100%;
+
+      content: '';
+
+      border-top-right-radius: 16px;
+      border-bottom-right-radius: 16px;
+    }
+  }
+
+
 
   &__content {
     padding-top: $block-p-md;
     padding-bottom: $block-p-md;
+    position: relative;
+    z-index: 0;
 
     @include respond-to(tablet) {
       padding-top: $block-p-md * 4.25;
       padding-bottom: $block-p-md * 4;
     }
+
+    @include respond-to(large) {
+      padding-top: $block-p-md * 4.6;
+      // padding-bottom: $block-p-md * 4;
+    }
   }
 
   &__heading {
-    margin-bottom: 15px;
+    margin-bottom: $flow-m-sm;
+
+    @include respond-to(large) {
+      margin-bottom: $flow-m-sm * 2.5;
+    }
 
     & span {
       display: block;
@@ -34,6 +76,14 @@
       font-size: $fz-lg;
       line-height: 1.5;
       margin-bottom: $flow-m-sm * 6;
+    }
+
+    @include respond-to(medium) {
+      max-width: 350px;
+    }
+
+    @include respond-to(large) {
+      max-width: 390px;
     }
   }
 

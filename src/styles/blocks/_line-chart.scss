@@ -40,9 +40,10 @@
     }
 
     @include respond-to(medium) {
-      width: 942px;
-      height: 332px;
-      background-image: url('../assets/imgs/chart-medium-wide.png');
+      width: 100%;
+      height: 349px;
+      background-image: url('../assets/imgs/chart-medium-short.png');
+      background-size: cover;
     }
 
   }

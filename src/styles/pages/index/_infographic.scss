@@ -3,7 +3,8 @@
   padding-bottom: $block-p-md;
 
   @include respond-to(medium) {
-    margin-top: 60px;
+    padding-top: $block-p-xs * 1.5;
+    padding-bottom: $block-p-xs;
   }
 
   &-content {

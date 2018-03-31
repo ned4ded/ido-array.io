@@ -20,6 +20,24 @@ body {
     font-size: $fz-xl * 1.66;
     line-height: 1.45;
   }
+
+  @include respond-to(large) {
+    font-size: $fz-xl * 2;
+    line-height: 1.26;
+  }
+}
+
+.heading-2 {
+  font-family: $ff-sans;
+  font-size: $fz-lg;
+  font-weight: bold;
+  text-align: left;
+  color: $blue-dark-300;
+  line-height: 1.3;
+
+  @include respond-to(tablet) {
+    font-size: $fz-xl;
+  };
 }
 
 .text {
@@ -39,6 +57,37 @@ body {
       color: rgba($lightest, .5);
     }
   }
+
+  &--dark {
+    line-height: 1.7;
+    text-align: left;
+
+    color: rgba($darkest, .45);
+
+    @include respond-to(tablet) {
+      line-height: 2.38;
+
+      margin-bottom: $flow-m-lg * 1.75;
+    }
+  }
+
+  &--highlight {
+    font-family: $ff-play;
+    color: $darkest;
+
+    @include respond-to(tablet) {
+      font-size: $fz-lg;
+      line-height: 1.69;
+    }
+  }
+
+  &--context-end {
+    margin-bottom: $flow-m-lg * 3;
+
+    @include respond-to(medium) {
+      margin-bottom: $flow-m-lg * 6;
+    };
+  }
 }
 
 //blocks
@@ -50,6 +99,7 @@ body {
 @import './blocks/line-chart.scss';
 @import './blocks/socials.scss';
 @import './blocks/copyright.scss';
+@import './blocks/aspect.scss';
 
 //pages
 @import './pages/index/base.scss';

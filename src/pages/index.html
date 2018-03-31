@@ -13,8 +13,7 @@
 
   <!-- Core CSS -->
   <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/vendor/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous"> -->
+  <link rel="stylesheet" href="css/vendor/bootstrap.min.css" integrity="sha384-ABoEw4RXiIAN+5C4NQFLj4SMgTRFfK9OunMCZi6tcpeWZWlfdj40zpk7nh1ljDhE">
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i|Play:400,700&amp;subset=latin-ext" rel="stylesheet">
@@ -30,341 +29,441 @@
   <![endif]-->
 
   <header id="header" class="container-fluid fixed-top header">
-    <div class="row">
-      <div class="col-12">
-        <nav class="container navbar navbar-expand-lg header__navbar">
-          <div class="navbar-brand">
-            <a href="index.html" class="header__logo">
-              <img src="assets/imgs/logo-white.png" alt="Arrio.io logotype" width="127" height="39">
-            </a>
-          </div>
-          <button id="menu-toggler" class="navbar-toggler navbar-toggler-right header__toggler" type="button" aria-expanded="false">
-            <svg class="icon icon__burger">
-              <use xlink:href="assets/sprite.svg#icon__burger"></use>
-            </svg>
-          </button>
-
-          <div id="headerMenu" class="collapse navbar-collapse">
-            <ul class="header__menu">
-              <li class="header__menu-item">
-                <a href="#" class="header__link">About IDO</a>
-              </li>
-              <li class="header__menu-item">
-                <a href="#" class="header__link">Current status</a>
-              </li>
-              <li class="header__menu-item">
-                <a href="#" class="header__link">Smart contract</a>
-              </li>
-            </ul>
-          </div>
-        </nav>
+    <nav class="container navbar navbar-expand-md header__navbar">
+      <div class="navbar-brand">
+        <a href="index.html" class="header__logo">
+          <img src="assets/imgs/logo-white.png" alt="Arrio.io logotype" width="127" height="39">
+        </a>
       </div>
-    </div>
+      <button id="menu-toggler" class="navbar-toggler navbar-toggler-right header__toggler" type="button" aria-expanded="false">
+        <svg class="icon icon__burger">
+          <use xlink:href="assets/sprite.svg#icon__burger"></use>
+        </svg>
+      </button>
+
+      <div id="headerMenu" class="collapse navbar-collapse">
+        <ul class="header__menu">
+          <li class="header__menu-item">
+            <a href="#" class="header__link">About IDO</a>
+          </li>
+          <li class="header__menu-item">
+            <a href="#" class="header__link">Current status</a>
+          </li>
+          <li class="header__menu-item">
+            <a href="#" class="header__link">Smart contract</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
   </header>
 
-  <div class="container-fluid">
-    <div class="row main-info">
-      <div class="col-12 col-lg-6 jumbo">
-        <div class="container">
+  <div class="main-info">
+      <div class="main-info__block jumbo">
+        <div class="main-info__block-content jumbo__content">
+          <h1 class="heading-1 jumbo__heading">
+              <span>Initial</span>
+              <span>Development</span>
+              <span>Offering</span>
+            </h1>
+          <p class="text text--light jumbo__text">An elastic approach to funding blockchain projects.</p>
           <div class="row">
-            <div class="col-12 jumbo__content">
-              <h1 class="heading-1 jumbo__heading">
-                  <span>Initial</span>
-                  <span>Development</span>
-                  <span>Offering</span>
-                </h1>
-              <p class="text text--light jumbo__text">An elastic approach to funding blockchain projects.</p>
-
-              <div class="row">
-                <div class="col-12 col-md-6">
-                  <div class="eray jumbo__eray">
-                    <p class="text text--light text--dimmed eray__desc">eRAY total supply</p>
-                    <p class="text text--light eray__value">
-                      <span data-total-eray-supply>866.2893</span>
-                    </p>
-                    <p class="text text--light eray__desc">Backed 1:1 by ETH</p>
-                  </div>
-                </div>
-                <div class="col-12 col-md-6 text-md-right">
-                  <div class="tge jumbo__tge">
-                    <p class="text text--light text--dimmed tge__text">Token generation event</p>
-                    <dl class="tge__data">
-                      <div class="tge__data-group tge__data-group--left">
-                        <dt class="text text--light tge__data-heading">Status</dt>
-                        <dd class="text text--light tge__data-value" data-tge-status>Live</dd>
-                      </div>
-                      <div class="tge__data-group tge__data-group--right">
-                        <dt class="text text--light tge__data-heading">Actual price</dt>
-                        <dd class="text text--light tge__data-value tge__data-value--price" data-tge-actual-price>1.5 ETH</dd>
-                      </div>
-                    </dl>
-                  </div>
-                </div>
+            <div class="col-12 col-sm-6">
+              <div class="eray jumbo__eray">
+                <p class="text text--light text--dimmed eray__desc">eRAY total supply</p>
+                <p class="text text--light eray__value">
+                  <span data-total-eray-supply>866.2893</span>
+                </p>
+                <p class="text text--light eray__desc">Backed 1:1 by ETH</p>
               </div>
-
-
+            </div>
+            <div class="col-12 col-sm-6 text-sm-right">
+              <div class="tge jumbo__tge">
+                <p class="text text--light text--dimmed tge__text">Token generation event</p>
+                <dl class="tge__data">
+                  <div class="tge__data-group tge__data-group--left">
+                    <dt class="text text--light tge__data-heading">Status</dt>
+                    <dd class="text text--light tge__data-value" data-tge-status>Live</dd>
+                  </div>
+                  <div class="tge__data-group tge__data-group--right">
+                    <dt class="text text--light tge__data-heading">Actual price</dt>
+                    <dd class="text text--light tge__data-value tge__data-value--price" data-tge-actual-price>1.5 ETH</dd>
+                  </div>
+                </dl>
+              </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="col-12 col-lg-6">
-        <div class="container">
+      <div class="main-info__block">
+        <div class="main-info__block-content infographic">
           <div class="row">
-            <div class="col-12 infographic">
-              <div class="row">
 
-                <div class="col-12 col-md-6">
-                  <div class="eray infographic__eray">
-                    <p class="text text--dimmed eray__desc">eRAY total supply</p>
-                    <p class="text eray__value">
-                      <span data-total-eray-supply>866.2893</span>
-                    </p>
-                    <p class="text eray__desc">Backed 1:1 by ETH</p>
-                  </div>
-                </div>
-
-                <div class="col-12 col-md-6 text-md-right">
-                  <div class="tge infographic__tge">
-                    <p class="text text--dimmed tge__text">Token generation event</p>
-                    <dl class="tge__data">
-                      <div class="tge__data-group tge__data-group--left">
-                        <dt class="text tge__data-heading">Status</dt>
-                        <dd class="text tge__data-value" data-tge-status>Live</dd>
-                      </div>
-                      <div class="tge__data-group tge__data-group--right">
-                        <dt class="text tge__data-heading">Actual price</dt>
-                        <dd class="text tge__data-value tge__data-value--price" data-tge-actual-price>1.5 ETH</dd>
-                      </div>
-                    </dl>
-                  </div>
-                </div>
-
+            <div class="col-12 col-sm-5 col-xl-4">
+              <div class="eray infographic__eray">
+                <p class="text text--dimmed eray__desc">eRAY total supply</p>
+                <p class="text eray__value">
+                  <span data-total-eray-supply>866.2893</span>
+                </p>
+                <p class="text eray__desc">Backed 1:1 by ETH</p>
               </div>
+            </div>
 
-              <div class="infographic-content">
-                <ul class="row justify-content-between justify-content-md-start nav infographic-content__tabs" role="tablist">
-
-                  <li class="col-4 col-md-auto infographic-content__tab">
-                    <a class="infographic-content__tab-link active" data-toggle="pill" href="#coinbase">Coinbase</a>
-                  </li>
-
-                  <li class="col-4 col-md-auto infographic-content__tab">
-                    <a class="infographic-content__tab-link" data-toggle="pill" href="#cryptonet">Cryptonet</a>
-                  </li>
-
-                  <li class="col-4 col-md-auto infographic-content__tab">
-                    <a class="infographic-content__tab-link" data-toggle="pill" href="#prostocoin">Prostocoin</a>
-                  </li>
-
-                </ul>
-
-                <div class="tab-content infographic-content__content">
-
-                  <div id="coinbase" class="tab-pane active" role="tabpanel">
-
-                    <div class="row justify-content-center align-items-start">
-                      <div class="col-12">
-
-                        <div class="diagramm">
-                          <ul class="diagramm__timescale">
-                            <li class="diagramm__timescale-item">
-                              <button class="diagramm__timescale-btn active" type="button" name="hours">1H</button>
-                            </li>
-                            <li class="diagramm__timescale-item">
-                              <button class="diagramm__timescale-btn" type="button" name="days">1D</button>
-                            </li>
-                            <li class="diagramm__timescale-item">
-                              <button class="diagramm__timescale-btn" type="button" name="weeks">1W</button>
-                            </li>
-                            <li class="diagramm__timescale-item">
-                              <button class="diagramm__timescale-btn" type="button" name="month">1M</button>
-                            </li>
-                            <li class="diagramm__timescale-item">
-                              <button class="diagramm__timescale-btn" type="button" name="year">1Y</button>
-                            </li>
-                            <li class="diagramm__timescale-item">
-                              <button class="diagramm__timescale-btn" type="button" name="all">All</button>
-                            </li>
-
-                          </ul>
-
-                          <div class="row">
-                            <div class="col-12 col-md-3">
-                              <dl class="diagramm__data">
-                                <dt class="text text--dimmed diagramm__data-heading">Token price</dt>
-                                <dd class="text diagramm__data-value diagramm__data-value--postfix" data-postfix="ETH">356.28</dd>
-                              </dl>
-                            </div>
-                            <div class="col-12 col-md-3">
-                              <dl class="diagramm__data">
-                                <dt class="text text--dimmed diagramm__data-heading">Since last month</dt>
-                                <dd class="text diagramm__data-value" data-prefix="+" data-postfix="ETH">35.57</dd>
-                              </dl>
-                            </div>
-                            <div class="col-12 col-md-3">
-                              <dl class="diagramm__data">
-                                <dt class="text text--dimmed diagramm__data-heading">Since last month (%)</dt>
-                                <dd class="text diagramm__data-value" data-prefix="+" data-postfix="%">11.57</dd>
-                              </dl>
-                            </div>
-                          </div>
-
-                        </div>
-
-                        <div class="line-chart diagramm__line-chart">
-                          <p class="text line-chart__current" data-postfix="ETH">567.43</p>
-                          <div class="line-chart__view">
-
-                          </div>
-                          <ul class="line-chart__timescale">
-                            <li class="text line-chart__timescale-item">Feb 26</li>
-                            <li class="text line-chart__timescale-item">Feb 27</li>
-                            <li class="text line-chart__timescale-item">Feb 28</li>
-                            <li class="text line-chart__timescale-item">Mar 1</li>
-                            <li class="text line-chart__timescale-item">Mar 2</li>
-                          </ul>
-                        </div>
-
-                      </div>
-                    </div>
-
+            <div class="col-12 col-sm-7 col-xl-8 text-sm-right">
+              <div class="tge infographic__tge">
+                <p class="text text--dimmed tge__text">Token generation event</p>
+                <dl class="tge__data">
+                  <div class="tge__data-group tge__data-group--left">
+                    <dt class="text tge__data-heading">Status</dt>
+                    <dd class="text tge__data-value" data-tge-status>Live</dd>
                   </div>
+                  <div class="tge__data-group tge__data-group--right">
+                    <dt class="text tge__data-heading">Actual price</dt>
+                    <dd class="text tge__data-value tge__data-value--price" data-tge-actual-price>1.5 ETH</dd>
+                  </div>
+                </dl>
+              </div>
+            </div>
 
-                  <div id="cryptonet" class="tab-pane" role="tabpanel">
+          </div>
 
-                    <div class="row justify-content-center align-items-start">
-                      <div class="col-12">
+          <div class="infographic-content">
+            <ul class="row justify-content-between justify-content-sm-start nav infographic-content__tabs" role="tablist">
 
-                        <div class="diagramm">
-                          <ul class="diagramm__timescale">
-                            <li class="diagramm__timescale-item">
-                              <button class="diagramm__timescale-btn active" type="button" name="hours">1H</button>
-                            </li>
-                            <li class="diagramm__timescale-item">
-                              <button class="diagramm__timescale-btn" type="button" name="days">1D</button>
-                            </li>
-                            <li class="diagramm__timescale-item">
-                              <button class="diagramm__timescale-btn" type="button" name="weeks">1W</button>
-                            </li>
-                            <li class="diagramm__timescale-item">
-                              <button class="diagramm__timescale-btn" type="button" name="month">1M</button>
-                            </li>
-                            <li class="diagramm__timescale-item">
-                              <button class="diagramm__timescale-btn" type="button" name="year">1Y</button>
-                            </li>
-                            <li class="diagramm__timescale-item">
-                              <button class="diagramm__timescale-btn" type="button" name="all">All</button>
-                            </li>
+              <li class="col-4 col-sm-auto infographic-content__tab">
+                <a class="infographic-content__tab-link active" data-toggle="pill" href="#coinbase">Coinbase</a>
+              </li>
 
-                          </ul>
+              <li class="col-4 col-sm-auto infographic-content__tab">
+                <a class="infographic-content__tab-link" data-toggle="pill" href="#cryptonet">Cryptonet</a>
+              </li>
 
+              <li class="col-4 col-sm-auto infographic-content__tab">
+                <a class="infographic-content__tab-link" data-toggle="pill" href="#prostocoin">Prostocoin</a>
+              </li>
+
+            </ul>
+
+            <div class="tab-content infographic-content__content">
+
+              <div id="coinbase" class="tab-pane active" role="tabpanel">
+
+                <div class="row justify-content-center align-items-start">
+                  <div class="col-12">
+
+                    <div class="diagramm">
+                      <ul class="diagramm__timescale">
+                        <li class="diagramm__timescale-item">
+                          <button class="diagramm__timescale-btn active" type="button" name="hours">1H</button>
+                        </li>
+                        <li class="diagramm__timescale-item">
+                          <button class="diagramm__timescale-btn" type="button" name="days">1D</button>
+                        </li>
+                        <li class="diagramm__timescale-item">
+                          <button class="diagramm__timescale-btn" type="button" name="weeks">1W</button>
+                        </li>
+                        <li class="diagramm__timescale-item">
+                          <button class="diagramm__timescale-btn" type="button" name="month">1M</button>
+                        </li>
+                        <li class="diagramm__timescale-item">
+                          <button class="diagramm__timescale-btn" type="button" name="year">1Y</button>
+                        </li>
+                        <li class="diagramm__timescale-item">
+                          <button class="diagramm__timescale-btn" type="button" name="all">All</button>
+                        </li>
+
+                      </ul>
+
+                      <div class="row diagramm__data-group">
+                        <div class="col-12 col-sm-3 col-md-5 col-lg-4">
                           <dl class="diagramm__data">
                             <dt class="text text--dimmed diagramm__data-heading">Token price</dt>
                             <dd class="text diagramm__data-value diagramm__data-value--postfix" data-postfix="ETH">356.28</dd>
                           </dl>
+                        </div>
+                        <div class="col-12 col-sm-3 col-md-5 col-lg-4">
                           <dl class="diagramm__data">
                             <dt class="text text--dimmed diagramm__data-heading">Since last month</dt>
                             <dd class="text diagramm__data-value" data-prefix="+" data-postfix="ETH">35.57</dd>
                           </dl>
-                          <dl class="diagramm__data">
+                        </div>
+                        <div class="col-12 col-sm-3 col-lg-4">
+                          <dl class="diagramm__data diagramm__data--last-month-percent">
                             <dt class="text text--dimmed diagramm__data-heading">Since last month (%)</dt>
                             <dd class="text diagramm__data-value" data-prefix="+" data-postfix="%">11.57</dd>
                           </dl>
                         </div>
+                      </div>
 
-                        <div class="line-chart diagramm__line-chart">
-                          <p class="text line-chart__current" data-postfix="ETH">567.43</p>
-                          <img class="line-chart__view" src="assets/imgs/chart-mobile.png" alt="Diagramm placeholder" width="289" height="317">
-                          <ul class="line-chart__timescale">
-                            <li class="text line-chart__timescale-item">Feb 26</li>
-                            <li class="text line-chart__timescale-item">Feb 27</li>
-                            <li class="text line-chart__timescale-item">Feb 28</li>
-                            <li class="text line-chart__timescale-item">Mar 1</li>
-                            <li class="text line-chart__timescale-item">Mar 2</li>
-                          </ul>
-                        </div>
+                    </div>
+
+                    <div class="line-chart diagramm__line-chart">
+                      <p class="text line-chart__current" data-postfix="ETH">567.43</p>
+                      <div class="line-chart__view">
 
                       </div>
+                      <ul class="line-chart__timescale">
+                        <li class="text line-chart__timescale-item">Feb 26</li>
+                        <li class="text line-chart__timescale-item">Feb 27</li>
+                        <li class="text line-chart__timescale-item">Feb 28</li>
+                        <li class="text line-chart__timescale-item">Mar 1</li>
+                        <li class="text line-chart__timescale-item">Mar 2</li>
+                      </ul>
                     </div>
 
                   </div>
-
-                  <div id="prostocoin" class="tab-pane" role="tabpanel">
-                    <div class="row justify-content-center align-items-start">
-                      <div class="col-12" style="text-transform: capitalize;">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                        in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                      </div>
-                    </div>
-                  </div>
-
                 </div>
+
               </div>
+
+              <div id="cryptonet" class="tab-pane" role="tabpanel">
+
+                <div class="row justify-content-center align-items-start">
+                  <div class="col-12">
+
+                    <div class="diagramm">
+                      <ul class="diagramm__timescale">
+                        <li class="diagramm__timescale-item">
+                          <button class="diagramm__timescale-btn" type="button" name="hours">1H</button>
+                        </li>
+                        <li class="diagramm__timescale-item">
+                          <button class="diagramm__timescale-btn" type="button" name="days">1D</button>
+                        </li>
+                        <li class="diagramm__timescale-item">
+                          <button class="diagramm__timescale-btn active" type="button" name="weeks">1W</button>
+                        </li>
+                        <li class="diagramm__timescale-item">
+                          <button class="diagramm__timescale-btn" type="button" name="month">1M</button>
+                        </li>
+                        <li class="diagramm__timescale-item">
+                          <button class="diagramm__timescale-btn" type="button" name="year">1Y</button>
+                        </li>
+                        <li class="diagramm__timescale-item">
+                          <button class="diagramm__timescale-btn" type="button" name="all">All</button>
+                        </li>
+
+                      </ul>
+
+                      <div class="row diagramm__data-group">
+                        <div class="col-12 col-md-3 col-lg-5 col-xl-4">
+                          <dl class="diagramm__data">
+                            <dt class="text text--dimmed diagramm__data-heading">Token price</dt>
+                            <dd class="text diagramm__data-value diagramm__data-value--postfix" data-postfix="ETH">3526.28</dd>
+                          </dl>
+                        </div>
+                        <div class="col-12 col-md-3 col-lg-5 col-xl-4">
+                          <dl class="diagramm__data">
+                            <dt class="text text--dimmed diagramm__data-heading">Since last month</dt>
+                            <dd class="text diagramm__data-value" data-prefix="+" data-postfix="ETH">35.57</dd>
+                          </dl>
+                        </div>
+                        <div class="col-12 col-md-3 col-xl-4">
+                          <dl class="diagramm__data diagramm__data--last-month-percent">
+                            <dt class="text text--dimmed diagramm__data-heading">Since last month (%)</dt>
+                            <dd class="text diagramm__data-value" data-prefix="+" data-postfix="%">37.900</dd>
+                          </dl>
+                        </div>
+                      </div>
+
+                    </div>
+
+                    <div class="line-chart diagramm__line-chart">
+                      <p class="text line-chart__current" data-postfix="ETH">1000.43</p>
+                      <div class="line-chart__view">
+
+                      </div>
+                      <ul class="line-chart__timescale">
+                        <li class="text line-chart__timescale-item">Feb 26</li>
+                        <li class="text line-chart__timescale-item">Feb 27</li>
+                        <li class="text line-chart__timescale-item">Feb 28</li>
+                        <li class="text line-chart__timescale-item">Mar 1</li>
+                        <li class="text line-chart__timescale-item">Mar 2</li>
+                      </ul>
+                    </div>
+
+                  </div>
+                </div>
+
+              </div>
+
+              <div id="prostocoin" class="tab-pane" role="tabpanel">
+
+                <div class="row justify-content-center align-items-start">
+                  <div class="col-12">
+
+                    <div class="diagramm">
+                      <ul class="diagramm__timescale">
+                        <li class="diagramm__timescale-item">
+                          <button class="diagramm__timescale-btn active" type="button" name="hours">1H</button>
+                        </li>
+                        <li class="diagramm__timescale-item">
+                          <button class="diagramm__timescale-btn" type="button" name="days">1D</button>
+                        </li>
+                        <li class="diagramm__timescale-item">
+                          <button class="diagramm__timescale-btn" type="button" name="weeks">1W</button>
+                        </li>
+                        <li class="diagramm__timescale-item">
+                          <button class="diagramm__timescale-btn" type="button" name="month">1M</button>
+                        </li>
+                        <li class="diagramm__timescale-item">
+                          <button class="diagramm__timescale-btn" type="button" name="year">1Y</button>
+                        </li>
+                        <li class="diagramm__timescale-item">
+                          <button class="diagramm__timescale-btn" type="button" name="all">All</button>
+                        </li>
+
+                      </ul>
+
+                      <div class="row diagramm__data-group">
+                        <div class="col-12 col-md-3 col-lg-5 col-xl-4">
+                          <dl class="diagramm__data">
+                            <dt class="text text--dimmed diagramm__data-heading">Token price</dt>
+                            <dd class="text diagramm__data-value diagramm__data-value--postfix" data-postfix="ETH">356.28</dd>
+                          </dl>
+                        </div>
+                        <div class="col-12 col-md-3 col-lg-5 col-xl-4">
+                          <dl class="diagramm__data">
+                            <dt class="text text--dimmed diagramm__data-heading">Since last month</dt>
+                            <dd class="text diagramm__data-value" data-prefix="+" data-postfix="ETH">35.57</dd>
+                          </dl>
+                        </div>
+                        <div class="col-12 col-md-3 col-xl-4">
+                          <dl class="diagramm__data diagramm__data--last-month-percent">
+                            <dt class="text text--dimmed diagramm__data-heading">Since last month (%)</dt>
+                            <dd class="text diagramm__data-value" data-prefix="+" data-postfix="%">11.57</dd>
+                          </dl>
+                        </div>
+                      </div>
+
+                    </div>
+
+                    <div class="line-chart diagramm__line-chart">
+                      <p class="text line-chart__current" data-postfix="ETH">567.43</p>
+                      <div class="line-chart__view">
+
+                      </div>
+                      <ul class="line-chart__timescale">
+                        <li class="text line-chart__timescale-item">Feb 26</li>
+                        <li class="text line-chart__timescale-item">Feb 27</li>
+                        <li class="text line-chart__timescale-item">Feb 28</li>
+                        <li class="text line-chart__timescale-item">Mar 1</li>
+                        <li class="text line-chart__timescale-item">Mar 2</li>
+                      </ul>
+                    </div>
+
+                  </div>
+                </div>
+
+              </div>
+
             </div>
           </div>
         </div>
       </div>
+  </div>
+
+  <div class="container">
+    <div class="row terms justify-content-md-end">
+      <div class="col-12 col-md-9">
+        <p class="text text--dark text--highlight terms__text">
+          Now the tokens can be exchanged into crypto (in case of ethereum — ETH) at any time with a 1:1 ratio. But if the contributors believe in the succes of the project they will likely choose to keep them.
+        </p>
+      </div>
+      <div class="col-12">
+        <ul class="row terms__aspects aspects">
+          <li class="col-12 col-sm-auto aspect">
+            <span class="aspect__heading">
+              Ratio 1:1
+            </span>
+            <p class="text aspect__text">
+              The contributors are guaranteed to exchange these tokens into ETH.
+            </p>
+          </li>
+          <li class="col-12 col-sm-auto aspect">
+            <span class="aspect__heading">
+              50%
+            </span>
+            <p class="text aspect__text">
+              Opening of a new round when 50% of the stock of crypto currency is burned.
+            </p>
+          </li>
+          <li class="col-12 col-sm-auto aspect">
+            <span class="aspect__heading">
+              Example
+            </span>
+            <p class="text aspect__text">
+              The contributors are guaranteed to exchange these tokens into ETH.
+            </p>
+          </li>
+        </ul>
+      </div>
+      <div class="col-12 col-md-9">
+        <p class="text text--dark text--context-end terms__text">
+          When the token is exchanged back to crypto using the smart contract reserves, the crypto is sent to holder of tokens, and tokens are burnt. When 50% of crypto (ETH) reserves is burnt a next investment round kicks in automatically at a rate set by founders (that optionally can be set at any time, and could theoretically match market price of the token). At this point ETH is automatically converted to tokens at osme rate (let's say 20:1, meaning for every 20 ETH investor gets 1 token and 19 tokens stay within contract for founders to pay contributors).
+        </p>
+      </div>
+      <div class="col-12 col-md-9">
+        <h2 class="heading-2 terms__heading">Changing Parts in Investment Rounds</h2>
+        <p class="text text--dark terms__text">
+          Every day the amount of tokens investor receieves for every ether invested is increasing making it more attractive to wait another stage of the round, but in increasing the rist that someone will take an opportunity to invest early. Here is an example how the token distribution changes from one stage of investment round to another until the round is finished:
+        </p>
+      </div>
     </div>
   </div>
 
-  <footer class="container-fluid">
-    <div class="row">
-      <div class="col-12 footer">
-        <div class="container">
-          <div class="row">
-            <ul class="col-12 col-md-6 socials footer__socials">
+  <footer class="container-fluid footer">
+    <div class="container">
+      <div class="row">
+        <ul class="col-12 col-md-6 socials footer__socials">
 
-              <li class="socials__item">
-                <a href="#" class="text text--light socials__link">
-                  Facebook
-                  <svg class="icon icon__fb">
-                    <use xlink:href="assets/sprite.svg#icon__fb"></use>
-                  </svg>
-                </a>
-              </li>
+          <li class="socials__item">
+            <a href="#" class="text text--light socials__link">
+              Facebook
+              <svg class="icon icon__fb">
+                <use xlink:href="assets/sprite.svg#icon__fb"></use>
+              </svg>
+            </a>
+          </li>
 
-              <li class="socials__item">
-                <a href="#" class="text text--light socials__link">
-                  Twitter
-                  <svg class="icon icon__tw">
-                    <use xlink:href="assets/sprite.svg#icon__tw"></use>
-                  </svg>
-                </a>
-              </li>
+          <li class="socials__item">
+            <a href="#" class="text text--light socials__link">
+              Twitter
+              <svg class="icon icon__tw">
+                <use xlink:href="assets/sprite.svg#icon__tw"></use>
+              </svg>
+            </a>
+          </li>
 
-              <li class="socials__item">
-                <a href="#" class="text text--light socials__link">
-                  Google+
-                  <svg class="icon icon__ggl">
-                    <use xlink:href="assets/sprite.svg#icon__ggl"></use>
-                  </svg>
-                </a>
-              </li>
+          <li class="socials__item">
+            <a href="#" class="text text--light socials__link">
+              Google+
+              <svg class="icon icon__ggl">
+                <use xlink:href="assets/sprite.svg#icon__ggl"></use>
+              </svg>
+            </a>
+          </li>
 
-              <li class="socials__item">
-                <a href="#" class="text text--light socials__link">
-                  LinkedIn
-                  <svg class="icon icon__in">
-                    <use xlink:href="assets/sprite.svg#icon__in"></use>
-                  </svg>
-                </a>
-              </li>
+          <li class="socials__item">
+            <a href="#" class="text text--light socials__link">
+              LinkedIn
+              <svg class="icon icon__in">
+                <use xlink:href="assets/sprite.svg#icon__in"></use>
+              </svg>
+            </a>
+          </li>
 
-              <li class="socials__item">
-                <a href="#" class="text text--light socials__link">
-                  GitHub
-                  <svg class="icon icon__git">
-                    <use xlink:href="assets/sprite.svg#icon__git"></use>
-                  </svg>
-                </a>
-              </li>
+          <li class="socials__item">
+            <a href="#" class="text text--light socials__link">
+              GitHub
+              <svg class="icon icon__git">
+                <use xlink:href="assets/sprite.svg#icon__git"></use>
+              </svg>
+            </a>
+          </li>
 
-            </ul>
-            <p class="col-12 col-md-6 text text--light copyright footer__copyright">
-              © 2018 Array - All Rights Reserved
-            </p>
-          </div>
-        </div>
+        </ul>
+        <p class="col-12 col-md-6 text text--light copyright footer__copyright">
+          © 2018 Array - All Rights Reserved
+        </p>
       </div>
     </div>
   </footer>

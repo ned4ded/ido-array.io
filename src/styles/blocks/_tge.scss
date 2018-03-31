@@ -1,6 +1,11 @@
 .tge {
   display: inline-flex;
   flex-flow: column nowrap;
+  min-width: 215px;
+
+  @include respond-to(large) {
+    min-width: 265px;
+  }
 
   @mixin left-group() {
     .tge__data-group--left & {
@@ -8,8 +13,15 @@
     }
   }
 
+  @mixin right-group() {
+    .tge__data-group--right & {
+      @content;
+    }
+  }
+
   &__text {
     margin-bottom: 5px;
+    text-align: left;
   }
 
   &__data {
@@ -32,11 +44,17 @@
         border-bottom-left-radius: 4px;
         @include gradient-contrast-green();
 
+        @include respond-to(large) {
+          min-width: 90px;
+        }
       }
 
       &--right {
         padding-left: 24px;
         padding-right: 25px;
+
+        margin: auto;
+
       }
     }
 
@@ -46,6 +64,10 @@
       @include left-group() {
         color: $lightest;
       }
+
+      @include right-group() {
+        text-align: center;
+      }
     }
 
     &-value {
@@ -54,6 +76,10 @@
 
       @include left-group() {
         color: $lightest;
+      }
+
+      @include right-group() {
+        text-align: center;
       }
 
       &--price {

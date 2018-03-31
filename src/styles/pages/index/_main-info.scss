@@ -1,3 +1,45 @@
 .main-info {
-  padding-top: 60px;
+  display: flex;
+  flex-flow: column nowrap;
+  width: 100%;
+
+  @include respond-to(medium) {
+    margin-top: 60px;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    max-width: 970px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  @include respond-to(large) {
+    margin-top: 60px;
+    max-width: 1170px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  &__block {
+    padding-right: 15px;
+    padding-left: 15px;
+
+    @include respond-to(medium) {
+      width: 50%;
+    }
+
+    &-content {
+      @include respond-to(tablet) {
+        max-width: 750px;
+        margin: auto;
+        padding-right: 16px;
+        padding-left: 16px;
+      }
+
+      @include respond-to(medium) {
+        max-width: auto;
+        padding-right: 0;
+        padding-left: 0;
+      }
+    }
+  }
 }

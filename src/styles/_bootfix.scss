@@ -2,23 +2,30 @@ body {
   min-width: 320px;
 }
 
+.container-fluid {
+  @media(max-width: $breakpoint-sm - 1) {
+    padding-right: 0;
+    padding-left: 0;
+
+    & > .row {
+      margin-right: 0;
+      margin-left: 0;
+    }
+  }
+}
+
 .container {
   max-width: 100%;
 
-  @media(max-width: 789px) {
-    padding-right: 1px;
-    padding-left: 1px;
-  }
-
-  @media (min-width: 790px) {
+  @media (min-width: $breakpoint-sm) {
     max-width: 750px;
   }
 
-  @media (min-width: 990px) {
+  @media (min-width: $breakpoint-md) {
     max-width: 970px;
   }
 
-  @media (min-width: 1205px) {
+  @media (min-width: $breakpoint-lg) {
     max-width: 1170px;
   }
 }

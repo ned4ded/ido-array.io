@@ -56,6 +56,26 @@
   }
 
   &__data {
+    &--last-month-percent {
+      @include respond-to(medium) {
+        display: none;
+      }
+
+      @include respond-to(large) {
+        display: block;
+      }
+    }
+
+    &-group {
+      @include respond-to(tablet) {
+        margin-bottom: $flow-m-lg * 2;
+      }
+
+      @include respond-to(medium) {
+        margin-bottom: $block-p-sm * 1.5;
+      }
+    }
+
     &-heading {
       margin-bottom: 0;
 
@@ -65,6 +85,7 @@
 
     &-value {
       margin-bottom: 0;
+      max-width: 95%;
 
       color: $blue-contrast-200;
 
