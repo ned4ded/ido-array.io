@@ -3,11 +3,11 @@
   padding-bottom: $block-p-lg;
 
   @include respond-to(medium) {
-    padding-top: $block-p-lg * 2.5;
+    padding-top: $block-p-md * 1.25;
   }
 
   &__text {
-    
+
   }
 
   &__heading {

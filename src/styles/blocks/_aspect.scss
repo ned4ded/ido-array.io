@@ -51,11 +51,11 @@
     color: $blue-dark-300;
 
     @include respond-to(medium) {
-      width: 212px;
+      width: auto;
     }
 
     @include respond-to(large) {
-      width: 263px;
+      // width: 263px;
     }
   }
 }

@@ -36,6 +36,13 @@ $alice-blue: rgb(244, 249, 255);
   @include make-gradient($deep-sky-blue-2, $bright-turquoise, $percent1, $percent2, $angle);
 }
 
+@function make-gradient-contrast-green($percent1: 0%, $percent2: 100%, $angle: 221deg) {
+  @return gradient($deep-sky-blue-2, $bright-turquoise, $percent1, $percent2, $angle);
+}
+@function make-gradient-contrast-blue($percent1: 0%, $percent2: 100%, $angle: 221deg) {
+  @return gradient($deep-sky-blue, $persian-blue, $percent1, $percent2, $angle);
+}
+
 
 $lightest: rgb(255, 255, 255);
 

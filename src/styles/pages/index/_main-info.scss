@@ -2,21 +2,69 @@
   display: flex;
   flex-flow: column nowrap;
   width: 100%;
+  position: relative;
 
   @include respond-to(medium) {
-    margin-top: 60px;
+    // margin-top: 60px;
     flex-flow: row nowrap;
     justify-content: space-between;
     max-width: 970px;
     margin-right: auto;
     margin-left: auto;
+    padding-bottom: 100px;
+
   }
 
   @include respond-to(large) {
-    margin-top: 60px;
+    // margin-top: 60px;
     max-width: 1170px;
     margin-right: auto;
     margin-left: auto;
+  }
+
+  &__bg {
+    position: relative;
+    z-index: 0;
+
+    @include respond-to(medium) {
+      &:before {
+        position: absolute;
+        content: '';
+        width: 100%;
+        height: calc(100% + 100px);
+        top: -100px;
+        left: 0;
+
+        background-image: url('../assets/imgs/bg-main-triangle-left.svg');
+        background-repeat: no-repeat;
+        background-position: top left;
+        z-index: -1;
+      }
+
+      &:after{
+        position: absolute;
+        content: '';
+        width: 100%;
+        height: 100%;
+        bottom: 0;
+        right: 0;
+
+        background-image: url('../assets/imgs/bg-main-triangle-right.svg');
+        background-repeat: no-repeat;
+        background-position: bottom right;
+        z-index: -1;
+      }
+    }
+
+    @include respond-to(large) {
+      &:before {
+        background-image: url('../assets/imgs/bg-main-triangle-left--lg.svg');
+      }
+
+      &:after {
+        background-image: url('../assets/imgs/bg-main-triangle-right--lg.svg');
+      }
+    }
   }
 
   &__block {

@@ -1,5 +1,7 @@
 .header {
   @include gradient-dark-blue();
+  position: relative;
+  z-index: 1;
 
   @include respond-to(medium) {
     background-image: none;
@@ -8,6 +10,30 @@
   &__logo {
     width: 100%;
     display: block;
+
+    & .logo--dark {
+      display: none;
+    }
+
+    @include respond-to(medium) {
+      & .logo--dark {
+        display: none;
+      }
+
+      & .logo--white {
+        display: block;
+      }
+    }
+
+    @include respond-to(tablet) {
+      margin-top: 8px;
+      margin-bottom: 8px;
+
+      img {
+        width: 197px;
+        height: auto;
+      }
+    }
   }
 
   &__navbar {
@@ -40,9 +66,55 @@
 
   &__link {
     color: $lightest;
+    font-size: 12px;
+    font-weight: 600;
+    font-family: $ff-sans;
+    line-height: 1.85;
+    letter-spacing: 0.9px;
+    text-transform: uppercase;
+    transition: opacity .1s ease-in;
+
+    &:hover {
+      color: $lightest;
+      text-decoration: none;
+    }
+
+    &:active {
+      opacity: .75;
+    }
 
     @include respond-to(medium) {
+      display: inline-block;
+      position: relative;
       color: $blue-100;
+
+      &:after {
+        content: '';
+        @include gradient-contrast-green($angle: to right);
+        position: absolute;
+        width: 0;
+        height: 1.25px;
+        bottom: 0;
+        left: 0;
+        transition: width .2s ease-in;
+      }
+
+      &:hover {
+        color: $blue-100;
+
+        &:after {
+          width: 100%;
+          color: $blue-100;
+        }
+      }
+
+      &:active{
+        transform: translateY(-2px);
+
+        &:after {
+          bottom: -2px;
+        }
+      }
     }
   }
 }
