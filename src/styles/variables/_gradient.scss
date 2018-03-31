@@ -1,0 +1,3 @@
+@mixin make-gradient ($color1, $color2, $percent1: 0, $percent2 : 100%, $angle: to-left ) {
+  background-image: linear-gradient($angle, $color1 $percent1, $color2 $percent2);
+}

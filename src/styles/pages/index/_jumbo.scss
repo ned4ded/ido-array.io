@@ -1,10 +1,14 @@
 .jumbo {
-  padding-top: $block-p-md;
-  padding-bottom: $block-p-md;
+  @include gradient-contrast-blue()
 
-  @include respond-to(tablet) {
-    padding-top: $block-p-md * 4.25;
-    padding-bottom: $block-p-md * 4;
+  &__content {
+    padding-top: $block-p-md;
+    padding-bottom: $block-p-md;
+
+    @include respond-to(tablet) {
+      padding-top: $block-p-md * 4.25;
+      padding-bottom: $block-p-md * 4;
+    }
   }
 
   &__heading {

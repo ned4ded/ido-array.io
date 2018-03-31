@@ -24,7 +24,8 @@
 
           content: '';
 
-          background-image: $gradient-contrast-green;
+          @include gradient-contrast-green();
+
         }
       }
 

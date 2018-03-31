@@ -1,5 +1,9 @@
 .header {
-  background-image: $gradient-dark-blue;
+  @include gradient-dark-blue();
+
+  @include respond-to(medium) {
+    background-image: none;
+  }
 
   &__logo {
     width: 100%;
@@ -36,5 +40,9 @@
 
   &__link {
     color: $lightest;
+
+    @include respond-to(medium) {
+      color: $blue-100;
+    }
   }
 }

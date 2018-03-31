@@ -24,10 +24,18 @@ $cerulean-blue: rgb(42, 84, 165);
 $solitude: rgb(234, 238, 246);
 $alice-blue: rgb(244, 249, 255);
 
-$gradient-dark-blue: linear-gradient(62deg, $smalt 0%, $sapphire 95%);
-$gradient-dark-blue-reverse: linear-gradient(230deg, $smalt 0%, $sapphire 95%);
-$gradient-contrast-blue: linear-gradient(221deg, $deep-sky-blue, $persian-blue);
-$gradient-contrast-green: linear-gradient(221deg, $deep-sky-blue-2, $bright-turquoise);
+@import './gradient.scss';
+
+@mixin gradient-dark-blue($percent1: 0%, $percent2: 95%, $angle: 62deg) {
+  @include make-gradient($smalt, $sapphire, $percent1, $percent2, $angle);
+}
+@mixin gradient-contrast-blue($percent1: 0%, $percent2: 100%, $angle: 221deg) {
+  @include make-gradient($deep-sky-blue, $persian-blue, $percent1, $percent2, $angle);
+}
+@mixin gradient-contrast-green($percent1: 0%, $percent2: 100%, $angle: 221deg) {
+  @include make-gradient($deep-sky-blue-2, $bright-turquoise, $percent1, $percent2, $angle);
+}
+
 
 $lightest: rgb(255, 255, 255);
 
