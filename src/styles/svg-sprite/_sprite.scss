@@ -10,9 +10,24 @@
 	width: ($width / $height)+em;
 }
 
+.icon__bar-chart {
+	font-size: 80px;
+	@include get-em-width(90, 80);
+}
+
 .icon__burger {
 	font-size: 19px;
 	@include get-em-width(32, 19);
+}
+
+.icon__coin {
+	font-size: 80px;
+	@include get-em-width(90, 80);
+}
+
+.icon__escolation {
+	font-size: 80px;
+	@include get-em-width(90, 80);
 }
 
 .icon__fb {
@@ -33,6 +48,11 @@
 .icon__in {
 	font-size: 32px;
 	@include get-em-width(32, 32);
+}
+
+.icon__shield {
+	font-size: 80px;
+	@include get-em-width(90, 80);
 }
 
 .icon__tw {

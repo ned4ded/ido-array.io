@@ -1,15 +1,15 @@
 .jumbo {
   // padding-top: 60px;
-  background: url('../assets/imgs/bg-main--mobile.png') no-repeat, make-gradient-contrast-blue();
+  background: url('../assets/imgs/bg-main--mobile.png') no-repeat, gradient-contrast-blue();
   background-size: 320px, 100%;
   background-position-y: 155%, 100%;
   background-position-x: -18px, 0;
 
   @include respond-to(tablet) {
     padding-top: 0;
-    background: url('../assets/imgs/bg-main--tablet-left.png') no-repeat, url('../assets/imgs/bg-main--tablet-right.png') no-repeat, make-gradient-contrast-blue();
+    background: url('../assets/imgs/bg-main--tablet-left.png') no-repeat, url('../assets/imgs/bg-main--tablet-right.png') no-repeat, gradient-contrast-blue();
     background-size: 624px, 548px, 100%;
-    background-position-y: calc(100% - 10px),10px, 100%;
+    background-position-y: calc(100% - 10px), 10px, 100%;
     background-position-x: 10px, calc(100% - 10px), 0;
   }
 
@@ -19,7 +19,7 @@
     position: relative;
 
     &:before {
-      background: url('../assets/imgs/bg-main.png') no-repeat, make-gradient-contrast-blue($angle: 216deg);
+      background: url('../assets/imgs/bg-main.png') no-repeat, gradient-contrast-blue($angle: 216deg);
       background-size: 692px, 100%;
       background-position-y: center, 100%;
       background-position-x: calc(100% - 11px), 0;

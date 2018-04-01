@@ -38,6 +38,10 @@ body {
   @include respond-to(tablet) {
     font-size: $fz-xl;
   };
+
+  &--lightest {
+    color: $lightest;
+  }
 }
 
 .text {
@@ -78,6 +82,10 @@ body {
     @include respond-to(tablet) {
       font-size: $fz-lg;
       line-height: 1.69;
+    }
+
+    &.text--light {
+      color: $lightest;
     }
   }
 

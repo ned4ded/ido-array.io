@@ -1,5 +1,20 @@
 .icon {
-  &__burger use {
-    fill: $bright-turquoise;
+  @mixin fill($names, $color, $postfix: null) {
+    @each $name in $names {
+      &__#{$name} use {
+        @if $postfix {
+          &:#{$postfix} {
+            fill: $color;
+          }
+        } @else {
+          fill: $color;
+        }
+      }
+    }
   }
+
+  @include fill(burger, $bright-turquoise);
+  @include fill(bar-chart coin escolation shield git fb tw ggl in, $lightest);
+  @include fill(git fb tw ggl in, $blue-contrast-400, hover);
+  
 }

@@ -1,6 +1,9 @@
 .terms {
-  padding-top: $block-p-lg * 1.5;
   padding-bottom: $block-p-lg;
+
+  @include respond-to(tablet) {
+    padding-top: $block-p-lg * 1.5;
+  };
 
   @include respond-to(medium) {
     padding-top: $block-p-md * 1.25;

@@ -24,9 +24,21 @@ body {
   fill: inherit;
   stroke: inherit; }
 
+.icon__bar-chart {
+  font-size: 80px;
+  width: 1.125em; }
+
 .icon__burger {
   font-size: 19px;
   width: 1.68421em; }
+
+.icon__coin {
+  font-size: 80px;
+  width: 1.125em; }
+
+.icon__escolation {
+  font-size: 80px;
+  width: 1.125em; }
 
 .icon__fb {
   font-size: 32px;
@@ -44,12 +56,58 @@ body {
   font-size: 32px;
   width: 1em; }
 
+.icon__shield {
+  font-size: 80px;
+  width: 1.125em; }
+
 .icon__tw {
   font-size: 32px;
   width: 1em; }
 
 .icon__burger use {
   fill: #00ffdc; }
+
+.icon__bar-chart use {
+  fill: white; }
+
+.icon__coin use {
+  fill: white; }
+
+.icon__escolation use {
+  fill: white; }
+
+.icon__shield use {
+  fill: white; }
+
+.icon__git use {
+  fill: white; }
+
+.icon__fb use {
+  fill: white; }
+
+.icon__tw use {
+  fill: white; }
+
+.icon__ggl use {
+  fill: white; }
+
+.icon__in use {
+  fill: white; }
+
+.icon__git use:hover {
+  fill: #00c6ff; }
+
+.icon__fb use:hover {
+  fill: #00c6ff; }
+
+.icon__tw use:hover {
+  fill: #00c6ff; }
+
+.icon__ggl use:hover {
+  fill: #00c6ff; }
+
+.icon__in use:hover {
+  fill: #00c6ff; }
 
 body {
   background-color: white; }
@@ -80,6 +138,8 @@ body {
   @media (min-width: 780px) {
     .heading-2 {
       font-size: 36px; } }
+  .heading-2--lightest {
+    color: white; }
 
 .text {
   color: #02206e;
@@ -106,6 +166,8 @@ body {
       .text--highlight {
         font-size: 26px;
         line-height: 1.69; } }
+    .text--highlight.text--light {
+      color: white; }
   .text--context-end {
     margin-bottom: 75px; }
     @media (min-width: 1000px) {
@@ -468,10 +530,6 @@ body {
   .socials__link {
     font-size: 0;
     display: block; }
-    .socials__link use {
-      fill: white; }
-    .socials__link:hover use {
-      fill: #00c6ff; }
 
 .copyright {
   font-size: 16px;
@@ -738,8 +796,10 @@ body {
         margin-bottom: 80px; } }
 
 .terms {
-  padding-top: 90px;
   padding-bottom: 60px; }
+  @media (min-width: 780px) {
+    .terms {
+      padding-top: 90px; } }
   @media (min-width: 1000px) {
     .terms {
       padding-top: 50px; } }
@@ -751,3 +811,62 @@ body {
   @media (min-width: 780px) {
     .terms__aspects {
       margin-bottom: 37.5px; } }
+
+.features {
+  background-image: url("../assets/imgs/bg-features--mobile.png"), linear-gradient(-180deg, transparent 0%, rgba(11, 128, 235, 0.6) 62%), linear-gradient(190deg, #00c6ff 0%, #1449db 100%);
+  background-repeat: no-repeat;
+  background-position-x: center, center, center;
+  background-position-y: bottom, bottom, center;
+  background-size: 100%, 100% 433px, 100%;
+  padding-top: 60px;
+  padding-bottom: 60px; }
+  @media (min-width: 780px) {
+    .features {
+      padding-top: 120px;
+      padding-bottom: 99px;
+      background-image: url("../assets/imgs/bg-features.png"), linear-gradient(-180deg, rgba(0, 198, 255, 0) 0%, rgba(11, 128, 235, 0.6) 62%), linear-gradient(219deg, #00c6ff 0%, #1449db 100%);
+      background-position-y: 134%, bottom, center;
+      background-position-x: 77%, center, center;
+      background-size: 149%, 100% 433px, 100%; } }
+  @media (min-width: 1000px) {
+    .features {
+      background-position-y: 103%, bottom, center;
+      background-position-x: 49%, center, center;
+      background-size: 125%, 100% 433px, 100%; } }
+  @media (min-width: 1210px) {
+    .features {
+      background-size: 100%, 100% 402px, 100%; } }
+  .features__heading {
+    margin-bottom: 25px; }
+    @media (min-width: 780px) {
+      .features__heading {
+        margin-bottom: 75px; } }
+  .features__icon {
+    margin-bottom: 15px; }
+    @media (min-width: 780px) {
+      .features__icon {
+        margin-bottom: 30px; } }
+  .features__text {
+    line-height: 1.75; }
+    .features__text--spread--lg {
+      line-height: 2.38; }
+    @media (min-width: 1210px) {
+      .features__text--spacing--narrow {
+        letter-spacing: -0.5px; } }
+  .features__item:not(:last-child) {
+    margin-bottom: 25px; }
+  .features__list {
+    padding: 0;
+    list-style: none;
+    margin-bottom: 25px; }
+    @media (min-width: 780px) {
+      .features__list {
+        margin-bottom: 10px; } }
+    @media (min-width: 1000px) {
+      .features__list {
+        margin-bottom: 20px; } }
+    @media (min-width: 1210px) {
+      .features__list {
+        margin-bottom: 75px; } }
+  .features .text--context-end {
+    margin-bottom: 50px; }

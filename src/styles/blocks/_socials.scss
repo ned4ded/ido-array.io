@@ -26,13 +26,5 @@
   &__link {
     font-size: 0;
     display: block;
-
-    & use {
-      fill: $lightest;
-    }
-
-    &:hover use {
-      fill: $blue-contrast-400;
-    }
   }
 }

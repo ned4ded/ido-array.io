@@ -1,5 +1,5 @@
 .footer {
-  @include gradient-dark-blue($angle: 230deg);
+  background-image: gradient-dark-blue($angle: 230deg);
 
   padding-top: $block-p-sm * 1.25;
   padding-bottom: $block-p-sm * 1.25;

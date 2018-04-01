@@ -1,5 +1,5 @@
 .header {
-  @include gradient-dark-blue();
+  background-image: gradient-dark-blue();
   position: relative;
   z-index: 1;
 
@@ -90,7 +90,7 @@
 
       &:after {
         content: '';
-        @include gradient-contrast-green($angle: to right);
+        background-image: gradient-contrast-green($angle: to right);;
         position: absolute;
         width: 0;
         height: 1.25px;

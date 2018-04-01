@@ -24,29 +24,10 @@ $cerulean-blue: rgb(42, 84, 165);
 $solitude: rgb(234, 238, 246);
 $alice-blue: rgb(244, 249, 255);
 
-@import './gradient.scss';
-
-@mixin gradient-dark-blue($percent1: 0%, $percent2: 95%, $angle: 62deg) {
-  @include make-gradient($smalt, $sapphire, $percent1, $percent2, $angle);
-}
-@mixin gradient-contrast-blue($percent1: 0%, $percent2: 100%, $angle: 221deg) {
-  @include make-gradient($deep-sky-blue, $persian-blue, $percent1, $percent2, $angle);
-}
-@mixin gradient-contrast-green($percent1: 0%, $percent2: 100%, $angle: 221deg) {
-  @include make-gradient($deep-sky-blue-2, $bright-turquoise, $percent1, $percent2, $angle);
-}
-
-@function make-gradient-contrast-green($percent1: 0%, $percent2: 100%, $angle: 221deg) {
-  @return gradient($deep-sky-blue-2, $bright-turquoise, $percent1, $percent2, $angle);
-}
-@function make-gradient-contrast-blue($percent1: 0%, $percent2: 100%, $angle: 221deg) {
-  @return gradient($deep-sky-blue, $persian-blue, $percent1, $percent2, $angle);
-}
-
-
 $lightest: rgb(255, 255, 255);
 
 $blue-dark-100: $sapphire-2;
+$blue-dark-200: $sapphire;
 $blue-dark-300: $midnight-express;
 $blue-100: $sapphire-light;
 $blue-200: $smalt;
@@ -56,7 +37,25 @@ $blue-contrast-100: $pacific-blue;
 $blue-contrast-200: $deep-sky-blue;
 $blue-contrast-300: $deep-sky-blue-2;
 $blue-contrast-400: $deep-sky-blue-3;
+$blue-contrast-500: $deep-sky-blue-4;
+$blue-contrast-600: $deep-sky-blue-5;
 
 $green-contrast: $medium-spring-green;
 
 $darkest: rgb(0,0,0);
+
+@import './gradient.scss';
+
+@function gradient-dark-blue($percent1: 0%, $percent2: 95%, $angle: 62deg) {
+  @return make-gradient($blue-200, $sapphire, $percent1, $percent2, $angle);
+}
+
+@function gradient-contrast-green($percent1: 0%, $percent2: 100%, $angle: 221deg) {
+  @return make-gradient($deep-sky-blue-2, $bright-turquoise, $percent1, $percent2, $angle);
+}
+@function gradient-contrast-blue($percent1: 0%, $percent2: 100%, $angle: 221deg) {
+  @return make-gradient($deep-sky-blue, $persian-blue, $percent1, $percent2, $angle);
+}
+@function gradient-contrast-blue-400($percent1: 0%, $percent2: 100%, $angle: 221deg) {
+  @return make-gradient($deep-sky-blue-3, $persian-blue, $percent1, $percent2, $angle);
+}
