@@ -1,0 +1,98 @@
+.scale {
+  position: relative;
+  z-index: 0;
+
+  width: 100%;
+  height: 10px;
+  margin-top: 45px;
+
+  @include respond-to(medium) {
+    margin-top: 55px;
+  }
+
+  &__name {
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+
+    width: calc(100% - 30px);
+    height: 100%;
+    margin-bottom: 0;
+
+    border-radius: 5px;
+    background-image: gradient-contrast-green($angle: 268deg);
+
+    font-size: 0;
+
+    &:after {
+      position: absolute;
+      bottom: calc(100% + 26px);
+      left: 0;
+
+      content: attr(data-scale-name);
+
+      color: $blue-400;
+
+      font-size: $fz-md;
+    }
+  }
+
+  &__bar {
+    position: absolute;
+    z-index: 0;
+
+    width: calc(100% - 30px);
+    height: 100%;
+
+    border-radius: 5px;
+    background-color: $light-200;
+
+    font-size: 0;
+
+    &:after {
+      position: absolute;
+      bottom: calc(100% + 5px);
+      left: 0;
+
+      display: none;
+
+      content: attr(data-start);
+
+      color: $blue-400;
+
+      font-size: $fz-md;
+      font-weight: bold;
+
+      @include respond-to(tablet){
+        display: block;
+      }
+    }
+
+    &:before {
+      position: absolute;
+      right: 0;
+      bottom: calc(100% + 5px);
+
+      display: none;
+
+      content: attr(data-end);
+
+      color: $blue-400;
+
+      font-size: $fz-md;
+      font-weight: bold;
+
+      @include respond-to(tablet){
+        display: block;
+      }
+    }
+  }
+
+  &--theme--dark {
+    .scale {
+      &__name {
+        background-image: gradient-contrast-blue-400($angle: 93deg);
+      }
+    }
+  }
+}

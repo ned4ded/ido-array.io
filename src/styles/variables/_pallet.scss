@@ -25,6 +25,8 @@ $solitude: rgb(234, 238, 246);
 $alice-blue: rgb(244, 249, 255);
 
 $lightest: rgb(255, 255, 255);
+$light-100: $alice-blue;
+$light-200: $solitude;
 
 $blue-dark-100: $sapphire-2;
 $blue-dark-200: $sapphire;
@@ -42,6 +44,7 @@ $blue-contrast-600: $deep-sky-blue-5;
 
 $green-contrast: $medium-spring-green;
 
+$dark-100: $black-russian;
 $darkest: rgb(0,0,0);
 
 @import './gradient.scss';
