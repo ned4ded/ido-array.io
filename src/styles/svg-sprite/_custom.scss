@@ -13,7 +13,7 @@
     fill: url('#gradient-contrast-green');
   };
 
-  @include fill(bar-chart coin escolation shield) {
+  @include fill(bar-chart coin escolation shield arrow-short) {
     fill: $lightest;
   };
 
@@ -31,4 +31,5 @@
       }
     }
   };
+
 }

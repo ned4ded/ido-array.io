@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="12px" height="18px" viewBox="0 0 12 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.1 (51147) - http://www.bohemiancoding.com/sketch -->
+    <title>Oval</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="100%" y1="0%" x2="0%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#00B5FF" offset="0%"></stop>
+            <stop stop-color="#00FFDB" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="close_btn" transform="translate(-27.000000, -24.000000)" fill="url(#linearGradient-1)" fill-rule="nonzero">
+            <g transform="translate(27.000000, 24.000000)" id="Oval">
+                <path d="M0.466654182,14.6627174 C-0.133837115,15.2334202 -0.157985451,16.1828606 0.412717364,16.7833519 C0.983420179,17.3838432 1.9328606,17.4079915 2.5333519,16.8372887 L11.1773897,8.62205442 L2.53955695,0.412717364 C1.93906565,-0.157985451 0.989625234,-0.133837115 0.418922419,0.466654182 C-0.151780396,1.06714548 -0.12763206,2.0165859 0.472859237,2.58728871 L6.8226164,8.62205442 L0.466654182,14.6627174 Z"></path>
+            </g>
+        </g>
+    </g>
+</svg>

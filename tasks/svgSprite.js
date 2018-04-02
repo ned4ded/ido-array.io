@@ -44,27 +44,27 @@ module.exports = gulp.task('svgSprite', function() {
           },
         },
       },
-      svg: {
-        transform: [
-          function(svg) {
-            const s = new XMLSerializer();
-
-            const exportFile = fs.readFileSync('src/assets/defs.svg', 'utf8');
-            const parsedDefs = new DOMParser().parseFromString(exportFile,"image/svg+xml");
-
-            const defs = parsedDefs.documentElement
-              .getElementsByTagName('defs')
-              .item(0);
-
-            const parsedSvg = (new DOMParser().parseFromString(svg,"image/svg+xml"));
-            const firstEl = parsedSvg.documentElement.firstChild;
-
-            parsedSvg.documentElement.insertBefore(defs, firstEl);
-
-            return s.serializeToString(parsedSvg);
-          }
-        ]
-      }
+      // svg: {
+      //   transform: [
+      //     function(svg) {
+      //       const s = new XMLSerializer();
+      //
+      //       const exportFile = fs.readFileSync('src/assets/defs.svg', 'utf8');
+      //       const parsedDefs = new DOMParser().parseFromString(exportFile,"image/svg+xml");
+      //
+      //       const defs = parsedDefs.documentElement
+      //         .getElementsByTagName('defs')
+      //         .item(0);
+      //
+      //       const parsedSvg = (new DOMParser().parseFromString(svg,"image/svg+xml"));
+      //       const firstEl = parsedSvg.documentElement.firstChild;
+      //
+      //       parsedSvg.documentElement.insertBefore(defs, firstEl);
+      //
+      //       return s.serializeToString(parsedSvg);
+      //     }
+      //   ]
+      // }
     }))
     .pipe(gulp.dest(path.join(__dirname, '..')))
 });

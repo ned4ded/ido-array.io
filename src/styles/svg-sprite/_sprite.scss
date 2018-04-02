@@ -10,6 +10,16 @@
 	width: ($width / $height)+em;
 }
 
+.icon__arrow {
+	font-size: 18px;
+	@include get-em-width(12, 18);
+}
+
+.icon__arrow-short {
+	font-size: 5px;
+	@include get-em-width(8, 5);
+}
+
 .icon__bar-chart {
 	font-size: 80px;
 	@include get-em-width(90, 80);

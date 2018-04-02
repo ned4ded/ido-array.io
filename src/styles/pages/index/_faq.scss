@@ -6,10 +6,16 @@
   background-size: 100%, 100%;
   background-position-y: bottom, center;
   padding-top: $block-p-lg * 1.5;
-  padding-bottom: $block-p-lg;
+  padding-bottom: $block-p-lg * 1.5;
+
 
   @include respond-to(tablet) {
     padding-top: $block-p-lg * 2;
+    padding-bottom: $block-p-lg * 2;
+  }
+
+  @include respond-to(large) {
+    padding-bottom: $block-p-lg * 2.25;
   }
 
   &__heading {
@@ -43,8 +49,6 @@
   }
 
   &__pair {
-    display: flex;
-    flex-flow: column nowrap;
     margin-bottom: 0;
     margin-right: -15px;
     margin-left: -15px;
@@ -63,43 +67,50 @@
       position: relative;
       margin-bottom: 0;
       cursor: pointer;
-      font-size: $fz-md;
-      color: $blue-contrast-300;
-      font-weight: bold;
-      text-align: left;
-      order: -1;
 
       border-top: solid 1px $blue-contrast-300;
-      padding: 10px 15px;
+      padding: 10px 55px 10px 15px;
       background-color: $blue-100;
 
+      &-text {
+        font-size: $fz-md;
+        color: $blue-contrast-300;
+        font-weight: bold;
+        text-align: left;
+      }
+
       @include respond-to(tablet) {
-        padding: 18px 25px 16px;
+        padding: 18px 55px 16px 25px;
 
         border-left: solid 1px $blue-contrast-300;
         border-right: solid 1px $blue-contrast-300;
+
+        .faq__pair:first-child & {
+          border-top-left-radius: 4px;
+          border-top-right-radius: 4px;
+        }
       }
+
 
       .faq__pair:last-child & {
         border-bottom: solid 1px $blue-contrast-300;
 
+        @include respond-to(tablet) {
+          border-bottom-left-radius: 4px;
+          border-bottom-right-radius: 4px;
+        }
+
         &[aria-expanded="true"] {
+          border-radius: 0;
           border-bottom: none;
         }
-      }
-
-      .faq__pair:last-child .collapsing ~ & {
-          border-bottom: none;
       }
 
       &:hover {
 
       }
 
-      &[aria-expanded="true"],
-      .collapsing ~ & {
-        font-size: $fz-lg;
-        color: $blue-100;
+      &[aria-expanded="true"] {
         background-color: $lightest;
         border-color: transparent;
         padding-bottom: 0;
@@ -108,7 +119,13 @@
           padding-top: 30px;
           padding-bottom: 15px;
         }
+
+        & .faq__pair-heading-text {
+          font-size: $fz-lg;
+          color: $blue-100;
+        }
       }
+
     }
   }
 
@@ -125,6 +142,64 @@
 
     @include respond-to(tablet) {
       padding: 0px 25px 35px;
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+
+    display: inline-block;
+
+    width: 30px;
+    height: 30px;
+
+
+    text-align: center;
+    vertical-align: middle;
+
+    border-radius: 100%;
+    background-image: gradient-contrast-blue-400($angle: 135deg);
+
+    @include respond-to(tablet) {
+      top: 15px;
+    }
+
+    .faq__pair-heading[aria-expanded="true"] & {
+      background-image: gradient-contrast-green($angle: 225deg);
+
+      top: 20px;
+      transform: rotate(180deg);
+
+      @include respond-to(tablet) {
+        top: 37px;
+      }
+    }
+
+
+    &:before {
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      width: 100%;
+      height: 100%;
+
+      content: '';
+
+      border-radius: 100%;
+      background-image: gradient-contrast-blue-400($angle: 225deg);
+      opacity: 1;
+      transition: opacity .1s ease-in;
+
+      .faq__pair-heading:hover & {
+        opacity: 0;
+      }
+
+      .faq__pair-heading[aria-expanded="true"] & {
+        background-image: gradient-contrast-green($angle: 135deg);
+      }
     }
   }
 }
