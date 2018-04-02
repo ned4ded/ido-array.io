@@ -1,0 +1,44 @@
+.brief {
+  padding-top: $block-p-lg * 1.5;
+  padding-bottom: $block-p-md;
+
+  @include respond-to(tablet) {
+    padding-top: $block-p-lg * 2;
+  }
+
+  @include  respond-to(medium) {
+    padding-bottom: $block-p-lg * 1.25;
+  }
+
+  &__heading {
+    margin-bottom: $flow-m-sm;
+
+    @include respond-to(tablet) {
+      margin-bottom: $flow-m-lg * 2;
+    }
+
+    @include respond-to(medium) {
+      font-size: $fz-xl * 1.08;
+    }
+  }
+
+  &__block {
+    &:not(:last-child) {
+      margin-bottom: $flow-m-lg * 2.75;
+
+      @include respond-to(medium) {
+        margin-bottom: $flow-m-lg * 2.5;
+      }
+    }
+  }
+
+  &__descr {
+    display: none;
+
+    @include respond-to(medium) {
+      display: flex;
+      line-height: 2.38;
+      font-size: $fz-md;
+    }
+  }
+}

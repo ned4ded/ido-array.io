@@ -1,20 +1,34 @@
 .icon {
-  @mixin fill($names, $color, $postfix: null) {
+  position: relative;
+
+  @mixin fill($names) {
     @each $name in $names {
       &__#{$name} use {
-        @if $postfix {
-          &:#{$postfix} {
-            fill: $color;
-          }
-        } @else {
-          fill: $color;
-        }
+        @content;
       }
     }
   }
 
-  @include fill(burger, $bright-turquoise);
-  @include fill(bar-chart coin escolation shield git fb tw ggl in, $lightest);
-  @include fill(git fb tw ggl in, $blue-contrast-400, hover);
-  
+  @include fill(burger) {
+    fill: url('#gradient-contrast-green');
+  };
+
+  @include fill(bar-chart coin escolation shield) {
+    fill: $lightest;
+  };
+
+  @include fill(git fb tw ggl in) {
+    fill: url('#gradient-contrast-blue-400');
+
+
+    &:last-child {
+      fill: rgb(192, 199, 219);
+      opacity: 1;
+      transition: opacity .1s ease-in;
+
+      .socials__link:hover & {
+        opacity: 0;
+      }
+    }
+  };
 }

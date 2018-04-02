@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+      <linearGradient x1="100%" y1="0%" x2="0%" y2="100%" id="gradient-contrast-green">
+        <stop stop-color="#00B5FF" offset="0%"></stop>
+        <stop stop-color="#00FFDB" offset="100%"></stop>
+      </linearGradient>
+      <linearGradient x1="100%" y1="0%" x2="0%" y2="100%" id="gradient-contrast-blue-400">
+        <stop stop-color="#00C6FF" offset="0%"/>
+        <stop stop-color="#1449DB" offset="100%"/>
+      </linearGradient>
+  </defs>
+</svg>

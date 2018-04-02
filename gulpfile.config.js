@@ -15,6 +15,7 @@ module.exports = {
     scripts: path.join(__dirname, 'src/scripts/**/*.js'),
     pages: path.join(__dirname, 'src/pages/*.html'),
     icons: path.join(__dirname, 'src/assets/icons/*.svg'),
-    svgTemplate: path.join(__dirname, 'src/templates/svg-sprite.mustache')
+    svgTemplate: path.join(__dirname, 'src/templates/svg-sprite.mustache'),
+    svgDefs: path.join(__dirname, 'src/assets/defs.svg')
   }
 };

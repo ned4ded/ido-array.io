@@ -43,6 +43,11 @@
 
   &__toggler {
     padding: 0;
+
+    &:focus {
+      outline: none;
+      
+    }
   }
 
   &__menu {

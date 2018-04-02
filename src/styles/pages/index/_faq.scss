@@ -1,0 +1,130 @@
+.faq {
+  background-image:
+    // url('../assets/imgs/bg-faq--mobile.png'),
+    gradient-dark-blue($angle: 202deg, $percent2: 100%);
+  background-repeat: no-repeat;
+  background-size: 100%, 100%;
+  background-position-y: bottom, center;
+  padding-top: $block-p-lg * 1.5;
+  padding-bottom: $block-p-lg;
+
+  @include respond-to(tablet) {
+    padding-top: $block-p-lg * 2;
+  }
+
+  &__heading {
+    font-family: $ff-sans;
+    font-size: $fz-xl * 1.08;
+    font-weight: bold;
+    text-align: left;
+    color: $lightest;
+    margin-bottom: $flow-m-xs;
+
+    @include respond-to(medium) {
+      margin-bottom: $flow-m-lg * 3;
+    }
+  }
+
+  &__descr {
+    line-height: 1.75;
+    margin-bottom: $flow-m-xs;
+
+    @include respond-to(tablet) {
+      margin-bottom: $flow-m-lg * 1.75;
+    }
+
+    @include respond-to(medium) {
+      margin-top: 18px;
+    }
+  }
+
+  &__list {
+    margin-bottom: $flow-m-lg * 3;
+  }
+
+  &__pair {
+    display: flex;
+    flex-flow: column nowrap;
+    margin-bottom: 0;
+    margin-right: -15px;
+    margin-left: -15px;
+
+    @include respond-to(tablet) {
+      margin-right: 0;
+      margin-left: 0;
+    }
+
+
+    &-content  {
+      margin-bottom: 0;
+    }
+
+    &-heading {
+      position: relative;
+      margin-bottom: 0;
+      cursor: pointer;
+      font-size: $fz-md;
+      color: $blue-contrast-300;
+      font-weight: bold;
+      text-align: left;
+      order: -1;
+
+      border-top: solid 1px $blue-contrast-300;
+      padding: 10px 15px;
+      background-color: $blue-100;
+
+      @include respond-to(tablet) {
+        padding: 18px 25px 16px;
+
+        border-left: solid 1px $blue-contrast-300;
+        border-right: solid 1px $blue-contrast-300;
+      }
+
+      .faq__pair:last-child & {
+        border-bottom: solid 1px $blue-contrast-300;
+
+        &[aria-expanded="true"] {
+          border-bottom: none;
+        }
+      }
+
+      .faq__pair:last-child .collapsing ~ & {
+          border-bottom: none;
+      }
+
+      &:hover {
+
+      }
+
+      &[aria-expanded="true"],
+      .collapsing ~ & {
+        font-size: $fz-lg;
+        color: $blue-100;
+        background-color: $lightest;
+        border-color: transparent;
+        padding-bottom: 0;
+
+        @include respond-to(tablet){
+          padding-top: 30px;
+          padding-bottom: 15px;
+        }
+      }
+    }
+  }
+
+
+
+  &__answer {
+    padding: 10px 15px;
+    padding-top: 0;
+    background-color: $lightest;
+    color: $blue-dark-300;
+    line-height: 1.75;
+    margin-bottom: 0;
+    text-align: justify;
+
+    @include respond-to(tablet) {
+      padding: 0px 25px 35px;
+    }
+  }
+}
