@@ -204,8 +204,8 @@ body {
   cursor: pointer;
   text-align: center;
   text-transform: uppercase;
-  border-radius: 6px;
-  border: none; }
+  border: none;
+  border-radius: 6px; }
   .button__glow {
     position: absolute;
     z-index: -1;
@@ -221,6 +221,8 @@ body {
     -webkit-filter: blur(11.8px);
             filter: blur(11.8px); }
   .button__text {
+    position: relative;
+    z-index: 0;
     display: inline-block;
     width: 100%;
     min-width: 262px;
@@ -228,23 +230,37 @@ body {
     padding: 24px 35px 24px;
     color: #02206e;
     border-radius: 6px;
-    background-image: linear-gradient(257deg, #00b5fe 0%, #00ffdc 100%);
+    background-image: linear-gradient(77deg, #00b5fe 0%, #00ffdc 100%);
     font-size: 12px;
     font-weight: 600;
     line-height: 1; }
+    .button__text:before {
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      content: '';
+      -webkit-transition: opacity .1s ease-in;
+      transition: opacity .1s ease-in;
+      opacity: 1;
+      border-radius: 6px;
+      background-image: linear-gradient(257deg, #00b5fe 0%, #00ffdc 100%); }
     .button__text:hover {
       text-decoration: none;
-      color: white;
-      background-image: linear-gradient(77deg, #00b5fe 0%, #00ffdc 100%); }
+      color: white; }
+      .button__text:hover:before {
+        opacity: 0; }
       .button__text:hover ~ .button__glow {
         background-image: linear-gradient(82deg, #00c6ff 0%, #1449db 100%); }
   .button--state--close .button__text {
     color: white;
-    background-image: linear-gradient(257deg, #00c6ff 0%, #1449db 100%); }
-    .button--state--close .button__text:hover {
-      background-image: linear-gradient(77deg, #00c6ff 0%, #1449db 100%); }
-      .button--state--close .button__text:hover ~ .button__glow {
-        background-image: linear-gradient(82deg, #00c6ff 0%, #1449db 100%); }
+    background-image: linear-gradient(77deg, #00c6ff 0%, #1449db 100%); }
+    .button--state--close .button__text:before {
+      background-image: linear-gradient(257deg, #00c6ff 0%, #1449db 100%); }
+    .button--state--close .button__text:hover ~ .button__glow {
+      background-image: linear-gradient(82deg, #00c6ff 0%, #1449db 100%); }
   .button--state--close .button__glow {
     background-image: linear-gradient(262deg, #00c6ff 0%, #1449db 100%); }
 
