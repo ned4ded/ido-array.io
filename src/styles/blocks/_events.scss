@@ -1,0 +1,82 @@
+.events {
+  @mixin column-width {
+    &--type {
+      &--age {
+        width: 52%;
+      }
+      &--transfers {
+        width: 28%;
+      }
+      &--quantity {
+        width: 20%;
+      }
+    }
+  }
+
+  $outer-bdrs: 7px;
+  $plr: 24px;
+
+  overflow-x: scroll;
+  margin-right: -15px;
+
+  @include respond-to(tablet) {
+    margin-right: 0;
+    overflow-x: auto;
+  }
+
+  &__table {
+    min-width: 720px;
+    border-collapse: collapse;
+    display: block;
+    padding-right: 15px;
+
+    @include respond-to(tablet) {
+      padding-right: 0;
+    }
+  }
+
+  &__body {
+    display: block;
+    border: 2px solid $lightest;
+    border-radius: $outer-bdrs;
+    background-image: gradient-contrast-blue-400($angle: 241deg);
+
+  }
+
+  &__head {
+    display: block;
+  }
+
+  &__header {
+    display: flex;
+    flex-flow: row nowrap;
+    padding: 5px $plr;
+  }
+
+  &__heading {
+    color: $blue-contrast-200;
+    padding: 0;
+
+    @include column-width;
+  }
+
+  &__data {
+    display: flex;
+    flex-flow: row nowrap;
+    padding: 20px $plr;
+
+    &:not(:last-child) {
+      border-bottom: 1px solid $lightest;
+    }
+  }
+
+  &__value {
+    color: $lightest;
+    font-family: $ff-sans;
+    font-size: $fz-md;
+    line-height: 2.25;
+
+    @include column-width;
+  }
+
+}

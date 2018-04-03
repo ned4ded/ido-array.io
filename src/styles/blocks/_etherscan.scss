@@ -1,0 +1,44 @@
+.etherscan {
+  &__link {
+    position: relative;
+
+    display: inline-block;
+
+    width: auto;
+    height: auto;
+
+    margin-bottom: $flow-m-sm;
+
+    &:after {
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      left: 0;
+
+      width: 100%;
+      height: 100%;
+
+      content: '';
+      transition: opacity .1s ease-in;
+
+      opacity: 0;
+      background-image: url('../assets/imgs/etherscan_btn_actv.png');
+    }
+
+    &:focus {
+      outline: none;
+    }
+    &:hover {
+      text-decoration: none;
+
+      &:after {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__text {
+    font-size: $fz-sm;
+    color: rgba($lightest, .75)
+  }
+}

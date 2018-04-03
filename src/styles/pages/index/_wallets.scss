@@ -1,0 +1,48 @@
+.wallets {
+  padding-top: $block-p-lg;
+  padding-bottom: $block-p-md * 1.125;
+  background-image: gradient-dark-blue($angle: 223deg);
+
+  &__heading {
+    color: $lightest;
+    line-height: 1.4;
+    margin-bottom: $flow-m-sm * 1.5;
+  }
+
+  &__data {
+    margin-bottom: $flow-m-lg * 1.25;
+
+    &-block {
+      &:not(:last-child) {
+        margin-bottom: $flow-m-sm * 1.25;
+      }
+    }
+
+    &-descr {
+      color: rgba($lightest, .75);
+      line-height: 1;
+      margin-bottom: $flow-m-xs / 2;
+    }
+
+    &-value {
+      color: $blue-contrast-200;
+      margin-bottom: 0;
+      font-size: $fz-lg;
+      line-height: 1;
+      font-weight: bold;
+
+      &[data-value-postfix]:after {
+        content: ' ' attr(data-value-postfix);
+      }
+    }
+
+    &-exp {
+      line-height: 1.75;
+      margin-bottom: 0;
+    }
+  }
+
+  &__events {
+    margin-bottom: $block-p-md * 1.25;
+  }
+}

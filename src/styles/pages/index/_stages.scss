@@ -2,6 +2,8 @@
   margin-right: -15px;
   margin-left: -15px;
 
+  // margin-bottom: 40px;
+
   @include respond-to(tablet) {
     display: flex;
     flex-flow: row nowrap;
@@ -230,7 +232,7 @@
             top: 14px;
           }
 
-          @include respond-to(tablet) {
+          @include respond-to(medium) {
             left: -77px;
           }
         }

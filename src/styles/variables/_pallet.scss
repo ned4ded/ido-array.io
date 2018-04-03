@@ -64,6 +64,3 @@ $darkest: rgb(0,0,0);
 @function gradient-contrast-blue-400($percent1: 0%, $percent2: 100%, $angle: 221deg) {
   @return make-gradient($deep-sky-blue-3, $persian-blue, $percent1, $percent2, $angle);
 }
-@function gradient-blue($percent1: 0%, $percent2: 100%, $angle: 149deg) {
-  @return make-gradient($blue-200, $blue-300, $percent1, $percent2, $angle);
-}
