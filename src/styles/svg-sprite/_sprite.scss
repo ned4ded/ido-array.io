@@ -65,6 +65,11 @@
 	@include get-em-width(90, 80);
 }
 
+.icon__trapezoid {
+	font-size: 270px;
+	@include get-em-width(370, 270);
+}
+
 .icon__tw {
 	font-size: 32px;
 	@include get-em-width(32, 32);
