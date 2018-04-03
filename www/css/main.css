@@ -1348,7 +1348,8 @@ body {
               flex-flow: row nowrap;
       -webkit-box-align: center;
           -ms-flex-align: center;
-              align-items: center; } }
+              align-items: center;
+      margin-bottom: 50px; } }
   @media (min-width: 1000px) {
     .stages {
       -webkit-box-pack: center;

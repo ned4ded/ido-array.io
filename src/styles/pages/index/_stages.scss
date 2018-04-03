@@ -2,12 +2,11 @@
   margin-right: -15px;
   margin-left: -15px;
 
-  // margin-bottom: 40px;
-
   @include respond-to(tablet) {
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
+    margin-bottom: 50px;
   }
 
   @include respond-to(medium) {
