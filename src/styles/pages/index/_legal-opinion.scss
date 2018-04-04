@@ -1,0 +1,110 @@
+.legal-opinion {
+  padding-top: $block-p-lg;
+  padding-bottom: $block-p-lg;
+
+  @include respond-to(tablet) {
+    padding-top: $block-p-lg * 1.84;
+    padding-bottom: $block-p-lg * 1.84;
+  }
+
+  @include respond-to(medium) {
+    padding-top: $block-p-lg * 2;
+    padding-bottom: $block-p-lg * 2;
+  }
+
+
+  &__heading {
+    margin-bottom: $flow-m-lg * 1.1;
+
+    @include respond-to(tablet) {
+      margin-bottom: $flow-m-lg * 1.75;
+    }
+  }
+
+  &__text {
+    line-height: 1.75;
+    margin-bottom: $flow-m-lg * 1.28;
+
+    @include respond-to(tablet) {
+      line-height: 2.4;
+
+      &.text--highlight {
+        line-height: 1.75;
+        margin-bottom: $flow-m-lg * 2;
+      }
+    }
+
+    @include respond-to(medium) {
+      margin-bottom: $flow-m-xs;
+    }
+  }
+
+  &__feedback {
+    position: relative;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-image: gradient-contrast-blue-400($angle: 250deg);
+    line-height: 1.6;
+    z-index: 0;
+
+    &:before {
+      display: none;
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-image: gradient-contrast-blue-400($angle: 250deg);
+      z-index: -1;
+      top: 0;
+      left: 0;
+    }
+
+    @include respond-to(tablet) {
+      background-image: none;
+      padding-top: 48px;
+      padding-bottom: 48px;
+      line-height: 1.25;
+      font-size: 26px;
+
+
+      &:before {
+        display: block;
+        width: calc(100% + 10px);
+        left: -39px;
+        transform: skew(-8.5deg, 0);
+        border-radius: 6px;
+      }
+    }
+
+    @include respond-to(medium) {
+      margin-bottom: $flow-m-lg * 2;
+      &:before {
+        width: calc(100% + 27px);
+        left: -54px;
+      }
+    }
+  }
+
+  &__email {
+    display: block;
+    color: $lightest;
+    font-weight: bold;
+
+    &:focus {
+      outline: none;
+    }
+
+    &:hover {
+      color: $lightest;
+      text-decoration: underline;
+    }
+
+    &:active {
+      opacity: .8;
+    }
+
+    @include respond-to(tablet) {
+
+    }
+  }
+}

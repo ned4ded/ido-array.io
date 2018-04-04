@@ -1647,3 +1647,80 @@ body {
     @media (min-width: 1000px) {
       .wallets__events {
         margin-bottom: 50px; } }
+
+.legal-opinion {
+  padding-top: 60px;
+  padding-bottom: 60px; }
+  @media (min-width: 780px) {
+    .legal-opinion {
+      padding-top: 110.4px;
+      padding-bottom: 110.4px; } }
+  @media (min-width: 1000px) {
+    .legal-opinion {
+      padding-top: 120px;
+      padding-bottom: 120px; } }
+  .legal-opinion__heading {
+    margin-bottom: 27.5px; }
+    @media (min-width: 780px) {
+      .legal-opinion__heading {
+        margin-bottom: 43.75px; } }
+  .legal-opinion__text {
+    line-height: 1.75;
+    margin-bottom: 32px; }
+    @media (min-width: 780px) {
+      .legal-opinion__text {
+        line-height: 2.4; }
+        .legal-opinion__text.text--highlight {
+          line-height: 1.75;
+          margin-bottom: 50px; } }
+    @media (min-width: 1000px) {
+      .legal-opinion__text {
+        margin-bottom: 10px; } }
+  .legal-opinion__feedback {
+    position: relative;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-image: linear-gradient(250deg, #00c6ff 0%, #1449db 100%);
+    line-height: 1.6;
+    z-index: 0; }
+    .legal-opinion__feedback:before {
+      display: none;
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-image: linear-gradient(250deg, #00c6ff 0%, #1449db 100%);
+      z-index: -1;
+      top: 0;
+      left: 0; }
+    @media (min-width: 780px) {
+      .legal-opinion__feedback {
+        background-image: none;
+        padding-top: 48px;
+        padding-bottom: 48px;
+        line-height: 1.25;
+        font-size: 26px; }
+        .legal-opinion__feedback:before {
+          display: block;
+          width: calc(100% + 10px);
+          left: -39px;
+          -webkit-transform: skew(-8.5deg, 0);
+                  transform: skew(-8.5deg, 0);
+          border-radius: 6px; } }
+    @media (min-width: 1000px) {
+      .legal-opinion__feedback {
+        margin-bottom: 50px; }
+        .legal-opinion__feedback:before {
+          width: calc(100% + 27px);
+          left: -54px; } }
+  .legal-opinion__email {
+    display: block;
+    color: white;
+    font-weight: bold; }
+    .legal-opinion__email:focus {
+      outline: none; }
+    .legal-opinion__email:hover {
+      color: white;
+      text-decoration: underline; }
+    .legal-opinion__email:active {
+      opacity: .8; }

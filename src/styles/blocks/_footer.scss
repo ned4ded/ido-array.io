@@ -9,6 +9,7 @@
     padding-bottom: $block-p-sm * 1.625;
   };
 
+
   &__copyright {
     @include respond-to(tablet) {
       order: -1;
