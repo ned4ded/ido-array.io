@@ -759,6 +759,7 @@ body {
     padding-right: 15px; }
     @media (min-width: 780px) {
       .events__table {
+        min-width: auto;
         padding-right: 0; } }
   .events__body {
     display: block;
@@ -781,10 +782,13 @@ body {
     padding: 0; }
     .events__heading--type--age {
       width: 52%; }
+      @media (min-width: 1210px) {
+        .events__heading--type--age {
+          width: 58.5%; } }
     .events__heading--type--transfers {
-      width: 28%; }
+      width: 24%; }
     .events__heading--type--quantity {
-      width: 20%; }
+      width: 17.5%; }
   .events__data {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -803,10 +807,17 @@ body {
     line-height: 2.25; }
     .events__value--type--age {
       width: 52%; }
+      @media (min-width: 1210px) {
+        .events__value--type--age {
+          width: 58.5%; } }
     .events__value--type--transfers {
-      width: 28%; }
+      width: 24%; }
     .events__value--type--quantity {
-      width: 20%; }
+      width: 17.5%; }
+    @media (min-width: 1210px) {
+      .events__value {
+        font-size: 26px;
+        line-height: 1.4; } }
 
 .etherscan__link {
   position: relative;
@@ -1337,6 +1348,9 @@ body {
 .stages {
   margin-right: -15px;
   margin-left: -15px; }
+  @media (max-width: 840px) {
+    .stages {
+      overflow: hidden; } }
   @media (min-width: 780px) {
     .stages {
       display: -webkit-box;
@@ -1534,17 +1548,85 @@ body {
         margin-bottom: 0; } }
 
 .wallets {
+  position: relative;
   padding-top: 60px;
   padding-bottom: 45px;
   background-image: linear-gradient(223deg, #002685 0%, #00144f 95%); }
+  .wallets:before {
+    position: absolute;
+    top: 0;
+    left: -62px;
+    display: none;
+    width: calc(798px + (100% - 970px) / 2);
+    height: 100%;
+    content: '';
+    -webkit-transform: skew(-7.3deg, 0);
+            transform: skew(-7.3deg, 0);
+    border-top-right-radius: 34px;
+    border-bottom-right-radius: 34px;
+    background-image: linear-gradient(223deg, #002685 0%, #00144f 95%); }
+  @media (min-width: 780px) {
+    .wallets {
+      padding-top: 120px;
+      padding-bottom: 80px; } }
+  @media (min-width: 1000px) {
+    .wallets {
+      background-image: none; }
+      .wallets:before {
+        display: block; } }
+  @media (min-width: 1210px) {
+    .wallets:before {
+      width: calc(966px + (100% - 1170px) / 2); } }
   .wallets__heading {
     color: white;
     line-height: 1.4;
-    margin-bottom: 22.5px; }
+    margin-bottom: 22.5px;
+    position: relative; }
+    .wallets__heading:after {
+      display: none;
+      position: absolute;
+      bottom: -8px;
+      right: 87px;
+      content: "Last " attr(data-wallets-events-count) " events";
+      color: #00aaff;
+      font-family: "Open Sans", sans-serif;
+      font-size: 14px;
+      font-weight: normal; }
+    .wallets__heading:not([data-wallets-events-count]):after, .wallets__heading[data-wallets-events-count="0"]:after {
+      display: none; }
+    .wallets__heading[data-wallets-events-count="1"]:after {
+      content: 'Last event'; }
+    @media (min-width: 780px) {
+      .wallets__heading {
+        margin-bottom: 58.75px; }
+        .wallets__heading:after {
+          display: block; } }
+    @media (min-width: 1000px) {
+      .wallets__heading {
+        margin-bottom: 48.75px; }
+        .wallets__heading:after {
+          display: block;
+          bottom: 4px;
+          right: 63px; } }
+    @media (min-width: 1210px) {
+      .wallets__heading {
+        letter-spacing: 1.5px; }
+        .wallets__heading:after {
+          letter-spacing: normal;
+          right: 95px; } }
   .wallets__data {
     margin-bottom: 31.25px; }
+    @media (min-width: 780px) {
+      .wallets__data {
+        margin-bottom: 10px; } }
+    @media (min-width: 1000px) {
+      .wallets__data {
+        margin-top: 15px; } }
     .wallets__data-block:not(:last-child) {
       margin-bottom: 18.75px; }
+      @media (min-width: 1000px) {
+        .wallets__data-block:not(:last-child) {
+          margin-bottom: 30px; } }
     .wallets__data-descr {
       color: rgba(255, 255, 255, 0.75);
       line-height: 1;
@@ -1561,4 +1643,7 @@ body {
       line-height: 1.75;
       margin-bottom: 0; }
   .wallets__events {
-    margin-bottom: 50px; }
+    margin-bottom: 70px; }
+    @media (min-width: 1000px) {
+      .wallets__events {
+        margin-bottom: 50px; } }

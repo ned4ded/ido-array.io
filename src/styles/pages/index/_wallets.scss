@@ -1,20 +1,120 @@
 .wallets {
+  position: relative;
   padding-top: $block-p-lg;
   padding-bottom: $block-p-md * 1.125;
   background-image: gradient-dark-blue($angle: 223deg);
+
+  &:before {
+    position: absolute;
+    top: 0;
+    left: -62px;
+
+    display: none;
+
+    width: calc(798px + (100% - 970px) / 2);
+    height: 100%;
+
+    content: '';
+    transform: skew(-7.3deg, 0);
+
+    border-top-right-radius: 34px;
+    border-bottom-right-radius: 34px;
+    background-image: gradient-dark-blue($angle: 223deg);
+  }
+
+  @include respond-to(tablet) {
+    padding-top: $block-p-lg * 2;
+    padding-bottom: $block-p-md * 2;
+  }
+
+  @include respond-to(medium) {
+    background-image: none;
+    &:before {
+      display: block;
+    }
+  }
+
+  @include respond-to(large) {
+    &:before {
+      width: calc(966px + (100% - 1170px) / 2);
+    }
+  }
 
   &__heading {
     color: $lightest;
     line-height: 1.4;
     margin-bottom: $flow-m-sm * 1.5;
+    position: relative;
+
+    &:after {
+      display: none;
+      position: absolute;
+      bottom: -8px;
+      right: 87px;
+
+      content: 'Last ' attr(data-wallets-events-count) ' events';
+
+      color: $blue-contrast-200;
+
+      font-family: $ff-sans;
+      font-size: $fz-sm;
+      font-weight: normal;
+    }
+
+    &:not([data-wallets-events-count]):after,
+    &[data-wallets-events-count="0"]:after {
+      display: none;
+    }
+
+    &[data-wallets-events-count="1"]:after {
+      content: 'Last event';
+    }
+
+    @include respond-to(tablet) {
+      margin-bottom: $flow-m-lg * 2.35;
+
+      &:after {
+        display: block;
+      }
+    }
+
+    @include respond-to(medium) {
+      margin-bottom: $flow-m-lg * 1.95;
+
+      &:after {
+        display: block;
+
+        bottom: 4px;
+        right: 63px;
+      }
+    }
+
+    @include respond-to(large) {
+      letter-spacing: 1.5px;
+
+      &:after {
+        letter-spacing: normal;
+        right: 95px;
+      }
+    }
   }
 
   &__data {
     margin-bottom: $flow-m-lg * 1.25;
 
-    &-block {
-      &:not(:last-child) {
-        margin-bottom: $flow-m-sm * 1.25;
+    @include respond-to(tablet) {
+      margin-bottom: $flow-m-xs;
+    }
+
+    @include respond-to(medium) {
+      margin-top: $flow-m-sm;
+    }
+
+    &-block:not(:last-child) {
+      margin-bottom: $flow-m-sm * 1.25;
+
+      @include respond-to(medium) {
+        margin-bottom: $flow-m-lg * 1.2;
       }
     }
 
@@ -43,6 +143,10 @@
   }
 
   &__events {
-    margin-bottom: $block-p-md * 1.25;
+    margin-bottom: $flow-m-lg * 2.8;
+
+    @include respond-to(medium) {
+      margin-bottom: $flow-m-lg * 2;
+    }
   }
 }

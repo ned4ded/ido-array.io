@@ -2,6 +2,10 @@
   margin-right: -15px;
   margin-left: -15px;
 
+  @media (max-width: 840px) {
+    overflow: hidden;
+  }
+
   @include respond-to(tablet) {
     display: flex;
     flex-flow: row nowrap;
