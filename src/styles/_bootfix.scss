@@ -7,6 +7,16 @@ body {
   padding-left: 0;
 }
 
+.accordion__body {
+  &.collapse {
+    display: none;
+  }
+
+  &.collapse.show {
+    display: block;
+  }
+}
+
 .container {
   max-width: 100%;
 

@@ -1,6 +1,6 @@
 .tge-info {
   padding-top: $block-p-lg * 1.5;
-  padding-bottom: $block-p-lg * 0.9;
+  padding-bottom: $block-p-lg * 0.7;
 
   @include respond-to(tablet) {
     padding-top: $block-p-lg * 2;
@@ -8,13 +8,17 @@
   }
   @include respond-to(medium) {
     padding-top: $block-p-lg * 2.1;
-    padding-bottom: $block-p-lg;
+    padding-bottom: $block-p-lg * 2.215;
   }
 
   &__heading {
     margin-bottom: $flow-m-lg * 1.5;
 
     @include respond-to(tablet) {
+      margin-bottom: $flow-m-lg * 1.9;
+    }
+
+    @include respond-to(medium) {
       margin-bottom: $flow-m-lg * 2.75;
     }
   }
@@ -25,7 +29,7 @@
     color: $dark-100;
 
     @include respond-to(tablet) {
-      margin-bottom: $flow-m-lg * 3;
+      margin-bottom: $flow-m-lg * 1.1;
     }
     @include respond-to(medium) {
       margin-bottom: 0;
@@ -34,11 +38,15 @@
     };
 
     &--highlight {
-      margin-bottom: 0;
+      margin-bottom: $flow-m-lg * 2;
 
       color: $blue-dark-300;
 
       font-weight: bold;
+
+      @include respond-to(tablet) {
+        margin-bottom: $flow-m-lg * 2.4;
+      }
     }
   }
 
@@ -56,6 +64,14 @@
       &:last-child {
         margin-bottom: $flow-m-lg * 2;
       }
+    }
+  }
+
+  &__accordion {
+    overflow-x: scroll;
+
+    @include respond-to(tablet) {
+      overflow-x: auto;
     }
   }
 }

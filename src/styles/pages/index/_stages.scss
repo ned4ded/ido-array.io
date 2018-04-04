@@ -1,6 +1,8 @@
 .stages {
   margin-right: -15px;
   margin-left: -15px;
+  margin-bottom: $block-p-md * 1.375;
+
 
   @media (max-width: 840px) {
     overflow: hidden;
@@ -10,11 +12,15 @@
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
-    margin-bottom: 50px;
   }
 
   @include respond-to(medium) {
     justify-content: center;
+      margin-bottom: $block-p-lg * 1.085; 
+  }
+
+  @include respond-to(large) {
+    margin-bottom: $block-p-lg;
   }
 
 
@@ -242,7 +248,6 @@
       }
     }
   }
-
 
   &__data {
 

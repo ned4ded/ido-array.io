@@ -1,0 +1,286 @@
+.accordion {
+  $overlapping: 4px;
+
+  @mixin column-width {
+    &--type {
+      &--round {
+        width: 32.5%;
+
+        @include respond-to(large) {
+          width: 29%;
+        }
+      }
+      &--amount {
+        width: 17.5%;
+        @include respond-to(large) {
+          width: 16%;
+
+        }
+      }
+      &--startblock {
+        width: 16.5%;
+        @include respond-to(large) {
+          width: 19.5%;
+
+        }
+      }
+      &--investor {
+        width: 11.9%;
+        @include respond-to(large) {
+          width: 11%;
+
+        }
+      }
+      &--project {
+        width: 10%;
+        @include respond-to(large) {
+          width: 11%;
+
+        }
+      }
+      &--founder {
+        width: 11.6%;
+        @include respond-to(large) {
+          width: 13.5%;
+
+        }
+      }
+
+    }
+  }
+
+  &__table {
+    display: block;
+
+    width: 100%;
+    min-width: 719px;
+    padding-right: 15px;
+    padding-bottom: $overlapping + 32px;
+
+    border-collapse: collapse;
+
+    @include respond-to(tablet) {
+      min-width: auto;
+      padding-right: 0;
+      padding-bottom: $overlapping;
+    }
+  }
+
+  &__body {
+    border-bottom-right-radius: 6px;
+    border-bottom-left-radius: 6px;
+
+    background-color: $light-200;
+    display: block;
+
+    &:hover {
+      background-color: $blue-400;
+    }
+
+    &.accordion__pair-heading {
+      transition: background-color .1s ease-in;
+      z-index: 0;
+
+      &:before {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 92%;
+        top: 0;
+        left: 50%;
+        border-bottom: 1px solid white;
+        transform: translateX(-50%);
+        box-shadow: inset 0px -7px 25px 1px transparent;
+        z-index: -1;
+        transition: width .2s ease-in .2s, box-shadow .1s ease-in;
+        border-top-left-radius: 6px;
+        border-top-right-radius: 6px;
+      }
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    &.accordion__pair-content {
+      background-color: $blue-400;
+    }
+
+    &[aria-expanded="true"] {
+      background-color: $blue-400;
+
+      &:hover:before {
+        border-bottom: 1px solid white;
+        width: calc(100% - 1px);
+        box-shadow: inset 0px -45px 40px -15px lighten($blue-400, 5%);
+        transition: width .2s ease-in, box-shadow .1s ease-in .2s;
+
+      }
+    }
+  }
+
+  &__pair {
+
+    &-heading {
+      position: relative;
+      bottom: -4px;
+
+      display: block;
+
+      margin-top: $flow-m-lg;
+
+      @include respond-to(tablet) {
+        margin-top: $flow-m-lg * 1.28;
+      }
+
+
+      &--order--first {
+        margin-top: 0;
+      }
+
+      transition: border-radius .1s ease-in;
+
+      border-radius: 6px;
+      border-bottom-right-radius: 0;
+      border-bottom-left-radius: 0;
+
+      &.collapsed {
+        border-bottom-right-radius: 6px;
+        border-bottom-left-radius: 6px;
+      }
+    }
+
+    &-content {
+      padding-top: $overlapping;
+    }
+  }
+
+  &__row {
+    position: relative;
+    display: flex;
+    flex-flow: row nowrap;
+    padding: 20px 22px;
+
+    @include respond-to(tablet) {
+      padding: 0 18px 22px;
+    }
+    @include respond-to(large) {
+      padding: 0 29px 22px;
+    }
+
+    &--type--main {
+      padding-top: 25px;
+      padding-bottom: 25px;
+    }
+  }
+
+  &__head {
+    display: block;
+  }
+
+  &__header {
+    display: flex;
+    flex-flow: row nowrap;
+    padding: 0 20px 10px;
+
+    @include respond-to(tablet) {
+      padding: 0 18px 13px;
+    }
+
+    @include respond-to(medium) {
+      padding-bottom: 1px;
+    }
+
+    @include respond-to(large) {
+      padding: 0 29px 5px;
+    }
+  }
+
+  &__table-heading {
+    color: rgba($blue-dark-300, .5);
+    font-size: $fz-sm;
+    font-weight: normal;
+    padding: 0;
+
+
+    @include column-width;
+  }
+
+  &__data {
+    font-size: $fz-sm;
+    line-height: 2;
+    padding: 0;
+    color: $dark-100;
+
+    @include column-width;
+
+    &[data-postfix]:after {
+      content: ' ' attr(data-postfix);
+    }
+
+    .accordion__pair-content &,
+    .accordion__body:hover &,
+    [aria-expanded="true"] & {
+      color: $lightest;
+    }
+
+    &--highlight {
+      font-weight: bold;
+    }
+
+    &--type {
+      &--sum {
+        width: 100%;
+        margin-top: 21px;
+        margin-right: 75px;
+        padding-top: 21px;
+
+        text-align: right;
+
+        border-top: 1px solid white;
+
+        font-size: $fz-lg;
+        font-weight: bold;
+      }
+
+      &--icon {
+        width: 0%;
+        padding: 0;
+      }
+    }
+
+    &-time {
+      padding: 0 10px;
+      display: inline-block;
+
+      & span {
+        display: inline-block;
+        padding: 0 5px;
+      }
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 32px;
+    transition: transform .1s ease-in;
+
+    .accordion__pair-heading[aria-expanded="true"] & {
+      transform: translateY(-50%) rotate(180deg);
+    }
+
+    & use {
+      fill: $blue-400;
+      font-size: 6px;
+      transition: fill .1s ease-in;
+
+      .accordion__pair-heading:hover &,
+      .accordion__pair-heading[aria-expanded="true"] & {
+        fill: $lightest;
+      }
+    }
+  }
+
+}

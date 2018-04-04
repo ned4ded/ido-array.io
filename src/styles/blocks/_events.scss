@@ -9,10 +9,18 @@
         }
       }
       &--transfers {
-        width: 24%;
+        width: 38%;
+
+        @include respond-to(large) {
+          width: 24%;
+        }
       }
       &--quantity {
-        width: 17.5%;
+        width: 10%;
+
+        @include respond-to(large) {
+          width: 17.5%;
+        }
       }
     }
   }
