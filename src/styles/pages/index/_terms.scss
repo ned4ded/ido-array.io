@@ -1,8 +1,9 @@
 .terms {
-  padding-bottom: $block-p-lg;
+  padding-bottom: $block-p-md;
 
   @include respond-to(tablet) {
     padding-top: $block-p-lg * 1.5;
+    padding-bottom: $block-p-lg * 2.085;
   };
 
   @include respond-to(medium) {
@@ -25,5 +26,29 @@
     @include respond-to(tablet) {
       margin-bottom: $flow-m-lg * 1.5;
     };
+  }
+
+  &__piecharts {
+    overflow-x: scroll;
+    margin-left: -15px;
+    margin-right: -15px;
+
+    @include respond-to(tablet) {
+      overflow-x: auto;
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+    &-block {
+      min-width: 755px;
+      padding-bottom: 20px;
+      padding-left: 15px;
+
+      @include respond-to(tablet) {
+        min-width: auto;
+        padding-bottom: 0;
+        padding-left: 0;
+      }
+    }
   }
 }

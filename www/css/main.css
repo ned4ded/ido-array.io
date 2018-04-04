@@ -1109,6 +1109,110 @@ body {
   font-size: 14px;
   color: rgba(255, 255, 255, 0.75); }
 
+@media (min-width: 1000px) {
+  .piechart {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; } }
+
+.piechart__name {
+  font-size: 26px;
+  font-weight: bold;
+  line-height: 1.46;
+  color: #071639;
+  margin-bottom: 0; }
+  @media (min-width: 780px) {
+    .piechart__name {
+      margin-bottom: 20px; } }
+  @media (min-width: 1000px) {
+    .piechart__name {
+      width: 100%;
+      margin-bottom: 15px; } }
+
+.piechart__img {
+  margin-bottom: 23px; }
+  @media (min-width: 780px) {
+    .piechart__img {
+      margin-bottom: 20px; } }
+  @media (min-width: 1000px) {
+    .piechart__img {
+      width: 61%;
+      height: auto;
+      margin-bottom: 0; } }
+
+.piechart__legend {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  margin: 0;
+  margin-bottom: 25px;
+  padding: 0;
+  list-style: none;
+  color: #1e1e20;
+  font-size: 16px;
+  line-height: 1.55; }
+  @media (min-width: 780px) {
+    .piechart__legend {
+      margin-bottom: 36px; } }
+  @media (min-width: 1000px) {
+    .piechart__legend {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-flow: column nowrap;
+              flex-flow: column nowrap;
+      width: 39%;
+      margin-bottom: 17.25px; } }
+  .piechart__legend-item {
+    width: 50%;
+    padding-left: 15px; }
+    @media (min-width: 1000px) {
+      .piechart__legend-item {
+        width: 100%; }
+        .piechart__legend-item:not(:last-child) {
+          margin-bottom: 23px; } }
+    .piechart__legend-item--type--investor {
+      color: #009edd; }
+  .piechart__legend-text {
+    margin-bottom: 0; }
+  .piechart__legend-percent {
+    position: relative;
+    display: block;
+    font-weight: bold;
+    line-height: 1; }
+    .piechart__legend-percent:before {
+      position: absolute;
+      top: calc(50% + 1px);
+      left: -12px;
+      width: 8px;
+      height: 8px;
+      content: '';
+      -webkit-transform: translateY(-50%);
+              transform: translateY(-50%);
+      border-radius: 100%;
+      background-color: #2a54a5; }
+      .piechart__legend-item--type--founder .piechart__legend-percent:before {
+        background-color: #00ff92; }
+      .piechart__legend-item--type--investor .piechart__legend-percent:before {
+        background-image: radial-gradient(circle at 100% 0, #9700ff, #0300b5); }
+
+.piechart__text {
+  margin-bottom: 0;
+  color: #1e1e20; }
+  @media (min-width: 1000px) {
+    .piechart__text {
+      width: 100%; } }
+
 .main-info {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1321,10 +1425,11 @@ body {
         margin-bottom: 80px; } }
 
 .terms {
-  padding-bottom: 60px; }
+  padding-bottom: 40px; }
   @media (min-width: 780px) {
     .terms {
-      padding-top: 90px; } }
+      padding-top: 90px;
+      padding-bottom: 125.1px; } }
   @media (min-width: 1000px) {
     .terms {
       padding-top: 50px; } }
@@ -1336,6 +1441,24 @@ body {
   @media (min-width: 780px) {
     .terms__aspects {
       margin-bottom: 37.5px; } }
+  .terms__piecharts {
+    overflow-x: scroll;
+    margin-left: -15px;
+    margin-right: -15px; }
+    @media (min-width: 780px) {
+      .terms__piecharts {
+        overflow-x: auto;
+        margin-left: 0;
+        margin-right: 0; } }
+    .terms__piecharts-block {
+      min-width: 755px;
+      padding-bottom: 20px;
+      padding-left: 15px; }
+      @media (min-width: 780px) {
+        .terms__piecharts-block {
+          min-width: auto;
+          padding-bottom: 0;
+          padding-left: 0; } }
 
 .features {
   background-image: url("../assets/imgs/bg-features--mobile.png"), linear-gradient(-180deg, transparent 0%, rgba(11, 128, 235, 0.6) 62%), linear-gradient(190deg, #00c6ff 0%, #1449db 100%);

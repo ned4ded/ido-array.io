@@ -1,0 +1,134 @@
+.piechart {
+
+  @include respond-to(medium) {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+  }
+
+  &__name {
+    font-size: $fz-lg;
+    font-weight: bold;
+    line-height: 1.46;
+    color: $blue-dark-300;
+    margin-bottom: 0;
+
+    @include respond-to(tablet) {
+      margin-bottom: $flow-m-md;
+    }
+
+    @include respond-to(medium) {
+      width: 100%;
+      margin-bottom: $flow-m-sm;
+    }
+  }
+
+  &__img {
+    margin-bottom: $flow-m-md * 1.15;
+
+    @include respond-to(tablet) {
+      margin-bottom: $flow-m-md;
+    }
+
+    @include respond-to(medium) {
+      width: 61%;
+      height: auto;
+      margin-bottom: 0;
+    }
+  }
+
+  &__legend {
+    display: flex;
+    flex-flow: row wrap;
+
+    margin: 0;
+    margin-bottom: $flow-m-lg;
+    padding: 0;
+
+    list-style: none;
+
+    color: $dark-100;
+
+    font-size: $fz-md;
+    line-height: 1.55;
+
+    @include respond-to(tablet) {
+      margin-bottom: $flow-m-lg * 1.44;
+    }
+
+    @include respond-to(medium) {
+      flex-flow: column nowrap;
+      width: 39%;
+      margin-bottom: $flow-m-sm * 1.15;
+    }
+
+    &-item {
+      width: 50%;
+      padding-left: 15px;
+
+      @include respond-to(medium) {
+        width: 100%;
+
+        &:not(:last-child) {
+          margin-bottom: $flow-m-md * 1.15;
+
+        }
+      }
+
+      &--type {
+        &--investor {
+          color: $blue-contrast-100;
+        }
+
+        &--founder {
+        }
+      }
+    }
+
+    &-text {
+      margin-bottom: 0;
+    }
+
+    &-percent {
+      position: relative;
+
+      display: block;
+
+      font-weight: bold;
+      line-height: 1;
+
+      &:before {
+        position: absolute;
+        top: calc(50% + 1px);
+        left: -12px;
+
+        width: 8px;
+        height: 8px;
+
+        content: '';
+        transform: translateY(-50%);
+
+        border-radius: 100%;
+        background-color: #2a54a5;
+
+        .piechart__legend-item--type--founder & {
+          background-color: $green-contrast;
+        }
+
+        .piechart__legend-item--type--investor & {
+          background-image: radial-gradient(circle at 100% 0, #9700ff, #0300b5);
+        }
+      }
+    }
+  }
+
+  &__text {
+    margin-bottom: 0;
+    color: $dark-100;
+
+    @include respond-to(medium) {
+      width: 100%;
+    }
+  }
+
+}
