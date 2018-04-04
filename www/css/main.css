@@ -430,6 +430,7 @@ body {
     margin-bottom: 5px;
     text-align: left; }
   .tge__data {
+    position: relative;
     display: -webkit-inline-box;
     display: -ms-inline-flexbox;
     display: inline-flex;
@@ -438,8 +439,20 @@ body {
         -ms-flex-flow: row nowrap;
             flex-flow: row nowrap;
     border-radius: 6px;
-    border: solid 1px #00b5fe;
-    margin: 0; }
+    margin: 0;
+    z-index: 0; }
+    .tge__data:before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      border: solid 1px #00b5fe;
+      border-radius: 6px;
+      z-index: -1; }
+    .tge__data:not([data-tge-status="true"]):before {
+      border: solid 1px #00144f; }
     .tge__data-group {
       padding: 10px 10px;
       display: -webkit-box;
@@ -458,6 +471,8 @@ body {
         border-top-left-radius: 4px;
         border-bottom-left-radius: 4px;
         background-image: linear-gradient(221deg, #00b5fe 0%, #00ffdc 100%); }
+        .tge__data:not([data-tge-status="true"]) .tge__data-group--left {
+          background-image: linear-gradient(62deg, #002685 0%, #00144f 95%); }
         @media (min-width: 1210px) {
           .tge__data-group--left {
             min-width: 90px; } }
@@ -474,6 +489,18 @@ body {
     .tge__data-value {
       font-weight: bold;
       margin: 0; }
+      .tge__data-value[data-tge-true] {
+        display: none; }
+      .tge__data-value[data-tge-false] {
+        display: none; }
+      .tge__data-value[data-tge-undefined] {
+        display: none; }
+      .tge__data[data-tge-status="true"] .tge__data-value[data-tge-true] {
+        display: block; }
+      .tge__data[data-tge-status="false"] .tge__data-value[data-tge-false] {
+        display: block; }
+      .tge__data:not([data-tge-status="false"]):not([data-tge-status="true"]) .tge__data-value[data-tge-undefined] {
+        display: block; }
       .tge__data-group--left .tge__data-value {
         color: white; }
       .tge__data-group--right .tge__data-value {
@@ -481,6 +508,8 @@ body {
       .tge__data-value--price {
         font-size: 26px;
         line-height: 1; }
+        .tge__data-value--price:after {
+          content: " " attr(data-prefix); }
   @media (min-width: 780px) {
     .tge.jumbo__tge {
       text-align: right; } }

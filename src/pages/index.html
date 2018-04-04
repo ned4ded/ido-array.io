@@ -97,14 +97,17 @@
               <div class="col-12 col-sm-6 text-sm-right">
                 <div class="tge jumbo__tge">
                   <p class="text text--light text--dimmed tge__text">Token generation event</p>
-                  <dl class="tge__data">
+
+                  <dl data-tge-status="true" class="tge__data">
                     <div class="tge__data-group tge__data-group--left">
                       <dt class="text text--light tge__data-heading">Status</dt>
-                      <dd class="text text--light tge__data-value" data-tge-status>Live</dd>
+                      <dd class="text tge__data-value" data-tge-true>Live</dd>
+                      <dd class="text tge__data-value" data-tge-false>Close</dd>
+                      <dd class="text tge__data-value" data-tge-undefined>Undefined</dd>
                     </div>
                     <div class="tge__data-group tge__data-group--right">
                       <dt class="text text--light tge__data-heading">Actual price</dt>
-                      <dd class="text text--light tge__data-value tge__data-value--price" data-tge-actual-price>1.5 ETH</dd>
+                      <dd data-prefix="ETH" class="text text--light tge__data-value tge__data-value--price" data-tge-actual-price>1.5</dd>
                     </div>
                   </dl>
                 </div>
@@ -129,14 +132,16 @@
               <div class="col-12 col-sm-7 col-xl-8 text-sm-right">
                 <div class="tge infographic__tge">
                   <p class="text text--dimmed tge__text">Token generation event</p>
-                  <dl class="tge__data">
+                  <dl data-tge-status="true" class="tge__data">
                     <div class="tge__data-group tge__data-group--left">
                       <dt class="text tge__data-heading">Status</dt>
-                      <dd class="text tge__data-value" data-tge-status>Live</dd>
+                      <dd class="text tge__data-value" data-tge-true>Live</dd>
+                      <dd class="text tge__data-value" data-tge-false>Close</dd>
+                      <dd class="text tge__data-value" data-tge-undefined>Undefined</dd>
                     </div>
                     <div class="tge__data-group tge__data-group--right">
                       <dt class="text tge__data-heading">Actual price</dt>
-                      <dd class="text tge__data-value tge__data-value--price" data-tge-actual-price>1.5 ETH</dd>
+                      <dd data-prefix="ETH" class="text tge__data-value tge__data-value--price" data-tge-actual-price>1.5</dd>
                     </div>
                   </dl>
                 </div>
