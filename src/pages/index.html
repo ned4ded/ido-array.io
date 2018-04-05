@@ -89,7 +89,7 @@
                 <div class="eray jumbo__eray">
                   <p class="text text--light text--dimmed eray__desc">eRAY total supply</p>
                   <p class="text text--light eray__value">
-                    <span data-total-eray-supply>866.2893</span>
+                    <span data-eth-balance>866.2893</span>
                   </p>
                   <p class="text text--light eray__desc">Backed 1:1 by ETH</p>
                 </div>
@@ -106,8 +106,9 @@
                       <dd class="text tge__data-value" data-tge-undefined>Undefined</dd>
                     </div>
                     <div class="tge__data-group tge__data-group--right">
-                      <dt class="text text--light tge__data-heading">Actual price</dt>
-                      <dd data-prefix="ETH" class="text text--light tge__data-value tge__data-value--price" data-tge-actual-price>1.5</dd>
+                      <dt class="text text--light tge__data-heading" data-tge-true>Actual price</dt>
+                      <dt class="text text--light tge__data-heading" data-tge-false data-tge-undefined>Balance</dt>
+                      <dd data-prefix="ETH" class="text text--light tge__data-value tge__data-value--price" data-eth-actual-price >1.5</dd>
                     </div>
                   </dl>
                 </div>
@@ -123,7 +124,7 @@
                 <div class="eray infographic__eray">
                   <p class="text text--dimmed eray__desc">eRAY total supply</p>
                   <p class="text eray__value">
-                    <span data-total-eray-supply>866.2893</span>
+                    <span data-eth-balance>866.2893</span>
                   </p>
                   <p class="text eray__desc">Backed 1:1 by ETH</p>
                 </div>
@@ -140,8 +141,9 @@
                       <dd class="text tge__data-value" data-tge-undefined>Undefined</dd>
                     </div>
                     <div class="tge__data-group tge__data-group--right">
-                      <dt class="text tge__data-heading">Actual price</dt>
-                      <dd data-prefix="ETH" class="text tge__data-value tge__data-value--price" data-tge-actual-price>1.5</dd>
+                      <dt class="text tge__data-heading" data-tge-true>Actual price</dt>
+                      <dt class="text tge__data-heading" data-tge-false data-tge-undefined>Balance</dt>
+                      <dd data-prefix="ETH" class="text tge__data-value tge__data-value--price" data-eth-actual-price >1.5</dd>
                     </div>
                   </dl>
                 </div>
@@ -500,7 +502,7 @@
                 <p class="piechart__legend-text">Investor<span class="piechart__legend-percent">40%</span></p>
               </li>
             </ul>
-            <p class="piechart__text">For every 70 ETH invested</p>
+            <p class="piechart__text">For every 100 ETH invested</p>
           </div>
         </div>
       </div>
@@ -667,10 +669,28 @@
     </div>
   </div>
 
-  <div class="container tge-info">
-    <div class="row justify-content-end">
+  <div data-tge-status="true" class="container tge-info">
+    <div class="row justify-content-end align-items-center">
       <h2 class="col-12 col-md-9 heading-2 tge-info__heading">Token generation event</h2>
-      <div class="col-12">
+      <span class="w-100"></span>
+      <p data-tge-false class="col-12 col-md-3 text tge-info__text tge-info__text--position--countdown tge-info__text--view--countdown">
+        The new round will begin at the end of the balance.
+      </p>
+      <p data-tge-undefined class="col-12 col-md-9 text tge-info__text tge-info__text--position--countdown">
+        <b>Something went wrong!</b> Couldn't get TGE status.
+      </p>
+      <div data-tge-false class="col-12 col-md-9">
+        <div class="tge-info__countdown">
+          <p class="tge-info__countdown-balance">
+            Balance <span class="tge-info__countdown-balance-value">156.284</span>
+          </p>
+          <div class="tge-info__countdown-time">
+            Time to a new round <time><span class="tge-info__countdown-days tge-info__countdown-time--divider">1 day</span> <span class="tge-info__countdown-hours">15 hours</span></time>
+          </div>
+        </div>
+      </div>
+
+      <div data-tge-true class="col-12">
         <div class="row tge-info__block">
           <p class="col-12 col-md-3 text text--dark tge-info__text">
             This shows how much to collect and how much is collected ETH.
@@ -686,58 +706,62 @@
           </p>
           <div data-toggle="tooltip" data-placement="top" title="521 277 / 521 400" data-delay='{ "hide": 1000 }' class="col-12 col-md-9 scale scale--theme--dark">
             <p class="scale__name" data-scale-name="Starting block" style="width: 81%">Starting block</p>
-            <p class="scale__bar scale__bar--theme--stages" data-start="521 100" data-end="521  400">521 277 / 521 400</p>
+            <p class="scale__bar scale__bar--theme--stages" data-start-block data-start="521 100" data-end="521 400">521 277 / 521 400</p>
           </div>
         </div>
       </div>
-      <p class="col-12 col-md-9 text tge-info__text tge-info__text--highlight">
+
+      <p data-tge-true class="col-12 col-md-9 text tge-info__text tge-info__text--highlight">
         Whichever completes sooner will end the live TGE.
       </p>
     </div>
 
-    <div class="stages">
-      <div class="stages__item stages__item--align--left">
-        <p class="text stages__name">
-          Stage <span data-previous-stage>4</span>
-        </p>
-        <div class="stages__data stages__data--price">
-          <p class="text text--dimmed stages__data-name">Previous price</p>
-          <p class="text stages__data-value" data-value-postfix="ETH">1.66</p>
+    <div data-tge-true class="tge-info__stage">
+      <div class="stages">
+        <div class="stages__item stages__item--align--left">
+          <p class="text stages__name">
+            Stage <span data-previous-stage>4</span>
+          </p>
+          <div class="stages__data stages__data--price">
+            <p class="text text--dimmed stages__data-name">Previous price</p>
+            <p class="text stages__data-value" data-value-postfix="ETH">1.66</p>
+          </div>
+          <div class="stages__data">
+            <p class="text text--dimmed stages__data-name">Starting block</p>
+            <p class="text stages__data-value">521 100</p>
+          </div>
         </div>
-        <div class="stages__data">
-          <p class="text text--dimmed stages__data-name">Starting block</p>
-          <p class="text stages__data-value">521 100</p>
-        </div>
-      </div>
 
-      <div class="stages__item stages__item--dark stages__item--align--center">
-        <p data-status="true" data-status-true="live" class="text stages__name">
-          Stage <span data-current-stage>5</span>
-        </p>
-        <div class="stages__data stages__data--price">
-          <p class="text text--dimmed stages__data-name">Actual price</p>
-          <p class="text stages__data-value" data-value-postfix="ETH">1.5</p>
+        <div class="stages__item stages__item--dark stages__item--align--center">
+          <p data-status="true" data-status-true="live" class="text stages__name">
+            Stage <span data-current-stage>5</span>
+          </p>
+          <div class="stages__data stages__data--price">
+            <p class="text text--dimmed stages__data-name">Actual price</p>
+            <p class="text stages__data-value" data-value-postfix="ETH">1.5</p>
+          </div>
+          <div class="stages__data">
+            <p class="text text--dimmed stages__data-name">Current block</p>
+            <p class="text stages__data-value">521 277</p>
+          </div>
         </div>
-        <div class="stages__data">
-          <p class="text text--dimmed stages__data-name">Current block</p>
-          <p class="text stages__data-value">521 277</p>
-        </div>
-      </div>
 
-      <div class="stages__item stages__item--align--right">
-        <p class="text stages__name">
-          Stage <span data-next-stage>6</span>
-        </p>
-        <div class="stages__data stages__data--price">
-          <p class="text text--dimmed stages__data-name">Previous price</p>
-          <p class="text stages__data-value" data-value-postfix="ETH">1.2</p>
-        </div>
-        <div class="stages__data">
-          <p class="text text--dimmed stages__data-name">Starting block</p>
-          <p class="text stages__data-value">521 100</p>
+        <div class="stages__item stages__item--align--right">
+          <p class="text stages__name">
+            Stage <span data-next-stage>6</span>
+          </p>
+          <div class="stages__data stages__data--price">
+            <p class="text text--dimmed stages__data-name">Previous price</p>
+            <p class="text stages__data-value" data-value-postfix="ETH">1.2</p>
+          </div>
+          <div class="stages__data">
+            <p class="text text--dimmed stages__data-name">Starting block</p>
+            <p class="text stages__data-value">521 100</p>
+          </div>
         </div>
       </div>
     </div>
+
 
     <div class="row justify-content-end">
 
@@ -1315,8 +1339,6 @@
       </div>
     </div>
   </footer>
-
-
 
   <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
   <script>

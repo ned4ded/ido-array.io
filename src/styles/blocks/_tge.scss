@@ -95,31 +95,6 @@
       font-weight: bold;
       margin: 0;
 
-      &[data-tge-true] {
-        display: none;
-      }
-
-      &[data-tge-false] {
-        display: none;
-      }
-
-      &[data-tge-undefined] {
-        display: none;
-      }
-
-      .tge__data[data-tge-status="true"] &[data-tge-true] {
-        display: block;
-      }
-
-      .tge__data[data-tge-status="false"] &[data-tge-false] {
-        display: block;
-      }
-
-      .tge__data:not([data-tge-status="false"]):not([data-tge-status="true"]) &[data-tge-undefined] {
-        display: block;
-      }
-
-
       @include left-group() {
         color: $lightest;
       }
@@ -140,12 +115,12 @@
   }
 
   &.jumbo__tge {
+    & .tge__data:not([data-tge-status="true"]) .tge__data-group--right * {
+      color: $blue-100;
+    }
+
     @include respond-to(tablet) {
       text-align: right;
-
-      & .tge {
-
-      }
     }
   }
 }

@@ -1,0 +1,23 @@
+[data-tge-true] {
+  display: none;
+}
+
+[data-tge-false] {
+  display: none;
+}
+
+[data-tge-undefined] {
+  display: none;
+}
+
+[data-tge-status="true"] [data-tge-true] {
+  display: block;
+}
+
+[data-tge-status="false"] [data-tge-false] {
+  display: block;
+}
+
+[data-tge-status]:not([data-tge-status="false"]):not([data-tge-status="true"]) [data-tge-undefined] {
+  display: block;
+}
