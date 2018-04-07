@@ -695,8 +695,17 @@
           <p class="col-12 col-md-3 text text--dark tge-info__text">
             This shows how much to collect and how much is collected ETH.
           </p>
-          <div data-toggle="tooltip" data-placement="top" title="300 675 ETH / 500 000" data-delay='{ "hide": 1000 }' class="col-12 col-md-9 scale">
-            <p class="scale__name" data-scale-name="ETH" style="width: 69%">ETH</p>
+          <div data-tooltip-inside class="col-12 col-md-9 scale">
+            <p class="scale__name" data-scale-name="ETH" style="width: 69%">
+              <span
+                data-toggle="tooltip"
+                data-placement="top"
+                title="300 675 ETH"
+                data-delay='{ "hide": 1000 }'
+                class="scale__tooltip-target">
+                ETH
+              </span>
+            </p>
             <p class="scale__bar" data-start="1" data-end="500 000">300 675 ETH / 500 000</p>
           </div>
         </div>
@@ -704,8 +713,18 @@
           <p class="col-12 col-md-3 text text--dark tge-info__text">
             This shows how many stages of investment are left.
           </p>
-          <div data-toggle="tooltip" data-placement="top" title="521 277 / 521 400" data-delay='{ "hide": 1000 }' class="col-12 col-md-9 scale scale--theme--dark">
-            <p class="scale__name" data-scale-name="Starting block" style="width: 81%">Starting block</p>
+          <div data-tooltip-inside class="col-12 col-md-9 scale scale--theme--dark">
+            <p class="scale__name" data-scale-name="Starting block" style="width: 90%">
+              <span
+                data-toggle="tooltip"
+                data-tooltip-theme="dark"
+                data-placement="top"
+                title="521 277"
+                data-delay='{ "hide": 1000 }'
+                class="scale__tooltip-target">
+                Starting block
+            </span>
+            </p>
             <p class="scale__bar scale__bar--theme--stages" data-start-block data-start="521 100" data-end="521 400">521 277 / 521 400</p>
           </div>
         </div>
@@ -1339,6 +1358,20 @@
       </div>
     </div>
   </footer>
+
+  <template id="tooltip-regular">
+    <div class="tooltip tooltip--theme--regular" role="tooltip">
+      <div class="arrow"></div>
+      <div class="tooltip-inner"></div>
+    </div>
+  </template>
+
+  <template id="tooltip-dark">
+    <div class="tooltip tooltip--theme--dark" role="tooltip">
+      <div class="arrow"></div>
+      <div class="tooltip-inner"></div>
+    </div>
+  </template>
 
   <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
   <script>
