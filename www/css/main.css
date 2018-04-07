@@ -769,10 +769,6 @@ body {
           display: block; } }
   .scale--theme--dark .scale__name {
     background-image: linear-gradient(93deg, #00c6ff 0%, #1449db 100%); }
-  .scale__tooltip-target {
-    position: absolute;
-    right: 0;
-    top: -10px; }
 
 .accordion__table {
   display: block;
@@ -1261,8 +1257,8 @@ body {
     background-color: #00aaff; }
 
 .tooltip--theme--regular .arrow {
-  left: auto;
-  right: 23px; }
+  right: 23px;
+  left: auto; }
   .tooltip--theme--regular .arrow:before {
     border-top-color: #00aaff; }
 
@@ -1295,6 +1291,11 @@ body {
   left: auto; }
   .tooltip--theme--dark .arrow:before {
     border-top-color: #1449db; }
+
+.scale__tooltip-target {
+  position: absolute;
+  right: 4px;
+  top: -17px; }
 
 .main-info {
   display: -webkit-box;

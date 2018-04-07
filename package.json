@@ -30,6 +30,7 @@
     "gulp-sourcemaps": "^2.6.4",
     "gulp-svg-sprite": "^1.4.0",
     "gulp-svgstore": "^6.1.1",
+    "gulp-uglify": "^3.0.0",
     "postcss-scss": "^1.0.2",
     "xmldom": "^0.1.27"
   },

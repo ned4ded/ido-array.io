@@ -1,55 +1,40 @@
-function makeTooltips({ templates, wrapperAttr }) {
+function makeTooltips({ templates, templateConf, wrapperAttr }) {
   const callbacks = {
-    template : template => {
-      return template.get().content
-    },
-    serialize : (node) => {
-      return (new XMLSerializer()).serializeToString(node);
-    },
+    template : template => template.content,
+    serialize : (node) => (new XMLSerializer()).serializeToString(node),
     call: template => selector => $( selector ).each(function(index) {
       const $el = $( this );
-
       const target = $el.parents(wrapperAttr).get(0);
 
-      $( target ).hover((ev) => {
-        return $el.tooltip('toggle');
+      $( target ).hover(() => {
+        $el.tooltip('toggle');
       });
 
       $el.tooltip({
         template,
         container: $el,
-        offset: -35,
+        ...templateConf
       });
 
       return $el;
     }),
   };
 
-  const processing = (template, functions) => {
-    const fns = functions instanceof Array ? functions : [functions];
+  const processing = (template) => {
+    const fns = [
+      callbacks.template,
+      callbacks.serialize,
+      callbacks.call
+    ];
 
     return fns.reduce((acc, fn) => {
       return fn(acc);
     }, template);
   }
 
-  const make = (name) => processing(templates[name], patterns[name]);
+  const make = (name) => processing(templates[name]);
 
-  const patterns = {
-    regular: [
-      callbacks.template,
-      callbacks.serialize,
-      callbacks.call
-    ],
-    dark: [
-      callbacks.template,
-      callbacks.serialize,
-      callbacks.call
-    ],
-  };
-
-  const regular = make('regular');
-  const dark = make('dark');
-
-  return { regular, dark };
+  return Object.keys(templates).reduce((acc, key) => {
+    return { ...acc, [key]: make(key) };
+  }, {});
 }

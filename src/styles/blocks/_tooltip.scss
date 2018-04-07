@@ -4,8 +4,6 @@
       @content;
     }
   }
-
-
   @include theme(regular) {
     &.tooltip {
 
@@ -44,15 +42,14 @@
     }
 
     & .arrow {
-      left: auto;
       right: 23px;
+      left: auto;
 
       &:before {
         border-top-color: $blue-contrast-200;
       }
     }
   }
-
   @include theme(dark) {
     &.tooltip {
 
@@ -99,5 +96,4 @@
       }
     }
   }
-
 }

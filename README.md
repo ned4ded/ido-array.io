@@ -60,3 +60,51 @@ To make new structure with tge-status logic use alike markup structure: `.some-c
 ```
 
 Use wrappers to avoid problems with flex markup;
+
+## JS Specifics
+
+### Tooltips
+
+Been used bootstrap's modified Popper.js; Write templates in the end of the layout file, declare them in terminal.js and provide specific selectors.
+
+``` html
+<template id="tooltip-dark">
+  <div class="tooltip tooltip--theme--dark" role="tooltip">
+    <div class="arrow"></div>
+    <div class="tooltip-inner"></div>
+  </div>
+</template>
+```
+
+```js
+const config = {
+  tooltips: {
+    templates: {
+      dark: document.getElementById('tooltip-dark'),
+    },
+    wrapperAttr: '[data-tooltip-trigger]',
+    templateConf: {
+      offset: -35,
+    }
+  }
+};
+```
+
+``` scss
+.tooltip--theme--dark {
+  &.tooltip {
+    & .tooltip-inner {
+      /* Container styles */
+    }
+
+    & .arrow {
+      /* Arrow position */
+      &:before {
+        /* Arrow styles */
+      }
+    }
+  }
+}
+```
+
+For the best positioning try to use empty elements (`span`'s for xmpl) as tooltip initializers and add to any of their parent element attr `[data-tooltip-trigger]` or whatever you specified in config.
