@@ -8,7 +8,7 @@ function startRunner(config) {
   }
 
   return {
-    tooltips: (selectors) => {
+    tooltips: function(selectors) {
       const tooltips = makeTooltips(config.tooltips);
 
       return Object.keys(selectors).reduce((acc, name) => {

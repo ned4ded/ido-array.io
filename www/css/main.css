@@ -1309,6 +1309,17 @@ body {
   display: block;
   width: 100%; }
 
+.tge__tooltip-target {
+  position: absolute;
+  left: 63%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  top: -15px;
+  display: block;
+  width: 100%; }
+  .tge__tooltip-target--bottom {
+    bottom: -15px; }
+
 .main-info {
   display: -webkit-box;
   display: -ms-flexbox;
