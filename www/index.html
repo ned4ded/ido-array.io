@@ -98,12 +98,14 @@
                 <div class="tge jumbo__tge">
                   <p class="text text--light text--dimmed tge__text">Token generation event</p>
 
-                  <dl data-tge-status="true" class="tge__data">
+                  <dl data-toggle="tooltip" data-placement="top" title=" Only 123 blocks left to the end of stage. Next price: 1.23 ETH / eRAY. Click for more info." data-delay='{ "hide": 1000 }' data-tge-status="true" class="tge__data">
                     <div class="tge__data-group tge__data-group--left">
                       <dt class="text text--light tge__data-heading">Status</dt>
                       <dd class="text tge__data-value" data-tge-true>Live</dd>
                       <dd class="text tge__data-value" data-tge-false>Close</dd>
                       <dd class="text tge__data-value" data-tge-undefined>Undefined</dd>
+
+
                     </div>
                     <div class="tge__data-group tge__data-group--right">
                       <dt class="text text--light tge__data-heading" data-tge-true>Actual price</dt>
@@ -133,7 +135,7 @@
               <div class="col-12 col-sm-7 col-xl-8 text-sm-right">
                 <div class="tge infographic__tge">
                   <p class="text text--dimmed tge__text">Token generation event</p>
-                  <dl data-tge-status="true" class="tge__data">
+                  <dl data-toggle="tooltip" data-placement="bottom" title=" Only 123 blocks left to the end of stage. Next price: 1.23 ETH / eRAY. Click for more info." data-delay='{ "hide": 1000 }' data-tge-status="true" class="tge__data">
                     <div class="tge__data-group tge__data-group--left">
                       <dt class="text tge__data-heading">Status</dt>
                       <dd class="text tge__data-value" data-tge-true>Live</dd>
@@ -738,8 +740,9 @@
           </div>
         </div>
 
-        <div class="stages__item stages__item--dark stages__item--align--center">
-          <p data-status="true" data-status-true="live" class="text stages__name">
+        <div data-tooltip-trigger class="stages__item stages__item--dark stages__item--align--center">
+
+          <p class="text stages__name">
             Stage <span data-current-stage>5</span>
           </p>
           <div class="stages__data stages__data--price">
@@ -750,6 +753,10 @@
             <p class="text text--dimmed stages__data-name">Current block</p>
             <p class="text stages__data-value">521 277</p>
           </div>
+          <span data-toggle="tooltip" data-placement="top" title="Only 123 blocks left to next stage (approximately 1 hour, 23 minutes)" data-delay='{ "hide": 1000 }' class="stage__tooltip-target">
+
+          </span>
+
         </div>
 
         <div class="stages__item stages__item--align--right">

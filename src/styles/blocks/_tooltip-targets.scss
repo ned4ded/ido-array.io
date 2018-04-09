@@ -9,3 +9,12 @@
   right: 4px;
   top: -17px;
 }
+
+@include target(stage) {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -15px;
+  display: block;
+  width: 100%;
+}
