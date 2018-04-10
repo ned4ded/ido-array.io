@@ -11,11 +11,11 @@
 
     @keyframes bg-right {
       from {
-        background-position-x: right 0;
+        background-position-x: bottom right 0;
       }
 
       to {
-        background-position-x: right -100%;
+        background-position: bottom right -100%;
       }
     }
 
@@ -54,7 +54,7 @@
       }
 
       &.shown:after {
-        background-position-x: right -110%;
+        background-position: bottom right -110%;
       }
 
       &.shown.showing:after {
