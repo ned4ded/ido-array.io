@@ -54,7 +54,7 @@
     top: 63%;
     right: -12%;
 
-    display: block;
+    display: none;
 
     width: 65px;
     height: 65px;
@@ -67,6 +67,10 @@
     background-image: gradient-contrast-green($angle: 257deg);
 
     font-size: 0;
+
+    @include respond-to(medium) {
+      display: block;
+    }
 
     &:before {
       position: absolute;

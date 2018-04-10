@@ -6,6 +6,12 @@ body {
   background-color: $lightest;
 }
 
+.body--overflow--hidden {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
 .heading-1 {
   text-transform: capitalize;
 

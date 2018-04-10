@@ -7,6 +7,13 @@
     background-image: none;
   }
 
+  &--behavior--mobile-menu {
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    // height: 100%;
+  }
+
   &__logo {
     width: 100%;
     display: block;
@@ -63,21 +70,27 @@
     }
 
     &-item {
+      margin: 25px 0;
       @include respond-to(medium) {
+        margin: 0;
         margin-left: 30px;
       }
     }
   }
 
   &__link {
+    font-size: 26px;
     color: $lightest;
-    font-size: 12px;
     font-weight: 600;
     font-family: $ff-sans;
     line-height: 1.85;
     letter-spacing: 0.9px;
     text-transform: uppercase;
     transition: opacity .1s ease-in;
+
+    @include respond-to(medium) {
+      font-size: 12px;
+    }
 
     &:hover {
       color: $lightest;

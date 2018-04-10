@@ -26,7 +26,16 @@
     position: relative;
     z-index: 0;
 
+    .header--behavior--mobile-menu ~ & {
+      margin-top: 59px;
+      
+      @include respond-to(tablet) {
+        margin-top: 96px;
+      }
+    }
+
     @include respond-to(medium) {
+      margin-top: 0;
       &:before {
         position: absolute;
         content: '';

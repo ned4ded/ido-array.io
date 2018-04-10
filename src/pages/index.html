@@ -48,1317 +48,1325 @@
   <![endif]-->
 
   <!-- header.container-fluid.fixed-top.header -->
-  <header id="header" class="container-fluid header">
-    <nav class="container navbar navbar-expand-md header__navbar">
-      <div class="navbar-brand">
-        <a id="logo" href="index.html" class="header__logo">
-          <img src="assets/imgs/logo-white.png" class="logo logo--white" alt="Arrio.io logotype" width="127" height="39">
-          <img src="assets/imgs/logo-dark.png" class="logo logo--dark" alt="Arrio.io logotype" width="127" height="39">
-        </a>
-      </div>
-      <button id="menu-toggler" class="navbar-toggler navbar-toggler-right header__toggler" type="button" aria-expanded="false">
-        <svg class="icon icon__burger">
-          <use xlink:href="assets/sprite.svg#icon__burger"></use>
-        </svg>
-      </button>
-
-      <div id="headerMenu" class="collapse navbar-collapse">
-        <ul class="header__menu">
-          <li class="header__menu-item">
-            <a href="#" class="header__link">About IDO</a>
-          </li>
-          <li class="header__menu-item">
-            <a href="#" class="header__link">Current status</a>
-          </li>
-          <li class="header__menu-item">
-            <a href="#" class="header__link">Smart contract</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-  </header>
-
-  <div id="main-info__bg" class="container-fluid main-info__bg">
-    <div class="main-info">
-        <div id="jumbo" class="main-info__block jumbo">
-          <div id="jumbo-content" class="main-info__block-content jumbo__content">
-            <h1 class="heading-1 jumbo__heading">
-                <span>Initial</span>
-                <span>Development</span>
-                <span>Offering</span>
-              </h1>
-            <p class="text text--light jumbo__text">An elastic approach to funding blockchain projects.</p>
-            <div class="row">
-              <div class="col-12 col-sm-6">
-                <div class="eray jumbo__eray">
-                  <p class="text text--light text--dimmed eray__desc">eRAY total supply</p>
-                  <p class="text text--light eray__value">
-                    <span data-eth-balance>866.2893</span>
-                  </p>
-                  <p class="text text--light eray__desc">Backed 1:1 by ETH</p>
-                </div>
-              </div>
-              <div class="col-12 col-sm-6 text-sm-right">
-                <div class="tge jumbo__tge">
-                  <p class="text text--light text--dimmed tge__text">Token generation event</p>
-
-                  <dl data-tooltip-trigger data-tge-status="true" class="tge__data">
-                    <div class="tge__data-group tge__data-group--left">
-                      <dt class="text text--light tge__data-heading">Status</dt>
-                      <dd class="text tge__data-value" data-tge-true>Live</dd>
-                      <dd class="text tge__data-value" data-tge-false>Close</dd>
-                      <dd class="text tge__data-value" data-tge-undefined>Undefined</dd>
-                    </div>
-                    <div class="tge__data-group tge__data-group--right">
-                      <dt class="text text--light tge__data-heading" data-tge-true>Actual price</dt>
-                      <dt class="text text--light tge__data-heading" data-tge-false data-tge-undefined>Balance</dt>
-                      <dd data-prefix="ETH" class="text text--light tge__data-value tge__data-value--price" data-eth-actual-price>1.5</dd>
-                    </div>
-                    <span  data-toggle="tooltip" data-placement="top" title=" Only 123 blocks left to the end of stage. Next price: 1.23 ETH / eRAY. Click for more info." data-delay='{ "hide": 1000 }' class="tge__tooltip-target"></span>
-                  </dl>
-                </div>
-              </div>
-            </div>
-            <button id="jumbo-toggle" class="button jumbo__button">
-              Закрыть
-
-              <svg class="icon icon__arrow jumbo__button-icon">
-                <use xlink:href="assets/sprite.svg#icon__arrow"></use>
-              </svg>
-            </button>
-          </div>
+  <div id="mobile-menu-wrapper">
+    <header id="header" class="container-fluid header">
+      <nav class="container navbar navbar-expand-md header__navbar">
+        <div class="navbar-brand">
+          <a id="logo" href="index.html" class="header__logo">
+            <img src="assets/imgs/logo-white.png" class="logo logo--white" alt="Arrio.io logotype" width="127" height="39">
+            <img src="assets/imgs/logo-dark.png" class="logo logo--dark" alt="Arrio.io logotype" width="127" height="39">
+          </a>
         </div>
-        <div id="infographic" class="main-info__block main-info__infographic">
-          <div class="main-info__block-content infographic">
-            <div class="row">
+        <button id="menu-toggler" class="navbar-toggler navbar-toggler-right header__toggler" type="button" aria-expanded="false">
+          <svg class="icon icon__burger">
+            <use xlink:href="assets/sprite.svg#icon__burger"></use>
+          </svg>
+        </button>
 
-              <div class="col-12 col-sm-5 col-xl-4">
-                <div class="eray infographic__eray">
-                  <p class="text text--dimmed eray__desc">eRAY total supply</p>
-                  <p class="text eray__value">
-                    <span data-eth-balance>866.2893</span>
-                  </p>
-                  <p class="text eray__desc">Backed 1:1 by ETH</p>
+        <div id="headerMenu" class="collapse navbar-collapse">
+          <ul class="header__menu">
+            <li class="header__menu-item">
+              <a href="#" class="header__link">About IDO</a>
+            </li>
+            <li class="header__menu-item">
+              <a href="#" class="header__link">Current status</a>
+            </li>
+            <li class="header__menu-item">
+              <a href="#" class="header__link">Smart contract</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <div id="main-info__bg" class="container-fluid main-info__bg">
+      <div class="main-info">
+          <div id="jumbo" class="main-info__block jumbo">
+            <div id="jumbo-content" class="main-info__block-content jumbo__content">
+              <h1 class="heading-1 jumbo__heading">
+                  <span>Initial</span>
+                  <span>Development</span>
+                  <span>Offering</span>
+                </h1>
+              <p class="text text--light jumbo__text">An elastic approach to funding blockchain projects.</p>
+              <div class="row">
+                <div class="col-12 col-sm-6">
+                  <div class="eray jumbo__eray">
+                    <p class="text text--light text--dimmed eray__desc">eRAY total supply</p>
+                    <p class="text text--light eray__value">
+                      <span data-eth-balance>866.2893</span>
+                    </p>
+                    <p class="text text--light eray__desc">Backed 1:1 by ETH</p>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-6 text-sm-right">
+                  <div class="tge jumbo__tge">
+                    <p class="text text--light text--dimmed tge__text">Token generation event</p>
+
+                    <dl data-tooltip-trigger data-tge-status="true" class="tge__data">
+                      <div class="tge__data-group tge__data-group--left">
+                        <dt class="text text--light tge__data-heading">Status</dt>
+                        <dd class="text tge__data-value" data-tge-true>Live</dd>
+                        <dd class="text tge__data-value" data-tge-false>Close</dd>
+                        <dd class="text tge__data-value" data-tge-undefined>Undefined</dd>
+                      </div>
+                      <div class="tge__data-group tge__data-group--right">
+                        <dt class="text text--light tge__data-heading" data-tge-true>Actual price</dt>
+                        <dt class="text text--light tge__data-heading" data-tge-false data-tge-undefined>Balance</dt>
+                        <dd data-prefix="ETH" class="text text--light tge__data-value tge__data-value--price" data-eth-actual-price>1.5</dd>
+                      </div>
+                      <span  data-toggle="tooltip" data-placement="top" title=" Only 123 blocks left to the end of stage. Next price: 1.23 ETH / eRAY. Click for more info." data-delay='{ "hide": 1000 }' class="tge__tooltip-target"></span>
+                    </dl>
+                  </div>
                 </div>
               </div>
+              <button id="jumbo-toggle" class="button jumbo__button">
+                Закрыть
 
-              <div class="col-12 col-sm-7 col-xl-8 text-sm-right">
-                <div class="tge infographic__tge">
-                  <p class="text text--dimmed tge__text">Token generation event</p>
-                  <dl data-tooltip-trigger data-tge-status="true" class="tge__data">
-                    <div class="tge__data-group tge__data-group--left">
-                      <dt class="text tge__data-heading">Status</dt>
-                      <dd class="text tge__data-value" data-tge-true>Live</dd>
-                      <dd class="text tge__data-value" data-tge-false>Close</dd>
-                      <dd class="text tge__data-value" data-tge-undefined>Undefined</dd>
-                    </div>
-                    <div class="tge__data-group tge__data-group--right">
-                      <dt class="text tge__data-heading" data-tge-true>Actual price</dt>
-                      <dt class="text tge__data-heading" data-tge-false data-tge-undefined>Balance</dt>
-                      <dd data-prefix="ETH" class="text tge__data-value tge__data-value--price" data-eth-actual-price >1.5</dd>
-                    </div>
-                    <span data-toggle="tooltip" data-placement="bottom" title=" Only 123 blocks left to the end of stage. Next price: 1.23 ETH / eRAY. Click for more info." data-delay='{ "hide": 1000 }' class="tge__tooltip-target tge__tooltip-target--bottom"></span>
-                  </dl>
-                </div>
-              </div>
-
+                <svg class="icon icon__arrow jumbo__button-icon">
+                  <use xlink:href="assets/sprite.svg#icon__arrow"></use>
+                </svg>
+              </button>
             </div>
+          </div>
+          <div id="infographic" class="main-info__block main-info__infographic">
+            <div class="main-info__block-content infographic">
+              <div class="row">
 
-            <div class="infographic-content">
-              <ul class="row justify-content-between justify-content-sm-start nav infographic-content__tabs" role="tablist">
+                <div class="col-12 col-sm-5 col-xl-4">
+                  <div class="eray infographic__eray">
+                    <p class="text text--dimmed eray__desc">eRAY total supply</p>
+                    <p class="text eray__value">
+                      <span data-eth-balance>866.2893</span>
+                    </p>
+                    <p class="text eray__desc">Backed 1:1 by ETH</p>
+                  </div>
+                </div>
 
-                <li class="col-4 col-sm-auto infographic-content__tab">
-                  <a class="infographic-content__tab-link active" data-toggle="pill" href="#coinbase">Coinbase</a>
+                <div class="col-12 col-sm-7 col-xl-8 text-sm-right">
+                  <div class="tge infographic__tge">
+                    <p class="text text--dimmed tge__text">Token generation event</p>
+                    <dl data-tooltip-trigger data-tge-status="true" class="tge__data">
+                      <div class="tge__data-group tge__data-group--left">
+                        <dt class="text tge__data-heading">Status</dt>
+                        <dd class="text tge__data-value" data-tge-true>Live</dd>
+                        <dd class="text tge__data-value" data-tge-false>Close</dd>
+                        <dd class="text tge__data-value" data-tge-undefined>Undefined</dd>
+                      </div>
+                      <div class="tge__data-group tge__data-group--right">
+                        <dt class="text tge__data-heading" data-tge-true>Actual price</dt>
+                        <dt class="text tge__data-heading" data-tge-false data-tge-undefined>Balance</dt>
+                        <dd data-prefix="ETH" class="text tge__data-value tge__data-value--price" data-eth-actual-price >1.5</dd>
+                      </div>
+                      <span data-toggle="tooltip" data-placement="bottom" title=" Only 123 blocks left to the end of stage. Next price: 1.23 ETH / eRAY. Click for more info." data-delay='{ "hide": 1000 }' class="tge__tooltip-target tge__tooltip-target--bottom"></span>
+                    </dl>
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="infographic-content">
+                <ul class="row justify-content-between justify-content-sm-start nav infographic-content__tabs" role="tablist">
+
+                  <li class="col-4 col-sm-auto infographic-content__tab">
+                    <a class="infographic-content__tab-link active" data-toggle="pill" href="#coinbase">Coinbase</a>
+                  </li>
+
+                  <li class="col-4 col-sm-auto infographic-content__tab">
+                    <a class="infographic-content__tab-link" data-toggle="pill" href="#cryptonet">Cryptonet</a>
+                  </li>
+
+                  <li class="col-4 col-sm-auto infographic-content__tab">
+                    <a class="infographic-content__tab-link" data-toggle="pill" href="#prostocoin">Prostocoin</a>
+                  </li>
+
+                </ul>
+
+                <div class="tab-content infographic-content__content">
+
+                  <div id="coinbase" class="tab-pane active" role="tabpanel">
+
+                    <div class="row justify-content-center align-items-start">
+                      <div class="col-12">
+
+                        <div class="diagramm">
+                          <ul class="diagramm__timescale">
+                            <li class="diagramm__timescale-item">
+                              <button class="diagramm__timescale-btn active" type="button" name="hours">1H</button>
+                            </li>
+                            <li class="diagramm__timescale-item">
+                              <button class="diagramm__timescale-btn" type="button" name="days">1D</button>
+                            </li>
+                            <li class="diagramm__timescale-item">
+                              <button class="diagramm__timescale-btn" type="button" name="weeks">1W</button>
+                            </li>
+                            <li class="diagramm__timescale-item">
+                              <button class="diagramm__timescale-btn" type="button" name="month">1M</button>
+                            </li>
+                            <li class="diagramm__timescale-item">
+                              <button class="diagramm__timescale-btn" type="button" name="year">1Y</button>
+                            </li>
+                            <li class="diagramm__timescale-item">
+                              <button class="diagramm__timescale-btn" type="button" name="all">All</button>
+                            </li>
+
+                          </ul>
+
+                          <div class="row diagramm__data-group">
+                            <div class="col-12 col-sm-3 col-md-auto">
+                              <dl class="diagramm__data">
+                                <dt class="text text--dimmed diagramm__data-heading">Token price</dt>
+                                <dd class="text diagramm__data-value diagramm__data-value--postfix" data-postfix="ETH">356.28</dd>
+                              </dl>
+                            </div>
+                            <div class="col-12 col-sm-3 col-md-auto">
+                              <dl class="diagramm__data">
+                                <dt class="text text--dimmed diagramm__data-heading">Since last month</dt>
+                                <dd class="text diagramm__data-value" data-prefix="+" data-postfix="ETH">35.57</dd>
+                              </dl>
+                            </div>
+                            <div class="col-12 col-sm-3 col-lg-auto">
+                              <dl class="diagramm__data diagramm__data--last-month-percent">
+                                <dt class="text text--dimmed diagramm__data-heading">Since last month (%)</dt>
+                                <dd class="text diagramm__data-value" data-prefix="+" data-postfix="%">11.57</dd>
+                              </dl>
+                            </div>
+                          </div>
+
+                        </div>
+
+                        <div class="line-chart diagramm__line-chart">
+                          <p class="text line-chart__current" data-postfix="ETH">567.43</p>
+                          <div class="line-chart__view">
+
+                          </div>
+                          <ul class="line-chart__timescale">
+                            <li class="text line-chart__timescale-item">Feb 26</li>
+                            <li class="text line-chart__timescale-item">Feb 27</li>
+                            <li class="text line-chart__timescale-item">Feb 28</li>
+                            <li class="text line-chart__timescale-item">Mar 1</li>
+                            <li class="text line-chart__timescale-item">Mar 2</li>
+                          </ul>
+                        </div>
+
+                      </div>
+                    </div>
+
+                  </div>
+
+                  <div id="cryptonet" class="tab-pane" role="tabpanel">
+
+                    <div class="row justify-content-center align-items-start">
+                      <div class="col-12">
+
+                        <div class="diagramm">
+                          <ul class="diagramm__timescale">
+                            <li class="diagramm__timescale-item">
+                              <button class="diagramm__timescale-btn" type="button" name="hours">1H</button>
+                            </li>
+                            <li class="diagramm__timescale-item">
+                              <button class="diagramm__timescale-btn" type="button" name="days">1D</button>
+                            </li>
+                            <li class="diagramm__timescale-item">
+                              <button class="diagramm__timescale-btn active" type="button" name="weeks">1W</button>
+                            </li>
+                            <li class="diagramm__timescale-item">
+                              <button class="diagramm__timescale-btn" type="button" name="month">1M</button>
+                            </li>
+                            <li class="diagramm__timescale-item">
+                              <button class="diagramm__timescale-btn" type="button" name="year">1Y</button>
+                            </li>
+                            <li class="diagramm__timescale-item">
+                              <button class="diagramm__timescale-btn" type="button" name="all">All</button>
+                            </li>
+
+                          </ul>
+
+                          <div class="row diagramm__data-group">
+                            <div class="col-12 col-md-3 col-lg-5 col-xl-4">
+                              <dl class="diagramm__data">
+                                <dt class="text text--dimmed diagramm__data-heading">Token price</dt>
+                                <dd class="text diagramm__data-value diagramm__data-value--postfix" data-postfix="ETH">3526.28</dd>
+                              </dl>
+                            </div>
+                            <div class="col-12 col-md-3 col-lg-5 col-xl-4">
+                              <dl class="diagramm__data">
+                                <dt class="text text--dimmed diagramm__data-heading">Since last month</dt>
+                                <dd class="text diagramm__data-value" data-prefix="+" data-postfix="ETH">35.57</dd>
+                              </dl>
+                            </div>
+                            <div class="col-12 col-md-3 col-xl-4">
+                              <dl class="diagramm__data diagramm__data--last-month-percent">
+                                <dt class="text text--dimmed diagramm__data-heading">Since last month (%)</dt>
+                                <dd class="text diagramm__data-value" data-prefix="+" data-postfix="%">37.900</dd>
+                              </dl>
+                            </div>
+                          </div>
+
+                        </div>
+
+                        <div class="line-chart diagramm__line-chart">
+                          <p class="text line-chart__current" data-postfix="ETH">1000.43</p>
+                          <div class="line-chart__view">
+
+                          </div>
+                          <ul class="line-chart__timescale">
+                            <li class="text line-chart__timescale-item">Feb 26</li>
+                            <li class="text line-chart__timescale-item">Feb 27</li>
+                            <li class="text line-chart__timescale-item">Feb 28</li>
+                            <li class="text line-chart__timescale-item">Mar 1</li>
+                            <li class="text line-chart__timescale-item">Mar 2</li>
+                          </ul>
+                        </div>
+
+                      </div>
+                    </div>
+
+                  </div>
+
+                  <div id="prostocoin" class="tab-pane" role="tabpanel">
+
+                    <div class="row justify-content-center align-items-start">
+                      <div class="col-12">
+
+                        <div class="diagramm">
+                          <ul class="diagramm__timescale">
+                            <li class="diagramm__timescale-item">
+                              <button class="diagramm__timescale-btn active" type="button" name="hours">1H</button>
+                            </li>
+                            <li class="diagramm__timescale-item">
+                              <button class="diagramm__timescale-btn" type="button" name="days">1D</button>
+                            </li>
+                            <li class="diagramm__timescale-item">
+                              <button class="diagramm__timescale-btn" type="button" name="weeks">1W</button>
+                            </li>
+                            <li class="diagramm__timescale-item">
+                              <button class="diagramm__timescale-btn" type="button" name="month">1M</button>
+                            </li>
+                            <li class="diagramm__timescale-item">
+                              <button class="diagramm__timescale-btn" type="button" name="year">1Y</button>
+                            </li>
+                            <li class="diagramm__timescale-item">
+                              <button class="diagramm__timescale-btn" type="button" name="all">All</button>
+                            </li>
+
+                          </ul>
+
+                          <div class="row diagramm__data-group">
+                            <div class="col-12 col-md-3 col-lg-5 col-xl-4">
+                              <dl class="diagramm__data">
+                                <dt class="text text--dimmed diagramm__data-heading">Token price</dt>
+                                <dd class="text diagramm__data-value diagramm__data-value--postfix" data-postfix="ETH">356.28</dd>
+                              </dl>
+                            </div>
+                            <div class="col-12 col-md-3 col-lg-5 col-xl-4">
+                              <dl class="diagramm__data">
+                                <dt class="text text--dimmed diagramm__data-heading">Since last month</dt>
+                                <dd class="text diagramm__data-value" data-prefix="+" data-postfix="ETH">35.57</dd>
+                              </dl>
+                            </div>
+                            <div class="col-12 col-md-3 col-xl-4">
+                              <dl class="diagramm__data diagramm__data--last-month-percent">
+                                <dt class="text text--dimmed diagramm__data-heading">Since last month (%)</dt>
+                                <dd class="text diagramm__data-value" data-prefix="+" data-postfix="%">11.57</dd>
+                              </dl>
+                            </div>
+                          </div>
+
+                        </div>
+
+                        <div class="line-chart diagramm__line-chart">
+                          <p class="text line-chart__current" data-postfix="ETH">567.43</p>
+                          <div class="line-chart__view">
+
+                          </div>
+                          <ul class="line-chart__timescale">
+                            <li class="text line-chart__timescale-item">Feb 26</li>
+                            <li class="text line-chart__timescale-item">Feb 27</li>
+                            <li class="text line-chart__timescale-item">Feb 28</li>
+                            <li class="text line-chart__timescale-item">Mar 1</li>
+                            <li class="text line-chart__timescale-item">Mar 2</li>
+                          </ul>
+                        </div>
+
+                      </div>
+                    </div>
+
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row terms justify-content-md-end">
+        <div class="col-12 col-md-9">
+          <p class="text text--dark text--highlight terms__text">
+            Now the tokens can be exchanged into crypto (in case of ethereum — ETH) at any time with a 1:1 ratio. But if the contributors believe in the succes of the project they will likely choose to keep them.
+          </p>
+        </div>
+        <div class="col-12">
+          <ul class="row terms__aspects aspects">
+            <li class="col-12 col-sm-auto col-md-3 aspect">
+              <span class="aspect__heading">
+                Ratio 1:1
+              </span>
+              <p class="text aspect__text">
+                The contributors are guaranteed to exchange these tokens into ETH.
+              </p>
+            </li>
+            <li class="col-12 col-sm-auto col-md-3 aspect">
+              <span class="aspect__heading">
+                50%
+              </span>
+              <p class="text aspect__text">
+                Opening of a new round when 50% of the stock of crypto currency is burned.
+              </p>
+            </li>
+            <li class="col-12 col-sm-auto col-md-3 aspect">
+              <span class="aspect__heading">
+                Example
+              </span>
+              <p class="text aspect__text">
+                The contributors are guaranteed to exchange these tokens into ETH.
+              </p>
+            </li>
+          </ul>
+        </div>
+        <div class="col-12 col-md-9">
+          <p class="text text--dark text--context-end terms__text">
+            When the token is exchanged back to crypto using the smart contract reserves, the crypto is sent to holder of tokens, and tokens are burnt. When 50% of crypto (ETH) reserves is burnt a next investment round kicks in automatically at a rate set by founders (that optionally can be set at any time, and could theoretically match market price of the token). At this point ETH is automatically converted to tokens at osme rate (let's say 20:1, meaning for every 20 ETH investor gets 1 token and 19 tokens stay within contract for founders to pay contributors).
+          </p>
+        </div>
+        <div class="col-12 col-md-9">
+          <h2 class="heading-2 terms__heading">Changing Parts in Investment Rounds</h2>
+          <p class="text text--dark terms__text">
+            Every day the amount of tokens investor receieves for every ether invested is increasing making it more attractive to wait another stage of the round, but in increasing the rist that someone will take an opportunity to invest early. Here is an example how the token distribution changes from one stage of investment round to another until the round is finished:
+          </p>
+
+        </div>
+
+        <div class="col-12 terms__piecharts">
+          <div class="row terms__piecharts-block">
+            <div class="col-3 piechart">
+              <p class="text piechart__name">Day: 1</p>
+              <img class="piechart__img" src="assets/imgs/pie-chart__day1.png" alt="piechart's data representation" width="128" height="128">
+              <ul class="piechart__legend">
+                <li class="piechart__legend-item piechart__legend-item--type--project">
+                  <p class="piechart__legend-text">Project<span class="piechart__legend-percent">80%</span></p>
                 </li>
-
-                <li class="col-4 col-sm-auto infographic-content__tab">
-                  <a class="infographic-content__tab-link" data-toggle="pill" href="#cryptonet">Cryptonet</a>
+                <li class="piechart__legend-item piechart__legend-item--type--founder">
+                  <p class="piechart__legend-text">Founder<span class="piechart__legend-percent">10%</span></p>
                 </li>
-
-                <li class="col-4 col-sm-auto infographic-content__tab">
-                  <a class="infographic-content__tab-link" data-toggle="pill" href="#prostocoin">Prostocoin</a>
+                <li class="piechart__legend-item piechart__legend-item--type--investor">
+                  <p class="piechart__legend-text">Investor<span class="piechart__legend-percent">10%</span></p>
                 </li>
-
               </ul>
+              <p class="piechart__text">For every 70 ETH invested</p>
+            </div>
 
-              <div class="tab-content infographic-content__content">
+            <div class="col-3 piechart">
+              <p class="text piechart__name">Day: 2</p>
+              <img class="piechart__img" src="assets/imgs/pie-chart__day2.png" alt="piechart's data representation" width="128" height="128">
+              <ul class="piechart__legend">
+                <li class="piechart__legend-item piechart__legend-item--type--project">
+                  <p class="piechart__legend-text">Project<span class="piechart__legend-percent">70%</span></p>
+                </li>
+                <li class="piechart__legend-item piechart__legend-item--type--founder">
+                  <p class="piechart__legend-text">Founder<span class="piechart__legend-percent">10%</span></p>
+                </li>
+                <li class="piechart__legend-item piechart__legend-item--type--investor">
+                  <p class="piechart__legend-text">Investor<span class="piechart__legend-percent">20%</span></p>
+                </li>
+              </ul>
+              <p class="piechart__text">For every 80 ETH invested</p>
+            </div>
 
-                <div id="coinbase" class="tab-pane active" role="tabpanel">
+            <div class="col-3 piechart">
+              <p class="text piechart__name">Day: 3</p>
+              <img class="piechart__img" src="assets/imgs/pie-chart__day3.png" alt="piechart's data representation" width="128" height="128">
+              <ul class="piechart__legend">
+                <li class="piechart__legend-item piechart__legend-item--type--project">
+                  <p class="piechart__legend-text">Project<span class="piechart__legend-percent">60%</span></p>
+                </li>
+                <li class="piechart__legend-item piechart__legend-item--type--founder">
+                  <p class="piechart__legend-text">Founder<span class="piechart__legend-percent">10%</span></p>
+                </li>
+                <li class="piechart__legend-item piechart__legend-item--type--investor">
+                  <p class="piechart__legend-text">Investor<span class="piechart__legend-percent">30%</span></p>
+                </li>
+              </ul>
+              <p class="piechart__text">For every 90 ETH invested</p>
+            </div>
 
-                  <div class="row justify-content-center align-items-start">
-                    <div class="col-12">
+            <div class="col-3 piechart">
+              <p class="text piechart__name">Day: 4</p>
+              <img class="piechart__img" src="assets/imgs/pie-chart__day4.png" alt="piechart's data representation" width="128" height="128">
+              <ul class="piechart__legend">
+                <li class="piechart__legend-item piechart__legend-item--type--project">
+                  <p class="piechart__legend-text">Project<span class="piechart__legend-percent">50%</span></p>
+                </li>
+                <li class="piechart__legend-item piechart__legend-item--type--founder">
+                  <p class="piechart__legend-text">Founder<span class="piechart__legend-percent">10%</span></p>
+                </li>
+                <li class="piechart__legend-item piechart__legend-item--type--investor">
+                  <p class="piechart__legend-text">Investor<span class="piechart__legend-percent">40%</span></p>
+                </li>
+              </ul>
+              <p class="piechart__text">For every 100 ETH invested</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-                      <div class="diagramm">
-                        <ul class="diagramm__timescale">
-                          <li class="diagramm__timescale-item">
-                            <button class="diagramm__timescale-btn active" type="button" name="hours">1H</button>
-                          </li>
-                          <li class="diagramm__timescale-item">
-                            <button class="diagramm__timescale-btn" type="button" name="days">1D</button>
-                          </li>
-                          <li class="diagramm__timescale-item">
-                            <button class="diagramm__timescale-btn" type="button" name="weeks">1W</button>
-                          </li>
-                          <li class="diagramm__timescale-item">
-                            <button class="diagramm__timescale-btn" type="button" name="month">1M</button>
-                          </li>
-                          <li class="diagramm__timescale-item">
-                            <button class="diagramm__timescale-btn" type="button" name="year">1Y</button>
-                          </li>
-                          <li class="diagramm__timescale-item">
-                            <button class="diagramm__timescale-btn" type="button" name="all">All</button>
-                          </li>
+    <div class="container-fluid features">
+      <div class="features__content container">
+        <div class="row justify-content-end">
+          <h2 class="col-12 col-md-9 heading-2 heading-2--lightest features__heading">This Approach to Funding has a Few Advantages to Traditional ICOs</h2>
+        </div>
+        <ul class="row features__list">
+          <li class="col-12 col-sm-3 features__item">
+            <svg class="icon icon__escolation features__icon">
+              <use xlink:href="assets/sprite.svg#icon__escolation"></use>
+            </svg>
+            <p class="text text--light features__text">
+              It ensures that there is no over raise that many people witnessed with ICOs.
+            </p>
+          </li>
+          <li class="col-12 col-sm-3 features__item">
+            <svg class="icon icon__bar-chart features__icon">
+              <use xlink:href="assets/sprite.svg#icon__bar-chart"></use>
+            </svg>
+            <p class="text text--light features__text">
+              More power over project to the contributors - the people who create it. Contributors may decide how much of their compensation to keep in tokens, rather than given a fixed amount.
+            </p>
+          </li>
+          <li class="col-12 col-sm-3 features__item">
+            <svg class="icon icon__shield features__icon">
+              <use xlink:href="assets/sprite.svg#icon__shield"></use>
+            </svg>
+            <p class="text text--light features__text">
+              Less risk of loosing the raised funds, since only a small amount of crypto is locked, not all the amount raised.
+            </p>
+          </li>
+          <li class="col-12 col-sm-3 features__item">
+            <svg class="icon icon__coin features__icon">
+              <use xlink:href="assets/sprite.svg#icon__coin"></use>
+            </svg>
+            <p class="text text--light features__text">
+              There is less wastage of funds on marketing, pr and other bs that the current ICO craze has created.
+            </p>
+          </li>
+        </ul>
+        <div class="row justify-content-end">
+          <p class="col-12 col-md-9 text text--highlight text--light text--context-end features__text features__text--spacing--narrow">Now the tokens can be exchanged into crypto (in case of ethereum - ETH) at any time with a 1:1 ratio.</p>
+          <div class="col-12 col-md-9">
+            <a id="more-info-open" class="button">
+              <span class="button__text">More information</span>
+              <span class="button__glow"></span>
+            </a>
+          </div>
+          <p data-more-info class="col-12 col-md-9 text text--light features__text features__text--spread--lg">
+            It is a simple idea combining two working technologies. DPOS (of graphene) and Solidity smart contracts. At the time of the writing Ethereum's market cap is roughly 30 billion dollars. If our blockchain reaches 1/1000th of that success, the market cap of Annihilat.io will reach $28m. If we, as founders/investors keep 10% of that, we will make a little bit of money. But on the way to this success 90% that is distributed to contributors may make some good money too.
+          </p>
+        </div>
+      </div>
+    </div>
 
-                        </ul>
+    <div data-more-info class="container brief">
 
-                        <div class="row diagramm__data-group">
-                          <div class="col-12 col-sm-3 col-md-auto">
-                            <dl class="diagramm__data">
-                              <dt class="text text--dimmed diagramm__data-heading">Token price</dt>
-                              <dd class="text diagramm__data-value diagramm__data-value--postfix" data-postfix="ETH">356.28</dd>
-                            </dl>
-                          </div>
-                          <div class="col-12 col-sm-3 col-md-auto">
-                            <dl class="diagramm__data">
-                              <dt class="text text--dimmed diagramm__data-heading">Since last month</dt>
-                              <dd class="text diagramm__data-value" data-prefix="+" data-postfix="ETH">35.57</dd>
-                            </dl>
-                          </div>
-                          <div class="col-12 col-sm-3 col-lg-auto">
-                            <dl class="diagramm__data diagramm__data--last-month-percent">
-                              <dt class="text text--dimmed diagramm__data-heading">Since last month (%)</dt>
-                              <dd class="text diagramm__data-value" data-prefix="+" data-postfix="%">11.57</dd>
-                            </dl>
-                          </div>
-                        </div>
+      <div class="brief__block">
+        <div class="row justify-content-end">
+          <h3 class="col-12 col-md-9 heading-2 brief__heading">Brief information for investors</h3>
+          <span class="w-100"></span>
+          <p class="col-md-3 brief__descr">
+            Brief references from basic information. Brief references from basic information
+          </p>
+          <p class="col-12 col-md-9 text text--dark">
+            It is a simple idea combining two working technologies. DPOS (of graphene) and Solidity smart contracts. At the time of the writing Ethereum's market cap is roughly 30 billion dollars. If our blockchain reaches 1/1000th of that success, the market cap of Annihilat.io will reach $28m. If we, as founders/investors keep 10% of that, we will make a little bit of money. But on the way to this success 90% that is distributed to contributors may make some good money too.
+          </p>
+        </div>
+      </div>
 
-                      </div>
+      <div class="brief__block">
+        <div class="row justify-content-end">
+          <h3 class="col-12 col-md-9 heading-2 brief__heading">Brief information for traders</h3>
+          <span class="w-100"></span>
+          <p class="col-md-3 brief__descr">
+            Brief references from basic information. Brief references from basic information
+          </p>
+          <p class="col-12 col-md-9 text text--dark">
+            The point of this project however is not only to bring to market another smart contract blockchain, even though we expect it to be much faster. The goal also is to create a precedent for a way projects can be funded. The community of contributors we may gather around us may transform this idea into something completely different and improve the idea greately. Only test will tell. On the other note we hope that the distribution of tokens as form of compensation will create a more or less even spread of stake among contributors and also investors.
+          </p>
+        </div>
 
-                      <div class="line-chart diagramm__line-chart">
-                        <p class="text line-chart__current" data-postfix="ETH">567.43</p>
-                        <div class="line-chart__view">
+      </div>
 
-                        </div>
-                        <ul class="line-chart__timescale">
-                          <li class="text line-chart__timescale-item">Feb 26</li>
-                          <li class="text line-chart__timescale-item">Feb 27</li>
-                          <li class="text line-chart__timescale-item">Feb 28</li>
-                          <li class="text line-chart__timescale-item">Mar 1</li>
-                          <li class="text line-chart__timescale-item">Mar 2</li>
-                        </ul>
-                      </div>
+    </div>
 
-                    </div>
-                  </div>
+    <div data-more-info class="container-fluid faq">
+      <div class="container">
+        <div class="row justify-content-end">
+          <h2 class="col-12 col-md-9 faq__heading">FAQ</h2>
+          <span class="w-100"></span>
+          <div class="col-12 col-md-3 text text--light faq__descr">
+            Here you can find frequently asked questions on this topic and answers to them.
+          </div>
 
-                </div>
+          <div class="col-12 col-md-9 faq__list">
 
-                <div id="cryptonet" class="tab-pane" role="tabpanel">
+            <div class="faq__pair">
 
-                  <div class="row justify-content-center align-items-start">
-                    <div class="col-12">
+              <p class="faq__pair-heading" data-toggle="collapse" data-target="#quastion-1" aria-expanded="false" aria-controls="quastion-1">
+                <span class="faq__pair-heading-text">The first frequently asked question on this topic?</span>
+                <span class="faq__icon">
+                  <svg class="icon icon__arrow-short">
+                    <use xlink:href="assets/sprite.svg#icon__arrow-short"></use>
+                  </svg>
+                </span>
+              </p>
 
-                      <div class="diagramm">
-                        <ul class="diagramm__timescale">
-                          <li class="diagramm__timescale-item">
-                            <button class="diagramm__timescale-btn" type="button" name="hours">1H</button>
-                          </li>
-                          <li class="diagramm__timescale-item">
-                            <button class="diagramm__timescale-btn" type="button" name="days">1D</button>
-                          </li>
-                          <li class="diagramm__timescale-item">
-                            <button class="diagramm__timescale-btn active" type="button" name="weeks">1W</button>
-                          </li>
-                          <li class="diagramm__timescale-item">
-                            <button class="diagramm__timescale-btn" type="button" name="month">1M</button>
-                          </li>
-                          <li class="diagramm__timescale-item">
-                            <button class="diagramm__timescale-btn" type="button" name="year">1Y</button>
-                          </li>
-                          <li class="diagramm__timescale-item">
-                            <button class="diagramm__timescale-btn" type="button" name="all">All</button>
-                          </li>
+              <div id="quastion-1" class="collapse faq__pair-content">
+                <p class="text text--light faq__answer">
+                  Every day the amount of tokens investor receieves for every ether invested is increasing making it more attractive to wait another stage of the round, but in increasing the rist that someone will take an opportunity to invest early.
+                </p>
+              </div>
 
-                        </ul>
+            </div>
 
-                        <div class="row diagramm__data-group">
-                          <div class="col-12 col-md-3 col-lg-5 col-xl-4">
-                            <dl class="diagramm__data">
-                              <dt class="text text--dimmed diagramm__data-heading">Token price</dt>
-                              <dd class="text diagramm__data-value diagramm__data-value--postfix" data-postfix="ETH">3526.28</dd>
-                            </dl>
-                          </div>
-                          <div class="col-12 col-md-3 col-lg-5 col-xl-4">
-                            <dl class="diagramm__data">
-                              <dt class="text text--dimmed diagramm__data-heading">Since last month</dt>
-                              <dd class="text diagramm__data-value" data-prefix="+" data-postfix="ETH">35.57</dd>
-                            </dl>
-                          </div>
-                          <div class="col-12 col-md-3 col-xl-4">
-                            <dl class="diagramm__data diagramm__data--last-month-percent">
-                              <dt class="text text--dimmed diagramm__data-heading">Since last month (%)</dt>
-                              <dd class="text diagramm__data-value" data-prefix="+" data-postfix="%">37.900</dd>
-                            </dl>
-                          </div>
-                        </div>
+            <div class="faq__pair">
 
-                      </div>
+              <p class="faq__pair-heading" data-toggle="collapse" data-target="#quastion-2" aria-expanded="true" aria-controls="quastion-2">
+                <span class="faq__pair-heading-text">The first frequently asked question on this topic?</span>
+                <span class="faq__icon">
+                  <svg class="icon icon__arrow-short">
+                    <use xlink:href="assets/sprite.svg#icon__arrow-short"></use>
+                  </svg>
+                </span>
+              </p>
 
-                      <div class="line-chart diagramm__line-chart">
-                        <p class="text line-chart__current" data-postfix="ETH">1000.43</p>
-                        <div class="line-chart__view">
+              <div id="quastion-2" class="collapse show faq__pair-content">
+                <p class="text text--light faq__answer">
+                  Every day the amount of tokens investor receieves for every ether invested is increasing making it more attractive to wait another stage of the round, but in increasing the rist that someone will take an opportunity to invest early.
+                </p>
+              </div>
 
-                        </div>
-                        <ul class="line-chart__timescale">
-                          <li class="text line-chart__timescale-item">Feb 26</li>
-                          <li class="text line-chart__timescale-item">Feb 27</li>
-                          <li class="text line-chart__timescale-item">Feb 28</li>
-                          <li class="text line-chart__timescale-item">Mar 1</li>
-                          <li class="text line-chart__timescale-item">Mar 2</li>
-                        </ul>
-                      </div>
+            </div>
 
-                    </div>
-                  </div>
+            <div class="faq__pair">
 
-                </div>
+              <p class="faq__pair-heading" data-toggle="collapse" data-target="#quastion-3" aria-expanded="false" aria-controls="quastion-3">
+                <span class="faq__pair-heading-text">The first frequently asked question on this topic?</span>
+                <span class="faq__icon">
+                  <svg class="icon icon__arrow-short">
+                    <use xlink:href="assets/sprite.svg#icon__arrow-short"></use>
+                  </svg>
+                </span>
+              </p>
 
-                <div id="prostocoin" class="tab-pane" role="tabpanel">
+              <div id="quastion-3" class="collapse faq__pair-content">
+                <p class="text text--light faq__answer">
+                  Every day the amount of tokens investor receieves for every ether invested is increasing making it more attractive to wait another stage of the round, but in increasing the rist that someone will take an opportunity to invest early.
+                </p>
+              </div>
 
-                  <div class="row justify-content-center align-items-start">
-                    <div class="col-12">
+            </div>
 
-                      <div class="diagramm">
-                        <ul class="diagramm__timescale">
-                          <li class="diagramm__timescale-item">
-                            <button class="diagramm__timescale-btn active" type="button" name="hours">1H</button>
-                          </li>
-                          <li class="diagramm__timescale-item">
-                            <button class="diagramm__timescale-btn" type="button" name="days">1D</button>
-                          </li>
-                          <li class="diagramm__timescale-item">
-                            <button class="diagramm__timescale-btn" type="button" name="weeks">1W</button>
-                          </li>
-                          <li class="diagramm__timescale-item">
-                            <button class="diagramm__timescale-btn" type="button" name="month">1M</button>
-                          </li>
-                          <li class="diagramm__timescale-item">
-                            <button class="diagramm__timescale-btn" type="button" name="year">1Y</button>
-                          </li>
-                          <li class="diagramm__timescale-item">
-                            <button class="diagramm__timescale-btn" type="button" name="all">All</button>
-                          </li>
+          </div>
 
-                        </ul>
+          <div class="col-12 col-md-9">
+            <a id="more-info-close" class="button button--state--close">
+              <span class="button__text">Close Information</span>
+              <span class="button__glow"></span>
+            </a>
+          </div>
 
-                        <div class="row diagramm__data-group">
-                          <div class="col-12 col-md-3 col-lg-5 col-xl-4">
-                            <dl class="diagramm__data">
-                              <dt class="text text--dimmed diagramm__data-heading">Token price</dt>
-                              <dd class="text diagramm__data-value diagramm__data-value--postfix" data-postfix="ETH">356.28</dd>
-                            </dl>
-                          </div>
-                          <div class="col-12 col-md-3 col-lg-5 col-xl-4">
-                            <dl class="diagramm__data">
-                              <dt class="text text--dimmed diagramm__data-heading">Since last month</dt>
-                              <dd class="text diagramm__data-value" data-prefix="+" data-postfix="ETH">35.57</dd>
-                            </dl>
-                          </div>
-                          <div class="col-12 col-md-3 col-xl-4">
-                            <dl class="diagramm__data diagramm__data--last-month-percent">
-                              <dt class="text text--dimmed diagramm__data-heading">Since last month (%)</dt>
-                              <dd class="text diagramm__data-value" data-prefix="+" data-postfix="%">11.57</dd>
-                            </dl>
-                          </div>
-                        </div>
+        </div>
+      </div>
+    </div>
 
-                      </div>
+    <div data-tge-status="true" class="container tge-info">
+      <div class="row justify-content-end align-items-center">
+        <h2 class="col-12 col-md-9 heading-2 tge-info__heading">Token generation event</h2>
+        <span class="w-100"></span>
+        <p data-tge-false class="col-12 col-md-3 text tge-info__text tge-info__text--position--countdown tge-info__text--view--countdown">
+          The new round will begin at the end of the balance.
+        </p>
+        <p data-tge-undefined class="col-12 col-md-9 text tge-info__text tge-info__text--position--countdown">
+          <b>Something went wrong!</b> Couldn't get TGE status.
+        </p>
+        <div data-tge-false class="col-12 col-md-9">
+          <div class="tge-info__countdown">
+            <p class="tge-info__countdown-balance">
+              Balance <span class="tge-info__countdown-balance-value">156.284</span>
+            </p>
+            <div class="tge-info__countdown-time">
+              Time to a new round <time><span class="tge-info__countdown-days tge-info__countdown-time--divider">1 day</span> <span class="tge-info__countdown-hours">15 hours</span></time>
+            </div>
+          </div>
+        </div>
 
-                      <div class="line-chart diagramm__line-chart">
-                        <p class="text line-chart__current" data-postfix="ETH">567.43</p>
-                        <div class="line-chart__view">
+        <div data-tge-true class="col-12">
+          <div class="row tge-info__block">
+            <p class="col-12 col-md-3 text text--dark tge-info__text">
+              This shows how much to collect and how much is collected ETH.
+            </p>
+            <div data-tooltip-trigger data- class="col-12 col-md-9 scale">
+              <p class="scale__name" data-scale-name="ETH" style="width: 50%">
+                <span data-toggle="tooltip" data-placement="top" title="300 675 ETH" data-delay='{ "hide": 1000 }' class="scale__tooltip-target">
+                  ETH
+                </span>
+              </p>
+              <p class="scale__bar" data-start="1" data-end="500 000">300 675 ETH / 500 000</p>
+            </div>
+          </div>
+          <div class="row tge-info__block">
+            <p class="col-12 col-md-3 text text--dark tge-info__text">
+              This shows how many stages of investment are left.
+            </p>
+            <div data-tooltip-trigger class="col-12 col-md-9 scale scale--theme--dark">
+              <p class="scale__name" data-scale-name="Starting block" style="width: 69%">
+                <span data-toggle="tooltip" data-tooltip-theme="dark" title="521 277" data-delay='{ "hide": 1000 }' class="scale__tooltip-target">Starting block</span>
+              </p>
+              <p class="scale__bar scale__bar--theme--stages" data-start-block data-start="521 100" data-end="521 400">521 277 / 521 400</p>
+            </div>
+          </div>
+        </div>
 
-                        </div>
-                        <ul class="line-chart__timescale">
-                          <li class="text line-chart__timescale-item">Feb 26</li>
-                          <li class="text line-chart__timescale-item">Feb 27</li>
-                          <li class="text line-chart__timescale-item">Feb 28</li>
-                          <li class="text line-chart__timescale-item">Mar 1</li>
-                          <li class="text line-chart__timescale-item">Mar 2</li>
-                        </ul>
-                      </div>
+        <p data-tge-true class="col-12 col-md-9 text tge-info__text tge-info__text--highlight">
+          Whichever completes sooner will end the live TGE.
+        </p>
+      </div>
 
-                    </div>
-                  </div>
+      <div data-tge-true class="tge-info__stage">
+        <div class="stages">
+          <div class="stages__item stages__item--align--left">
+            <p class="text stages__name">
+              Stage <span data-previous-stage>4</span>
+            </p>
+            <div class="stages__data stages__data--price">
+              <p class="text text--dimmed stages__data-name">Previous price</p>
+              <p class="text stages__data-value" data-value-postfix="ETH">1.66</p>
+            </div>
+            <div class="stages__data">
+              <p class="text text--dimmed stages__data-name">Starting block</p>
+              <p class="text stages__data-value">521 100</p>
+            </div>
+          </div>
 
-                </div>
+          <div data-tooltip-trigger class="stages__item stages__item--dark stages__item--align--center">
+            <p data-status="true" data-status-true="live" class="text stages__name">
+              Stage <span data-current-stage>5</span>
+            </p>
+            <div class="stages__data stages__data--price">
+              <p class="text text--dimmed stages__data-name">Actual price</p>
+              <p class="text stages__data-value" data-value-postfix="ETH">1.5</p>
+            </div>
+            <div class="stages__data">
+              <p class="text text--dimmed stages__data-name">Current block</p>
+              <p class="text stages__data-value">521 277</p>
+            </div>
+            <span data-toggle="tooltip" data-placement="top" title="Only 123 blocks left to next stage (approximately 1 hour, 23 minutes)" data-delay='{ "hide": 1000 }' class="stage__tooltip-target"></span>
+          </div>
 
+          <div class="stages__item stages__item--align--right">
+            <p class="text stages__name">
+              Stage <span data-next-stage>6</span>
+            </p>
+            <div class="stages__data stages__data--price">
+              <p class="text text--dimmed stages__data-name">Previous price</p>
+              <p class="text stages__data-value" data-value-postfix="ETH">1.2</p>
+            </div>
+            <div class="stages__data">
+              <p class="text text--dimmed stages__data-name">Starting block</p>
+              <p class="text stages__data-value">521 100</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="row justify-content-end">
+
+        <div class="col-12 col-md-9 tge-info__accordion accordion">
+
+          <table class="accordion__table">
+            <thead class="accordion__head">
+              <tr class="accordion__header">
+                <th class="accordion__table-heading accordion__table-heading--type--round">Round</th>
+                <th class="accordion__table-heading accordion__table-heading--type--amount">Amount</th>
+                <th class="accordion__table-heading accordion__table-heading--type--startblock">StartBlock</th>
+                <th class="accordion__table-heading accordion__table-heading--type--investor">Investor</th>
+                <th class="accordion__table-heading accordion__table-heading--type--project">Project</th>
+                <th class="accordion__table-heading accordion__table-heading--type--founder">Founder</th>
+              </tr>
+            </thead>
+
+            <tbody data-toggle="collapse" data-target="#body-1" aria-expanded="false" aria-controls="body-1" class="accordion__body accordion__pair-heading accordion__pair-heading--order--first collapsed">
+              <tr class="accordion__row accordion__row--type--main">
+                <td class="accordion__data accordion__data--type--round">
+                  <span data-tge-round class="accordion__data--highlight">TGE 5</span>
+
+                  <time class="accordion__data-time" datetime="2018-03-13T12:45">
+                    <span data-day>13.03.18</span> <span data-day-time>12:45</span>
+                  </time>
+                </td>
+                <td data-postfix="ETH" class="accordion__data accordion__data--type--amount">
+                  125
+                </td>
+                <td class="accordion__data accordion__data--type--startblock">521 090</td>
+                <td data-postfix="%" class="accordion__data accordion__data--type--investor">10</td>
+                <td data-postfix="%" class="accordion__data accordion__data--type--project">80</td>
+                <td data-postfix="%" class="accordion__data accordion__data--type--founder">
+                  10
+                </td>
+                <td class="accordion__data--type--icon">
+                  <svg class="icon icon__arrow-short accordion__icon">
+                    <use xlink:href="assets/sprite.svg#icon__arrow-short"></use>
+                  </svg>
+                </td>
+              </tr>
+            </tbody>
+            <tbody id="body-1" class="collapse accordion__body accordion__pair-content">
+              <tr class="accordion__row">
+                <td class="accordion__data accordion__data--type--round"></td>
+                <td data-postfix="" class="accordion__data accordion__data--type--amount">
+                </td>
+                <td class="accordion__data accordion__data--type--startblock">521 090</td>
+                <td data-postfix="%" class="accordion__data accordion__data--type--investor">10</td>
+                <td data-postfix="%" class="accordion__data accordion__data--type--project">80</td>
+                <td colspan="2" data-postfix="%" class="accordion__data accordion__data--type--founder">10</td>
+              </tr>
+              <tr class="accordion__row">
+                <td class="accordion__data accordion__data--type--round"></td>
+                <td data-postfix="" class="accordion__data accordion__data--type--amount">
+                </td>
+                <td class="accordion__data accordion__data--type--startblock">521 090</td>
+                <td data-postfix="%" class="accordion__data accordion__data--type--investor">10</td>
+                <td data-postfix="%" class="accordion__data accordion__data--type--project">80</td>
+                <td colspan="2" data-postfix="%" class="accordion__data accordion__data--type--founder">10</td>
+              </tr>
+              <tr class="accordion__row">
+                <td class="accordion__data accordion__data--type--round"></td>
+                <td data-postfix="" class="accordion__data accordion__data--type--amount">
+                </td>
+                <td class="accordion__data accordion__data--type--startblock">521 090</td>
+                <td data-postfix="%" class="accordion__data accordion__data--type--investor">10</td>
+                <td data-postfix="%" class="accordion__data accordion__data--type--project">80</td>
+                <td colspan="2" data-postfix="%" class="accordion__data accordion__data--type--founder">10</td>
+              </tr>
+              <tr class="accordion__row">
+                <td class="accordion__data accordion__data--type--round"></td>
+                <td data-postfix="" class="accordion__data accordion__data--type--amount">
+                </td>
+                <td class="accordion__data accordion__data--type--startblock">521 090</td>
+                <td data-postfix="%" class="accordion__data accordion__data--type--investor">10</td>
+                <td data-postfix="%" class="accordion__data accordion__data--type--project">80</td>
+                <td colspan="2" data-postfix="%" class="accordion__data accordion__data--type--founder">10</td>
+              </tr>
+              <tr class="accordion__row">
+                <td class="accordion__data accordion__data--type--round"></td>
+                <td data-postfix="" class="accordion__data accordion__data--type--amount">
+                </td>
+                <td class="accordion__data accordion__data--type--startblock">521 090</td>
+                <td data-postfix="%" class="accordion__data accordion__data--type--investor">10</td>
+                <td data-postfix="%" class="accordion__data accordion__data--type--project">80</td>
+                <td colspan="2" data-postfix="%" class="accordion__data accordion__data--type--founder">10</td>
+              </tr>
+              <tr class="accordion__row accordion__row--type--sum">
+                <td colspan="7" class="accordion__data accordion__data--type--sum">
+                  Summary: <span>345.1245</span>
+                </td>
+              </tr>
+            </tbody>
+
+            <tbody data-toggle="collapse" data-target="#body-2" aria-expanded="false" aria-controls="body-2" class="accordion__body accordion__pair-heading collapsed">
+              <tr class="accordion__row accordion__row--type--main">
+                <td class="accordion__data accordion__data--type--round">
+                  <span data-tge-round class="accordion__data--highlight">TGE 5</span>
+
+                  <time class="accordion__data-time" datetime="2018-03-13T12:45">
+                    <span data-day>13.03.18</span> <span data-day-time>12:45</span>
+                  </time>
+                </td>
+                <td data-postfix="ETH" class="accordion__data accordion__data--type--amount">
+                  125
+                </td>
+                <td class="accordion__data accordion__data--type--startblock">521 090</td>
+                <td data-postfix="%" class="accordion__data accordion__data--type--investor">10</td>
+                <td data-postfix="%" class="accordion__data accordion__data--type--project">80</td>
+                <td data-postfix="%" class="accordion__data accordion__data--type--founder">
+                  10
+                </td>
+                <td class="accordion__data--type--icon">
+                  <svg class="icon icon__arrow-short accordion__icon">
+                    <use xlink:href="assets/sprite.svg#icon__arrow-short"></use>
+                  </svg>
+                </td>
+              </tr>
+            </tbody>
+            <tbody id="body-2" class="collapse accordion__body accordion__pair-content">
+              <tr class="accordion__row">
+                <td class="accordion__data accordion__data--type--round"></td>
+                <td data-postfix="" class="accordion__data accordion__data--type--amount">
+                </td>
+                <td class="accordion__data accordion__data--type--startblock">521 090</td>
+                <td data-postfix="%" class="accordion__data accordion__data--type--investor">10</td>
+                <td data-postfix="%" class="accordion__data accordion__data--type--project">80</td>
+                <td colspan="2" data-postfix="%" class="accordion__data accordion__data--type--founder">10</td>
+              </tr>
+              <tr class="accordion__row">
+                <td class="accordion__data accordion__data--type--round"></td>
+                <td data-postfix="" class="accordion__data accordion__data--type--amount">
+                </td>
+                <td class="accordion__data accordion__data--type--startblock">521 090</td>
+                <td data-postfix="%" class="accordion__data accordion__data--type--investor">10</td>
+                <td data-postfix="%" class="accordion__data accordion__data--type--project">80</td>
+                <td colspan="2" data-postfix="%" class="accordion__data accordion__data--type--founder">10</td>
+              </tr>
+              <tr class="accordion__row">
+                <td class="accordion__data accordion__data--type--round"></td>
+                <td data-postfix="" class="accordion__data accordion__data--type--amount">
+                </td>
+                <td class="accordion__data accordion__data--type--startblock">521 090</td>
+                <td data-postfix="%" class="accordion__data accordion__data--type--investor">10</td>
+                <td data-postfix="%" class="accordion__data accordion__data--type--project">80</td>
+                <td colspan="2" data-postfix="%" class="accordion__data accordion__data--type--founder">10</td>
+              </tr>
+              <tr class="accordion__row">
+                <td class="accordion__data accordion__data--type--round"></td>
+                <td data-postfix="" class="accordion__data accordion__data--type--amount">
+                </td>
+                <td class="accordion__data accordion__data--type--startblock">521 090</td>
+                <td data-postfix="%" class="accordion__data accordion__data--type--investor">10</td>
+                <td data-postfix="%" class="accordion__data accordion__data--type--project">80</td>
+                <td colspan="2" data-postfix="%" class="accordion__data accordion__data--type--founder">10</td>
+              </tr>
+              <tr class="accordion__row">
+                <td class="accordion__data accordion__data--type--round"></td>
+                <td data-postfix="" class="accordion__data accordion__data--type--amount">
+                </td>
+                <td class="accordion__data accordion__data--type--startblock">521 090</td>
+                <td data-postfix="%" class="accordion__data accordion__data--type--investor">10</td>
+                <td data-postfix="%" class="accordion__data accordion__data--type--project">80</td>
+                <td colspan="2" data-postfix="%" class="accordion__data accordion__data--type--founder">10</td>
+              </tr>
+              <tr class="accordion__row accordion__row--type--sum">
+                <td colspan="7" class="accordion__data accordion__data--type--sum">
+                  Summary: <span>345.1245</span>
+                </td>
+              </tr>
+            </tbody>
+
+            <tbody data-toggle="collapse" data-target="#body-3" aria-expanded="false" aria-controls="body-3" class="accordion__body accordion__pair-heading collapsed">
+              <tr class="accordion__row accordion__row--type--main">
+                <td class="accordion__data accordion__data--type--round">
+                  <span data-tge-round class="accordion__data--highlight">TGE 5</span>
+
+                  <time class="accordion__data-time" datetime="2018-03-13T12:45">
+                    <span data-day>13.03.18</span> <span data-day-time>12:45</span>
+                  </time>
+                </td>
+                <td data-postfix="ETH" class="accordion__data accordion__data--type--amount">
+                  125
+                </td>
+                <td class="accordion__data accordion__data--type--startblock">521 090</td>
+                <td data-postfix="%" class="accordion__data accordion__data--type--investor">10</td>
+                <td data-postfix="%" class="accordion__data accordion__data--type--project">80</td>
+                <td data-postfix="%" class="accordion__data accordion__data--type--founder">
+                  10
+                </td>
+                <td class="accordion__data--type--icon">
+                  <svg class="icon icon__arrow-short accordion__icon">
+                    <use xlink:href="assets/sprite.svg#icon__arrow-short"></use>
+                  </svg>
+                </td>
+              </tr>
+            </tbody>
+            <tbody id="body-3" class="collapse accordion__body accordion__pair-content">
+              <tr class="accordion__row">
+                <td class="accordion__data accordion__data--type--round"></td>
+                <td data-postfix="" class="accordion__data accordion__data--type--amount">
+                </td>
+                <td class="accordion__data accordion__data--type--startblock">521 090</td>
+                <td data-postfix="%" class="accordion__data accordion__data--type--investor">10</td>
+                <td data-postfix="%" class="accordion__data accordion__data--type--project">80</td>
+                <td colspan="2" data-postfix="%" class="accordion__data accordion__data--type--founder">10</td>
+              </tr>
+              <tr class="accordion__row">
+                <td class="accordion__data accordion__data--type--round"></td>
+                <td data-postfix="" class="accordion__data accordion__data--type--amount">
+                </td>
+                <td class="accordion__data accordion__data--type--startblock">521 090</td>
+                <td data-postfix="%" class="accordion__data accordion__data--type--investor">10</td>
+                <td data-postfix="%" class="accordion__data accordion__data--type--project">80</td>
+                <td colspan="2" data-postfix="%" class="accordion__data accordion__data--type--founder">10</td>
+              </tr>
+              <tr class="accordion__row">
+                <td class="accordion__data accordion__data--type--round"></td>
+                <td data-postfix="" class="accordion__data accordion__data--type--amount">
+                </td>
+                <td class="accordion__data accordion__data--type--startblock">521 090</td>
+                <td data-postfix="%" class="accordion__data accordion__data--type--investor">10</td>
+                <td data-postfix="%" class="accordion__data accordion__data--type--project">80</td>
+                <td colspan="2" data-postfix="%" class="accordion__data accordion__data--type--founder">10</td>
+              </tr>
+              <tr class="accordion__row">
+                <td class="accordion__data accordion__data--type--round"></td>
+                <td data-postfix="" class="accordion__data accordion__data--type--amount">
+                </td>
+                <td class="accordion__data accordion__data--type--startblock">521 090</td>
+                <td data-postfix="%" class="accordion__data accordion__data--type--investor">10</td>
+                <td data-postfix="%" class="accordion__data accordion__data--type--project">80</td>
+                <td colspan="2" data-postfix="%" class="accordion__data accordion__data--type--founder">10</td>
+              </tr>
+              <tr class="accordion__row">
+                <td class="accordion__data accordion__data--type--round"></td>
+                <td data-postfix="" class="accordion__data accordion__data--type--amount">
+                </td>
+                <td class="accordion__data accordion__data--type--startblock">521 090</td>
+                <td data-postfix="%" class="accordion__data accordion__data--type--investor">10</td>
+                <td data-postfix="%" class="accordion__data accordion__data--type--project">80</td>
+                <td colspan="2" data-postfix="%" class="accordion__data accordion__data--type--founder">10</td>
+              </tr>
+              <tr class="accordion__row accordion__row--type--sum">
+                <td colspan="7" class="accordion__data accordion__data--type--sum">
+                  Summary: <span>345.1245</span>
+                </td>
+              </tr>
+            </tbody>
+
+            <tbody data-toggle="collapse" data-target="#body-4" aria-expanded="false" aria-controls="body-4" class="accordion__body accordion__pair-heading collapsed">
+              <tr class="accordion__row accordion__row--type--main">
+                <td class="accordion__data accordion__data--type--round">
+                  <span data-tge-round class="accordion__data--highlight">TGE 5</span>
+
+                  <time class="accordion__data-time" datetime="2018-03-13T12:45">
+                    <span data-day>13.03.18</span> <span data-day-time>12:45</span>
+                  </time>
+                </td>
+                <td data-postfix="ETH" class="accordion__data accordion__data--type--amount">
+                  125
+                </td>
+                <td class="accordion__data accordion__data--type--startblock">521 090</td>
+                <td data-postfix="%" class="accordion__data accordion__data--type--investor">10</td>
+                <td data-postfix="%" class="accordion__data accordion__data--type--project">80</td>
+                <td data-postfix="%" class="accordion__data accordion__data--type--founder">
+                  10
+                </td>
+                <td class="accordion__data--type--icon">
+                  <svg class="icon icon__arrow-short accordion__icon">
+                    <use xlink:href="assets/sprite.svg#icon__arrow-short"></use>
+                  </svg>
+                </td>
+              </tr>
+            </tbody>
+            <tbody id="body-4" class="collapse accordion__body accordion__pair-content">
+              <tr class="accordion__row">
+                <td class="accordion__data accordion__data--type--round"></td>
+                <td data-postfix="" class="accordion__data accordion__data--type--amount">
+                </td>
+                <td class="accordion__data accordion__data--type--startblock">521 090</td>
+                <td data-postfix="%" class="accordion__data accordion__data--type--investor">10</td>
+                <td data-postfix="%" class="accordion__data accordion__data--type--project">80</td>
+                <td colspan="2" data-postfix="%" class="accordion__data accordion__data--type--founder">10</td>
+              </tr>
+              <tr class="accordion__row">
+                <td class="accordion__data accordion__data--type--round"></td>
+                <td data-postfix="" class="accordion__data accordion__data--type--amount">
+                </td>
+                <td class="accordion__data accordion__data--type--startblock">521 090</td>
+                <td data-postfix="%" class="accordion__data accordion__data--type--investor">10</td>
+                <td data-postfix="%" class="accordion__data accordion__data--type--project">80</td>
+                <td colspan="2" data-postfix="%" class="accordion__data accordion__data--type--founder">10</td>
+              </tr>
+              <tr class="accordion__row">
+                <td class="accordion__data accordion__data--type--round"></td>
+                <td data-postfix="" class="accordion__data accordion__data--type--amount">
+                </td>
+                <td class="accordion__data accordion__data--type--startblock">521 090</td>
+                <td data-postfix="%" class="accordion__data accordion__data--type--investor">10</td>
+                <td data-postfix="%" class="accordion__data accordion__data--type--project">80</td>
+                <td colspan="2" data-postfix="%" class="accordion__data accordion__data--type--founder">10</td>
+              </tr>
+              <tr class="accordion__row">
+                <td class="accordion__data accordion__data--type--round"></td>
+                <td data-postfix="" class="accordion__data accordion__data--type--amount">
+                </td>
+                <td class="accordion__data accordion__data--type--startblock">521 090</td>
+                <td data-postfix="%" class="accordion__data accordion__data--type--investor">10</td>
+                <td data-postfix="%" class="accordion__data accordion__data--type--project">80</td>
+                <td colspan="2" data-postfix="%" class="accordion__data accordion__data--type--founder">10</td>
+              </tr>
+              <tr class="accordion__row">
+                <td class="accordion__data accordion__data--type--round"></td>
+                <td data-postfix="" class="accordion__data accordion__data--type--amount">
+                </td>
+                <td class="accordion__data accordion__data--type--startblock">521 090</td>
+                <td data-postfix="%" class="accordion__data accordion__data--type--investor">10</td>
+                <td data-postfix="%" class="accordion__data accordion__data--type--project">80</td>
+                <td colspan="2" data-postfix="%" class="accordion__data accordion__data--type--founder">10</td>
+              </tr>
+              <tr class="accordion__row accordion__row--type--sum">
+                <td colspan="7" class="accordion__data accordion__data--type--sum">
+                  Summary: <span>345.1245</span>
+                </td>
+              </tr>
+            </tbody>
+
+            <tbody data-toggle="collapse" data-target="#body-5" aria-expanded="false" aria-controls="body-5" class="accordion__body accordion__pair-heading collapsed">
+              <tr class="accordion__row accordion__row--type--main">
+                <td class="accordion__data accordion__data--type--round">
+                  <span data-tge-round class="accordion__data--highlight">TGE 5</span>
+
+                  <time class="accordion__data-time" datetime="2018-03-13T12:45">
+                    <span data-day>13.03.18</span> <span data-day-time>12:45</span>
+                  </time>
+                </td>
+                <td data-postfix="ETH" class="accordion__data accordion__data--type--amount">
+                  125
+                </td>
+                <td class="accordion__data accordion__data--type--startblock">521 090</td>
+                <td data-postfix="%" class="accordion__data accordion__data--type--investor">10</td>
+                <td data-postfix="%" class="accordion__data accordion__data--type--project">80</td>
+                <td data-postfix="%" class="accordion__data accordion__data--type--founder">
+                  10
+                </td>
+                <td class="accordion__data--type--icon">
+                  <svg class="icon icon__arrow-short accordion__icon">
+                    <use xlink:href="assets/sprite.svg#icon__arrow-short"></use>
+                  </svg>
+                </td>
+              </tr>
+            </tbody>
+            <tbody id="body-5" class="collapse accordion__body accordion__pair-content">
+              <tr class="accordion__row">
+                <td class="accordion__data accordion__data--type--round"></td>
+                <td data-postfix="" class="accordion__data accordion__data--type--amount">
+                </td>
+                <td class="accordion__data accordion__data--type--startblock">521 090</td>
+                <td data-postfix="%" class="accordion__data accordion__data--type--investor">10</td>
+                <td data-postfix="%" class="accordion__data accordion__data--type--project">80</td>
+                <td colspan="2" data-postfix="%" class="accordion__data accordion__data--type--founder">10</td>
+              </tr>
+              <tr class="accordion__row">
+                <td class="accordion__data accordion__data--type--round"></td>
+                <td data-postfix="" class="accordion__data accordion__data--type--amount">
+                </td>
+                <td class="accordion__data accordion__data--type--startblock">521 090</td>
+                <td data-postfix="%" class="accordion__data accordion__data--type--investor">10</td>
+                <td data-postfix="%" class="accordion__data accordion__data--type--project">80</td>
+                <td colspan="2" data-postfix="%" class="accordion__data accordion__data--type--founder">10</td>
+              </tr>
+              <tr class="accordion__row">
+                <td class="accordion__data accordion__data--type--round"></td>
+                <td data-postfix="" class="accordion__data accordion__data--type--amount">
+                </td>
+                <td class="accordion__data accordion__data--type--startblock">521 090</td>
+                <td data-postfix="%" class="accordion__data accordion__data--type--investor">10</td>
+                <td data-postfix="%" class="accordion__data accordion__data--type--project">80</td>
+                <td colspan="2" data-postfix="%" class="accordion__data accordion__data--type--founder">10</td>
+              </tr>
+              <tr class="accordion__row">
+                <td class="accordion__data accordion__data--type--round"></td>
+                <td data-postfix="" class="accordion__data accordion__data--type--amount">
+                </td>
+                <td class="accordion__data accordion__data--type--startblock">521 090</td>
+                <td data-postfix="%" class="accordion__data accordion__data--type--investor">10</td>
+                <td data-postfix="%" class="accordion__data accordion__data--type--project">80</td>
+                <td colspan="2" data-postfix="%" class="accordion__data accordion__data--type--founder">10</td>
+              </tr>
+              <tr class="accordion__row">
+                <td class="accordion__data accordion__data--type--round"></td>
+                <td data-postfix="" class="accordion__data accordion__data--type--amount">
+                </td>
+                <td class="accordion__data accordion__data--type--startblock">521 090</td>
+                <td data-postfix="%" class="accordion__data accordion__data--type--investor">10</td>
+                <td data-postfix="%" class="accordion__data accordion__data--type--project">80</td>
+                <td colspan="2" data-postfix="%" class="accordion__data accordion__data--type--founder">10</td>
+              </tr>
+              <tr class="accordion__row accordion__row--type--sum">
+                <td colspan="7" class="accordion__data accordion__data--type--sum">
+                  Summary: <span>345.1245</span>
+                </td>
+              </tr>
+            </tbody>
+
+
+          </table>
+
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container-fluid wallets">
+      <div class="container">
+        <div class="row justify-content-end">
+          <h1 data-wallets-events-count="5" class="col-12 col-md-9 heading-2 wallets__heading">
+            Project Wallets Snapshot
+          </h1>
+
+          <span class="w-100"></span>
+
+          <div class="col-12 col-md-3 wallets__data">
+            <div class="row">
+              <div class="col-12 col-sm-4 col-md-12 wallets__data-block">
+                <p class="text text--dimmed wallets__data-descr">Project balance:</p>
+                <p data-value-postfix="eRAY" class="text wallets__data-value">323.00</p>
+              </div>
+              <div class="col-12 col-sm-4 col-md-12 wallets__data-block">
+                <p class="text text--dimmed wallets__data-descr">Project received:</p>
+                <p data-value-postfix="eRAY" class="text wallets__data-value">2,323.23</p>
+                <p class="text text--light wallets__data-exp">in total</p>
+              </div>
+              <div class="col-12 col-sm-4 col-md-12 wallets__data-block">
+                <p class="text text--dimmed wallets__data-descr">Project spent:</p>
+                <p data-value-postfix="eRAY" class="text wallets__data-value">2,000.23</p>
+                <p class="text text--light wallets__data-exp">in total</p>
               </div>
             </div>
           </div>
-        </div>
-    </div>
-  </div>
 
-  <div class="container">
-    <div class="row terms justify-content-md-end">
-      <div class="col-12 col-md-9">
-        <p class="text text--dark text--highlight terms__text">
-          Now the tokens can be exchanged into crypto (in case of ethereum — ETH) at any time with a 1:1 ratio. But if the contributors believe in the succes of the project they will likely choose to keep them.
-        </p>
-      </div>
-      <div class="col-12">
-        <ul class="row terms__aspects aspects">
-          <li class="col-12 col-sm-auto col-md-3 aspect">
-            <span class="aspect__heading">
-              Ratio 1:1
-            </span>
-            <p class="text aspect__text">
-              The contributors are guaranteed to exchange these tokens into ETH.
-            </p>
-          </li>
-          <li class="col-12 col-sm-auto col-md-3 aspect">
-            <span class="aspect__heading">
-              50%
-            </span>
-            <p class="text aspect__text">
-              Opening of a new round when 50% of the stock of crypto currency is burned.
-            </p>
-          </li>
-          <li class="col-12 col-sm-auto col-md-3 aspect">
-            <span class="aspect__heading">
-              Example
-            </span>
-            <p class="text aspect__text">
-              The contributors are guaranteed to exchange these tokens into ETH.
-            </p>
-          </li>
-        </ul>
-      </div>
-      <div class="col-12 col-md-9">
-        <p class="text text--dark text--context-end terms__text">
-          When the token is exchanged back to crypto using the smart contract reserves, the crypto is sent to holder of tokens, and tokens are burnt. When 50% of crypto (ETH) reserves is burnt a next investment round kicks in automatically at a rate set by founders (that optionally can be set at any time, and could theoretically match market price of the token). At this point ETH is automatically converted to tokens at osme rate (let's say 20:1, meaning for every 20 ETH investor gets 1 token and 19 tokens stay within contract for founders to pay contributors).
-        </p>
-      </div>
-      <div class="col-12 col-md-9">
-        <h2 class="heading-2 terms__heading">Changing Parts in Investment Rounds</h2>
-        <p class="text text--dark terms__text">
-          Every day the amount of tokens investor receieves for every ether invested is increasing making it more attractive to wait another stage of the round, but in increasing the rist that someone will take an opportunity to invest early. Here is an example how the token distribution changes from one stage of investment round to another until the round is finished:
-        </p>
-
-      </div>
-
-      <div class="col-12 terms__piecharts">
-        <div class="row terms__piecharts-block">
-          <div class="col-3 piechart">
-            <p class="text piechart__name">Day: 1</p>
-            <img class="piechart__img" src="assets/imgs/pie-chart__day1.png" alt="piechart's data representation" width="128" height="128">
-            <ul class="piechart__legend">
-              <li class="piechart__legend-item piechart__legend-item--type--project">
-                <p class="piechart__legend-text">Project<span class="piechart__legend-percent">80%</span></p>
-              </li>
-              <li class="piechart__legend-item piechart__legend-item--type--founder">
-                <p class="piechart__legend-text">Founder<span class="piechart__legend-percent">10%</span></p>
-              </li>
-              <li class="piechart__legend-item piechart__legend-item--type--investor">
-                <p class="piechart__legend-text">Investor<span class="piechart__legend-percent">10%</span></p>
-              </li>
-            </ul>
-            <p class="piechart__text">For every 70 ETH invested</p>
-          </div>
-
-          <div class="col-3 piechart">
-            <p class="text piechart__name">Day: 2</p>
-            <img class="piechart__img" src="assets/imgs/pie-chart__day2.png" alt="piechart's data representation" width="128" height="128">
-            <ul class="piechart__legend">
-              <li class="piechart__legend-item piechart__legend-item--type--project">
-                <p class="piechart__legend-text">Project<span class="piechart__legend-percent">70%</span></p>
-              </li>
-              <li class="piechart__legend-item piechart__legend-item--type--founder">
-                <p class="piechart__legend-text">Founder<span class="piechart__legend-percent">10%</span></p>
-              </li>
-              <li class="piechart__legend-item piechart__legend-item--type--investor">
-                <p class="piechart__legend-text">Investor<span class="piechart__legend-percent">20%</span></p>
-              </li>
-            </ul>
-            <p class="piechart__text">For every 80 ETH invested</p>
-          </div>
-
-          <div class="col-3 piechart">
-            <p class="text piechart__name">Day: 3</p>
-            <img class="piechart__img" src="assets/imgs/pie-chart__day3.png" alt="piechart's data representation" width="128" height="128">
-            <ul class="piechart__legend">
-              <li class="piechart__legend-item piechart__legend-item--type--project">
-                <p class="piechart__legend-text">Project<span class="piechart__legend-percent">60%</span></p>
-              </li>
-              <li class="piechart__legend-item piechart__legend-item--type--founder">
-                <p class="piechart__legend-text">Founder<span class="piechart__legend-percent">10%</span></p>
-              </li>
-              <li class="piechart__legend-item piechart__legend-item--type--investor">
-                <p class="piechart__legend-text">Investor<span class="piechart__legend-percent">30%</span></p>
-              </li>
-            </ul>
-            <p class="piechart__text">For every 90 ETH invested</p>
-          </div>
-
-          <div class="col-3 piechart">
-            <p class="text piechart__name">Day: 4</p>
-            <img class="piechart__img" src="assets/imgs/pie-chart__day4.png" alt="piechart's data representation" width="128" height="128">
-            <ul class="piechart__legend">
-              <li class="piechart__legend-item piechart__legend-item--type--project">
-                <p class="piechart__legend-text">Project<span class="piechart__legend-percent">50%</span></p>
-              </li>
-              <li class="piechart__legend-item piechart__legend-item--type--founder">
-                <p class="piechart__legend-text">Founder<span class="piechart__legend-percent">10%</span></p>
-              </li>
-              <li class="piechart__legend-item piechart__legend-item--type--investor">
-                <p class="piechart__legend-text">Investor<span class="piechart__legend-percent">40%</span></p>
-              </li>
-            </ul>
-            <p class="piechart__text">For every 100 ETH invested</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="container-fluid features">
-    <div class="features__content container">
-      <div class="row justify-content-end">
-        <h2 class="col-12 col-md-9 heading-2 heading-2--lightest features__heading">This Approach to Funding has a Few Advantages to Traditional ICOs</h2>
-      </div>
-      <ul class="row features__list">
-        <li class="col-12 col-sm-3 features__item">
-          <svg class="icon icon__escolation features__icon">
-            <use xlink:href="assets/sprite.svg#icon__escolation"></use>
-          </svg>
-          <p class="text text--light features__text">
-            It ensures that there is no over raise that many people witnessed with ICOs.
-          </p>
-        </li>
-        <li class="col-12 col-sm-3 features__item">
-          <svg class="icon icon__bar-chart features__icon">
-            <use xlink:href="assets/sprite.svg#icon__bar-chart"></use>
-          </svg>
-          <p class="text text--light features__text">
-            More power over project to the contributors - the people who create it. Contributors may decide how much of their compensation to keep in tokens, rather than given a fixed amount.
-          </p>
-        </li>
-        <li class="col-12 col-sm-3 features__item">
-          <svg class="icon icon__shield features__icon">
-            <use xlink:href="assets/sprite.svg#icon__shield"></use>
-          </svg>
-          <p class="text text--light features__text">
-            Less risk of loosing the raised funds, since only a small amount of crypto is locked, not all the amount raised.
-          </p>
-        </li>
-        <li class="col-12 col-sm-3 features__item">
-          <svg class="icon icon__coin features__icon">
-            <use xlink:href="assets/sprite.svg#icon__coin"></use>
-          </svg>
-          <p class="text text--light features__text">
-            There is less wastage of funds on marketing, pr and other bs that the current ICO craze has created.
-          </p>
-        </li>
-      </ul>
-      <div class="row justify-content-end">
-        <p class="col-12 col-md-9 text text--highlight text--light text--context-end features__text features__text--spacing--narrow">Now the tokens can be exchanged into crypto (in case of ethereum - ETH) at any time with a 1:1 ratio.</p>
-        <p class="col-12 col-md-9 text text--light features__text features__text--spread--lg">
-          It is a simple idea combining two working technologies. DPOS (of graphene) and Solidity smart contracts. At the time of the writing Ethereum's market cap is roughly 30 billion dollars. If our blockchain reaches 1/1000th of that success, the market cap of Annihilat.io will reach $28m. If we, as founders/investors keep 10% of that, we will make a little bit of money. But on the way to this success 90% that is distributed to contributors may make some good money too.
-        </p>
-      </div>
-    </div>
-  </div>
-
-  <div class="container brief">
-
-    <div class="brief__block">
-      <div class="row justify-content-end">
-        <h3 class="col-12 col-md-9 heading-2 brief__heading">Brief information for investors</h3>
-        <span class="w-100"></span>
-        <p class="col-md-3 brief__descr">
-          Brief references from basic information. Brief references from basic information
-        </p>
-        <p class="col-12 col-md-9 text text--dark">
-          It is a simple idea combining two working technologies. DPOS (of graphene) and Solidity smart contracts. At the time of the writing Ethereum's market cap is roughly 30 billion dollars. If our blockchain reaches 1/1000th of that success, the market cap of Annihilat.io will reach $28m. If we, as founders/investors keep 10% of that, we will make a little bit of money. But on the way to this success 90% that is distributed to contributors may make some good money too.
-        </p>
-      </div>
-    </div>
-
-    <div class="brief__block">
-      <div class="row justify-content-end">
-        <h3 class="col-12 col-md-9 heading-2 brief__heading">Brief information for traders</h3>
-        <span class="w-100"></span>
-        <p class="col-md-3 brief__descr">
-          Brief references from basic information. Brief references from basic information
-        </p>
-        <p class="col-12 col-md-9 text text--dark">
-          The point of this project however is not only to bring to market another smart contract blockchain, even though we expect it to be much faster. The goal also is to create a precedent for a way projects can be funded. The community of contributors we may gather around us may transform this idea into something completely different and improve the idea greately. Only test will tell. On the other note we hope that the distribution of tokens as form of compensation will create a more or less even spread of stake among contributors and also investors.
-        </p>
-      </div>
-
-    </div>
-
-  </div>
-
-  <div class="container-fluid faq">
-    <div class="container">
-      <div class="row justify-content-end">
-        <h2 class="col-12 col-md-9 faq__heading">FAQ</h2>
-        <span class="w-100"></span>
-        <div class="col-12 col-md-3 text text--light faq__descr">
-          Here you can find frequently asked questions on this topic and answers to them.
-        </div>
-
-        <div class="col-12 col-md-9 faq__list">
-
-          <div class="faq__pair">
-
-            <p class="faq__pair-heading" data-toggle="collapse" data-target="#quastion-1" aria-expanded="false" aria-controls="quastion-1">
-              <span class="faq__pair-heading-text">The first frequently asked question on this topic?</span>
-              <span class="faq__icon">
-                <svg class="icon icon__arrow-short">
-                  <use xlink:href="assets/sprite.svg#icon__arrow-short"></use>
-                </svg>
-              </span>
-            </p>
-
-            <div id="quastion-1" class="collapse faq__pair-content">
-              <p class="text text--light faq__answer">
-                Every day the amount of tokens investor receieves for every ether invested is increasing making it more attractive to wait another stage of the round, but in increasing the rist that someone will take an opportunity to invest early.
-              </p>
-            </div>
-
-          </div>
-
-          <div class="faq__pair">
-
-            <p class="faq__pair-heading" data-toggle="collapse" data-target="#quastion-2" aria-expanded="true" aria-controls="quastion-2">
-              <span class="faq__pair-heading-text">The first frequently asked question on this topic?</span>
-              <span class="faq__icon">
-                <svg class="icon icon__arrow-short">
-                  <use xlink:href="assets/sprite.svg#icon__arrow-short"></use>
-                </svg>
-              </span>
-            </p>
-
-            <div id="quastion-2" class="collapse show faq__pair-content">
-              <p class="text text--light faq__answer">
-                Every day the amount of tokens investor receieves for every ether invested is increasing making it more attractive to wait another stage of the round, but in increasing the rist that someone will take an opportunity to invest early.
-              </p>
-            </div>
-
-          </div>
-
-          <div class="faq__pair">
-
-            <p class="faq__pair-heading" data-toggle="collapse" data-target="#quastion-3" aria-expanded="false" aria-controls="quastion-3">
-              <span class="faq__pair-heading-text">The first frequently asked question on this topic?</span>
-              <span class="faq__icon">
-                <svg class="icon icon__arrow-short">
-                  <use xlink:href="assets/sprite.svg#icon__arrow-short"></use>
-                </svg>
-              </span>
-            </p>
-
-            <div id="quastion-3" class="collapse faq__pair-content">
-              <p class="text text--light faq__answer">
-                Every day the amount of tokens investor receieves for every ether invested is increasing making it more attractive to wait another stage of the round, but in increasing the rist that someone will take an opportunity to invest early.
-              </p>
-            </div>
-
-          </div>
-
-        </div>
-
-        <div class="col-12 col-md-9">
-          <a href="#" class="button button--state--close">
-            <span class="button__text">Close Information</span>
-            <span class="button__glow"></span>
-          </a>
-        </div>
-
-      </div>
-    </div>
-  </div>
-
-  <div data-tge-status="true" class="container tge-info">
-    <div class="row justify-content-end align-items-center">
-      <h2 class="col-12 col-md-9 heading-2 tge-info__heading">Token generation event</h2>
-      <span class="w-100"></span>
-      <p data-tge-false class="col-12 col-md-3 text tge-info__text tge-info__text--position--countdown tge-info__text--view--countdown">
-        The new round will begin at the end of the balance.
-      </p>
-      <p data-tge-undefined class="col-12 col-md-9 text tge-info__text tge-info__text--position--countdown">
-        <b>Something went wrong!</b> Couldn't get TGE status.
-      </p>
-      <div data-tge-false class="col-12 col-md-9">
-        <div class="tge-info__countdown">
-          <p class="tge-info__countdown-balance">
-            Balance <span class="tge-info__countdown-balance-value">156.284</span>
-          </p>
-          <div class="tge-info__countdown-time">
-            Time to a new round <time><span class="tge-info__countdown-days tge-info__countdown-time--divider">1 day</span> <span class="tge-info__countdown-hours">15 hours</span></time>
-          </div>
-        </div>
-      </div>
-
-      <div data-tge-true class="col-12">
-        <div class="row tge-info__block">
-          <p class="col-12 col-md-3 text text--dark tge-info__text">
-            This shows how much to collect and how much is collected ETH.
-          </p>
-          <div data-tooltip-trigger data- class="col-12 col-md-9 scale">
-            <p class="scale__name" data-scale-name="ETH" style="width: 50%">
-              <span data-toggle="tooltip" data-placement="top" title="300 675 ETH" data-delay='{ "hide": 1000 }' class="scale__tooltip-target">
-                ETH
-              </span>
-            </p>
-            <p class="scale__bar" data-start="1" data-end="500 000">300 675 ETH / 500 000</p>
-          </div>
-        </div>
-        <div class="row tge-info__block">
-          <p class="col-12 col-md-3 text text--dark tge-info__text">
-            This shows how many stages of investment are left.
-          </p>
-          <div data-tooltip-trigger class="col-12 col-md-9 scale scale--theme--dark">
-            <p class="scale__name" data-scale-name="Starting block" style="width: 69%">
-              <span data-toggle="tooltip" data-tooltip-theme="dark" title="521 277" data-delay='{ "hide": 1000 }' class="scale__tooltip-target">Starting block</span>
-            </p>
-            <p class="scale__bar scale__bar--theme--stages" data-start-block data-start="521 100" data-end="521 400">521 277 / 521 400</p>
-          </div>
-        </div>
-      </div>
-
-      <p data-tge-true class="col-12 col-md-9 text tge-info__text tge-info__text--highlight">
-        Whichever completes sooner will end the live TGE.
-      </p>
-    </div>
-
-    <div data-tge-true class="tge-info__stage">
-      <div class="stages">
-        <div class="stages__item stages__item--align--left">
-          <p class="text stages__name">
-            Stage <span data-previous-stage>4</span>
-          </p>
-          <div class="stages__data stages__data--price">
-            <p class="text text--dimmed stages__data-name">Previous price</p>
-            <p class="text stages__data-value" data-value-postfix="ETH">1.66</p>
-          </div>
-          <div class="stages__data">
-            <p class="text text--dimmed stages__data-name">Starting block</p>
-            <p class="text stages__data-value">521 100</p>
-          </div>
-        </div>
-
-        <div data-tooltip-trigger class="stages__item stages__item--dark stages__item--align--center">
-          <p data-status="true" data-status-true="live" class="text stages__name">
-            Stage <span data-current-stage>5</span>
-          </p>
-          <div class="stages__data stages__data--price">
-            <p class="text text--dimmed stages__data-name">Actual price</p>
-            <p class="text stages__data-value" data-value-postfix="ETH">1.5</p>
-          </div>
-          <div class="stages__data">
-            <p class="text text--dimmed stages__data-name">Current block</p>
-            <p class="text stages__data-value">521 277</p>
-          </div>
-          <span data-toggle="tooltip" data-placement="top" title="Only 123 blocks left to next stage (approximately 1 hour, 23 minutes)" data-delay='{ "hide": 1000 }' class="stage__tooltip-target"></span>
-        </div>
-
-        <div class="stages__item stages__item--align--right">
-          <p class="text stages__name">
-            Stage <span data-next-stage>6</span>
-          </p>
-          <div class="stages__data stages__data--price">
-            <p class="text text--dimmed stages__data-name">Previous price</p>
-            <p class="text stages__data-value" data-value-postfix="ETH">1.2</p>
-          </div>
-          <div class="stages__data">
-            <p class="text text--dimmed stages__data-name">Starting block</p>
-            <p class="text stages__data-value">521 100</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-
-    <div class="row justify-content-end">
-
-      <div class="col-12 col-md-9 tge-info__accordion accordion">
-
-        <table class="accordion__table">
-          <thead class="accordion__head">
-            <tr class="accordion__header">
-              <th class="accordion__table-heading accordion__table-heading--type--round">Round</th>
-              <th class="accordion__table-heading accordion__table-heading--type--amount">Amount</th>
-              <th class="accordion__table-heading accordion__table-heading--type--startblock">StartBlock</th>
-              <th class="accordion__table-heading accordion__table-heading--type--investor">Investor</th>
-              <th class="accordion__table-heading accordion__table-heading--type--project">Project</th>
-              <th class="accordion__table-heading accordion__table-heading--type--founder">Founder</th>
-            </tr>
-          </thead>
-
-          <tbody data-toggle="collapse" data-target="#body-1" aria-expanded="false" aria-controls="body-1" class="accordion__body accordion__pair-heading accordion__pair-heading--order--first collapsed">
-            <tr class="accordion__row accordion__row--type--main">
-              <td class="accordion__data accordion__data--type--round">
-                <span data-tge-round class="accordion__data--highlight">TGE 5</span>
-
-                <time class="accordion__data-time" datetime="2018-03-13T12:45">
-                  <span data-day>13.03.18</span> <span data-day-time>12:45</span>
-                </time>
-              </td>
-              <td data-postfix="ETH" class="accordion__data accordion__data--type--amount">
-                125
-              </td>
-              <td class="accordion__data accordion__data--type--startblock">521 090</td>
-              <td data-postfix="%" class="accordion__data accordion__data--type--investor">10</td>
-              <td data-postfix="%" class="accordion__data accordion__data--type--project">80</td>
-              <td data-postfix="%" class="accordion__data accordion__data--type--founder">
-                10
-              </td>
-              <td class="accordion__data--type--icon">
-                <svg class="icon icon__arrow-short accordion__icon">
-                  <use xlink:href="assets/sprite.svg#icon__arrow-short"></use>
-                </svg>
-              </td>
-            </tr>
-          </tbody>
-          <tbody id="body-1" class="collapse accordion__body accordion__pair-content">
-            <tr class="accordion__row">
-              <td class="accordion__data accordion__data--type--round"></td>
-              <td data-postfix="" class="accordion__data accordion__data--type--amount">
-              </td>
-              <td class="accordion__data accordion__data--type--startblock">521 090</td>
-              <td data-postfix="%" class="accordion__data accordion__data--type--investor">10</td>
-              <td data-postfix="%" class="accordion__data accordion__data--type--project">80</td>
-              <td colspan="2" data-postfix="%" class="accordion__data accordion__data--type--founder">10</td>
-            </tr>
-            <tr class="accordion__row">
-              <td class="accordion__data accordion__data--type--round"></td>
-              <td data-postfix="" class="accordion__data accordion__data--type--amount">
-              </td>
-              <td class="accordion__data accordion__data--type--startblock">521 090</td>
-              <td data-postfix="%" class="accordion__data accordion__data--type--investor">10</td>
-              <td data-postfix="%" class="accordion__data accordion__data--type--project">80</td>
-              <td colspan="2" data-postfix="%" class="accordion__data accordion__data--type--founder">10</td>
-            </tr>
-            <tr class="accordion__row">
-              <td class="accordion__data accordion__data--type--round"></td>
-              <td data-postfix="" class="accordion__data accordion__data--type--amount">
-              </td>
-              <td class="accordion__data accordion__data--type--startblock">521 090</td>
-              <td data-postfix="%" class="accordion__data accordion__data--type--investor">10</td>
-              <td data-postfix="%" class="accordion__data accordion__data--type--project">80</td>
-              <td colspan="2" data-postfix="%" class="accordion__data accordion__data--type--founder">10</td>
-            </tr>
-            <tr class="accordion__row">
-              <td class="accordion__data accordion__data--type--round"></td>
-              <td data-postfix="" class="accordion__data accordion__data--type--amount">
-              </td>
-              <td class="accordion__data accordion__data--type--startblock">521 090</td>
-              <td data-postfix="%" class="accordion__data accordion__data--type--investor">10</td>
-              <td data-postfix="%" class="accordion__data accordion__data--type--project">80</td>
-              <td colspan="2" data-postfix="%" class="accordion__data accordion__data--type--founder">10</td>
-            </tr>
-            <tr class="accordion__row">
-              <td class="accordion__data accordion__data--type--round"></td>
-              <td data-postfix="" class="accordion__data accordion__data--type--amount">
-              </td>
-              <td class="accordion__data accordion__data--type--startblock">521 090</td>
-              <td data-postfix="%" class="accordion__data accordion__data--type--investor">10</td>
-              <td data-postfix="%" class="accordion__data accordion__data--type--project">80</td>
-              <td colspan="2" data-postfix="%" class="accordion__data accordion__data--type--founder">10</td>
-            </tr>
-            <tr class="accordion__row accordion__row--type--sum">
-              <td colspan="7" class="accordion__data accordion__data--type--sum">
-                Summary: <span>345.1245</span>
-              </td>
-            </tr>
-          </tbody>
-
-          <tbody data-toggle="collapse" data-target="#body-2" aria-expanded="false" aria-controls="body-2" class="accordion__body accordion__pair-heading collapsed">
-            <tr class="accordion__row accordion__row--type--main">
-              <td class="accordion__data accordion__data--type--round">
-                <span data-tge-round class="accordion__data--highlight">TGE 5</span>
-
-                <time class="accordion__data-time" datetime="2018-03-13T12:45">
-                  <span data-day>13.03.18</span> <span data-day-time>12:45</span>
-                </time>
-              </td>
-              <td data-postfix="ETH" class="accordion__data accordion__data--type--amount">
-                125
-              </td>
-              <td class="accordion__data accordion__data--type--startblock">521 090</td>
-              <td data-postfix="%" class="accordion__data accordion__data--type--investor">10</td>
-              <td data-postfix="%" class="accordion__data accordion__data--type--project">80</td>
-              <td data-postfix="%" class="accordion__data accordion__data--type--founder">
-                10
-              </td>
-              <td class="accordion__data--type--icon">
-                <svg class="icon icon__arrow-short accordion__icon">
-                  <use xlink:href="assets/sprite.svg#icon__arrow-short"></use>
-                </svg>
-              </td>
-            </tr>
-          </tbody>
-          <tbody id="body-2" class="collapse accordion__body accordion__pair-content">
-            <tr class="accordion__row">
-              <td class="accordion__data accordion__data--type--round"></td>
-              <td data-postfix="" class="accordion__data accordion__data--type--amount">
-              </td>
-              <td class="accordion__data accordion__data--type--startblock">521 090</td>
-              <td data-postfix="%" class="accordion__data accordion__data--type--investor">10</td>
-              <td data-postfix="%" class="accordion__data accordion__data--type--project">80</td>
-              <td colspan="2" data-postfix="%" class="accordion__data accordion__data--type--founder">10</td>
-            </tr>
-            <tr class="accordion__row">
-              <td class="accordion__data accordion__data--type--round"></td>
-              <td data-postfix="" class="accordion__data accordion__data--type--amount">
-              </td>
-              <td class="accordion__data accordion__data--type--startblock">521 090</td>
-              <td data-postfix="%" class="accordion__data accordion__data--type--investor">10</td>
-              <td data-postfix="%" class="accordion__data accordion__data--type--project">80</td>
-              <td colspan="2" data-postfix="%" class="accordion__data accordion__data--type--founder">10</td>
-            </tr>
-            <tr class="accordion__row">
-              <td class="accordion__data accordion__data--type--round"></td>
-              <td data-postfix="" class="accordion__data accordion__data--type--amount">
-              </td>
-              <td class="accordion__data accordion__data--type--startblock">521 090</td>
-              <td data-postfix="%" class="accordion__data accordion__data--type--investor">10</td>
-              <td data-postfix="%" class="accordion__data accordion__data--type--project">80</td>
-              <td colspan="2" data-postfix="%" class="accordion__data accordion__data--type--founder">10</td>
-            </tr>
-            <tr class="accordion__row">
-              <td class="accordion__data accordion__data--type--round"></td>
-              <td data-postfix="" class="accordion__data accordion__data--type--amount">
-              </td>
-              <td class="accordion__data accordion__data--type--startblock">521 090</td>
-              <td data-postfix="%" class="accordion__data accordion__data--type--investor">10</td>
-              <td data-postfix="%" class="accordion__data accordion__data--type--project">80</td>
-              <td colspan="2" data-postfix="%" class="accordion__data accordion__data--type--founder">10</td>
-            </tr>
-            <tr class="accordion__row">
-              <td class="accordion__data accordion__data--type--round"></td>
-              <td data-postfix="" class="accordion__data accordion__data--type--amount">
-              </td>
-              <td class="accordion__data accordion__data--type--startblock">521 090</td>
-              <td data-postfix="%" class="accordion__data accordion__data--type--investor">10</td>
-              <td data-postfix="%" class="accordion__data accordion__data--type--project">80</td>
-              <td colspan="2" data-postfix="%" class="accordion__data accordion__data--type--founder">10</td>
-            </tr>
-            <tr class="accordion__row accordion__row--type--sum">
-              <td colspan="7" class="accordion__data accordion__data--type--sum">
-                Summary: <span>345.1245</span>
-              </td>
-            </tr>
-          </tbody>
-
-          <tbody data-toggle="collapse" data-target="#body-3" aria-expanded="false" aria-controls="body-3" class="accordion__body accordion__pair-heading collapsed">
-            <tr class="accordion__row accordion__row--type--main">
-              <td class="accordion__data accordion__data--type--round">
-                <span data-tge-round class="accordion__data--highlight">TGE 5</span>
-
-                <time class="accordion__data-time" datetime="2018-03-13T12:45">
-                  <span data-day>13.03.18</span> <span data-day-time>12:45</span>
-                </time>
-              </td>
-              <td data-postfix="ETH" class="accordion__data accordion__data--type--amount">
-                125
-              </td>
-              <td class="accordion__data accordion__data--type--startblock">521 090</td>
-              <td data-postfix="%" class="accordion__data accordion__data--type--investor">10</td>
-              <td data-postfix="%" class="accordion__data accordion__data--type--project">80</td>
-              <td data-postfix="%" class="accordion__data accordion__data--type--founder">
-                10
-              </td>
-              <td class="accordion__data--type--icon">
-                <svg class="icon icon__arrow-short accordion__icon">
-                  <use xlink:href="assets/sprite.svg#icon__arrow-short"></use>
-                </svg>
-              </td>
-            </tr>
-          </tbody>
-          <tbody id="body-3" class="collapse accordion__body accordion__pair-content">
-            <tr class="accordion__row">
-              <td class="accordion__data accordion__data--type--round"></td>
-              <td data-postfix="" class="accordion__data accordion__data--type--amount">
-              </td>
-              <td class="accordion__data accordion__data--type--startblock">521 090</td>
-              <td data-postfix="%" class="accordion__data accordion__data--type--investor">10</td>
-              <td data-postfix="%" class="accordion__data accordion__data--type--project">80</td>
-              <td colspan="2" data-postfix="%" class="accordion__data accordion__data--type--founder">10</td>
-            </tr>
-            <tr class="accordion__row">
-              <td class="accordion__data accordion__data--type--round"></td>
-              <td data-postfix="" class="accordion__data accordion__data--type--amount">
-              </td>
-              <td class="accordion__data accordion__data--type--startblock">521 090</td>
-              <td data-postfix="%" class="accordion__data accordion__data--type--investor">10</td>
-              <td data-postfix="%" class="accordion__data accordion__data--type--project">80</td>
-              <td colspan="2" data-postfix="%" class="accordion__data accordion__data--type--founder">10</td>
-            </tr>
-            <tr class="accordion__row">
-              <td class="accordion__data accordion__data--type--round"></td>
-              <td data-postfix="" class="accordion__data accordion__data--type--amount">
-              </td>
-              <td class="accordion__data accordion__data--type--startblock">521 090</td>
-              <td data-postfix="%" class="accordion__data accordion__data--type--investor">10</td>
-              <td data-postfix="%" class="accordion__data accordion__data--type--project">80</td>
-              <td colspan="2" data-postfix="%" class="accordion__data accordion__data--type--founder">10</td>
-            </tr>
-            <tr class="accordion__row">
-              <td class="accordion__data accordion__data--type--round"></td>
-              <td data-postfix="" class="accordion__data accordion__data--type--amount">
-              </td>
-              <td class="accordion__data accordion__data--type--startblock">521 090</td>
-              <td data-postfix="%" class="accordion__data accordion__data--type--investor">10</td>
-              <td data-postfix="%" class="accordion__data accordion__data--type--project">80</td>
-              <td colspan="2" data-postfix="%" class="accordion__data accordion__data--type--founder">10</td>
-            </tr>
-            <tr class="accordion__row">
-              <td class="accordion__data accordion__data--type--round"></td>
-              <td data-postfix="" class="accordion__data accordion__data--type--amount">
-              </td>
-              <td class="accordion__data accordion__data--type--startblock">521 090</td>
-              <td data-postfix="%" class="accordion__data accordion__data--type--investor">10</td>
-              <td data-postfix="%" class="accordion__data accordion__data--type--project">80</td>
-              <td colspan="2" data-postfix="%" class="accordion__data accordion__data--type--founder">10</td>
-            </tr>
-            <tr class="accordion__row accordion__row--type--sum">
-              <td colspan="7" class="accordion__data accordion__data--type--sum">
-                Summary: <span>345.1245</span>
-              </td>
-            </tr>
-          </tbody>
-
-          <tbody data-toggle="collapse" data-target="#body-4" aria-expanded="false" aria-controls="body-4" class="accordion__body accordion__pair-heading collapsed">
-            <tr class="accordion__row accordion__row--type--main">
-              <td class="accordion__data accordion__data--type--round">
-                <span data-tge-round class="accordion__data--highlight">TGE 5</span>
-
-                <time class="accordion__data-time" datetime="2018-03-13T12:45">
-                  <span data-day>13.03.18</span> <span data-day-time>12:45</span>
-                </time>
-              </td>
-              <td data-postfix="ETH" class="accordion__data accordion__data--type--amount">
-                125
-              </td>
-              <td class="accordion__data accordion__data--type--startblock">521 090</td>
-              <td data-postfix="%" class="accordion__data accordion__data--type--investor">10</td>
-              <td data-postfix="%" class="accordion__data accordion__data--type--project">80</td>
-              <td data-postfix="%" class="accordion__data accordion__data--type--founder">
-                10
-              </td>
-              <td class="accordion__data--type--icon">
-                <svg class="icon icon__arrow-short accordion__icon">
-                  <use xlink:href="assets/sprite.svg#icon__arrow-short"></use>
-                </svg>
-              </td>
-            </tr>
-          </tbody>
-          <tbody id="body-4" class="collapse accordion__body accordion__pair-content">
-            <tr class="accordion__row">
-              <td class="accordion__data accordion__data--type--round"></td>
-              <td data-postfix="" class="accordion__data accordion__data--type--amount">
-              </td>
-              <td class="accordion__data accordion__data--type--startblock">521 090</td>
-              <td data-postfix="%" class="accordion__data accordion__data--type--investor">10</td>
-              <td data-postfix="%" class="accordion__data accordion__data--type--project">80</td>
-              <td colspan="2" data-postfix="%" class="accordion__data accordion__data--type--founder">10</td>
-            </tr>
-            <tr class="accordion__row">
-              <td class="accordion__data accordion__data--type--round"></td>
-              <td data-postfix="" class="accordion__data accordion__data--type--amount">
-              </td>
-              <td class="accordion__data accordion__data--type--startblock">521 090</td>
-              <td data-postfix="%" class="accordion__data accordion__data--type--investor">10</td>
-              <td data-postfix="%" class="accordion__data accordion__data--type--project">80</td>
-              <td colspan="2" data-postfix="%" class="accordion__data accordion__data--type--founder">10</td>
-            </tr>
-            <tr class="accordion__row">
-              <td class="accordion__data accordion__data--type--round"></td>
-              <td data-postfix="" class="accordion__data accordion__data--type--amount">
-              </td>
-              <td class="accordion__data accordion__data--type--startblock">521 090</td>
-              <td data-postfix="%" class="accordion__data accordion__data--type--investor">10</td>
-              <td data-postfix="%" class="accordion__data accordion__data--type--project">80</td>
-              <td colspan="2" data-postfix="%" class="accordion__data accordion__data--type--founder">10</td>
-            </tr>
-            <tr class="accordion__row">
-              <td class="accordion__data accordion__data--type--round"></td>
-              <td data-postfix="" class="accordion__data accordion__data--type--amount">
-              </td>
-              <td class="accordion__data accordion__data--type--startblock">521 090</td>
-              <td data-postfix="%" class="accordion__data accordion__data--type--investor">10</td>
-              <td data-postfix="%" class="accordion__data accordion__data--type--project">80</td>
-              <td colspan="2" data-postfix="%" class="accordion__data accordion__data--type--founder">10</td>
-            </tr>
-            <tr class="accordion__row">
-              <td class="accordion__data accordion__data--type--round"></td>
-              <td data-postfix="" class="accordion__data accordion__data--type--amount">
-              </td>
-              <td class="accordion__data accordion__data--type--startblock">521 090</td>
-              <td data-postfix="%" class="accordion__data accordion__data--type--investor">10</td>
-              <td data-postfix="%" class="accordion__data accordion__data--type--project">80</td>
-              <td colspan="2" data-postfix="%" class="accordion__data accordion__data--type--founder">10</td>
-            </tr>
-            <tr class="accordion__row accordion__row--type--sum">
-              <td colspan="7" class="accordion__data accordion__data--type--sum">
-                Summary: <span>345.1245</span>
-              </td>
-            </tr>
-          </tbody>
-
-          <tbody data-toggle="collapse" data-target="#body-5" aria-expanded="false" aria-controls="body-5" class="accordion__body accordion__pair-heading collapsed">
-            <tr class="accordion__row accordion__row--type--main">
-              <td class="accordion__data accordion__data--type--round">
-                <span data-tge-round class="accordion__data--highlight">TGE 5</span>
-
-                <time class="accordion__data-time" datetime="2018-03-13T12:45">
-                  <span data-day>13.03.18</span> <span data-day-time>12:45</span>
-                </time>
-              </td>
-              <td data-postfix="ETH" class="accordion__data accordion__data--type--amount">
-                125
-              </td>
-              <td class="accordion__data accordion__data--type--startblock">521 090</td>
-              <td data-postfix="%" class="accordion__data accordion__data--type--investor">10</td>
-              <td data-postfix="%" class="accordion__data accordion__data--type--project">80</td>
-              <td data-postfix="%" class="accordion__data accordion__data--type--founder">
-                10
-              </td>
-              <td class="accordion__data--type--icon">
-                <svg class="icon icon__arrow-short accordion__icon">
-                  <use xlink:href="assets/sprite.svg#icon__arrow-short"></use>
-                </svg>
-              </td>
-            </tr>
-          </tbody>
-          <tbody id="body-5" class="collapse accordion__body accordion__pair-content">
-            <tr class="accordion__row">
-              <td class="accordion__data accordion__data--type--round"></td>
-              <td data-postfix="" class="accordion__data accordion__data--type--amount">
-              </td>
-              <td class="accordion__data accordion__data--type--startblock">521 090</td>
-              <td data-postfix="%" class="accordion__data accordion__data--type--investor">10</td>
-              <td data-postfix="%" class="accordion__data accordion__data--type--project">80</td>
-              <td colspan="2" data-postfix="%" class="accordion__data accordion__data--type--founder">10</td>
-            </tr>
-            <tr class="accordion__row">
-              <td class="accordion__data accordion__data--type--round"></td>
-              <td data-postfix="" class="accordion__data accordion__data--type--amount">
-              </td>
-              <td class="accordion__data accordion__data--type--startblock">521 090</td>
-              <td data-postfix="%" class="accordion__data accordion__data--type--investor">10</td>
-              <td data-postfix="%" class="accordion__data accordion__data--type--project">80</td>
-              <td colspan="2" data-postfix="%" class="accordion__data accordion__data--type--founder">10</td>
-            </tr>
-            <tr class="accordion__row">
-              <td class="accordion__data accordion__data--type--round"></td>
-              <td data-postfix="" class="accordion__data accordion__data--type--amount">
-              </td>
-              <td class="accordion__data accordion__data--type--startblock">521 090</td>
-              <td data-postfix="%" class="accordion__data accordion__data--type--investor">10</td>
-              <td data-postfix="%" class="accordion__data accordion__data--type--project">80</td>
-              <td colspan="2" data-postfix="%" class="accordion__data accordion__data--type--founder">10</td>
-            </tr>
-            <tr class="accordion__row">
-              <td class="accordion__data accordion__data--type--round"></td>
-              <td data-postfix="" class="accordion__data accordion__data--type--amount">
-              </td>
-              <td class="accordion__data accordion__data--type--startblock">521 090</td>
-              <td data-postfix="%" class="accordion__data accordion__data--type--investor">10</td>
-              <td data-postfix="%" class="accordion__data accordion__data--type--project">80</td>
-              <td colspan="2" data-postfix="%" class="accordion__data accordion__data--type--founder">10</td>
-            </tr>
-            <tr class="accordion__row">
-              <td class="accordion__data accordion__data--type--round"></td>
-              <td data-postfix="" class="accordion__data accordion__data--type--amount">
-              </td>
-              <td class="accordion__data accordion__data--type--startblock">521 090</td>
-              <td data-postfix="%" class="accordion__data accordion__data--type--investor">10</td>
-              <td data-postfix="%" class="accordion__data accordion__data--type--project">80</td>
-              <td colspan="2" data-postfix="%" class="accordion__data accordion__data--type--founder">10</td>
-            </tr>
-            <tr class="accordion__row accordion__row--type--sum">
-              <td colspan="7" class="accordion__data accordion__data--type--sum">
-                Summary: <span>345.1245</span>
-              </td>
-            </tr>
-          </tbody>
-
-
-        </table>
-
-      </div>
-
-    </div>
-  </div>
-
-  <div class="container-fluid wallets">
-    <div class="container">
-      <div class="row justify-content-end">
-        <h1 data-wallets-events-count="5" class="col-12 col-md-9 heading-2 wallets__heading">
-          Project Wallets Snapshot
-        </h1>
-
-        <span class="w-100"></span>
-
-        <div class="col-12 col-md-3 wallets__data">
-          <div class="row">
-            <div class="col-12 col-sm-4 col-md-12 wallets__data-block">
-              <p class="text text--dimmed wallets__data-descr">Project balance:</p>
-              <p data-value-postfix="eRAY" class="text wallets__data-value">323.00</p>
-            </div>
-            <div class="col-12 col-sm-4 col-md-12 wallets__data-block">
-              <p class="text text--dimmed wallets__data-descr">Project received:</p>
-              <p data-value-postfix="eRAY" class="text wallets__data-value">2,323.23</p>
-              <p class="text text--light wallets__data-exp">in total</p>
-            </div>
-            <div class="col-12 col-sm-4 col-md-12 wallets__data-block">
-              <p class="text text--dimmed wallets__data-descr">Project spent:</p>
-              <p data-value-postfix="eRAY" class="text wallets__data-value">2,000.23</p>
-              <p class="text text--light wallets__data-exp">in total</p>
+          <div class="col-12 col-md-9">
+            <div class="events wallets__events">
+              <table class="events__table">
+                <thead class="events__head">
+                  <tr class="events__header">
+                    <td class="events__heading events__heading--type--age">Age</td>
+                    <td class="events__heading events__heading--type--transfers">Transfers</td>
+                    <td class="events__heading events__heading--type--quantity">Quantity</td>
+                  </tr>
+                </thead>
+                <tbody class="events__body">
+                  <tr class="events__data">
+                    <td class="events__value events__value--type--age">23 days 1 hr ago</td>
+                    <td class="events__value events__value--type--transfers">134</td>
+                    <td class="events__value events__value--type--quantity">3,333,333</td>
+                  </tr>
+                  <tr class="events__data">
+                    <td class="events__value events__value--type--age">43 days 19 hrs ago</td>
+                    <td class="events__value events__value--type--transfers">275</td>
+                    <td class="events__value events__value--type--quantity">16,250</td>
+                  </tr>
+                  <tr class="events__data">
+                    <td class="events__value events__value--type--age">23 days 1 hr ago</td>
+                    <td class="events__value events__value--type--transfers">134</td>
+                    <td class="events__value events__value--type--quantity">3,333,333</td>
+                  </tr>
+                  <tr class="events__data">
+                    <td class="events__value events__value--type--age">43 days 19 hrs ago</td>
+                    <td class="events__value events__value--type--transfers">275</td>
+                    <td class="events__value events__value--type--quantity">16,250</td>
+                  </tr>
+                  <tr class="events__data">
+                    <td class="events__value events__value--type--age">23 days 1 hr ago</td>
+                    <td class="events__value events__value--type--transfers">134</td>
+                    <td class="events__value events__value--type--quantity">3,333,333</td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
           </div>
-        </div>
 
-        <div class="col-12 col-md-9">
-          <div class="events wallets__events">
-            <table class="events__table">
-              <thead class="events__head">
-                <tr class="events__header">
-                  <td class="events__heading events__heading--type--age">Age</td>
-                  <td class="events__heading events__heading--type--transfers">Transfers</td>
-                  <td class="events__heading events__heading--type--quantity">Quantity</td>
-                </tr>
-              </thead>
-              <tbody class="events__body">
-                <tr class="events__data">
-                  <td class="events__value events__value--type--age">23 days 1 hr ago</td>
-                  <td class="events__value events__value--type--transfers">134</td>
-                  <td class="events__value events__value--type--quantity">3,333,333</td>
-                </tr>
-                <tr class="events__data">
-                  <td class="events__value events__value--type--age">43 days 19 hrs ago</td>
-                  <td class="events__value events__value--type--transfers">275</td>
-                  <td class="events__value events__value--type--quantity">16,250</td>
-                </tr>
-                <tr class="events__data">
-                  <td class="events__value events__value--type--age">23 days 1 hr ago</td>
-                  <td class="events__value events__value--type--transfers">134</td>
-                  <td class="events__value events__value--type--quantity">3,333,333</td>
-                </tr>
-                <tr class="events__data">
-                  <td class="events__value events__value--type--age">43 days 19 hrs ago</td>
-                  <td class="events__value events__value--type--transfers">275</td>
-                  <td class="events__value events__value--type--quantity">16,250</td>
-                </tr>
-                <tr class="events__data">
-                  <td class="events__value events__value--type--age">23 days 1 hr ago</td>
-                  <td class="events__value events__value--type--transfers">134</td>
-                  <td class="events__value events__value--type--quantity">3,333,333</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-
-        <div class="col-12 col-md-9 etherscan wallets__etherscan">
-          <a class="etherscan__link" href="#">
-            <img src="assets/imgs/etherscan_btn.png" alt="Etherscan logotype" class="etherscan__logo" width="262" height="80">
-          </a>
-          <p class="text etherscan__text">To see all translations go to Etherscan</p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="container legal-opinion">
-    <div class="row justify-content-end">
-      <h2 class="col-12 col-md-9 heading-2 legal-opinion__heading">
-        Legal Opinion
-      </h2>
-      <p class="text text--dark legal-opinion__text col-12 col-md-9">
-        Every day the amount of tokens investor receieves for every ether invested is increasing making it more attractive to wait another stage of the round, but in increasing the rist that someone will take an opportunity to invest early. Here is an example how the token distribution changes from one stage of investment round to another until the round is finished.
-      </p>
-      <p class="text text--highlight legal-opinion__text col-12 col-md-9">
-        Now the tokens can be exchanged into crypto (in case of ethereum - ETH) at any time with a 1:1 ratio. But if the contributors believe in the succes of the project they will likely choose to keep them.
-      </p>
-      <p class="text text--light legal-opinion__text legal-opinion__feedback col-12 col-sm-11 col-md-9">
-        For all questions, please contact:
-        <a href="mailto:examplemail@gmail.com" class="legal-opinion__email">examplemail@gmail.com</a>
-      </p>
-      <p class="text text--dark col-12 col-md-9 legal-opinion__text">
-        Every day the amount of tokens investor receieves for every ether invested is increasing making it more attractive to wait another stage of the round, but in increasing the rist that someone will take an opportunity to invest early.
-      </p>
-    </div>
-  </div>
-
-  <footer class="container-fluid footer">
-    <div class="container">
-      <div class="row">
-        <ul class="col-12 col-sm-6 socials footer__socials">
-
-          <li class="socials__item">
-            <a href="#" class="text text--light socials__link">
-              Facebook
-              <svg class="icon icon__fb">
-                <use xlink:href="assets/sprite.svg#icon__fb"></use>
-                <use xlink:href="assets/sprite.svg#icon__fb"></use>
-              </svg>
+          <div class="col-12 col-md-9 etherscan wallets__etherscan">
+            <a class="etherscan__link" href="#">
+              <img src="assets/imgs/etherscan_btn.png" alt="Etherscan logotype" class="etherscan__logo" width="262" height="80">
             </a>
-          </li>
+            <p class="text etherscan__text">To see all translations go to Etherscan</p>
+          </div>
+        </div>
+      </div>
+    </div>
 
-          <li class="socials__item">
-            <a href="#" class="text text--light socials__link">
-              Twitter
-              <svg class="icon icon__tw">
-                <use xlink:href="assets/sprite.svg#icon__tw"></use>
-                <use xlink:href="assets/sprite.svg#icon__tw"></use>
-              </svg>
-            </a>
-          </li>
-
-          <li class="socials__item">
-            <a href="#" class="text text--light socials__link">
-              Google+
-              <svg class="icon icon__ggl">
-                <use xlink:href="assets/sprite.svg#icon__ggl"></use>
-                <use xlink:href="assets/sprite.svg#icon__ggl"></use>
-              </svg>
-            </a>
-          </li>
-
-          <li class="socials__item">
-            <a href="#" class="text text--light socials__link">
-              LinkedIn
-              <svg class="icon icon__in">
-                <use xlink:href="assets/sprite.svg#icon__in"></use>
-                <use xlink:href="assets/sprite.svg#icon__in"></use>
-              </svg>
-            </a>
-          </li>
-
-          <li class="socials__item">
-            <a href="#" class="text text--light socials__link">
-              GitHub
-              <svg class="icon icon__git">
-                <use xlink:href="assets/sprite.svg#icon__git"></use>
-                <use xlink:href="assets/sprite.svg#icon__git"></use>
-              </svg>
-            </a>
-          </li>
-
-        </ul>
-        <p class="col-12 col-sm-6 text text--light copyright footer__copyright">
-          © 2018 Array - All Rights Reserved
+    <div class="container legal-opinion">
+      <div class="row justify-content-end">
+        <h2 class="col-12 col-md-9 heading-2 legal-opinion__heading">
+          Legal Opinion
+        </h2>
+        <p class="text text--dark legal-opinion__text col-12 col-md-9">
+          Every day the amount of tokens investor receieves for every ether invested is increasing making it more attractive to wait another stage of the round, but in increasing the rist that someone will take an opportunity to invest early. Here is an example how the token distribution changes from one stage of investment round to another until the round is finished.
+        </p>
+        <p class="text text--highlight legal-opinion__text col-12 col-md-9">
+          Now the tokens can be exchanged into crypto (in case of ethereum - ETH) at any time with a 1:1 ratio. But if the contributors believe in the succes of the project they will likely choose to keep them.
+        </p>
+        <p class="text text--light legal-opinion__text legal-opinion__feedback col-12 col-sm-11 col-md-9">
+          For all questions, please contact:
+          <a href="mailto:examplemail@gmail.com" class="legal-opinion__email">examplemail@gmail.com</a>
+        </p>
+        <p class="text text--dark col-12 col-md-9 legal-opinion__text">
+          Every day the amount of tokens investor receieves for every ether invested is increasing making it more attractive to wait another stage of the round, but in increasing the rist that someone will take an opportunity to invest early.
         </p>
       </div>
     </div>
-  </footer>
+
+    <footer class="container-fluid footer">
+      <div class="container">
+        <div class="row">
+          <ul class="col-12 col-sm-6 socials footer__socials">
+
+            <li class="socials__item">
+              <a href="#" class="text text--light socials__link">
+                Facebook
+                <svg class="icon icon__fb">
+                  <use xlink:href="assets/sprite.svg#icon__fb"></use>
+                  <use xlink:href="assets/sprite.svg#icon__fb"></use>
+                </svg>
+              </a>
+            </li>
+
+            <li class="socials__item">
+              <a href="#" class="text text--light socials__link">
+                Twitter
+                <svg class="icon icon__tw">
+                  <use xlink:href="assets/sprite.svg#icon__tw"></use>
+                  <use xlink:href="assets/sprite.svg#icon__tw"></use>
+                </svg>
+              </a>
+            </li>
+
+            <li class="socials__item">
+              <a href="#" class="text text--light socials__link">
+                Google+
+                <svg class="icon icon__ggl">
+                  <use xlink:href="assets/sprite.svg#icon__ggl"></use>
+                  <use xlink:href="assets/sprite.svg#icon__ggl"></use>
+                </svg>
+              </a>
+            </li>
+
+            <li class="socials__item">
+              <a href="#" class="text text--light socials__link">
+                LinkedIn
+                <svg class="icon icon__in">
+                  <use xlink:href="assets/sprite.svg#icon__in"></use>
+                  <use xlink:href="assets/sprite.svg#icon__in"></use>
+                </svg>
+              </a>
+            </li>
+
+            <li class="socials__item">
+              <a href="#" class="text text--light socials__link">
+                GitHub
+                <svg class="icon icon__git">
+                  <use xlink:href="assets/sprite.svg#icon__git"></use>
+                  <use xlink:href="assets/sprite.svg#icon__git"></use>
+                </svg>
+              </a>
+            </li>
+
+          </ul>
+          <p class="col-12 col-sm-6 text text--light copyright footer__copyright">
+            © 2018 Array - All Rights Reserved
+          </p>
+        </div>
+      </div>
+    </footer>
+  </div>
 
   <template id="tooltip-regular">
     <div class="tooltip tooltip--theme--regular" role="tooltip">
