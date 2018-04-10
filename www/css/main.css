@@ -674,18 +674,15 @@ body {
   .line-chart__view {
     margin: auto;
     width: 289px;
-    height: 317px;
-    background-image: url("../assets/imgs/chart-mobile.png"); }
+    height: 317px; }
     @media (min-width: 780px) {
       .line-chart__view {
         width: 721px;
-        height: 332px;
-        background-image: url("../assets/imgs/chart-tablet.png"); } }
+        height: 332px; } }
     @media (min-width: 1000px) {
       .line-chart__view {
         width: 100%;
         height: 349px;
-        background-image: url("../assets/imgs/chart-medium-short.png");
         background-size: cover; } }
   .line-chart__timescale {
     display: -webkit-box;
@@ -1924,29 +1921,50 @@ body {
           padding-left: 0; } }
 
 .features {
-  background-image: url("../assets/imgs/bg-features--mobile.png"), linear-gradient(-180deg, transparent 0%, rgba(11, 128, 235, 0.6) 62%), linear-gradient(190deg, #00c6ff 0%, #1449db 100%);
+  background-image: linear-gradient(-180deg, transparent 0%, rgba(11, 128, 235, 0.5) 62%), url("../assets/imgs/bg-features-mobile-color.png"), linear-gradient(190deg, #00c6ff 0%, #1449db 100%);
   background-repeat: no-repeat;
   background-position-x: center, center, center;
-  background-position-y: bottom, bottom, center;
-  background-size: 100%, 100% 433px, 100%;
+  background-position-y: bottom -180px, bottom, center;
+  background-size: 100% 433px, 750px, 100%;
   padding-top: 60px;
   padding-bottom: 60px; }
+  .features--state--open {
+    background-image: linear-gradient(-180deg, transparent 0%, rgba(11, 128, 235, 0.9) 62%), url("../assets/imgs/bg-features-mobile-color.png"), linear-gradient(190deg, #00c6ff 0%, #1449db 100%);
+    background-repeat: no-repeat;
+    background-position-x: center, center, center;
+    background-position-y: bottom, bottom, center;
+    background-size: 100% 433px, 750px, 100%; }
   @media (min-width: 780px) {
     .features {
       padding-top: 120px;
       padding-bottom: 99px;
-      background-image: url("../assets/imgs/bg-features.png"), linear-gradient(-180deg, rgba(0, 198, 255, 0) 0%, rgba(11, 128, 235, 0.6) 62%), linear-gradient(219deg, #00c6ff 0%, #1449db 100%);
-      background-position-y: 134%, bottom, center;
-      background-position-x: 77%, center, center;
-      background-size: 149%, 100% 433px, 100%; } }
+      background-image: linear-gradient(-180deg, rgba(0, 198, 255, 0) 0%, rgba(11, 128, 235, 0.5) 62%), url("../assets/imgs/bg-features-tablet-color.png"), linear-gradient(219deg, #00c6ff 0%, #1449db 100%);
+      background-position-y: bottom, bottom -30%, center;
+      background-position-x: center, center, center;
+      background-size: 100% 433px, 1000px, 100%; }
+      .features--state--open {
+        background-image: linear-gradient(-180deg, transparent 0%, rgba(11, 128, 235, 0.9) 62%), url("../assets/imgs/bg-features-tablet-color.png"), linear-gradient(219deg, #00c6ff 0%, #1449db 100%);
+        background-position-y: bottom, bottom, center; } }
   @media (min-width: 1000px) {
     .features {
-      background-position-y: 103%, bottom, center;
-      background-position-x: 49%, center, center;
-      background-size: 125%, 100% 433px, 100%; } }
+      background-image: linear-gradient(-180deg, rgba(0, 198, 255, 0) 0%, rgba(11, 128, 235, 0.5) 62%), url("../assets/imgs/bg-features-color.png"), linear-gradient(219deg, #00c6ff 0%, #1449db 100%);
+      background-position-y: bottom, bottom -450px, center;
+      background-position-x: center, center, center;
+      background-size: 100% 433px, 1500px, 100%; }
+      .features--state--open {
+        background-image: linear-gradient(-180deg, transparent 0%, rgba(11, 128, 235, 0.9) 62%), url("../assets/imgs/bg-features-color.png"), linear-gradient(219deg, #00c6ff 0%, #1449db 100%);
+        background-position-y: bottom, bottom -100px, center;
+        background-size: 100% 600px, 1500px, 100%; } }
   @media (min-width: 1210px) {
     .features {
-      background-size: 100%, 100% 402px, 100%; } }
+      background-image: linear-gradient(39deg, #1449db 200px, transparent 600px), linear-gradient(309deg, #098cef 200px, transparent 600px), linear-gradient(-180deg, rgba(0, 198, 255, 0) 0%, rgba(11, 128, 235, 0.5) 62%), url("../assets/imgs/bg-features-color.png"), linear-gradient(219deg, #00c6ff 0%, #1449db 100%);
+      background-position-y: center, center, bottom, bottom -375px, center;
+      background-position-x: left, right, center, center, center;
+      background-size: 1500px, 1500px, 100% 433px, 1500px, 100%; }
+      .features--state--open {
+        background-image: linear-gradient(75deg, #1449db 200px, transparent 700px), linear-gradient(280deg, #098cef 200px, transparent 600px), linear-gradient(-180deg, rgba(0, 198, 255, 0) 0%, rgba(11, 128, 235, 0.9) 62%), url("../assets/imgs/bg-features-color.png"), linear-gradient(219deg, #00c6ff 0%, #1449db 100%);
+        background-position-y: center, center, bottom, bottom -100px, center;
+        background-size: 1500px, 1500px, 100% 600px, 1500px, 100%; } }
   .features__heading {
     margin-bottom: 25px; }
     @media (min-width: 780px) {
@@ -2015,16 +2033,30 @@ body {
         font-size: 16px; } }
 
 .faq {
-  background-image: linear-gradient(202deg, #002685 0%, #00144f 100%);
+  background-image: url("../assets/imgs/bg-faq-mobile-color.png"), linear-gradient(202deg, #002685 0%, #00144f 100%);
   background-repeat: no-repeat;
-  background-size: 100%, 100%;
+  background-size: 750px, 100%;
+  background-position-x: right, 0;
   background-position-y: bottom, center;
   padding-top: 90px;
   padding-bottom: 90px; }
+  @media (min-width: 750px) {
+    .faq {
+      background-size: 100%, 100%; } }
   @media (min-width: 780px) {
     .faq {
       padding-top: 120px;
-      padding-bottom: 120px; } }
+      padding-bottom: 120px;
+      background-image: url("../assets/imgs/bg-faq-tablet-color.png"), linear-gradient(202deg, #002685 0%, #00144f 100%);
+      background-size: 1000px, 100%;
+      background-position-x: center, 0;
+      background-position-y: bottom, center; } }
+  @media (min-width: 1000px) {
+    .faq {
+      background-image: url("../assets/imgs/bg-faq-color.png"), linear-gradient(202deg, #002685 0%, #00144f 100%);
+      background-size: 1500px, 100%;
+      background-position-x: left, 0;
+      background-position-y: bottom, center; } }
   @media (min-width: 1210px) {
     .faq {
       padding-bottom: 135px; } }
@@ -2546,7 +2578,13 @@ body {
   position: relative;
   padding-top: 60px;
   padding-bottom: 45px;
-  background-image: linear-gradient(223deg, #002685 0%, #00144f 95%); }
+  background-image: url("../assets/imgs/bg-wallets-mobile-color.png"), linear-gradient(223deg, #002685 0%, #00144f 95%);
+  background-repeat: no-repeat;
+  background-size: 750px, 100%;
+  background-position: bottom, center; }
+  @media (min-width: 750px) {
+    .wallets {
+      background-size: 100%, 100%; } }
   .wallets:before {
     position: absolute;
     top: 0;
@@ -2563,15 +2601,23 @@ body {
   @media (min-width: 780px) {
     .wallets {
       padding-top: 120px;
-      padding-bottom: 80px; } }
+      padding-bottom: 80px;
+      background-image: url("../assets/imgs/bg-wallets-top-color.png"), url("../assets/imgs/bg-wallets-bottom-color.png"), linear-gradient(223deg, #002685 0%, #00144f 95%);
+      background-size: 1000px, 1000px, 100%;
+      background-position: top center, bottom center, center; } }
   @media (min-width: 1000px) {
     .wallets {
       background-image: none; }
       .wallets:before {
-        display: block; } }
+        display: block;
+        background-image: url("../assets/imgs/bg-wallets-top-color.png"), url("../assets/imgs/bg-wallets-bottom-color.png"), linear-gradient(223deg, #002685 0%, #00144f 95%);
+        background-size: 1000px, 1000px, 100%;
+        background-repeat: no-repeat;
+        background-position: top left, bottom -35px right -65px, center; } }
   @media (min-width: 1210px) {
     .wallets:before {
-      width: calc(966px + (100% - 1170px) / 2); } }
+      width: calc(966px + (100% - 1170px) / 2);
+      background-position: top right, bottom -35px right -65px, center; } }
   .wallets__heading {
     color: white;
     line-height: 1.4;

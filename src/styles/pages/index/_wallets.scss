@@ -2,7 +2,16 @@
   position: relative;
   padding-top: $block-p-lg;
   padding-bottom: $block-p-md * 1.125;
-  background-image: gradient-dark-blue($angle: 223deg);
+  background-image: url('../assets/imgs/bg-wallets-mobile-color.png'),
+    gradient-dark-blue($angle: 223deg);
+
+  background-repeat: no-repeat;
+  background-size: 750px, 100%;
+  background-position: bottom, center;
+
+  @media(min-width: 750px) {
+    background-size: 100%, 100%;
+  }
 
   &:before {
     position: absolute;
@@ -25,18 +34,34 @@
   @include respond-to(tablet) {
     padding-top: $block-p-lg * 2;
     padding-bottom: $block-p-md * 2;
+
+    background-image: url('../assets/imgs/bg-wallets-top-color.png'),
+      url('../assets/imgs/bg-wallets-bottom-color.png'),
+      gradient-dark-blue($angle: 223deg);
+
+    background-size: 1000px, 1000px, 100%;
+    background-position: top center, bottom center, center;
   }
 
   @include respond-to(medium) {
     background-image: none;
     &:before {
       display: block;
+
+      background-image: url('../assets/imgs/bg-wallets-top-color.png'),
+        url('../assets/imgs/bg-wallets-bottom-color.png'),
+        gradient-dark-blue($angle: 223deg);
+
+      background-size: 1000px, 1000px, 100%;
+      background-repeat: no-repeat;
+      background-position: top left, bottom -35px right -65px, center;
     }
   }
 
   @include respond-to(large) {
     &:before {
       width: calc(966px + (100% - 1170px) / 2);
+      background-position: top right, bottom -35px right -65px, center;
     }
   }
 

@@ -1,33 +1,90 @@
 .features {
-  background-image: url('../assets/imgs/bg-features--mobile.png'),
-    linear-gradient(-180deg, transparent 0%, rgba(11,128,235,0.60) 62%),
+  background-image: linear-gradient(-180deg, transparent 0%, rgba(11,128,235,.5) 62%),
+    url('../assets/imgs/bg-features-mobile-color.png'),
     gradient-contrast-blue-400($angle: 190deg);
   background-repeat: no-repeat;
   background-position-x: center, center, center;
-  background-position-y: bottom, bottom, center;
-  background-size: 100%, 100% 433px, 100%;
+  background-position-y: bottom -180px, bottom, center;
+  background-size: 100% 433px, 750px, 100%;
+
   padding-top: $block-p-lg;
   padding-bottom: $block-p-lg;
+
+  &--state--open {
+    background-image: linear-gradient(-180deg, transparent 0%, rgba(11,128,235,.9) 62%),
+      url('../assets/imgs/bg-features-mobile-color.png'),
+      gradient-contrast-blue-400($angle: 190deg);
+    background-repeat: no-repeat;
+    background-position-x: center, center, center;
+    background-position-y: bottom, bottom, center;
+    background-size: 100% 433px, 750px, 100%;
+  }
 
   @include respond-to(tablet) {
     padding-top: $block-p-lg * 2;
     padding-bottom: $block-p-lg * 1.65;
-    background-image: url('../assets/imgs/bg-features.png'),
-      linear-gradient(-180deg, rgba(0,198,255,0.00) 0%, rgba(11,128,235,0.60) 62%),
+
+    background-image:
+      linear-gradient(-180deg, rgba(0,198,255,0.00) 0%, rgba(11,128,235,0.5) 62%),
+      url('../assets/imgs/bg-features-tablet-color.png'),
       gradient-contrast-blue-400($angle: 219deg);
-    background-position-y: 134%, bottom, center;
-    background-position-x: 77%, center, center;
-    background-size: 149%, 100% 433px, 100%;
+    background-position-y: bottom, bottom -30%, center;
+    background-position-x: center, center, center;
+    background-size: 100% 433px, 1000px, 100%;
+
+    &--state--open {
+      background-image: linear-gradient(-180deg, transparent 0%, rgba(11,128,235,.9) 62%),
+        url('../assets/imgs/bg-features-tablet-color.png'),
+        gradient-contrast-blue-400($angle: 219deg);
+
+      background-position-y: bottom, bottom, center;
+    }
   }
 
   @include respond-to(medium) {
-    background-position-y: 103%, bottom, center;
-    background-position-x: 49%, center, center;
-    background-size: 125%, 100% 433px, 100%;
+    background-image:
+      linear-gradient(-180deg, rgba(0,198,255,0.00) 0%, rgba(11,128,235,0.5) 62%),
+      url('../assets/imgs/bg-features-color.png'),
+      gradient-contrast-blue-400($angle: 219deg);
+    background-position-y: bottom, bottom -450px, center;
+    background-position-x: center, center, center;
+    background-size: 100% 433px, 1500px, 100%;
+
+    &--state--open {
+      background-image: linear-gradient(-180deg, transparent 0%, rgba(11,128,235,.9) 62%),
+        url('../assets/imgs/bg-features-color.png'),
+        gradient-contrast-blue-400($angle: 219deg);
+
+      background-position-y: bottom, bottom -100px, center;
+      background-size: 100% 600px, 1500px, 100%;
+    }
   }
 
   @include respond-to(large) {
-    background-size: 100%, 100% 402px, 100%;
+    // $blue-400:
+    // $blue-contrast-400:
+
+    background-image:
+      linear-gradient(39deg, $blue-400 200px, transparent 600px),
+      linear-gradient(309deg, rgb(9, 140, 239) 200px, transparent 600px),
+      linear-gradient(-180deg, rgba(0,198,255,0.00) 0%, rgba(11,128,235,0.5) 62%),
+      url('../assets/imgs/bg-features-color.png'),
+      gradient-contrast-blue-400($angle: 219deg);
+
+    background-position-y: center, center, bottom, bottom -375px, center;
+    background-position-x: left, right, center, center, center;
+    background-size: 1500px, 1500px, 100% 433px, 1500px, 100%;
+
+    &--state--open {
+      background-image: linear-gradient(75deg, rgb(20, 73, 219) 200px, transparent 700px),
+        linear-gradient(280deg, rgb(9, 140, 239) 200px, transparent 600px),
+        linear-gradient(-180deg, rgba(0,198,255,0.00) 0%, rgba(11,128,235,0.9) 62%),
+        url('../assets/imgs/bg-features-color.png'),
+        gradient-contrast-blue-400($angle: 219deg);
+
+      background-position-y: center, center, bottom, bottom -100px, center;
+      background-size: 1500px, 1500px, 100% 600px, 1500px, 100%;
+    }
   }
 
   &__heading {

@@ -1,17 +1,40 @@
 .faq {
   background-image:
-    // url('../assets/imgs/bg-faq--mobile.png'),
+    url('../assets/imgs/bg-faq-mobile-color.png'),
     gradient-dark-blue($angle: 202deg, $percent2: 100%);
   background-repeat: no-repeat;
-  background-size: 100%, 100%;
+  background-size: 750px, 100%;
+  background-position-x: right, 0;
   background-position-y: bottom, center;
   padding-top: $block-p-lg * 1.5;
   padding-bottom: $block-p-lg * 1.5;
+
+  @media(min-width: 750px) {
+    background-size: 100%, 100%;
+  }
 
 
   @include respond-to(tablet) {
     padding-top: $block-p-lg * 2;
     padding-bottom: $block-p-lg * 2;
+
+    background-image:
+      url('../assets/imgs/bg-faq-tablet-color.png'),
+      gradient-dark-blue($angle: 202deg, $percent2: 100%);
+
+      background-size: 1000px, 100%;
+      background-position-x: center, 0;
+      background-position-y: bottom, center;
+  }
+
+  @include respond-to(medium) {
+    background-image:
+      url('../assets/imgs/bg-faq-color.png'),
+      gradient-dark-blue($angle: 202deg, $percent2: 100%);
+
+      background-size: 1500px, 100%;
+      background-position-x: left, 0;
+      background-position-y: bottom, center;
   }
 
   @include respond-to(large) {
