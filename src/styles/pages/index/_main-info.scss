@@ -84,10 +84,16 @@
       }
 
       @include respond-to(medium) {
-        max-width: auto;
         padding-right: 0;
         padding-left: 0;
+
+        &.infographic {
+          max-width: none;
+        }
       }
     }
   }
+
 }
+
+@import '../../animations/main-info.scss';

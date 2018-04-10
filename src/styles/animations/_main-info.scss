@@ -1,0 +1,85 @@
+.main-info {
+    @keyframes bg-left {
+      from {
+        background-position-x: 0;
+      }
+
+      to {
+        background-position-x: -115%;
+      }
+    }
+
+    @keyframes bg-right {
+      from {
+        background-position-x: right 0;
+      }
+
+      to {
+        background-position-x: right -100%;
+      }
+    }
+
+    @keyframes infographic {
+      from {
+        width: 50%;
+      }
+
+      to {
+        width: 100%;
+      }
+    }
+
+    &__bg {
+        @include respond-to(medium) {
+      &.showing:before {
+        animation-name: bg-left;
+        animation-duration: 1s;
+
+        animation-fill-mode: forwards;
+      }
+
+      &.shown:before {
+        background-position-x: -115%;
+      }
+
+      &.shown.showing:before {
+        animation-direction: reverse;
+      }
+
+      &.showing:after {
+        animation-name: bg-right;
+        animation-duration: 1s;
+
+        animation-fill-mode: forwards;
+      }
+
+      &.shown:after {
+        background-position-x: right -110%;
+      }
+
+      &.shown.showing:after {
+        animation-direction: reverse;
+      }
+
+      }
+    }
+
+    &__infographic {
+      @include respond-to(medium) {
+        &.showing{
+          animation-name: infographic;
+          animation-duration: 1s;
+
+          animation-fill-mode: forwards;
+        }
+
+        &.shown{
+          width: 100%;
+        }
+
+        &.shown.showing{
+          animation-direction: reverse;
+        }
+      }
+    }
+}

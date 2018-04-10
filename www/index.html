@@ -31,6 +31,10 @@
           <stop stop-color="#00B5FF" offset="0%"></stop>
           <stop stop-color="#00FFDB" offset="100%"></stop>
         </linearGradient>
+        <linearGradient gradientTransform="rotate(-180)" x1="100%" y1="0%" x2="0%" y2="100%" id="gradient-contrast-green-rotated">
+          <stop stop-color="#00B5FF" offset="0%"></stop>
+          <stop stop-color="#00FFDB" offset="100%"></stop>
+        </linearGradient>
         <linearGradient x1="100%" y1="0%" x2="0%" y2="100%" id="gradient-contrast-blue-400">
           <stop stop-color="#00C6FF" offset="0%"/>
           <stop stop-color="#1449DB" offset="100%"/>
@@ -47,7 +51,7 @@
   <header id="header" class="container-fluid header">
     <nav class="container navbar navbar-expand-md header__navbar">
       <div class="navbar-brand">
-        <a href="index.html" class="header__logo">
+        <a id="logo" href="index.html" class="header__logo">
           <img src="assets/imgs/logo-white.png" class="logo logo--white" alt="Arrio.io logotype" width="127" height="39">
           <img src="assets/imgs/logo-dark.png" class="logo logo--dark" alt="Arrio.io logotype" width="127" height="39">
         </a>
@@ -74,10 +78,10 @@
     </nav>
   </header>
 
-  <div class="container-fluid main-info__bg">
+  <div id="main-info__bg" class="container-fluid main-info__bg">
     <div class="main-info">
-        <div class="main-info__block jumbo">
-          <div class="main-info__block-content jumbo__content">
+        <div id="jumbo" class="main-info__block jumbo">
+          <div id="jumbo-content" class="main-info__block-content jumbo__content">
             <h1 class="heading-1 jumbo__heading">
                 <span>Initial</span>
                 <span>Development</span>
@@ -115,9 +119,16 @@
                 </div>
               </div>
             </div>
+            <button id="jumbo-toggle" class="button jumbo__button">
+              Закрыть
+
+              <svg class="icon icon__arrow jumbo__button-icon">
+                <use xlink:href="assets/sprite.svg#icon__arrow"></use>
+              </svg>
+            </button>
           </div>
         </div>
-        <div class="main-info__block">
+        <div id="infographic" class="main-info__block main-info__infographic">
           <div class="main-info__block-content infographic">
             <div class="row">
 
@@ -201,19 +212,19 @@
                         </ul>
 
                         <div class="row diagramm__data-group">
-                          <div class="col-12 col-sm-3 col-md-5 col-lg-4">
+                          <div class="col-12 col-sm-3 col-md-auto">
                             <dl class="diagramm__data">
                               <dt class="text text--dimmed diagramm__data-heading">Token price</dt>
                               <dd class="text diagramm__data-value diagramm__data-value--postfix" data-postfix="ETH">356.28</dd>
                             </dl>
                           </div>
-                          <div class="col-12 col-sm-3 col-md-5 col-lg-4">
+                          <div class="col-12 col-sm-3 col-md-auto">
                             <dl class="diagramm__data">
                               <dt class="text text--dimmed diagramm__data-heading">Since last month</dt>
                               <dd class="text diagramm__data-value" data-prefix="+" data-postfix="ETH">35.57</dd>
                             </dl>
                           </div>
-                          <div class="col-12 col-sm-3 col-lg-4">
+                          <div class="col-12 col-sm-3 col-lg-auto">
                             <dl class="diagramm__data diagramm__data--last-month-percent">
                               <dt class="text text--dimmed diagramm__data-heading">Since last month (%)</dt>
                               <dd class="text diagramm__data-value" data-prefix="+" data-postfix="%">11.57</dd>

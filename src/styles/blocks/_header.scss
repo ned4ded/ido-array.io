@@ -46,7 +46,7 @@
 
     &:focus {
       outline: none;
-      
+
     }
   }
 
@@ -123,3 +123,5 @@
     }
   }
 }
+
+@import '../animations/header.scss';

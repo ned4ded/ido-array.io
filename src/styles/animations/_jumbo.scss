@@ -1,0 +1,128 @@
+.jumbo {
+  @keyframes width-shrink-sm {
+    from {
+      width: 50%;
+      right: 0;
+    }
+
+    to {
+      width: 0%;
+      right: calc((100vh - 970px) / -2 + 30px);
+    }
+  }
+
+  @keyframes width-shrink-md {
+    from {
+      width: 50%;
+      right: 0;
+    }
+
+    to {
+      width: 0%;
+      right: 0;
+    }
+  }
+
+  @keyframes width-shrink-lg {
+    from {
+      width: 50%;
+      right: 0;
+    }
+
+    to {
+      width: 0%;
+      right: calc((100vh - 1170px) + 65px);
+    }
+  }
+
+  @keyframes width-shrink-xl {
+    from {
+      width: 50%;
+      right: 0;
+    }
+
+    to {
+      width: 0%;
+      right: calc((100vh - 1170px) / -2.5);
+    }
+  }
+
+  @keyframes button-rotation {
+    from {
+      transform: translate(-50%, -50%) rotate(180deg);
+    }
+
+    to {
+      transform: translate(-50%, -50%) rotate(360deg);
+    }
+  }
+
+  @include respond-to(medium) {
+      right: 0;
+      padding-right: 0;
+      padding-left: 0;
+
+    &.showing {
+      animation-name: width-shrink-md;
+      animation-duration: 1s;
+
+      animation-fill-mode: forwards;
+
+      @media (max-width: 1100px) {
+        animation-name: width-shrink-sm;
+      }
+
+      @include respond-to(large) {
+        @media (max-width: 1340px) {
+          animation-name: width-shrink-lg;
+        }
+
+        animation-name: width-shrink-xl;
+      }
+    }
+
+    &.shown {
+      width: 0%;
+      right: 0;
+
+      @media (max-width: 1100px) {
+        right: calc((100vh - 970px) / -2 + 30px);
+      }
+
+      @include respond-to(large) {
+        @media (max-width: 1340px) {
+          right: calc((100vh - 1170px) + 65px);
+        }
+
+        right: calc((100vh - 1170px) / -2.5);
+      }
+    }
+
+    &.shown.showing {
+      animation-duration: 1s;
+      animation-direction: reverse;
+
+      animation-fill-mode: forwards;
+    }
+
+    &__button {
+      &.showing &-icon {
+        animation-name: button-rotation;
+        animation-duration: .5s;
+
+        animation-fill-mode: forwards;
+      }
+
+      &.shown &-icon {
+        transform: translate(-50%, -50%) rotate(360deg);
+      }
+
+      &.shown.showing &-icon {
+        animation-duration: .5s;
+        animation-direction: reverse;
+
+        animation-fill-mode: forwards;
+      }
+    }
+  }
+}

@@ -67,6 +67,11 @@
     }
 
     &-group {
+      & div {
+        @include respond-to(medium) {
+          min-width: 190px;
+        }
+      }
       @include respond-to(tablet) {
         margin-bottom: $flow-m-lg * 2;
       }

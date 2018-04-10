@@ -17,6 +17,13 @@
     background-image: none;
 
     position: relative;
+    z-index: 1;
+
+    &:after {
+      content: "";
+      clear: both;
+      display: table;
+    }
 
     &:before {
       background: url('../assets/imgs/bg-main.png') no-repeat, gradient-contrast-blue($angle: 216deg);
@@ -41,6 +48,71 @@
   }
 
 
+  &__button {
+    position: absolute;
+    z-index: 0;
+    top: 63%;
+    right: -12%;
+
+    display: block;
+
+    width: 65px;
+    height: 65px;
+    padding: 0;
+
+    cursor: pointer;
+    transform: translate(-50%, -50%);
+
+    border-radius: 100%;
+    background-image: gradient-contrast-green($angle: 257deg);
+
+    font-size: 0;
+
+    &:before {
+      position: absolute;
+      z-index: -1;
+      top: 3px;
+      left: 3px;
+
+      display: block;
+
+      width: 59px;
+      height: 59px;
+
+      content: '';
+
+      border-radius: 100%;
+      background-color: $lightest;
+    }
+
+    &-icon {
+      position: absolute;
+      top: 50%;
+      left: 49%;
+
+      transform: translate(-50%, -50%) rotate(180deg);
+
+      & use {
+        fill: url('#gradient-contrast-green-rotated');
+      }
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &:hover {
+      background-image: gradient-contrast-green($angle: 77deg);
+
+      & .jumbo__button-icon use {
+        fill: url('#gradient-contrast-green');
+      }
+    }
+
+    &:active {
+        transform: translate(-50%, calc(-50% + 1px)) ;
+    }
+  }
 
   &__content {
     padding-top: $block-p-md;
@@ -53,7 +125,14 @@
       padding-bottom: $block-p-md * 4;
     }
 
+    @include respond-to(medium) {
+      position: absolute;
+      width: 470px;
+      right: 15px;
+    }
+
     @include respond-to(large) {
+      width: 555px;
       padding-top: $block-p-md * 4.6;
     }
   }
@@ -112,3 +191,5 @@
     }
   }
 }
+
+@import '../../animations/jumbo.scss';

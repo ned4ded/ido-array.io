@@ -1,0 +1,65 @@
+.header {
+  @keyframes disappear {
+    from {
+      opacity: 1;
+    }
+
+    to {
+      opacity: 0;
+    }
+  }
+
+  @include respond-to(medium) {
+
+    &__logo {
+      position: relative;
+
+      & .logo--white {
+        opacity: 1;
+      }
+
+      & .logo--dark {
+        display: block;
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+
+      &.showing .logo--white {
+        animation-delay: 0s;
+        animation-name: disappear;
+        animation-duration: .2s;
+
+        animation-fill-mode: forwards;
+      }
+
+      &.shown .logo--white {
+        opacity: 0;
+      }
+
+      &.shown.showing .logo--white {
+        animation-delay: .8s;
+        animation-direction: reverse;
+      }
+
+      &.showing .logo--dark {
+        animation-delay: .2s;
+        animation-name: disappear;
+        animation-duration: .2s;
+        animation-direction: reverse;
+
+        animation-fill-mode: forwards;
+      }
+
+      &.shown .logo--dark {
+        opacity: 1;
+      }
+
+      &.shown.showing .logo--dark  {
+        animation-delay: .7s;
+        animation-direction: normal;
+      }
+    }
+  }
+}
