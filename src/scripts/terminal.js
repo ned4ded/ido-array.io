@@ -38,7 +38,7 @@ $(function () {
   $(selectors.tooltips.groups.scaleName).find(selectors.tooltips.templates.regular).tooltip('show');
   $(selectors.tooltips.groups.scaleName).find(selectors.tooltips.templates.dark).tooltip('show');
 
-  $('[data-tooltip-group]').on('show.bs.tooltip', function(ev) {
+  $('[data-tooltip-group="block-scale"]').on('show.bs.tooltip', function(ev) {
     const $other = $('[data-tooltip-group]').not( $( this ) );
     return $other.tooltip('hide');
   });

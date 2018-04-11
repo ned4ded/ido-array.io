@@ -1,4 +1,4 @@
-(() => {
+// (() => {
   class Animation {
     constructor(element, toggler, settings) {
       if(!element) throw new Error("Passed element wasn't found");
@@ -13,6 +13,7 @@
       this.processClassName= settings.processClassName || 'showing';
 
       this.binding = () => this.animate();
+      this.callback = () => {};
 
       $( this.toggle ).click( this.binding );
     }
@@ -35,10 +36,12 @@
       if($( this.element ).data().shown === undefined) this.isShown( true );
 
       if(this.isShown()) {
+        this.callback('forward', 'start');
 
         $( this.element ).addClass(this.processClassName);
 
         return setTimeout(() => {
+          this.callback('forward', 'end');
           this.toggleShown();
           $( this.element ).removeClass(this.processClassName);
           $( this.element ).addClass(this.endClassName);
@@ -46,9 +49,11 @@
           return $( els.toggle ).click( this.binding );
         }, this.duration);
       } else {
+        this.callback('backward', 'start');
         $( this.element ).addClass(this.processClassName);
 
         return setTimeout(() => {
+          this.callback('backward', 'end');
           $( this.element ).removeClass(this.endClassName);
           $( this.element ).removeClass(this.processClassName);
           this.toggleShown();
@@ -56,6 +61,10 @@
           return $( els.toggle ).click( this.binding );
         }, this.duration);
       }
+    }
+
+    setAnimationCallback(cb) {
+      this.callback = cb;
     }
   }
 
@@ -74,4 +83,4 @@
   };
 
   const animations = new Animation( [els.bg, els.jumbo, els.infographic, els.toggle, els.logo], els.toggle, settings);
-})();
+// })();

@@ -143,7 +143,7 @@
                   </div>
                 </div>
 
-                <div class="col-12 col-sm-7 col-md-auto text-sm-right">
+                <div class="col-12 col-sm-7 col-md-auto text-sm-right block--z-position--forward">
                   <div class="tge infographic__tge">
                     <p class="text text--dimmed tge__text">Token generation event</p>
                     <dl data-tooltip-trigger data-tge-status="true" class="tge__data">
@@ -192,7 +192,7 @@
                         <div class="diagramm">
                           <ul class="diagramm__timescale">
                             <li class="diagramm__timescale-item">
-                              <button class="diagramm__timescale-btn active" type="button" name="hours">1H</button>
+                              <button id="h-btn" class="diagramm__timescale-btn active" type="button" name="hours">1H</button>
                             </li>
                             <li class="diagramm__timescale-item">
                               <button class="diagramm__timescale-btn" type="button" name="days">1D</button>
@@ -207,7 +207,7 @@
                               <button class="diagramm__timescale-btn" type="button" name="year">1Y</button>
                             </li>
                             <li class="diagramm__timescale-item">
-                              <button class="diagramm__timescale-btn" type="button" name="all">All</button>
+                              <button id="all-btn" class="diagramm__timescale-btn" type="button" name="all">All</button>
                             </li>
 
                           </ul>
@@ -236,15 +236,8 @@
                         </div>
 
                         <div class="line-chart diagramm__line-chart">
-                          <p class="text line-chart__current" data-postfix="ETH">567.43</p>
-                          <div class="line-chart__view" id="linechart" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
-                          <ul class="line-chart__timescale">
-                            <li class="text line-chart__timescale-item">Feb 26</li>
-                            <li class="text line-chart__timescale-item">Feb 27</li>
-                            <li class="text line-chart__timescale-item">Feb 28</li>
-                            <li class="text line-chart__timescale-item">Mar 1</li>
-                            <li class="text line-chart__timescale-item">Mar 2</li>
-                          </ul>
+                          <p id="max-value" class="text line-chart__current" data-postfix="ETH">567.43</p>
+                          <div class="line-chart__view" id="linechart" style="min-width: 310px; min-height: 300px;"></div>
                         </div>
 
                       </div>
@@ -1284,7 +1277,8 @@
   </script>
 
   <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.0/p5.min.js"></script> -->
-  <script src="https://code.highcharts.com/highcharts.src.js"></script>
+  <!-- <script src="https://code.highcharts.com/stock/highstock.js"></script> -->
+  <script src="https://code.highcharts.com/highcharts.js"></script>
 
   <script type="text/javascript" src="js/main.js"></script>
 </body>
