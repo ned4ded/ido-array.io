@@ -10,6 +10,36 @@
     margin-top: 55px;
   }
 
+  &-devider {
+    display: flex;
+    flex-flow: row nowrap;
+    width: 100%;
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    height: 10px;
+
+    &__item {
+      position: relative;
+      display: block;
+      height: 100%;
+      flex: 1 1 auto;
+      cursor: help;
+      z-index: 1;
+
+      &:not(:last-child):after {
+        content: '';
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        height: 80%;
+        width: 1px;
+        background-color: #8ca8c3;
+      }
+    }
+  }
+
   &__name {
     position: absolute;
     z-index: 1;
@@ -23,6 +53,8 @@
     background-image: gradient-contrast-green($angle: 268deg);
 
     font-size: 0;
+
+    transition: width .2s ease-in;
 
     &:after {
       position: absolute;
@@ -41,7 +73,7 @@
     position: absolute;
     z-index: 0;
 
-    width: calc(100% - 30px);
+    width: 100%;
     height: 100%;
 
     border-radius: 5px;

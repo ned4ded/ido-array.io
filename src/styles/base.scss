@@ -211,6 +211,13 @@ body {
   }
 }
 
+.block {
+  &--z-position--forward {
+    position: relative;
+    z-index: 1;
+  }
+}
+
 //blocks
 @import './blocks/header.scss';
 @import './blocks/footer.scss';

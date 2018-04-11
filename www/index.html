@@ -571,29 +571,47 @@
           </div>
         </div>
 
-        <div data-tge-true class="col-12">
+        <div data-tge-true class="col-12 block--z-position--forward">
           <div class="row tge-info__block">
             <p class="col-12 col-md-3 text text--dark tge-info__text">
               This shows how much to collect and how much is collected ETH.
             </p>
-            <div data-tooltip-trigger data- class="col-12 col-md-9 scale">
-              <p class="scale__name" data-scale-name="ETH" style="width: 50%">
-                <span data-toggle="tooltip" data-placement="top" title="300 675 ETH" data-delay='{ "hide": 1000 }' class="scale__tooltip-target">
-                  ETH
-                </span>
-              </p>
-              <p class="scale__bar" data-start="1" data-end="500 000">300 675 ETH / 500 000</p>
+            <div data-tooltip-trigger data- class="col-12 col-md-9">
+              <div class="scale">
+                <p class="scale__name" data-scale-name="ETH" style="width: 50%">
+                  <span data-toggle="tooltip" data-placement="top" title="300 675 ETH" data-delay='{ "hide": 1000 }' class="scale__tooltip-target">
+                    ETH
+                  </span>
+                </p>
+                <p class="scale__bar" data-start="1" data-end="500 000">300 675 ETH / 500 000</p>
+              </div>
             </div>
           </div>
           <div class="row tge-info__block">
             <p class="col-12 col-md-3 text text--dark tge-info__text">
               This shows how many stages of investment are left.
             </p>
-            <div data-tooltip-trigger class="col-12 col-md-9 scale scale--theme--dark">
-              <p class="scale__name" data-scale-name="Starting block" style="width: 69%">
-                <span data-toggle="tooltip" data-tooltip-theme="dark" title="521 277" data-delay='{ "hide": 1000 }' class="scale__tooltip-target">Starting block</span>
-              </p>
-              <p class="scale__bar scale__bar--theme--stages" data-start-block data-start="521 100" data-end="521 400">521 277 / 521 400</p>
+            <div class="col-12 col-md-9">
+              <div class="scale scale--theme--dark">
+                <div data-tooltip-trigger>
+                  <p class="scale__name" data-scale-name="Starting block" style="width: 69%">
+                    <span data-toggle="tooltip" data-tooltip-theme="dark" title="521 277" data-delay='{ "hide": 1000 }' class="scale__tooltip-target">Starting block</span>
+                  </p>
+                  <p class="scale__bar scale__bar--theme--stages" data-start-block data-start="521 100" data-end="521 400">521 277 / 521 400</p>
+                </div>
+
+                <div class="scale-devider">
+                  <span data-toggle="tooltip" data-tooltip-group="block-scale" data-tooltip-theme="wide" data-placement="bottom" title="Stage 1: Price per token 1.66 ETH. The stage is closed" data-delay='{ "hide": 1000 }' class="scale-devider__item scale-devider__tooltip-target"></span>
+                  <span data-toggle="tooltip" data-tooltip-group="block-scale" data-tooltip-theme="wide" data-placement="bottom" title="Stage 2: Price per token 1.66 ETH. The stage is closed" data-delay='{ "hide": 1000 }' class="scale-devider__item scale-devider__tooltip-target"></span>
+                  <span data-toggle="tooltip" data-tooltip-group="block-scale" data-tooltip-theme="wide" data-placement="bottom" title="Stage 3: Price per token 1.66 ETH. The stage is closed" data-delay='{ "hide": 1000 }' class="scale-devider__item scale-devider__tooltip-target"></span>
+                  <span data-toggle="tooltip" data-tooltip-group="block-scale" data-tooltip-theme="wide" data-placement="bottom" title="Stage 4: Price per token 1.66 ETH. The stage is closed" data-delay='{ "hide": 1000 }' class="scale-devider__item scale-devider__tooltip-target"></span>
+                  <span data-toggle="tooltip" data-tooltip-group="block-scale" data-tooltip-theme="wide" data-placement="bottom" title="Stage 5: Price per token 1.66 ETH. The stage is closed" data-delay='{ "hide": 1000 }' class="scale-devider__item scale-devider__tooltip-target"></span>
+                  <span data-toggle="tooltip" data-tooltip-group="block-scale" data-tooltip-theme="wide" data-placement="bottom" title="Stage 6: Price per token 1.66 ETH. The stage is closed" data-delay='{ "hide": 1000 }' class="scale-devider__item scale-devider__tooltip-target"></span>
+                  <span data-toggle="tooltip" data-tooltip-group="block-scale" data-tooltip-theme="wide" data-placement="bottom" title="Stage 7: Price per token: 1.5 ETH. Stage is live. Ends in 123 blocks (~ 2 hours, 10 minutes)" data-delay='{ "hide": 1000 }' class="scale-devider__item scale-devider__tooltip-target"></span>
+                  <span data-toggle="tooltip" data-tooltip-group="block-scale" data-tooltip-theme="wide" data-placement="bottom" title="Stage 8: Price per token: 1.1 ETH. Start in 2323 blocks (~ 20 hours, 12 minutes)" data-delay='{ "hide": 1000 }' class="scale-devider__item scale-devider__tooltip-target"></span>
+                  <span data-toggle="tooltip" data-tooltip-group="block-scale" data-tooltip-theme="wide" data-placement="bottom" title="Stage 9: Price per token: 1.1 ETH. Start in 2323 blocks (~ 20 hours, 12 minutes)" data-delay='{ "hide": 1000 }' class="scale-devider__item scale-devider__tooltip-target"></span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -1231,6 +1249,13 @@
 
   <template id="tooltip-regular">
     <div class="tooltip tooltip--theme--regular" role="tooltip">
+      <div class="arrow"></div>
+      <div class="tooltip-inner"></div>
+    </div>
+  </template>
+
+  <template id="tooltip-wide">
+    <div class="tooltip tooltip--theme--wide" role="tooltip">
       <div class="arrow"></div>
       <div class="tooltip-inner"></div>
     </div>

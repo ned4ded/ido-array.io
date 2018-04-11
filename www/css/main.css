@@ -283,6 +283,10 @@ body {
   .button--state--close .button__glow {
     background-image: linear-gradient(262deg, #00c6ff 0%, #1449db 100%); }
 
+.block--z-position--forward {
+  position: relative;
+  z-index: 1; }
+
 .header {
   background-image: linear-gradient(62deg, #002685 0%, #00144f 95%);
   position: relative;
@@ -790,6 +794,38 @@ body {
   @media (min-width: 1000px) {
     .scale {
       margin-top: 55px; } }
+  .scale-devider {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row nowrap;
+            flex-flow: row nowrap;
+    width: 100%;
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    height: 10px; }
+    .scale-devider__item {
+      position: relative;
+      display: block;
+      height: 100%;
+      -webkit-box-flex: 1;
+          -ms-flex: 1 1 auto;
+              flex: 1 1 auto;
+      cursor: help;
+      z-index: 1; }
+      .scale-devider__item:not(:last-child):after {
+        content: '';
+        position: absolute;
+        right: 0;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+                transform: translateY(-50%);
+        height: 80%;
+        width: 1px;
+        background-color: #8ca8c3; }
   .scale__name {
     position: absolute;
     z-index: 1;
@@ -799,7 +835,9 @@ body {
     margin-bottom: 0;
     border-radius: 5px;
     background-image: linear-gradient(268deg, #00b5fe 0%, #00ffdc 100%);
-    font-size: 0; }
+    font-size: 0;
+    -webkit-transition: width .2s ease-in;
+    transition: width .2s ease-in; }
     .scale__name:after {
       position: absolute;
       bottom: calc(100% + 26px);
@@ -810,7 +848,7 @@ body {
   .scale__bar {
     position: absolute;
     z-index: 0;
-    width: calc(100% - 30px);
+    width: 100%;
     height: 100%;
     border-radius: 5px;
     background-color: #eaeef6;
@@ -1366,6 +1404,39 @@ body {
   left: auto; }
   .tooltip--theme--dark .arrow:before {
     border-top-color: #1449db; }
+
+.tooltip--theme--wide .tooltip-inner {
+  position: relative;
+  z-index: 0;
+  min-width: 300px;
+  max-width: 350px;
+  padding: 6px 15px;
+  color: white;
+  background-color: transparent;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 2; }
+  .tooltip--theme--wide .tooltip-inner:before {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: '';
+    -webkit-transform: skew(-8deg, 0);
+            transform: skew(-8deg, 0);
+    border-radius: 4px;
+    background-color: #1449db; }
+
+.tooltip--theme--wide .arrow {
+  right: 23px;
+  left: auto; }
+  .tooltip--theme--wide .arrow:before {
+    border-top-color: #1449db; }
+
+.tooltip--theme--wide.bs-tooltip-bottom .arrow:before {
+  border-bottom-color: #1449db; }
 
 .scale__tooltip-target {
   position: absolute;
