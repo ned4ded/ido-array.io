@@ -620,6 +620,11 @@ body {
     .diagramm__timescale-btn:active {
       -webkit-transform: translateY(-1px);
               transform: translateY(-1px); }
+    .diagramm__timescale-btn:disabled {
+      color: rgba(2, 32, 110, 0.5);
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+      cursor: default; }
     .diagramm__timescale-btn.active {
       font-weight: bold; }
 
@@ -715,7 +720,7 @@ body {
         -webkit-box-pack: end;
             -ms-flex-pack: end;
                 justify-content: flex-end;
-        height: 349px; } }
+        height: 370px; } }
   .line-chart__timescale {
     display: -webkit-box;
     display: -ms-flexbox;

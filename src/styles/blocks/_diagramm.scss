@@ -49,6 +49,12 @@
         transform: translateY(-1px);
       }
 
+      &:disabled {
+        color: rgba($blue-100, .5);
+        transform: translateY(0);
+        cursor: default;
+      }
+
       &.active {
         font-weight: bold;
       }

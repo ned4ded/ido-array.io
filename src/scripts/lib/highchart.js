@@ -152,10 +152,32 @@
     $('#max-value').html(Math.round(chart.yAxis[0].max * 100) / 100);
 
     $('#h-btn').click(function() {
+      $('.diagramm__timescale-btn').removeClass('active');
+
+      $( this ).addClass('active');
+
       return chart.xAxis[0].setExtremes(Date.parse('2011-10-14T14:59'), Date.parse('2011-10-14T15:59'));
+    });
+    $('#d-btn').click(function() {
+      $('.diagramm__timescale-btn').removeClass('active');
+
+      $( this ).addClass('active');
+
+      return chart.xAxis[0].setExtremes(Date.parse('2011-10-13T15:59'), Date.parse('2011-10-14T15:59'));
+    });
+    $('#w-btn').click(function() {
+      $('.diagramm__timescale-btn').removeClass('active');
+
+      $( this ).addClass('active');
+
+      return chart.xAxis[0].setExtremes(Date.parse('2011-10-7T15:59'), Date.parse('2011-10-14T15:59'));
     });
 
     $('#all-btn').click(function() {
+      $('.diagramm__timescale-btn').removeClass('active');
+
+      $( this ).addClass('active');
+      
       chart.xAxis[0].setExtremes(undefined, undefined);
       chart.redraw();
       return;
