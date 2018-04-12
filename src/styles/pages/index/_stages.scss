@@ -4,7 +4,7 @@
   margin-bottom: $block-p-md * 1.375;
 
 
-  @media (max-width: 840px) {
+  @media (max-width: 850px) {
     overflow: hidden;
   }
 
@@ -16,7 +16,7 @@
 
   @include respond-to(medium) {
     justify-content: center;
-      margin-bottom: $block-p-lg * 1.085; 
+      margin-bottom: $block-p-lg * 1.085;
   }
 
   @include respond-to(large) {

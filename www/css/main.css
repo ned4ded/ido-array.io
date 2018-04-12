@@ -552,8 +552,8 @@ body {
           .tge__data-group--left {
             min-width: 90px; } }
       .tge__data-group--right {
-        padding-left: 24px;
-        padding-right: 25px;
+        padding-left: 23px;
+        padding-right: 24px;
         margin: auto; }
     .tge__data-heading {
       font-weight: 400; }
@@ -675,7 +675,7 @@ body {
           flex-flow: column nowrap;
   -webkit-box-align: end;
       -ms-flex-align: end;
-          align-items: end; }
+          align-items: flex-end; }
   .line-chart:after {
     position: absolute;
     bottom: 0;
@@ -1540,7 +1540,7 @@ body {
 
 .tge__tooltip-target {
   position: absolute;
-  left: 63%;
+  left: calc(50% + 20px);
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   top: -15px;
@@ -1843,22 +1843,6 @@ body {
       .jumbo__tge {
         display: none; } }
 
-@-webkit-keyframes width-shrink-sm {
-  from {
-    width: 50%;
-    right: 0; }
-  to {
-    width: 0%;
-    right: calc((100vh - 970px) / -2 + 30px); } }
-
-@keyframes width-shrink-sm {
-  from {
-    width: 50%;
-    right: 0; }
-  to {
-    width: 0%;
-    right: calc((100vh - 970px) / -2 + 30px); } }
-
 @-webkit-keyframes width-shrink-md {
   from {
     width: 50%;
@@ -1881,7 +1865,7 @@ body {
     right: 0; }
   to {
     width: 0%;
-    right: calc((100vh - 1170px) + 65px); } }
+    right: 0; } }
 
 @keyframes width-shrink-lg {
   from {
@@ -1889,7 +1873,7 @@ body {
     right: 0; }
   to {
     width: 0%;
-    right: calc((100vh - 1170px) + 65px); } }
+    right: 0; } }
 
 @-webkit-keyframes width-shrink-xl {
   from {
@@ -1935,15 +1919,11 @@ body {
               animation-duration: 1s;
       -webkit-animation-fill-mode: forwards;
               animation-fill-mode: forwards; } }
-    @media (min-width: 1000px) and (max-width: 1100px) {
-      .jumbo.showing {
-        -webkit-animation-name: width-shrink-sm;
-                animation-name: width-shrink-sm; } }
     @media (min-width: 1000px) and (min-width: 1210px) {
       .jumbo.showing {
         -webkit-animation-name: width-shrink-xl;
                 animation-name: width-shrink-xl; } }
-  @media (min-width: 1000px) and (min-width: 1210px) and (max-width: 1340px) {
+  @media (min-width: 1000px) and (min-width: 1210px) and (max-width: 1590px) {
     .jumbo.showing {
       -webkit-animation-name: width-shrink-lg;
               animation-name: width-shrink-lg; } }
@@ -1952,15 +1932,12 @@ body {
     .jumbo.shown {
       width: 0%;
       right: 0; } }
-    @media (min-width: 1000px) and (max-width: 1100px) {
-      .jumbo.shown {
-        right: calc((100vh - 970px) / -2 + 30px); } }
     @media (min-width: 1000px) and (min-width: 1210px) {
       .jumbo.shown {
         right: calc((100vh - 1170px) / -2.5); } }
-  @media (min-width: 1000px) and (min-width: 1210px) and (max-width: 1340px) {
+  @media (min-width: 1000px) and (min-width: 1210px) and (max-width: 1590px) {
     .jumbo.shown {
-      right: calc((100vh - 1170px) + 65px); } }
+      right: 0; } }
 
 @media (min-width: 1000px) {
     .jumbo.shown.showing {
@@ -2524,7 +2501,7 @@ body {
   margin-right: -15px;
   margin-left: -15px;
   margin-bottom: 55px; }
-  @media (max-width: 840px) {
+  @media (max-width: 850px) {
     .stages {
       overflow: hidden; } }
   @media (min-width: 780px) {

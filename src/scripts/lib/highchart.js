@@ -170,14 +170,14 @@
 
       $( this ).addClass('active');
 
-      return chart.xAxis[0].setExtremes(Date.parse('2011-10-7T15:59'), Date.parse('2011-10-14T15:59'));
+      return chart.xAxis[0].setExtremes(Date.parse('2011-10-07T15:59'), Date.parse('2011-10-14T15:59'));
     });
 
     $('#all-btn').click(function() {
       $('.diagramm__timescale-btn').removeClass('active');
 
       $( this ).addClass('active');
-      
+
       chart.xAxis[0].setExtremes(undefined, undefined);
       chart.redraw();
       return;
