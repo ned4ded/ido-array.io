@@ -8,12 +8,12 @@
         title: false,
         spacingTop: 0,
         spacingBottom: 10,
+        animation: false,
       },
       credits: {
         enabled: false,
       },
       xAxis: {
-        crosshair: true,
         type: 'datetime',
         min: Date.parse('2011-10-06T08:00'),
         max: Date.parse('2011-10-14T15:59'),
@@ -27,11 +27,11 @@
       yAxis: {
         title: false,
         endOnTick: false,
-        maxPadding: 0.05,
+        maxPadding: 0.1,
         opposite: true,
         events: {
           afterSetExtremes: (ev) => {
-            return $('#max-value').html(ev.dataMax);
+            return $('#max-value').html(Math.round(ev.max * 100) / 100);
           }
         },
         gridLineColor: '#e6e6e6',
@@ -46,19 +46,8 @@
       },
       plotOptions: {
         area: {
-          fillColor: {
-            linearGradient: {
-              x1: 0,
-              y1: 0,
-              x2: 0,
-              y2: 1
-            },
-            stops: [
-              [0, Highcharts.getOptions().colors[0]],
-              [1, '153, 221, 255']
-            ]
-          },
           marker: {
+            enabled: false,
             radius: 10
           },
           lineWidth: 1,
@@ -70,8 +59,7 @@
           threshold: null,
           events: {
             mouseOver: function (ev) {
-              console.log(this);
-              console.log(ev);
+
             },
           }
           // getExtremesFromAll: true,
@@ -80,16 +68,33 @@
           point: {
             events: {
               mouseOver: function(ev) {
-                console.log('mouseover');
-                console.log(this);
+                const marker = this.series.stateMarkerGraphic.element;
+
+                const makePath = () => {
+                  const ns = 'http://www.w3.org/2000/svg';
+                  const path = document.createElementNS(ns, "path");
+                  const d = ['M', [Math.round(this.plotX) - 1, Math.round(this.plotY)], 'v', chart.plotHeight - this.plotY + 20]
+                    .map(e => e instanceof Array ? e.join(', ') : e)
+                    .join(' ');
+                  path.setAttributeNS(null, "d", d);
+                  path.setAttributeNS(null, "style", "opacity:1");
+                  path.setAttributeNS(null, "class", "highcharts-custom-crosshair");
+
+                  return path;
+                }
+
+                this.customCrosshair = makePath();
+
+                return $( marker ).before( this.customCrosshair );
               },
+              mouseOut: function(ev) {
+                return $( this.customCrosshair ).remove();
+              }
             }
           },
           events: {
             mouseOut: function(ev) {
-              console.log('mouseoout');
-              console.log(this);
-              console.log(ev);
+
             }
           },
         }
@@ -98,9 +103,18 @@
       tooltip: {
         positioner: function(labelWidth, labelHeight, point) {
           const y = chart.plotHeight + chart.plotTop + 3;
-          const x = point.plotX - (labelWidth / 2) + chart.plotLeft;
 
-          return { x, y, };
+          const findX = () => {
+            if(point.plotX < (labelWidth / 2)) {
+              return 0;
+            } else if(point.plotX > chart.plotWidth - (labelWidth / 2)) {
+              return chart.plotWidth - labelWidth + chart.plotLeft * 2 - 2;
+            } else {
+              return point.plotX - (labelWidth / 2) + chart.plotLeft;
+            }
+          }
+
+          return { x: findX(), y, };
         },
         shadow: false,
         animation: false,
@@ -135,7 +149,7 @@
 
     chart.xAxis[0].setExtremes(Date.parse('2011-10-14T14:59'), Date.parse('2011-10-14T15:59'));
 
-    $('#max-value').html(chart.yAxis[0].dataMax);
+    $('#max-value').html(Math.round(chart.yAxis[0].max * 100) / 100);
 
     $('#h-btn').click(function() {
       return chart.xAxis[0].setExtremes(Date.parse('2011-10-14T14:59'), Date.parse('2011-10-14T15:59'));
@@ -153,6 +167,9 @@
 
     const timeout = () => setTimeout(function () {
       chart.reflow();
+      if(chart.hoverPoint) {
+        $( chart.hoverPoint.customCrosshair ).remove();
+      }
 
       if(!timer) return;
 

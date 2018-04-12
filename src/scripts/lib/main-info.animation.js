@@ -79,8 +79,9 @@
     infographic: document.getElementById('infographic'),
     bg: document.getElementById('main-info__bg'),
     logo: document.getElementById('logo'),
+    chart: document.getElementById('linechart'),
     toggle: document.getElementById('jumbo-toggle'),
   };
 
-  const animations = new Animation( [els.bg, els.jumbo, els.infographic, els.toggle, els.logo], els.toggle, settings);
+  const animations = new Animation( [els.bg, els.jumbo, els.infographic, els.toggle, els.logo, els.chart], els.toggle, settings);
 // })();

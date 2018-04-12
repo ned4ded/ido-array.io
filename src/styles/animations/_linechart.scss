@@ -1,0 +1,67 @@
+.line-chart__view {
+  @keyframes appearing {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes stroke-color {
+    from {
+      stroke: $blue-400;
+    }
+
+    to {
+      stroke: #008bff;
+    }
+  }
+
+  @include respond-to(medium) {
+    & .highcharts-area {
+      fill: url('#gradient-highcharts');
+      opacity: 0;
+    }
+
+    & .highcharts-graph {
+      stroke: $blue-400;
+    }
+
+    &.showing{
+      & .highcharts-area {
+        animation-name: appearing;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+      }
+
+      & .highcharts-graph {
+        animation-name: stroke-color;
+        animation-duration: 1s;
+
+        animation-fill-mode: forwards;
+      }
+    }
+
+    &.shown{
+      & .highcharts-area {
+        opacity: 1;
+      }
+
+      & .highcharts-graph {
+        stroke: #008bff;
+      }
+    }
+
+    &.shown.showing{
+      & .highcharts-area {
+        animation-direction: reverse;
+      }
+
+      & .highcharts-graph {
+        animation-direction: reverse;
+      }
+    }
+  }
+}

@@ -1,7 +1,14 @@
 .highcharts {
+  @mixin theme-contrast {
+    .line-chart__view--theme--contrast & {
+      @content
+    }
+  }
+
   &-container  {
     position: absolute !important;
     left: auto !important;
+    overflow: visible !important;
     right: 0;
   }
 
@@ -10,12 +17,21 @@
   }
 
   &-area {
-    fill: transparent;
+    fill: url('#gradient-highcharts');
+
+    @include respond-to(medium) {
+      fill: transparent;
+    }
   }
 
   &-graph {
-    stroke: $blue-400;
+    stroke: #008bff;
     stroke-width: 2px;
+    transition: stroke .1s ease-in;
+
+    @include respond-to(medium) {
+      stroke: $blue-400;
+    }
   }
 
   &-halo {
@@ -23,17 +39,7 @@
     stroke: rgba($darkest, .05);
   }
 
-  &-point {
-    fill: transparent;
-    stroke-width: 0px;
-
-    &-hover {
-      fill: $green-contrast;
-      stroke-width: 1px;
-    }
-  }
-
-  &-markers path:not(.highcharts-halo):not(.highcharts-point) {
+  &-markers path:not(.highcharts-halo):not(.highcharts-point):not(.highcharts-custom-crosshair) {
     fill: $green-contrast;
     stroke-width: 5;
     stroke: $lightest;
@@ -61,8 +67,8 @@
     display: none;
   }
 
-  &-root {
-
+  &-root:not(:root) {
+    overflow: visible;
   }
 
   &-tooltip>span {
@@ -81,5 +87,10 @@
 
   &-tooltip--highlight {
     font-weight: bold;
+  }
+
+  &-custom-crosshair {
+    stroke: rgb(0, 139, 255);
+    stroke-width: 2px;
   }
 }
