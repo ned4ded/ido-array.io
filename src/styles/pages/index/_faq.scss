@@ -41,6 +41,17 @@
     padding-bottom: $block-p-lg * 2.25;
   }
 
+  @media(min-width: 1500px) {
+    background-image:
+      linear-gradient(250deg, $blue-200 20%, rgba($blue-200, 0) 60%),
+      url('../assets/imgs/bg-faq-color.png'),
+      gradient-dark-blue($angle: 202deg, $percent2: 100%);
+
+      background-size: 100%, 1500px, 100%;
+      background-position-x: right, left, 0;
+      background-position-y: center, bottom, center;
+  }
+
   &__heading {
     font-family: $ff-sans;
     font-size: $fz-xl * 1.08;

@@ -70,13 +70,13 @@
         <div id="headerMenu" class="collapse navbar-collapse">
           <ul class="header__menu">
             <li class="header__menu-item">
-              <a href="#" class="header__link">About IDO</a>
+              <a data-smooth-scroll href="#about-ido" class="header__link">About IDO</a>
             </li>
             <li class="header__menu-item">
-              <a href="#" class="header__link">Current status</a>
+              <a data-smooth-scroll href="#tge-status" class="header__link">Current status</a>
             </li>
             <li class="header__menu-item">
-              <a href="#" class="header__link">Smart contract</a>
+              <a data-smooth-scroll href="#wallets" class="header__link">Smart contract</a>
             </li>
           </ul>
         </div>
@@ -115,7 +115,7 @@
                         <dd class="text tge__data-value" data-tge-undefined>Undefined</dd>
                       </div>
                       <div class="tge__data-group tge__data-group--right">
-                        <dt class="text text--light tge__data-heading" data-tge-true>Actual price</dt>
+                        <dt class="text text--light tge__data-heading" data-tge-true>Current price</dt>
                         <dt class="text text--light tge__data-heading" data-tge-false data-tge-undefined>Balance</dt>
                         <dd data-prefix="ETH" class="text text--light tge__data-value tge__data-value--price" data-eth-actual-price>1.5</dd>
                       </div>
@@ -158,7 +158,7 @@
                         <dd class="text tge__data-value" data-tge-undefined>Undefined</dd>
                       </div>
                       <div class="tge__data-group tge__data-group--right">
-                        <dt class="text tge__data-heading" data-tge-true>Actual price</dt>
+                        <dt class="text tge__data-heading" data-tge-true>Current price</dt>
                         <dt class="text tge__data-heading" data-tge-false data-tge-undefined>Balance</dt>
                         <dd data-prefix="ETH" class="text tge__data-value tge__data-value--price" data-eth-actual-price >1.5</dd>
                       </div>
@@ -259,7 +259,7 @@
       </div>
     </div>
 
-    <div class="container">
+    <div id="about-ido" class="container">
       <div class="row terms justify-content-md-end">
         <div class="col-12 col-md-9">
           <p class="text text--dark text--highlight terms__text">
@@ -547,7 +547,7 @@
       </div>
     </div>
 
-    <div data-tge-status="true" class="container tge-info">
+    <div id="tge-status" data-tge-status="true" class="container tge-info">
       <div class="row justify-content-end align-items-center">
         <h2 class="col-12 col-md-9 heading-2 tge-info__heading">Token generation event</h2>
         <span class="w-100"></span>
@@ -639,7 +639,7 @@
               Stage <span data-current-stage>5</span>
             </p>
             <div class="stages__data stages__data--price">
-              <p class="text text--dimmed stages__data-name">Actual price</p>
+              <p class="text text--dimmed stages__data-name">Current price</p>
               <p class="text stages__data-value" data-value-postfix="ETH">1.5</p>
             </div>
             <div class="stages__data">
@@ -664,7 +664,6 @@
           </div>
         </div>
       </div>
-
 
       <div class="row justify-content-end">
 
@@ -1080,7 +1079,7 @@
       </div>
     </div>
 
-    <div class="container-fluid wallets">
+    <div id="wallets" class="container-fluid wallets">
       <div class="container">
         <div class="row justify-content-end">
           <h1 data-wallets-events-count="5" class="col-12 col-md-9 heading-2 wallets__heading">
