@@ -4,42 +4,43 @@
   const animation = (boolean) => {
     $('#logo').animate({opacity: (boolean ? 0 : 1)}, 500);
     $('#header').animate({height: (boolean ? '100%' : $( '.navbar-brand' ).height() + 20)}, 500);
-    $('#headerMenu').collapse('toggle');
   }
 
-  const isToggled = (boolean) => {
-    const arg = ["toggled", boolean].filter(n => n !== undefined);
+  function lsHandler(ev) {
+    ev.preventDefault();
 
-    return $( '#menu-toggler' ).data(...arg);
-  }
+    $('#menu-toggler').trigger('click');
+    $( this ).unbind( 'click', lsHandler );
 
-  const toggle = () => {
-    const boolean = !isToggled();
+    return $( this ).trigger('click');
+  };
 
-    return isToggled( boolean );
-  }
-
-  $('#menu-toggler').click((ev) => {
-    ev.preventDefault;
-
+  $('#menu-toggler').click(function(ev) {
+    ev.preventDefault();
     if(width() >= 1000) return;
 
-    if($( '#menu-toggler' ).data().toggled === undefined) isToggled( true );
+    const $target = $( $( this ).data( 'target' ) );
+    if(!$target.length) return;
 
-    if(isToggled()) {
+    const innerLinks = $target.find('a[href]');
+
+
+    if($target.is(':hidden')) {
+      innerLinks.click(lsHandler);
       $('#header').toggleClass('header--behavior--mobile-menu');
       $('#mobile-menu-wrapper').toggleClass('body--overflow--hidden');
-
       animation(true);
-      isToggled( false );
+      $target.toggle();
     } else {
       animation(false);
+
       setTimeout(function () {
+        $target.toggle();
         $('#header').toggleClass('header--behavior--mobile-menu');
         $('#header').attr('style', '');
         $('#logo').attr('style', '');
         $('#mobile-menu-wrapper').toggleClass('body--overflow--hidden');
-        isToggled( true );
+        innerLinks.unbind( 'click', lsHandler);
       }, 520);
     }
   });

@@ -2319,7 +2319,10 @@ body {
 
 .tge-info {
   padding-top: 90px;
-  padding-bottom: 42px; }
+  padding-bottom: 42px;
+  position: relative;
+  z-index: 0;
+  overflow: hidden; }
   @media (min-width: 780px) {
     .tge-info {
       padding-top: 120px;

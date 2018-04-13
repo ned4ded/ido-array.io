@@ -2,8 +2,10 @@
   background-image: gradient-dark-blue();
   position: relative;
   z-index: 100;
+  // overflow: hidden;
 
   @include respond-to(medium) {
+    // overflow: auto;
     background-image: none;
   }
 
