@@ -27,8 +27,9 @@ $(function () {
         scaleName: '.scale__name',
         stages: '.stages',
         tge: '.tge',
-      }
-    }
+      },
+    },
+    smoothScroll: '[data-smooth-scroll]',
   };
 
   const runner = startRunner(config);
@@ -42,4 +43,7 @@ $(function () {
     const $other = $('[data-tooltip-group]').not( $( this ) );
     return $other.tooltip('hide');
   });
+
+  $( document ).ready(() => new SmoothScrolling($( selectors.smoothScroll ).get()));
+
 });
