@@ -516,7 +516,8 @@ body {
             flex-flow: row nowrap;
     border-radius: 6px;
     margin: 0;
-    z-index: 0; }
+    z-index: 0;
+    width: 100%; }
     .tge__data:before {
       content: '';
       position: absolute;
