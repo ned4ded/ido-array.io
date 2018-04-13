@@ -24,6 +24,12 @@
     text-align: left;
   }
 
+  &__link {
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
   &__data {
     position: relative;
     display: inline-flex;
@@ -32,7 +38,7 @@
     margin: 0;
     z-index: 0;
     width: 100%;
-    
+
 
     &:before {
       content: '';
@@ -63,6 +69,10 @@
         border-bottom-left-radius: 4px;
         background-image: gradient-contrast-green();
 
+        &:hover {
+          text-decoration: none;
+        }
+
         .tge__data:not([data-tge-status="true"]) & {
           background-image: gradient-dark-blue();
         }
@@ -77,6 +87,10 @@
         padding-right: 24px;
 
         margin: auto;
+
+        &:hover {
+          text-decoration: none;
+        }
 
       }
     }
