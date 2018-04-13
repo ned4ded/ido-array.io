@@ -2,128 +2,191 @@
   position: relative;
   z-index: 0;
 
+  box-sizing: content-box;
   width: 100%;
-  height: 10px;
-  margin-top: 45px;
-
-  @include respond-to(medium) {
-    margin-top: 55px;
-  }
+  margin-top: 0;
 
   &-devider {
+    position: absolute;
+    top: 0;
+    height: calc(100% + 14px);
+    left: 0;
     display: flex;
     flex-flow: row nowrap;
+
     width: 100%;
-    position: absolute;
-    bottom: -10px;
-    left: 0;
-    height: 10px;
 
     &__item {
       position: relative;
-      display: block;
-      height: 100%;
-      flex: 1 1 auto;
-      cursor: help;
       z-index: 1;
 
+      display: block;
+      flex: 1 1 auto;
+
+      height: 100%;
+
       &:not(:last-child):after {
-        content: '';
         position: absolute;
+        bottom: 0;
         right: 0;
-        top: 50%;
-        transform: translateY(-50%);
-        height: 80%;
+
         width: 1px;
+        height: 8px;
+
+        content: '';
+        transform: translateY(-50%);
+
         background-color: #8ca8c3;
       }
     }
   }
 
-  &__name {
-    position: absolute;
+  &__progress {
+    position: relative;
     z-index: 1;
     bottom: 0;
 
-    width: calc(100% - 30px);
-    height: 100%;
+    display: block;
+    order: 100;
+
+    width: 100%;
+    height: 10px;
     margin-bottom: 0;
+
+    transition: width .2s ease-in;
 
     border-radius: 5px;
     background-image: gradient-contrast-green($angle: 268deg);
 
     font-size: 0;
+  }
 
-    transition: width .2s ease-in;
+  &__data {
+    left: 0;
 
-    &:after {
+    color: $blue-400;
+
+    font-size: $fz-md;
+    font-weight: bold;
+  }
+
+  &__name {
+    order: -1;
+
+    width: 100%;
+
+    font-size: $fz-md;
+    font-weight: normal;
+  }
+
+  &__start, &__end {
+    width: 50%;
+    margin-bottom: 5px;
+    display: none;
+
+    @include respond-to(tablet){
+      display: block;
+    }
+  }
+
+  &__end {
+    text-align: right;
+  }
+
+  &__earned {
+    position: absolute;
+    z-index: 0;
+    right: -29px;
+    bottom: 32px;
+    left: auto;
+
+    min-width: 135px;
+    max-width: 250px;
+    padding: 6px 15px;
+
+    text-align: center;
+
+    color: rgb(255, 255, 255);
+    background-color: transparent;
+
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 2;
+
+    &:before {
       position: absolute;
-      bottom: calc(100% + 26px);
+      z-index: -1;
+      top: 0;
       left: 0;
 
-      content: attr(data-scale-name);
+      width: 100%;
+      height: 100%;
 
-      color: $blue-400;
+      content: '';
+      transform: skew(-8deg, 0);
 
-      font-size: $fz-md;
+      border-radius: 4px;
+      // background-color: $blue-400;
+      background-color: $blue-contrast-200;
+    }
+
+    &:after {
+      content: ' ' attr(data-postfix);
+    }
+
+    &-arrow {
+      position: absolute;
+      right: 25px;
+      bottom: -6px;
+
+      content: "";
+
+      border-width: .4rem .4rem 0;
+      border-style: solid;
+      border-color: transparent;
+      // border-top-color: $blue-400;
+      border-top-color: $blue-contrast-200;
     }
   }
 
   &__bar {
-    position: absolute;
+    position: relative;
     z-index: 0;
+    bottom: 0;
 
-    width: 100%;
-    height: 100%;
+    display: flex;
+    flex-flow: row wrap;
 
-    border-radius: 5px;
-    background-color: $light-200;
+    margin-bottom: 0;
 
     font-size: 0;
 
-    &:after {
-      position: absolute;
-      bottom: calc(100% + 5px);
-      left: 0;
-
-      display: none;
-
-      content: attr(data-start);
-
-      color: $blue-400;
-
-      font-size: $fz-md;
-      font-weight: bold;
-
-      @include respond-to(tablet){
-        display: block;
-      }
-    }
-
     &:before {
       position: absolute;
-      right: 0;
-      bottom: calc(100% + 5px);
+      z-index: -1;
+      bottom: 0;
+      left: 0;
 
-      display: none;
+      width: 100%;
+      height: 10px;
 
-      content: attr(data-end);
+      content: '';
 
-      color: $blue-400;
-
-      font-size: $fz-md;
-      font-weight: bold;
-
-      @include respond-to(tablet){
-        display: block;
-      }
+      border-radius: 5px;
+      background-color: $light-200;
     }
   }
 
   &--theme--dark {
     .scale {
-      &__name {
+      &__progress {
         background-image: gradient-contrast-blue-400($angle: 93deg);
+      }
+
+      &__earned {
+        &:before { background-color: $blue-400; }
+
+        &-arrow { border-top-color: $blue-400; }
       }
     }
   }

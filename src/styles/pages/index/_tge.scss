@@ -3,7 +3,6 @@
   padding-bottom: $block-p-lg * 0.7;
   position: relative;
   z-index: 0;
-  overflow: hidden;
 
   @include respond-to(tablet) {
     padding-top: $block-p-lg * 2;
