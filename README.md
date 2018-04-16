@@ -41,6 +41,49 @@ Parsed Json from https://ido-array-io.appspot.com/info
 }
 ```
 
+### Data attributes
+Name | Description
+--- | ---
+`[data-eth-balance]` | Main-info (jumbo and infographic blocks), tge-info (tge-status false state).
+`[data-tge-status]` | Tge tags, Tge-info block. It influences inside styling behavior
+`[data-token-price]` | Infographic block, 'Token price'
+`[data-token-price-change]` | Infographic block, 'since last month(ETH)'
+`[data-token-price-change-percent]` | Infographic block, 'since last month(%)'
+`[data-tge-scale="{{name}}"]` | tge-info block, scales. Used 2 names: 'total', 'stages'
+`[data-tge-scale-start]` | tge-info block, scales. Starting value
+`[data-tge-scale-end]` | tge-info block, scales. Ending value
+`[data-tge-scale-progress]` | tge-info block, scales. Progress %
+`[data-tge-scale-earned]` | tge-info block, scales. Precise value in tooltip
+`[data-tge-scale-stage]` | tge-info block, scales. All singled stages in scales with divider
+`[data-tge-stages="{{name}}"]` | tge-info block, stages. Parent for all inside stages' data. Available names: 'prev' for previous, 'cur' for current and 'next'
+`[data-tge-stages-number]` | tge-info block, stages. `span` with stage's number.
+`[data-tge-stages-price]` | tge-info block, stages. `p` tag with stage's price
+`[data-tge-stages-start]` | tge-info block, stages. `p` tag with stage's starting block value, **Don't forget** to use parent for defining the scope of binding
+`[data-tge-countdown="{{name}}"]` | tge-info block, tge-status false state, timer. `span`s with countdown, `h` for hours, `d` for days
+`[data-tge-stages-table="{{value}}"]` | tge-info block, table. Use unique stages num to identify grouped up body tags
+`[data-tge-stages-head]` | tge-info block, table. One of the elements of `data-tge-stages-table` pair, contains main-row
+`[data-tge-stages-row]` | tge-info block, table. Each row inside the other part of `data-tge-stages-table`
+`[data-tge-stages-round]` | tge-info block, table. `span` with stage's number.
+`[data-tge-stages-date]` | tge-info block, table. `time` tag.
+`[data-tge-stages-day]` | tge-info block, table. `span` tag, date
+`[data-tge-stages-time]` | tge-info block, table. `span` tag, precise time
+`[data-tge-stages-amount]` | tge-info block, table. `span` tag, table head amount
+`[data-tge-stages-start]` | tge-info block, table. `td` tag, table head start, **Don't forget** to use parent for defining the scope of binding
+`[data-tge-stages-investor]` | tge-info block, table. `td` tag, table investor
+`[data-tge-stages-project]` | tge-info block, table. `td` tag, table project
+`[data-tge-stages-founder]` | tge-info block, table. `td` tag, table founder
+`[data-tge-stages-sum]` | tge-info block, table. `span` tag, table summary
+`[data-project-balance]` | walelts block. `p` tag 'Project balance'
+`[data-project-received]` | walelts block. `p` tag 'Project received'
+`[data-project-spent]` | walelts block. `p` tag 'Project spent'
+`[data-project-event]` | walelts block, table. `tr` tag; use as parent
+`[data-project-event-age]` | walelts block, table. `td` tag; 
+`[data-project-event-transfers]` | walelts block, table. `td` tag;
+`[data-project-event-quantity]` | walelts block, table. `td` tag;
+
+
+
+
 ### Token generation event
 
 TGE status should be written in `$([data-tge-status])` elements. Has 3 states: `true`, `false`, `undefined` or something else, that doesn't match `true/false`.

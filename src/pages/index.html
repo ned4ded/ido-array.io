@@ -51,7 +51,6 @@
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
   <![endif]-->
 
-  <!-- header.container-fluid.fixed-top.header -->
   <div id="mobile-menu-wrapper">
     <header id="header" class="container-fluid header">
       <nav class="container navbar navbar-expand-md header__navbar">
@@ -225,14 +224,14 @@
                           <div class="row diagramm__data-group">
                             <div class="col-12 col-sm-3 col-md-auto">
                               <dl class="diagramm__data">
-                                <dt class="text text--dimmed diagramm__data-heading">Token price</dt>
+                                <dt class="text text--dimmed diagramm__data-heading" data-token-price>Token price</dt>
                                 <dd class="text diagramm__data-value diagramm__data-value--postfix" data-postfix="ETH">356.28</dd>
                               </dl>
                             </div>
                             <div class="col-12 col-sm-3 col-md-auto">
                               <dl class="diagramm__data">
                                 <dt class="text text--dimmed diagramm__data-heading">Since last month</dt>
-                                <dd class="text diagramm__data-value" data-prefix="+" data-postfix="ETH">35.57</dd>
+                                <dd class="text diagramm__data-value" data-prefix="+" data-postfix="ETH" data-token-price-change-percent>35.57</dd>
                               </dl>
                             </div>
                             <div class="col-12 col-sm-3 col-lg-auto">
@@ -566,10 +565,10 @@
         <div data-tge-false class="col-12 col-md-9">
           <div class="tge-info__countdown">
             <p class="tge-info__countdown-balance">
-              Balance <span class="tge-info__countdown-balance-value">156.284</span>
+              Balance <span data-eth-balance class="tge-info__countdown-balance-value">156.284</span>
             </p>
             <div class="tge-info__countdown-time">
-              Time to a new round <time><span class="tge-info__countdown-days tge-info__countdown-time--divider">1 day</span> <span class="tge-info__countdown-hours">15 hours</span></time>
+              Time to a new round <time><span data-tge-countdown="d" class="tge-info__countdown-days tge-info__countdown-time--divider">1 day</span> <span data-tge-countdown="h" class="tge-info__countdown-hours">15 hours</span></time>
             </div>
           </div>
         </div>
@@ -582,8 +581,8 @@
             </p>
             <div data-tooltip-trigger class="col-12 col-md-9">
               <div class="scale">
-                <p class="scale__bar">
-                  Representation of values on scale from <span class="scale__data scale__start" data-scale-start>1</span> to <span class="scale__data scale__end" data-scale-end>500 000</span>. Goal fulfilled up to <span class="scale__data scale__progress" style="width: 61%"><span class="scale__data scale__earned" data-scale-earned data-postfix="ETH">300 675 <span class="scale__earned-arrow"></span></span></span><span class="scale__data scale__name" data-scale-currency>ETH</span>.
+                <p data-tge-scale="total" class="scale__bar">
+                  Representation of values on scale from <span class="scale__data scale__start" data-tge-scale-start>1</span> to <span class="scale__data scale__end" data-tge-scale-end>500 000</span>. Goal fulfilled up to <span class="scale__data scale__progress" style="width: 61%" data-tge-scale-progress><span class="scale__data scale__earned" data-tge-scale-earned data-postfix="ETH">300 675 <span class="scale__earned-arrow"></span></span></span><span class="scale__data scale__name" data-scale-currency>ETH</span>.
                 </p>
               </div>
             </div>
@@ -595,20 +594,20 @@
             </p>
             <div class="col-12 col-md-9">
               <div class="scale scale--theme--dark">
-                <p class="scale__bar">
-                  Representation of values on scale from <span class="scale__data scale__start" data-scale-start>521 100</span> to <span class="scale__data scale__end" data-scale-end>521 400</span>. Goal fulfilled up to <span class="scale__data scale__progress" style="width: 63%"><span class="scale__data scale__earned" data-scale-earned data-postfix="">521 277 <span class="scale__earned-arrow"></span></span></span>. Scale name is<span class="scale__data scale__name" data-scale-currency>Starting block</span>.
+                <p data-tge-scale="stages" class="scale__bar">
+                  Representation of values on scale from <span class="scale__data scale__start" data-tge-scale-start>521 100</span> to <span class="scale__data scale__end" data-tge-scale-end>521 400</span>. Goal fulfilled up to <span class="scale__data scale__progress" style="width: 63%" data-tge-scale-progress><span class="scale__data scale__earned" data-tge-scale-earned data-postfix="">521 277 <span class="scale__earned-arrow"></span></span></span>. Scale name is<span class="scale__data scale__name" data-scale-currency>Starting block</span>.
                 </p>
 
                 <div class="scale-devider">
-                  <span data-toggle="tooltip" data-tooltip-group="block-scale" data-tooltip-theme="wide" data-placement="bottom" title="Stage 1: Price per token 1.66 ETH. The stage is closed" data-delay='{ "hide": 1000 }' class="scale-devider__item scale-devider__tooltip-target"></span>
-                  <span data-toggle="tooltip" data-tooltip-group="block-scale" data-tooltip-theme="wide" data-placement="bottom" title="Stage 2: Price per token 1.66 ETH. The stage is closed" data-delay='{ "hide": 1000 }' class="scale-devider__item scale-devider__tooltip-target"></span>
-                  <span data-toggle="tooltip" data-tooltip-group="block-scale" data-tooltip-theme="wide" data-placement="bottom" title="Stage 3: Price per token 1.66 ETH. The stage is closed" data-delay='{ "hide": 1000 }' class="scale-devider__item scale-devider__tooltip-target"></span>
-                  <span data-toggle="tooltip" data-tooltip-group="block-scale" data-tooltip-theme="wide" data-placement="bottom" title="Stage 4: Price per token 1.66 ETH. The stage is closed" data-delay='{ "hide": 1000 }' class="scale-devider__item scale-devider__tooltip-target"></span>
-                  <span data-toggle="tooltip" data-tooltip-group="block-scale" data-tooltip-theme="wide" data-placement="bottom" title="Stage 5: Price per token 1.66 ETH. The stage is closed" data-delay='{ "hide": 1000 }' class="scale-devider__item scale-devider__tooltip-target"></span>
-                  <span data-toggle="tooltip" data-tooltip-group="block-scale" data-tooltip-theme="wide" data-placement="bottom" title="Stage 6: Price per token 1.66 ETH. The stage is closed" data-delay='{ "hide": 1000 }' class="scale-devider__item scale-devider__tooltip-target"></span>
-                  <span data-toggle="tooltip" data-tooltip-group="block-scale" data-tooltip-theme="wide" data-placement="bottom" title="Stage 7: Price per token: 1.5 ETH. Stage is live. Ends in 123 blocks (~ 2 hours, 10 minutes)" data-delay='{ "hide": 1000 }' class="scale-devider__item scale-devider__tooltip-target"></span>
-                  <span data-toggle="tooltip" data-tooltip-group="block-scale" data-tooltip-theme="wide" data-placement="bottom" title="Stage 8: Price per token: 1.1 ETH. Start in 2323 blocks (~ 20 hours, 12 minutes)" data-delay='{ "hide": 1000 }' class="scale-devider__item scale-devider__tooltip-target"></span>
-                  <span id="test" data-toggle="tooltip" data-tooltip-group="block-scale" data-tooltip-theme="wide" data-placement="bottom" title="Stage 9: Price per token: 1.1 ETH. Start in 2323 blocks (~ 20 hours, 12 minutes)" data-delay='{ "hide": 1000 }' class="scale-devider__item scale-devider__tooltip-target"></span>
+                  <span data-tge-scale-stage data-toggle="tooltip" data-tooltip-group="block-scale" data-tooltip-theme="wide" data-placement="bottom" title="Stage 1: Price per token 1.66 ETH. The stage is closed" data-delay='{ "hide": 1000 }' class="scale-devider__item scale-devider__tooltip-target"></span>
+                  <span data-tge-scale-stage data-toggle="tooltip" data-tooltip-group="block-scale" data-tooltip-theme="wide" data-placement="bottom" title="Stage 2: Price per token 1.66 ETH. The stage is closed" data-delay='{ "hide": 1000 }' class="scale-devider__item scale-devider__tooltip-target"></span>
+                  <span data-tge-scale-stage data-toggle="tooltip" data-tooltip-group="block-scale" data-tooltip-theme="wide" data-placement="bottom" title="Stage 3: Price per token 1.66 ETH. The stage is closed" data-delay='{ "hide": 1000 }' class="scale-devider__item scale-devider__tooltip-target"></span>
+                  <span data-tge-scale-stage data-toggle="tooltip" data-tooltip-group="block-scale" data-tooltip-theme="wide" data-placement="bottom" title="Stage 4: Price per token 1.66 ETH. The stage is closed" data-delay='{ "hide": 1000 }' class="scale-devider__item scale-devider__tooltip-target"></span>
+                  <span data-tge-scale-stage data-toggle="tooltip" data-tooltip-group="block-scale" data-tooltip-theme="wide" data-placement="bottom" title="Stage 5: Price per token 1.66 ETH. The stage is closed" data-delay='{ "hide": 1000 }' class="scale-devider__item scale-devider__tooltip-target"></span>
+                  <span data-tge-scale-stage data-toggle="tooltip" data-tooltip-group="block-scale" data-tooltip-theme="wide" data-placement="bottom" title="Stage 6: Price per token 1.66 ETH. The stage is closed" data-delay='{ "hide": 1000 }' class="scale-devider__item scale-devider__tooltip-target"></span>
+                  <span data-tge-scale-stage data-toggle="tooltip" data-tooltip-group="block-scale" data-tooltip-theme="wide" data-placement="bottom" title="Stage 7: Price per token: 1.5 ETH. Stage is live. Ends in 123 blocks (~ 2 hours, 10 minutes)" data-delay='{ "hide": 1000 }' class="scale-devider__item scale-devider__tooltip-target"></span>
+                  <span data-tge-scale-stage data-toggle="tooltip" data-tooltip-group="block-scale" data-tooltip-theme="wide" data-placement="bottom" title="Stage 8: Price per token: 1.1 ETH. Start in 2323 blocks (~ 20 hours, 12 minutes)" data-delay='{ "hide": 1000 }' class="scale-devider__item scale-devider__tooltip-target"></span>
+                  <span data-tge-scale-stage data-toggle="tooltip" data-tooltip-group="block-scale" data-tooltip-theme="wide" data-placement="bottom" title="Stage 9: Price per token: 1.1 ETH. Start in 2323 blocks (~ 20 hours, 12 minutes)" data-delay='{ "hide": 1000 }' class="scale-devider__item scale-devider__tooltip-target"></span>
                 </div>
               </div>
             </div>
@@ -622,46 +621,46 @@
 
       <div data-tge-true class="tge-info__stage">
         <div class="stages">
-          <div class="stages__item stages__item--align--left">
+          <div data-tge-stages="prev" class="stages__item stages__item--align--left">
             <p class="text stages__name">
-              Stage <span data-previous-stage>4</span>
+              Stage <span data-tge-stages-number>4</span>
             </p>
             <div class="stages__data stages__data--price">
               <p class="text text--dimmed stages__data-name">Previous price</p>
-              <p class="text stages__data-value" data-value-postfix="ETH">1.66</p>
+              <p class="text stages__data-value" data-tge-stages-price data-value-postfix="ETH">1.66</p>
             </div>
             <div class="stages__data">
               <p class="text text--dimmed stages__data-name">Starting block</p>
-              <p class="text stages__data-value">521 100</p>
+              <p class="text stages__data-value" data-tge-stages-start>521 100</p>
             </div>
           </div>
 
-          <div data-tooltip-trigger class="stages__item stages__item--dark stages__item--align--center">
+          <div data-tge-stages="cur" data-tooltip-trigger class="stages__item stages__item--dark stages__item--align--center">
             <p data-status="true" data-status-true="live" class="text stages__name">
-              Stage <span data-current-stage>5</span>
+              Stage <span data-tge-stages-number>5</span>
             </p>
             <div class="stages__data stages__data--price">
               <p class="text text--dimmed stages__data-name">Current price</p>
-              <p class="text stages__data-value" data-value-postfix="ETH">1.5</p>
+              <p class="text stages__data-value" data-tge-stages-price data-value-postfix="ETH">1.5</p>
             </div>
             <div class="stages__data">
               <p class="text text--dimmed stages__data-name">Current block</p>
-              <p class="text stages__data-value">521 277</p>
+              <p class="text stages__data-value" data-tge-stages-start>521 277</p>
             </div>
             <span data-toggle="tooltip" data-placement="top" title="Only 123 blocks left to next stage (approximately 1 hour, 23 minutes)" data-delay='{ "hide": 1000 }' class="stage__tooltip-target"></span>
           </div>
 
-          <div class="stages__item stages__item--align--right">
+          <div data-tge-stages="next" class="stages__item stages__item--align--right">
             <p class="text stages__name">
-              Stage <span data-next-stage>6</span>
+              Stage <span data-tge-stages-number>6</span>
             </p>
             <div class="stages__data stages__data--price">
               <p class="text text--dimmed stages__data-name">Previous price</p>
-              <p class="text stages__data-value" data-value-postfix="ETH">1.2</p>
+              <p class="text stages__data-value" data-tge-stages-price data-value-postfix="ETH">1.2</p>
             </div>
             <div class="stages__data">
               <p class="text text--dimmed stages__data-name">Starting block</p>
-              <p class="text stages__data-value">521 100</p>
+              <p class="text stages__data-value" data-tge-stages-start>521 100</p>
             </div>
           </div>
         </div>
@@ -683,22 +682,22 @@
               </tr>
             </thead>
 
-            <tbody data-toggle="collapse" data-target="#body-1" aria-expanded="false" aria-controls="body-1" class="accordion__body accordion__pair-heading accordion__pair-heading--order--first collapsed">
+            <tbody data-tge-stages-table="5" data-tge-stages-head data-toggle="collapse" data-target="#body-1" aria-expanded="false" aria-controls="body-1" class="accordion__body accordion__pair-heading accordion__pair-heading--order--first collapsed">
               <tr class="accordion__row accordion__row--type--main">
                 <td class="accordion__data accordion__data--type--round">
-                  <span data-tge-round class="accordion__data--highlight">TGE 5</span>
+                  <span class="accordion__data--highlight" data-tge-stages-round>TGE 5</span>
 
-                  <time class="accordion__data-time" datetime="2018-03-13T12:45">
-                    <span data-day>13.03.18</span> <span data-day-time>12:45</span>
+                  <time data-tge-stages-date class="accordion__data-time" datetime="2018-03-13T12:45">
+                    <span data-tge-stages-day>13.03.18</span> <span data-tge-stages-time>12:45</span>
                   </time>
                 </td>
-                <td data-postfix="ETH" class="accordion__data accordion__data--type--amount">
+                <td data-tge-stages-amount data-postfix="ETH" class="accordion__data accordion__data--type--amount">
                   125
                 </td>
-                <td class="accordion__data accordion__data--type--startblock">521 090</td>
-                <td data-postfix="%" class="accordion__data accordion__data--type--investor">10</td>
-                <td data-postfix="%" class="accordion__data accordion__data--type--project">80</td>
-                <td data-postfix="%" class="accordion__data accordion__data--type--founder">
+                <td data-tge-stages-start class="accordion__data accordion__data--type--startblock">521 090</td>
+                <td data-tge-stages-investor data-postfix="%" class="accordion__data accordion__data--type--investor">10</td>
+                <td data-tge-stages-project data-postfix="%" class="accordion__data accordion__data--type--project">80</td>
+                <td data-tge-stages-founder data-postfix="%" class="accordion__data accordion__data--type--founder">
                   10
                 </td>
                 <td class="accordion__data--type--icon">
@@ -708,75 +707,76 @@
                 </td>
               </tr>
             </tbody>
-            <tbody id="body-1" class="collapse accordion__body accordion__pair-content">
-              <tr class="accordion__row">
+            <tbody data-tge-stages-table="5" id="body-1" class="collapse accordion__body accordion__pair-content">
+              <tr data-tge-stages-row class="accordion__row">
                 <td class="accordion__data accordion__data--type--round"></td>
                 <td data-postfix="" class="accordion__data accordion__data--type--amount">
                 </td>
-                <td class="accordion__data accordion__data--type--startblock">521 090</td>
-                <td data-postfix="%" class="accordion__data accordion__data--type--investor">10</td>
-                <td data-postfix="%" class="accordion__data accordion__data--type--project">80</td>
-                <td colspan="2" data-postfix="%" class="accordion__data accordion__data--type--founder">10</td>
+                <td data-tge-stages-start class="accordion__data accordion__data--type--startblock">521 090</td>
+                <td data-tge-stages-investor data-postfix="%" class="accordion__data accordion__data--type--investor">10</td>
+                <td data-tge-stages-project data-postfix="%" class="accordion__data accordion__data--type--project">80</td>
+                <td data-tge-stages-founder colspan="2" data-postfix="%" class="accordion__data accordion__data--type--founder">10</td>
               </tr>
-              <tr class="accordion__row">
+              <tr data-tge-stages-row class="accordion__row">
                 <td class="accordion__data accordion__data--type--round"></td>
                 <td data-postfix="" class="accordion__data accordion__data--type--amount">
                 </td>
-                <td class="accordion__data accordion__data--type--startblock">521 090</td>
-                <td data-postfix="%" class="accordion__data accordion__data--type--investor">10</td>
-                <td data-postfix="%" class="accordion__data accordion__data--type--project">80</td>
-                <td colspan="2" data-postfix="%" class="accordion__data accordion__data--type--founder">10</td>
+                <td data-tge-stages-start class="accordion__data accordion__data--type--startblock">521 090</td>
+                <td data-tge-stages-investor data-postfix="%" class="accordion__data accordion__data--type--investor">10</td>
+                <td data-tge-stages-project data-postfix="%" class="accordion__data accordion__data--type--project">80</td>
+                <td data-tge-stages-founder colspan="2" data-postfix="%" class="accordion__data accordion__data--type--founder">10</td>
               </tr>
-              <tr class="accordion__row">
+              <tr data-tge-stages-row class="accordion__row">
                 <td class="accordion__data accordion__data--type--round"></td>
                 <td data-postfix="" class="accordion__data accordion__data--type--amount">
                 </td>
-                <td class="accordion__data accordion__data--type--startblock">521 090</td>
-                <td data-postfix="%" class="accordion__data accordion__data--type--investor">10</td>
-                <td data-postfix="%" class="accordion__data accordion__data--type--project">80</td>
-                <td colspan="2" data-postfix="%" class="accordion__data accordion__data--type--founder">10</td>
+                <td data-tge-stages-start class="accordion__data accordion__data--type--startblock">521 090</td>
+                <td data-tge-stages-investor data-postfix="%" class="accordion__data accordion__data--type--investor">10</td>
+                <td data-tge-stages-project data-postfix="%" class="accordion__data accordion__data--type--project">80</td>
+                <td data-tge-stages-founder colspan="2" data-postfix="%" class="accordion__data accordion__data--type--founder">10</td>
               </tr>
-              <tr class="accordion__row">
+              <tr data-tge-stages-row class="accordion__row">
                 <td class="accordion__data accordion__data--type--round"></td>
                 <td data-postfix="" class="accordion__data accordion__data--type--amount">
                 </td>
-                <td class="accordion__data accordion__data--type--startblock">521 090</td>
-                <td data-postfix="%" class="accordion__data accordion__data--type--investor">10</td>
-                <td data-postfix="%" class="accordion__data accordion__data--type--project">80</td>
-                <td colspan="2" data-postfix="%" class="accordion__data accordion__data--type--founder">10</td>
+                <td data-tge-stages-start class="accordion__data accordion__data--type--startblock">521 090</td>
+                <td data-tge-stages-investor data-postfix="%" class="accordion__data accordion__data--type--investor">10</td>
+                <td data-tge-stages-project data-postfix="%" class="accordion__data accordion__data--type--project">80</td>
+                <td data-tge-stages-founder colspan="2" data-postfix="%" class="accordion__data accordion__data--type--founder">10</td>
               </tr>
-              <tr class="accordion__row">
+              <tr data-tge-stages-row class="accordion__row">
                 <td class="accordion__data accordion__data--type--round"></td>
                 <td data-postfix="" class="accordion__data accordion__data--type--amount">
                 </td>
-                <td class="accordion__data accordion__data--type--startblock">521 090</td>
-                <td data-postfix="%" class="accordion__data accordion__data--type--investor">10</td>
-                <td data-postfix="%" class="accordion__data accordion__data--type--project">80</td>
-                <td colspan="2" data-postfix="%" class="accordion__data accordion__data--type--founder">10</td>
+                <td data-tge-stages-start class="accordion__data accordion__data--type--startblock">521 090</td>
+                <td data-tge-stages-investor data-postfix="%" class="accordion__data accordion__data--type--investor">10</td>
+                <td data-tge-stages-project data-postfix="%" class="accordion__data accordion__data--type--project">80</td>
+                <td data-tge-stages-founder colspan="2" data-postfix="%" class="accordion__data accordion__data--type--founder">10</td>
               </tr>
+
               <tr class="accordion__row accordion__row--type--sum">
                 <td colspan="7" class="accordion__data accordion__data--type--sum">
-                  Summary: <span>345.1245</span>
+                  Summary: <span data-tge-stages-sum>345.1245</span>
                 </td>
               </tr>
             </tbody>
 
-            <tbody data-toggle="collapse" data-target="#body-2" aria-expanded="false" aria-controls="body-2" class="accordion__body accordion__pair-heading collapsed">
+            <tbody data-tge-stages-table="5" data-tge-stages-head data-toggle="collapse" data-target="#body-2" aria-expanded="false" aria-controls="body-2" class="accordion__body accordion__pair-heading collapsed">
               <tr class="accordion__row accordion__row--type--main">
                 <td class="accordion__data accordion__data--type--round">
-                  <span data-tge-round class="accordion__data--highlight">TGE 5</span>
+                  <span class="accordion__data--highlight" data-tge-stages-round>TGE 5</span>
 
-                  <time class="accordion__data-time" datetime="2018-03-13T12:45">
-                    <span data-day>13.03.18</span> <span data-day-time>12:45</span>
+                  <time data-tge-stages-date class="accordion__data-time" datetime="2018-03-13T12:45">
+                    <span data-tge-stages-day>13.03.18</span> <span data-tge-stages-time>12:45</span>
                   </time>
                 </td>
-                <td data-postfix="ETH" class="accordion__data accordion__data--type--amount">
+                <td data-tge-stages-amount data-postfix="ETH" class="accordion__data accordion__data--type--amount">
                   125
                 </td>
-                <td class="accordion__data accordion__data--type--startblock">521 090</td>
-                <td data-postfix="%" class="accordion__data accordion__data--type--investor">10</td>
-                <td data-postfix="%" class="accordion__data accordion__data--type--project">80</td>
-                <td data-postfix="%" class="accordion__data accordion__data--type--founder">
+                <td data-tge-stages-start class="accordion__data accordion__data--type--startblock">521 090</td>
+                <td data-tge-stages-investor data-postfix="%" class="accordion__data accordion__data--type--investor">10</td>
+                <td data-tge-stages-project data-postfix="%" class="accordion__data accordion__data--type--project">80</td>
+                <td data-tge-stages-founder data-postfix="%" class="accordion__data accordion__data--type--founder">
                   10
                 </td>
                 <td class="accordion__data--type--icon">
@@ -786,75 +786,76 @@
                 </td>
               </tr>
             </tbody>
-            <tbody id="body-2" class="collapse accordion__body accordion__pair-content">
-              <tr class="accordion__row">
+            <tbody data-tge-stages-table="5" id="body-2" class="collapse accordion__body accordion__pair-content">
+              <tr data-tge-stages-row class="accordion__row">
                 <td class="accordion__data accordion__data--type--round"></td>
                 <td data-postfix="" class="accordion__data accordion__data--type--amount">
                 </td>
-                <td class="accordion__data accordion__data--type--startblock">521 090</td>
-                <td data-postfix="%" class="accordion__data accordion__data--type--investor">10</td>
-                <td data-postfix="%" class="accordion__data accordion__data--type--project">80</td>
-                <td colspan="2" data-postfix="%" class="accordion__data accordion__data--type--founder">10</td>
+                <td data-tge-stages-start class="accordion__data accordion__data--type--startblock">521 090</td>
+                <td data-tge-stages-investor data-postfix="%" class="accordion__data accordion__data--type--investor">10</td>
+                <td data-tge-stages-project data-postfix="%" class="accordion__data accordion__data--type--project">80</td>
+                <td data-tge-stages-founder colspan="2" data-postfix="%" class="accordion__data accordion__data--type--founder">10</td>
               </tr>
-              <tr class="accordion__row">
+              <tr data-tge-stages-row class="accordion__row">
                 <td class="accordion__data accordion__data--type--round"></td>
                 <td data-postfix="" class="accordion__data accordion__data--type--amount">
                 </td>
-                <td class="accordion__data accordion__data--type--startblock">521 090</td>
-                <td data-postfix="%" class="accordion__data accordion__data--type--investor">10</td>
-                <td data-postfix="%" class="accordion__data accordion__data--type--project">80</td>
-                <td colspan="2" data-postfix="%" class="accordion__data accordion__data--type--founder">10</td>
+                <td data-tge-stages-start class="accordion__data accordion__data--type--startblock">521 090</td>
+                <td data-tge-stages-investor data-postfix="%" class="accordion__data accordion__data--type--investor">10</td>
+                <td data-tge-stages-project data-postfix="%" class="accordion__data accordion__data--type--project">80</td>
+                <td data-tge-stages-founder colspan="2" data-postfix="%" class="accordion__data accordion__data--type--founder">10</td>
               </tr>
-              <tr class="accordion__row">
+              <tr data-tge-stages-row class="accordion__row">
                 <td class="accordion__data accordion__data--type--round"></td>
                 <td data-postfix="" class="accordion__data accordion__data--type--amount">
                 </td>
-                <td class="accordion__data accordion__data--type--startblock">521 090</td>
-                <td data-postfix="%" class="accordion__data accordion__data--type--investor">10</td>
-                <td data-postfix="%" class="accordion__data accordion__data--type--project">80</td>
-                <td colspan="2" data-postfix="%" class="accordion__data accordion__data--type--founder">10</td>
+                <td data-tge-stages-start class="accordion__data accordion__data--type--startblock">521 090</td>
+                <td data-tge-stages-investor data-postfix="%" class="accordion__data accordion__data--type--investor">10</td>
+                <td data-tge-stages-project data-postfix="%" class="accordion__data accordion__data--type--project">80</td>
+                <td data-tge-stages-founder colspan="2" data-postfix="%" class="accordion__data accordion__data--type--founder">10</td>
               </tr>
-              <tr class="accordion__row">
+              <tr data-tge-stages-row class="accordion__row">
                 <td class="accordion__data accordion__data--type--round"></td>
                 <td data-postfix="" class="accordion__data accordion__data--type--amount">
                 </td>
-                <td class="accordion__data accordion__data--type--startblock">521 090</td>
-                <td data-postfix="%" class="accordion__data accordion__data--type--investor">10</td>
-                <td data-postfix="%" class="accordion__data accordion__data--type--project">80</td>
-                <td colspan="2" data-postfix="%" class="accordion__data accordion__data--type--founder">10</td>
+                <td data-tge-stages-start class="accordion__data accordion__data--type--startblock">521 090</td>
+                <td data-tge-stages-investor data-postfix="%" class="accordion__data accordion__data--type--investor">10</td>
+                <td data-tge-stages-project data-postfix="%" class="accordion__data accordion__data--type--project">80</td>
+                <td data-tge-stages-founder colspan="2" data-postfix="%" class="accordion__data accordion__data--type--founder">10</td>
               </tr>
-              <tr class="accordion__row">
+              <tr data-tge-stages-row class="accordion__row">
                 <td class="accordion__data accordion__data--type--round"></td>
                 <td data-postfix="" class="accordion__data accordion__data--type--amount">
                 </td>
-                <td class="accordion__data accordion__data--type--startblock">521 090</td>
-                <td data-postfix="%" class="accordion__data accordion__data--type--investor">10</td>
-                <td data-postfix="%" class="accordion__data accordion__data--type--project">80</td>
-                <td colspan="2" data-postfix="%" class="accordion__data accordion__data--type--founder">10</td>
+                <td data-tge-stages-start class="accordion__data accordion__data--type--startblock">521 090</td>
+                <td data-tge-stages-investor data-postfix="%" class="accordion__data accordion__data--type--investor">10</td>
+                <td data-tge-stages-project data-postfix="%" class="accordion__data accordion__data--type--project">80</td>
+                <td data-tge-stages-founder colspan="2" data-postfix="%" class="accordion__data accordion__data--type--founder">10</td>
               </tr>
+
               <tr class="accordion__row accordion__row--type--sum">
                 <td colspan="7" class="accordion__data accordion__data--type--sum">
-                  Summary: <span>345.1245</span>
+                  Summary: <span data-tge-stages-sum>345.1245</span>
                 </td>
               </tr>
             </tbody>
 
-            <tbody data-toggle="collapse" data-target="#body-3" aria-expanded="false" aria-controls="body-3" class="accordion__body accordion__pair-heading collapsed">
+            <tbody data-tge-stages-table="5" data-tge-stages-head data-toggle="collapse" data-target="#body-3" aria-expanded="false" aria-controls="body-3" class="accordion__body accordion__pair-heading collapsed">
               <tr class="accordion__row accordion__row--type--main">
                 <td class="accordion__data accordion__data--type--round">
-                  <span data-tge-round class="accordion__data--highlight">TGE 5</span>
+                  <span class="accordion__data--highlight" data-tge-stages-round>TGE 5</span>
 
-                  <time class="accordion__data-time" datetime="2018-03-13T12:45">
-                    <span data-day>13.03.18</span> <span data-day-time>12:45</span>
+                  <time data-tge-stages-date class="accordion__data-time" datetime="2018-03-13T12:45">
+                    <span data-tge-stages-day>13.03.18</span> <span data-tge-stages-time>12:45</span>
                   </time>
                 </td>
-                <td data-postfix="ETH" class="accordion__data accordion__data--type--amount">
+                <td data-tge-stages-amount data-postfix="ETH" class="accordion__data accordion__data--type--amount">
                   125
                 </td>
-                <td class="accordion__data accordion__data--type--startblock">521 090</td>
-                <td data-postfix="%" class="accordion__data accordion__data--type--investor">10</td>
-                <td data-postfix="%" class="accordion__data accordion__data--type--project">80</td>
-                <td data-postfix="%" class="accordion__data accordion__data--type--founder">
+                <td data-tge-stages-start class="accordion__data accordion__data--type--startblock">521 090</td>
+                <td data-tge-stages-investor data-postfix="%" class="accordion__data accordion__data--type--investor">10</td>
+                <td data-tge-stages-project data-postfix="%" class="accordion__data accordion__data--type--project">80</td>
+                <td data-tge-stages-founder data-postfix="%" class="accordion__data accordion__data--type--founder">
                   10
                 </td>
                 <td class="accordion__data--type--icon">
@@ -864,75 +865,76 @@
                 </td>
               </tr>
             </tbody>
-            <tbody id="body-3" class="collapse accordion__body accordion__pair-content">
-              <tr class="accordion__row">
+            <tbody data-tge-stages-table="5" id="body-3" class="collapse accordion__body accordion__pair-content">
+              <tr data-tge-stages-row class="accordion__row">
                 <td class="accordion__data accordion__data--type--round"></td>
                 <td data-postfix="" class="accordion__data accordion__data--type--amount">
                 </td>
-                <td class="accordion__data accordion__data--type--startblock">521 090</td>
-                <td data-postfix="%" class="accordion__data accordion__data--type--investor">10</td>
-                <td data-postfix="%" class="accordion__data accordion__data--type--project">80</td>
-                <td colspan="2" data-postfix="%" class="accordion__data accordion__data--type--founder">10</td>
+                <td data-tge-stages-start class="accordion__data accordion__data--type--startblock">521 090</td>
+                <td data-tge-stages-investor data-postfix="%" class="accordion__data accordion__data--type--investor">10</td>
+                <td data-tge-stages-project data-postfix="%" class="accordion__data accordion__data--type--project">80</td>
+                <td data-tge-stages-founder colspan="2" data-postfix="%" class="accordion__data accordion__data--type--founder">10</td>
               </tr>
-              <tr class="accordion__row">
+              <tr data-tge-stages-row class="accordion__row">
                 <td class="accordion__data accordion__data--type--round"></td>
                 <td data-postfix="" class="accordion__data accordion__data--type--amount">
                 </td>
-                <td class="accordion__data accordion__data--type--startblock">521 090</td>
-                <td data-postfix="%" class="accordion__data accordion__data--type--investor">10</td>
-                <td data-postfix="%" class="accordion__data accordion__data--type--project">80</td>
-                <td colspan="2" data-postfix="%" class="accordion__data accordion__data--type--founder">10</td>
+                <td data-tge-stages-start class="accordion__data accordion__data--type--startblock">521 090</td>
+                <td data-tge-stages-investor data-postfix="%" class="accordion__data accordion__data--type--investor">10</td>
+                <td data-tge-stages-project data-postfix="%" class="accordion__data accordion__data--type--project">80</td>
+                <td data-tge-stages-founder colspan="2" data-postfix="%" class="accordion__data accordion__data--type--founder">10</td>
               </tr>
-              <tr class="accordion__row">
+              <tr data-tge-stages-row class="accordion__row">
                 <td class="accordion__data accordion__data--type--round"></td>
                 <td data-postfix="" class="accordion__data accordion__data--type--amount">
                 </td>
-                <td class="accordion__data accordion__data--type--startblock">521 090</td>
-                <td data-postfix="%" class="accordion__data accordion__data--type--investor">10</td>
-                <td data-postfix="%" class="accordion__data accordion__data--type--project">80</td>
-                <td colspan="2" data-postfix="%" class="accordion__data accordion__data--type--founder">10</td>
+                <td data-tge-stages-start class="accordion__data accordion__data--type--startblock">521 090</td>
+                <td data-tge-stages-investor data-postfix="%" class="accordion__data accordion__data--type--investor">10</td>
+                <td data-tge-stages-project data-postfix="%" class="accordion__data accordion__data--type--project">80</td>
+                <td data-tge-stages-founder colspan="2" data-postfix="%" class="accordion__data accordion__data--type--founder">10</td>
               </tr>
-              <tr class="accordion__row">
+              <tr data-tge-stages-row class="accordion__row">
                 <td class="accordion__data accordion__data--type--round"></td>
                 <td data-postfix="" class="accordion__data accordion__data--type--amount">
                 </td>
-                <td class="accordion__data accordion__data--type--startblock">521 090</td>
-                <td data-postfix="%" class="accordion__data accordion__data--type--investor">10</td>
-                <td data-postfix="%" class="accordion__data accordion__data--type--project">80</td>
-                <td colspan="2" data-postfix="%" class="accordion__data accordion__data--type--founder">10</td>
+                <td data-tge-stages-start class="accordion__data accordion__data--type--startblock">521 090</td>
+                <td data-tge-stages-investor data-postfix="%" class="accordion__data accordion__data--type--investor">10</td>
+                <td data-tge-stages-project data-postfix="%" class="accordion__data accordion__data--type--project">80</td>
+                <td data-tge-stages-founder colspan="2" data-postfix="%" class="accordion__data accordion__data--type--founder">10</td>
               </tr>
-              <tr class="accordion__row">
+              <tr data-tge-stages-row class="accordion__row">
                 <td class="accordion__data accordion__data--type--round"></td>
                 <td data-postfix="" class="accordion__data accordion__data--type--amount">
                 </td>
-                <td class="accordion__data accordion__data--type--startblock">521 090</td>
-                <td data-postfix="%" class="accordion__data accordion__data--type--investor">10</td>
-                <td data-postfix="%" class="accordion__data accordion__data--type--project">80</td>
-                <td colspan="2" data-postfix="%" class="accordion__data accordion__data--type--founder">10</td>
+                <td data-tge-stages-start class="accordion__data accordion__data--type--startblock">521 090</td>
+                <td data-tge-stages-investor data-postfix="%" class="accordion__data accordion__data--type--investor">10</td>
+                <td data-tge-stages-project data-postfix="%" class="accordion__data accordion__data--type--project">80</td>
+                <td data-tge-stages-founder colspan="2" data-postfix="%" class="accordion__data accordion__data--type--founder">10</td>
               </tr>
+
               <tr class="accordion__row accordion__row--type--sum">
                 <td colspan="7" class="accordion__data accordion__data--type--sum">
-                  Summary: <span>345.1245</span>
+                  Summary: <span data-tge-stages-sum>345.1245</span>
                 </td>
               </tr>
             </tbody>
 
-            <tbody data-toggle="collapse" data-target="#body-4" aria-expanded="false" aria-controls="body-4" class="accordion__body accordion__pair-heading collapsed">
+            <tbody data-tge-stages-table="5" data-tge-stages-head data-toggle="collapse" data-target="#body-4" aria-expanded="false" aria-controls="body-4" class="accordion__body accordion__pair-heading collapsed">
               <tr class="accordion__row accordion__row--type--main">
                 <td class="accordion__data accordion__data--type--round">
-                  <span data-tge-round class="accordion__data--highlight">TGE 5</span>
+                  <span class="accordion__data--highlight" data-tge-stages-round>TGE 5</span>
 
-                  <time class="accordion__data-time" datetime="2018-03-13T12:45">
-                    <span data-day>13.03.18</span> <span data-day-time>12:45</span>
+                  <time data-tge-stages-date class="accordion__data-time" datetime="2018-03-13T12:45">
+                    <span data-tge-stages-day>13.03.18</span> <span data-tge-stages-time>12:45</span>
                   </time>
                 </td>
-                <td data-postfix="ETH" class="accordion__data accordion__data--type--amount">
+                <td data-tge-stages-amount data-postfix="ETH" class="accordion__data accordion__data--type--amount">
                   125
                 </td>
-                <td class="accordion__data accordion__data--type--startblock">521 090</td>
-                <td data-postfix="%" class="accordion__data accordion__data--type--investor">10</td>
-                <td data-postfix="%" class="accordion__data accordion__data--type--project">80</td>
-                <td data-postfix="%" class="accordion__data accordion__data--type--founder">
+                <td data-tge-stages-start class="accordion__data accordion__data--type--startblock">521 090</td>
+                <td data-tge-stages-investor data-postfix="%" class="accordion__data accordion__data--type--investor">10</td>
+                <td data-tge-stages-project data-postfix="%" class="accordion__data accordion__data--type--project">80</td>
+                <td data-tge-stages-founder data-postfix="%" class="accordion__data accordion__data--type--founder">
                   10
                 </td>
                 <td class="accordion__data--type--icon">
@@ -942,75 +944,76 @@
                 </td>
               </tr>
             </tbody>
-            <tbody id="body-4" class="collapse accordion__body accordion__pair-content">
-              <tr class="accordion__row">
+            <tbody data-tge-stages-table="5" id="body-4" class="collapse accordion__body accordion__pair-content">
+              <tr data-tge-stages-row class="accordion__row">
                 <td class="accordion__data accordion__data--type--round"></td>
                 <td data-postfix="" class="accordion__data accordion__data--type--amount">
                 </td>
-                <td class="accordion__data accordion__data--type--startblock">521 090</td>
-                <td data-postfix="%" class="accordion__data accordion__data--type--investor">10</td>
-                <td data-postfix="%" class="accordion__data accordion__data--type--project">80</td>
-                <td colspan="2" data-postfix="%" class="accordion__data accordion__data--type--founder">10</td>
+                <td data-tge-stages-start class="accordion__data accordion__data--type--startblock">521 090</td>
+                <td data-tge-stages-investor data-postfix="%" class="accordion__data accordion__data--type--investor">10</td>
+                <td data-tge-stages-project data-postfix="%" class="accordion__data accordion__data--type--project">80</td>
+                <td data-tge-stages-founder colspan="2" data-postfix="%" class="accordion__data accordion__data--type--founder">10</td>
               </tr>
-              <tr class="accordion__row">
+              <tr data-tge-stages-row class="accordion__row">
                 <td class="accordion__data accordion__data--type--round"></td>
                 <td data-postfix="" class="accordion__data accordion__data--type--amount">
                 </td>
-                <td class="accordion__data accordion__data--type--startblock">521 090</td>
-                <td data-postfix="%" class="accordion__data accordion__data--type--investor">10</td>
-                <td data-postfix="%" class="accordion__data accordion__data--type--project">80</td>
-                <td colspan="2" data-postfix="%" class="accordion__data accordion__data--type--founder">10</td>
+                <td data-tge-stages-start class="accordion__data accordion__data--type--startblock">521 090</td>
+                <td data-tge-stages-investor data-postfix="%" class="accordion__data accordion__data--type--investor">10</td>
+                <td data-tge-stages-project data-postfix="%" class="accordion__data accordion__data--type--project">80</td>
+                <td data-tge-stages-founder colspan="2" data-postfix="%" class="accordion__data accordion__data--type--founder">10</td>
               </tr>
-              <tr class="accordion__row">
+              <tr data-tge-stages-row class="accordion__row">
                 <td class="accordion__data accordion__data--type--round"></td>
                 <td data-postfix="" class="accordion__data accordion__data--type--amount">
                 </td>
-                <td class="accordion__data accordion__data--type--startblock">521 090</td>
-                <td data-postfix="%" class="accordion__data accordion__data--type--investor">10</td>
-                <td data-postfix="%" class="accordion__data accordion__data--type--project">80</td>
-                <td colspan="2" data-postfix="%" class="accordion__data accordion__data--type--founder">10</td>
+                <td data-tge-stages-start class="accordion__data accordion__data--type--startblock">521 090</td>
+                <td data-tge-stages-investor data-postfix="%" class="accordion__data accordion__data--type--investor">10</td>
+                <td data-tge-stages-project data-postfix="%" class="accordion__data accordion__data--type--project">80</td>
+                <td data-tge-stages-founder colspan="2" data-postfix="%" class="accordion__data accordion__data--type--founder">10</td>
               </tr>
-              <tr class="accordion__row">
+              <tr data-tge-stages-row class="accordion__row">
                 <td class="accordion__data accordion__data--type--round"></td>
                 <td data-postfix="" class="accordion__data accordion__data--type--amount">
                 </td>
-                <td class="accordion__data accordion__data--type--startblock">521 090</td>
-                <td data-postfix="%" class="accordion__data accordion__data--type--investor">10</td>
-                <td data-postfix="%" class="accordion__data accordion__data--type--project">80</td>
-                <td colspan="2" data-postfix="%" class="accordion__data accordion__data--type--founder">10</td>
+                <td data-tge-stages-start class="accordion__data accordion__data--type--startblock">521 090</td>
+                <td data-tge-stages-investor data-postfix="%" class="accordion__data accordion__data--type--investor">10</td>
+                <td data-tge-stages-project data-postfix="%" class="accordion__data accordion__data--type--project">80</td>
+                <td data-tge-stages-founder colspan="2" data-postfix="%" class="accordion__data accordion__data--type--founder">10</td>
               </tr>
-              <tr class="accordion__row">
+              <tr data-tge-stages-row class="accordion__row">
                 <td class="accordion__data accordion__data--type--round"></td>
                 <td data-postfix="" class="accordion__data accordion__data--type--amount">
                 </td>
-                <td class="accordion__data accordion__data--type--startblock">521 090</td>
-                <td data-postfix="%" class="accordion__data accordion__data--type--investor">10</td>
-                <td data-postfix="%" class="accordion__data accordion__data--type--project">80</td>
-                <td colspan="2" data-postfix="%" class="accordion__data accordion__data--type--founder">10</td>
+                <td data-tge-stages-start class="accordion__data accordion__data--type--startblock">521 090</td>
+                <td data-tge-stages-investor data-postfix="%" class="accordion__data accordion__data--type--investor">10</td>
+                <td data-tge-stages-project data-postfix="%" class="accordion__data accordion__data--type--project">80</td>
+                <td data-tge-stages-founder colspan="2" data-postfix="%" class="accordion__data accordion__data--type--founder">10</td>
               </tr>
+
               <tr class="accordion__row accordion__row--type--sum">
                 <td colspan="7" class="accordion__data accordion__data--type--sum">
-                  Summary: <span>345.1245</span>
+                  Summary: <span data-tge-stages-sum>345.1245</span>
                 </td>
               </tr>
             </tbody>
 
-            <tbody data-toggle="collapse" data-target="#body-5" aria-expanded="false" aria-controls="body-5" class="accordion__body accordion__pair-heading collapsed">
+            <tbody data-tge-stages-table="5" data-tge-stages-head data-toggle="collapse" data-target="#body-5" aria-expanded="false" aria-controls="body-5" class="accordion__body accordion__pair-heading collapsed">
               <tr class="accordion__row accordion__row--type--main">
                 <td class="accordion__data accordion__data--type--round">
-                  <span data-tge-round class="accordion__data--highlight">TGE 5</span>
+                  <span class="accordion__data--highlight" data-tge-stages-round>TGE 5</span>
 
-                  <time class="accordion__data-time" datetime="2018-03-13T12:45">
-                    <span data-day>13.03.18</span> <span data-day-time>12:45</span>
+                  <time data-tge-stages-date class="accordion__data-time" datetime="2018-03-13T12:45">
+                    <span data-tge-stages-day>13.03.18</span> <span data-tge-stages-time>12:45</span>
                   </time>
                 </td>
-                <td data-postfix="ETH" class="accordion__data accordion__data--type--amount">
+                <td data-tge-stages-amount data-postfix="ETH" class="accordion__data accordion__data--type--amount">
                   125
                 </td>
-                <td class="accordion__data accordion__data--type--startblock">521 090</td>
-                <td data-postfix="%" class="accordion__data accordion__data--type--investor">10</td>
-                <td data-postfix="%" class="accordion__data accordion__data--type--project">80</td>
-                <td data-postfix="%" class="accordion__data accordion__data--type--founder">
+                <td data-tge-stages-start class="accordion__data accordion__data--type--startblock">521 090</td>
+                <td data-tge-stages-investor data-postfix="%" class="accordion__data accordion__data--type--investor">10</td>
+                <td data-tge-stages-project data-postfix="%" class="accordion__data accordion__data--type--project">80</td>
+                <td data-tge-stages-founder data-postfix="%" class="accordion__data accordion__data--type--founder">
                   10
                 </td>
                 <td class="accordion__data--type--icon">
@@ -1020,59 +1023,59 @@
                 </td>
               </tr>
             </tbody>
-            <tbody id="body-5" class="collapse accordion__body accordion__pair-content">
-              <tr class="accordion__row">
+            <tbody data-tge-stages-table="5" id="body-5" class="collapse accordion__body accordion__pair-content">
+              <tr data-tge-stages-row class="accordion__row">
                 <td class="accordion__data accordion__data--type--round"></td>
                 <td data-postfix="" class="accordion__data accordion__data--type--amount">
                 </td>
-                <td class="accordion__data accordion__data--type--startblock">521 090</td>
-                <td data-postfix="%" class="accordion__data accordion__data--type--investor">10</td>
-                <td data-postfix="%" class="accordion__data accordion__data--type--project">80</td>
-                <td colspan="2" data-postfix="%" class="accordion__data accordion__data--type--founder">10</td>
+                <td data-tge-stages-start class="accordion__data accordion__data--type--startblock">521 090</td>
+                <td data-tge-stages-investor data-postfix="%" class="accordion__data accordion__data--type--investor">10</td>
+                <td data-tge-stages-project data-postfix="%" class="accordion__data accordion__data--type--project">80</td>
+                <td data-tge-stages-founder colspan="2" data-postfix="%" class="accordion__data accordion__data--type--founder">10</td>
               </tr>
-              <tr class="accordion__row">
+              <tr data-tge-stages-row class="accordion__row">
                 <td class="accordion__data accordion__data--type--round"></td>
                 <td data-postfix="" class="accordion__data accordion__data--type--amount">
                 </td>
-                <td class="accordion__data accordion__data--type--startblock">521 090</td>
-                <td data-postfix="%" class="accordion__data accordion__data--type--investor">10</td>
-                <td data-postfix="%" class="accordion__data accordion__data--type--project">80</td>
-                <td colspan="2" data-postfix="%" class="accordion__data accordion__data--type--founder">10</td>
+                <td data-tge-stages-start class="accordion__data accordion__data--type--startblock">521 090</td>
+                <td data-tge-stages-investor data-postfix="%" class="accordion__data accordion__data--type--investor">10</td>
+                <td data-tge-stages-project data-postfix="%" class="accordion__data accordion__data--type--project">80</td>
+                <td data-tge-stages-founder colspan="2" data-postfix="%" class="accordion__data accordion__data--type--founder">10</td>
               </tr>
-              <tr class="accordion__row">
+              <tr data-tge-stages-row class="accordion__row">
                 <td class="accordion__data accordion__data--type--round"></td>
                 <td data-postfix="" class="accordion__data accordion__data--type--amount">
                 </td>
-                <td class="accordion__data accordion__data--type--startblock">521 090</td>
-                <td data-postfix="%" class="accordion__data accordion__data--type--investor">10</td>
-                <td data-postfix="%" class="accordion__data accordion__data--type--project">80</td>
-                <td colspan="2" data-postfix="%" class="accordion__data accordion__data--type--founder">10</td>
+                <td data-tge-stages-start class="accordion__data accordion__data--type--startblock">521 090</td>
+                <td data-tge-stages-investor data-postfix="%" class="accordion__data accordion__data--type--investor">10</td>
+                <td data-tge-stages-project data-postfix="%" class="accordion__data accordion__data--type--project">80</td>
+                <td data-tge-stages-founder colspan="2" data-postfix="%" class="accordion__data accordion__data--type--founder">10</td>
               </tr>
-              <tr class="accordion__row">
+              <tr data-tge-stages-row class="accordion__row">
                 <td class="accordion__data accordion__data--type--round"></td>
                 <td data-postfix="" class="accordion__data accordion__data--type--amount">
                 </td>
-                <td class="accordion__data accordion__data--type--startblock">521 090</td>
-                <td data-postfix="%" class="accordion__data accordion__data--type--investor">10</td>
-                <td data-postfix="%" class="accordion__data accordion__data--type--project">80</td>
-                <td colspan="2" data-postfix="%" class="accordion__data accordion__data--type--founder">10</td>
+                <td data-tge-stages-start class="accordion__data accordion__data--type--startblock">521 090</td>
+                <td data-tge-stages-investor data-postfix="%" class="accordion__data accordion__data--type--investor">10</td>
+                <td data-tge-stages-project data-postfix="%" class="accordion__data accordion__data--type--project">80</td>
+                <td data-tge-stages-founder colspan="2" data-postfix="%" class="accordion__data accordion__data--type--founder">10</td>
               </tr>
-              <tr class="accordion__row">
+              <tr data-tge-stages-row class="accordion__row">
                 <td class="accordion__data accordion__data--type--round"></td>
                 <td data-postfix="" class="accordion__data accordion__data--type--amount">
                 </td>
-                <td class="accordion__data accordion__data--type--startblock">521 090</td>
-                <td data-postfix="%" class="accordion__data accordion__data--type--investor">10</td>
-                <td data-postfix="%" class="accordion__data accordion__data--type--project">80</td>
-                <td colspan="2" data-postfix="%" class="accordion__data accordion__data--type--founder">10</td>
+                <td data-tge-stages-start class="accordion__data accordion__data--type--startblock">521 090</td>
+                <td data-tge-stages-investor data-postfix="%" class="accordion__data accordion__data--type--investor">10</td>
+                <td data-tge-stages-project data-postfix="%" class="accordion__data accordion__data--type--project">80</td>
+                <td data-tge-stages-founder colspan="2" data-postfix="%" class="accordion__data accordion__data--type--founder">10</td>
               </tr>
+
               <tr class="accordion__row accordion__row--type--sum">
                 <td colspan="7" class="accordion__data accordion__data--type--sum">
-                  Summary: <span>345.1245</span>
+                  Summary: <span data-tge-stages-sum>345.1245</span>
                 </td>
               </tr>
             </tbody>
-
 
           </table>
 
@@ -1094,16 +1097,16 @@
             <div class="row">
               <div class="col-12 col-sm-4 col-md-12 wallets__data-block">
                 <p class="text text--dimmed wallets__data-descr">Project balance:</p>
-                <p data-value-postfix="eRAY" class="text wallets__data-value">323.00</p>
+                <p data-value-postfix="eRAY" class="text wallets__data-value" data-project-balance>323.00</p>
               </div>
               <div class="col-12 col-sm-4 col-md-12 wallets__data-block">
                 <p class="text text--dimmed wallets__data-descr">Project received:</p>
-                <p data-value-postfix="eRAY" class="text wallets__data-value">2,323.23</p>
+                <p data-value-postfix="eRAY" class="text wallets__data-value" data-project-received>2,323.23</p>
                 <p class="text text--light wallets__data-exp">in total</p>
               </div>
               <div class="col-12 col-sm-4 col-md-12 wallets__data-block">
                 <p class="text text--dimmed wallets__data-descr">Project spent:</p>
-                <p data-value-postfix="eRAY" class="text wallets__data-value">2,000.23</p>
+                <p data-value-postfix="eRAY" class="text wallets__data-value" data-project-spent>2,000.23</p>
                 <p class="text text--light wallets__data-exp">in total</p>
               </div>
             </div>
@@ -1120,31 +1123,33 @@
                   </tr>
                 </thead>
                 <tbody class="events__body">
-                  <tr class="events__data">
-                    <td class="events__value events__value--type--age">23 days 1 hr ago</td>
-                    <td class="events__value events__value--type--transfers">134</td>
-                    <td class="events__value events__value--type--quantity">3,333,333</td>
+
+                  <tr class="events__data" data-project-event>
+                    <td class="events__value events__value--type--age" data-project-event-age>23 days 1 hr ago</td>
+                    <td class="events__value events__value--type--transfers" data-project-event-transfers>134</td>
+                    <td class="events__value events__value--type--quantity" data-project-event-quantity>3,333,333</td>
                   </tr>
-                  <tr class="events__data">
-                    <td class="events__value events__value--type--age">43 days 19 hrs ago</td>
-                    <td class="events__value events__value--type--transfers">275</td>
-                    <td class="events__value events__value--type--quantity">16,250</td>
+                  <tr class="events__data" data-project-event>
+                    <td class="events__value events__value--type--age" data-project-event-age>23 days 1 hr ago</td>
+                    <td class="events__value events__value--type--transfers" data-project-event-transfers>134</td>
+                    <td class="events__value events__value--type--quantity" data-project-event-quantity>3,333,333</td>
                   </tr>
-                  <tr class="events__data">
-                    <td class="events__value events__value--type--age">23 days 1 hr ago</td>
-                    <td class="events__value events__value--type--transfers">134</td>
-                    <td class="events__value events__value--type--quantity">3,333,333</td>
+                  <tr class="events__data" data-project-event>
+                    <td class="events__value events__value--type--age" data-project-event-age>23 days 1 hr ago</td>
+                    <td class="events__value events__value--type--transfers" data-project-event-transfers>134</td>
+                    <td class="events__value events__value--type--quantity" data-project-event-quantity>3,333,333</td>
                   </tr>
-                  <tr class="events__data">
-                    <td class="events__value events__value--type--age">43 days 19 hrs ago</td>
-                    <td class="events__value events__value--type--transfers">275</td>
-                    <td class="events__value events__value--type--quantity">16,250</td>
+                  <tr class="events__data" data-project-event>
+                    <td class="events__value events__value--type--age" data-project-event-age>23 days 1 hr ago</td>
+                    <td class="events__value events__value--type--transfers" data-project-event-transfers>134</td>
+                    <td class="events__value events__value--type--quantity" data-project-event-quantity>3,333,333</td>
                   </tr>
-                  <tr class="events__data">
-                    <td class="events__value events__value--type--age">23 days 1 hr ago</td>
-                    <td class="events__value events__value--type--transfers">134</td>
-                    <td class="events__value events__value--type--quantity">3,333,333</td>
+                  <tr class="events__data" data-project-event>
+                    <td class="events__value events__value--type--age" data-project-event-age>23 days 1 hr ago</td>
+                    <td class="events__value events__value--type--transfers" data-project-event-transfers>134</td>
+                    <td class="events__value events__value--type--quantity" data-project-event-quantity>3,333,333</td>
                   </tr>
+
                 </tbody>
               </table>
             </div>
