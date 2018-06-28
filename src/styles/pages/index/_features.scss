@@ -58,15 +58,21 @@
   }
 
   @include respond-to(large) {
-    background-image:
-      linear-gradient(39deg, $blue-400 200px, transparent 600px),
-      linear-gradient(309deg, rgb(9, 140, 239) 200px, transparent 600px),
-      linear-gradient(-180deg, rgba(0,198,255,0.00) 0%, rgba(11,128,235,0.5) 62%),
-      url('../assets/imgs/bg-features-color.png'),
-      gradient-contrast-blue-400($angle: 219deg);
+    // background-image:
+    //   linear-gradient(39deg, $blue-400 200px, transparent 600px),
+    //   linear-gradient(309deg, rgb(9, 140, 239) 200px, transparent 600px),
+    //   linear-gradient(-180deg, rgba(0,198,255,0.00) 0%, rgba(11,128,235,0.5) 62%),
+    //   url('../assets/imgs/bg-features-color.png'),
+    //   gradient-contrast-blue-400($angle: 219deg);
+    //
+    // background-position: center left, center right, center bottom, center bottom -375px, center center;
+    // background-size: 1500px 100%, 1500px 100%, 100% 433px, 1500px, 100%;
 
-    background-position: center left, center right, center bottom, center bottom -375px, center center;
-    background-size: 1500px 100%, 1500px 100%, 100% 433px, 1500px, 100%;
+    background-image:
+      url('../assets/imgs/bg-features-color.png'),
+      radial-gradient(at 80% 130%, rgb(0, 164, 255) 34%, rgb(20, 73, 219) 100%);
+    background-position: -100px 200px, center;
+    background-size: 1900px, 100%;
 
     &--state--open {
       background-image: linear-gradient(75deg, rgb(20, 73, 219) 200px, transparent 700px),
@@ -79,6 +85,16 @@
       background-size: 1500px  100%, 1500px 100%, 100% 600px, 1500px, 100%;
     }
   }
+
+  @media (min-width: 1800px) {
+    background-image:
+      radial-gradient(at 70% 130%, rgba(0, 164, 255, 0) 34%, rgba(0, 164, 255, 0.5) 35%, rgb(5, 140, 246) 65%, rgb(20, 73, 219) 100%),
+      url('../assets/imgs/bg-features-color.png'),
+      radial-gradient(at 80% 130%, rgb(0, 164, 255) 34%, rgb(20, 73, 219) 100%);
+    background-position: center, center 200px, center;
+    background-size: 100%, 1900px, 100%;
+  }
+
 
   &__heading {
     margin-bottom: $flow-m-lg;
@@ -150,6 +166,6 @@
   &__list {
     padding: 0;
     list-style: none;
-    margin: 0;
+    margin-bottom: 0;
   }
 }

@@ -1,0 +1,40 @@
+.idea {
+  padding-top: $block-p-lg * 2.3;
+  padding-bottom: $block-p-lg * 2.3;
+
+  &__bg {
+    background-color: $light-000;
+  }
+
+  &__heading {
+    margin-bottom: $flow-m-lg * 1.8;
+  }
+
+  &__block {
+    &--position {
+      &--left {
+        margin-bottom: $flow-m-lg * 2;
+
+        @include respond-to(medium) {
+          margin-bottom: 0;
+        }
+      }
+
+      &--right {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: start;
+
+        @include respond-to(medium) {
+          justify-content: end;
+        }
+      }
+    }
+  }
+
+  &__laptop-icon {
+    width: 100%;
+    max-width: 532px;
+    height: auto;
+  }
+}

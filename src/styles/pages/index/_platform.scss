@@ -1,0 +1,86 @@
+.platform {
+  padding-top: $block-p-lg;
+  padding-bottom: $block-p-lg;
+
+  @include respond-to(tablet) {
+    padding-top: $block-p-lg * 1.84;
+    padding-bottom: $block-p-lg * 1.84;
+  }
+
+  @include respond-to(medium) {
+    padding-top: $block-p-lg * 2;
+    padding-bottom: $block-p-lg * 2;
+  }
+
+
+  &__heading {
+    margin-bottom: $flow-m-lg * 1.1;
+
+    @include respond-to(tablet) {
+      margin-bottom: $flow-m-lg * 1.96;
+    }
+  }
+
+  &__text {
+    line-height: 1.75;
+    margin-bottom: $flow-m-lg * 1.28;
+
+    @include respond-to(tablet) {
+      line-height: 2.15;
+
+      &.text--highlight {
+        line-height: 1.75;
+        margin-bottom: $flow-m-lg * 2;
+      }
+    }
+
+    @include respond-to(medium) {
+      margin-bottom: $flow-m-xs;
+    }
+
+    &--highlight {
+      color: $blue-dark-300;
+    }
+
+    &--flow {
+      &--extra-margin {
+        margin-bottom: $flow-m-lg * 1.2;
+      }
+    }
+  }
+
+  &__extract {
+    display: flex;
+    justify-content: center;
+    margin-bottom: $flow-m-lg * 1.84;
+
+    &-content {
+      width: 100%;
+      max-width: 945px;
+      padding-top: 20px;
+      padding-right: 43px;
+      padding-bottom: 25px;
+
+      text-align: center;
+
+      background-image:
+      url('../assets/imgs/icon__ethereum.png'),
+      url('../assets/imgs/bg-platform-highlight.png'),
+      linear-gradient(84deg, #1084ff, #0f84ff);
+      background-repeat: no-repeat;
+      background-position-x: right 13%, center, center;
+      background-position-y: center, bottom, center; 
+
+      font-family: $ff-play;
+      font-size: 72px;
+      font-weight: bold;
+      line-height: 1;
+      border-radius: 7px;
+    }
+
+    &-sign {
+      padding-right: 31px;
+      padding-left: 45px;
+    }
+  }
+}
