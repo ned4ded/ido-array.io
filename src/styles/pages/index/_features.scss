@@ -20,7 +20,7 @@
 
   @include respond-to(tablet) {
     padding-top: $block-p-lg * 2;
-    padding-bottom: $block-p-lg * 1.65;
+    padding-bottom: $block-p-lg * 2;
 
     background-image:
       linear-gradient(-180deg, rgba(0,198,255,0.00) 0%, rgba(11,128,235,0.5) 62%),
@@ -82,9 +82,10 @@
 
   &__heading {
     margin-bottom: $flow-m-lg;
+    font-size: $fz-xl * 1.11;
 
     @include respond-to(tablet) {
-      margin-bottom: $flow-m-lg * 3;
+      margin-bottom: $flow-m-lg * 2;
     }
   }
 
@@ -96,11 +97,34 @@
   }
 
   &__text {
-    line-height: 1.75;
+    line-height: 1.7;
+    margin-bottom: 0;
+    opacity: .9;
 
     &--spread {
       &--lg {
         line-height: 2.38;
+      }
+    }
+
+    &--wideness {
+      &--narrow {
+        @include respond-to(large) {
+          max-width: 790px;
+        }
+      }
+    }
+
+    &--position {
+      &--left {
+        max-width: 200px;
+        opacity: 1;
+      }
+    }
+
+    &--color {
+      &--dark {
+        color: $sapphire-light;
       }
     }
 
@@ -117,31 +141,15 @@
     &:not(:last-child) {
       margin-bottom: $flow-m-lg;
     }
+
+    &--align {
+      padding-top: 2px;
+    }
   }
 
   &__list {
     padding: 0;
     list-style: none;
-    margin-bottom: $flow-m-lg;
-
-    @include respond-to(tablet) {
-      margin-bottom: $flow-m-xs;
-    }
-
-    @include respond-to(medium) {
-      margin-bottom: $flow-m-md;
-    }
-
-    @include respond-to(large) {
-      margin-bottom: $flow-m-lg * 3;
-    }
-  }
-
-  & .text--context-end {
-    margin-bottom: $flow-m-lg * 2;
-
-    // @include respond-to(medium) {
-    //   margin-bottom: $flow-m-lg * 2;
-    // }
+    margin: 0;
   }
 }
