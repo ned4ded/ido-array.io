@@ -1,0 +1,60 @@
+.solving-issues {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  &__item:nth-child(n + 1) {
+    margin-top: $flow-m-lg;
+  }
+
+  @include respond-to(tablet) {
+    &__item:nth-child(n + 3) {
+      margin-top: $flow-m-lg * 1.5;
+    }
+  }
+
+  @include respond-to(medium) {
+    &__item:nth-child(n + 4) {
+      margin-top: $flow-m-lg * 2;
+    }
+  }
+
+  @include respond-to(large) {
+    &__item:nth-child(n + 4) {
+      margin-top: $flow-m-lg * 2.48;
+    }
+  }
+
+  &__icon {
+    margin-bottom: $flow-m-sm * 1.13;
+    height: 161px;
+    object-fit: contain;
+    object-position: center bottom;
+  }
+
+  &__text {
+    line-height: 1.75;
+    width: auto;
+    margin-bottom: 0;
+    color: $midnight-express;
+    position: relative;
+
+    &--arrow {
+      &:after {
+        position: relative;
+        left: 2px;
+
+        display: inline-block;
+
+        width: 0;  height: 0;
+
+        content: '';
+
+        border-top: 7px solid rgb(20, 73, 219);
+        border-right: 7px solid transparent;
+        border-bottom: 2px solid transparent;
+        border-left: 7px solid transparent;
+      }
+    }
+  }
+}

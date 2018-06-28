@@ -103,6 +103,12 @@ body {
       margin-bottom: $flow-m-lg * 6;
     };
   }
+
+  &--weight {
+    &--bold {
+      font-weight: bold;
+    }
+  }
 }
 
 .button {
@@ -184,6 +190,21 @@ body {
       & ~ .button__glow {
         background-image: gradient-contrast-blue-400($angle: 82deg);
       }
+    }
+
+    &--color {
+      &--lightest {
+        color: $lightest;
+
+        &:hover {
+          color: $blue-100;
+        }
+      }
+    }
+
+    &--aggitation {
+      text-transform: uppercase;
+      font-size: 16px;
     }
   }
 

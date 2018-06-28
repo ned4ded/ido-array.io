@@ -5,6 +5,7 @@ const config = require('./gulpfile.config');
 const browserSync = require('browser-sync').create();
 
 const styles = require('./tasks/styles');
+
 const scripts = require('./tasks/scripts')(browserSync);
 const html = require('./tasks/html')(browserSync);
 const sprite = require('./tasks/svgSprite');

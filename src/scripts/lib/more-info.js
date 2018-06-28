@@ -1,5 +1,4 @@
 (() => {
-
   const els = {
     open: document.getElementById('more-info-open'),
     $features: $('.features'),

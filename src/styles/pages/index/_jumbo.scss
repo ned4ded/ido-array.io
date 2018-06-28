@@ -137,7 +137,8 @@
 
     @include respond-to(large) {
       width: 555px;
-      padding-top: $block-p-md * 4.6;
+      padding-top: $block-p-md * 3;
+      padding-bottom: $block-p-lg * 2.8;
     }
   }
 

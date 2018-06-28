@@ -196,7 +196,7 @@
       if(!timer) return;
 
       return timeout();
-    }, 1);
+    }, 16);
 
     infographicAnimation.setAnimationCallback((direction, state) => {
       if(state === 'start') {

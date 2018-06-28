@@ -12,10 +12,13 @@ module.exports = {
     stylesSvgSprite: path.join(__dirname, 'src/styles/svg-sprite/'),
     stylesAll: path.join(__dirname, 'src/styles/**/*.scss'),
     stylesBase: path.join(__dirname, 'src/styles/base.scss'),
+    stylesSvg: path.join(__dirname, 'src/styles/svg.scss'),
     scripts: path.join(__dirname, 'src/scripts/**/*.js'),
     pages: path.join(__dirname, 'src/pages/*.html'),
     icons: path.join(__dirname, 'src/assets/icons/*.svg'),
     svgTemplate: path.join(__dirname, 'src/templates/svg-sprite.mustache'),
-    svgDefs: path.join(__dirname, 'src/assets/defs.svg')
+    svgLayoutTemplate: path.join(__dirname, 'src/templates/svg-sprite-layout.svg'),
+    svgDefs: path.join(__dirname, 'src/assets/defs.svg'),
+    svgStylesTemplate: path.join(__dirname, 'src/templates/svg-sprite-styles.svg'),
   }
 };

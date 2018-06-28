@@ -74,13 +74,13 @@ body {
   font-size: 80px;
   width: 1.125em; }
 
-.icon__trapezoid {
-  font-size: 270px;
-  width: 1.37037em; }
-
 .icon__tw {
   font-size: 32px;
   width: 1em; }
+
+.icon__weights {
+  font-size: 113px;
+  width: 1.29204em; }
 
 .icon {
   position: relative; }
@@ -145,6 +145,8 @@ body {
     width: auto;
     height: auto;
     font-size: 0; }
+  .icon__weights .test {
+    fill: yellow; }
 
 body {
   background-color: white;
@@ -216,6 +218,8 @@ body {
     @media (min-width: 1000px) {
       .text--context-end {
         margin-bottom: 150px; } }
+  .text--weight--bold {
+    font-weight: bold; }
 
 .button {
   position: relative;
@@ -274,6 +278,13 @@ body {
         opacity: 0; }
       .button__text:hover ~ .button__glow {
         background-image: linear-gradient(82deg, #00c6ff 0%, #1449db 100%); }
+    .button__text--color--lightest {
+      color: white; }
+      .button__text--color--lightest:hover {
+        color: #02206e; }
+    .button__text--aggitation {
+      text-transform: uppercase;
+      font-size: 16px; }
   .button--state--close .button__text {
     color: white;
     background-image: linear-gradient(77deg, #00c6ff 0%, #1449db 100%); }
@@ -1861,7 +1872,8 @@ body {
     @media (min-width: 1210px) {
       .jumbo__content {
         width: 555px;
-        padding-top: 184px; } }
+        padding-top: 120px;
+        padding-bottom: 168px; } }
   .jumbo__heading {
     margin-bottom: 15px; }
     @media (min-width: 1210px) {
@@ -2959,6 +2971,46 @@ body {
       text-decoration: underline; }
     .legal-opinion__email:active {
       opacity: .8; }
+
+.solving-issues {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+  .solving-issues__item:nth-child(n + 1) {
+    margin-top: 25px; }
+  @media (min-width: 780px) {
+    .solving-issues__item:nth-child(n + 3) {
+      margin-top: 37.5px; } }
+  @media (min-width: 1000px) {
+    .solving-issues__item:nth-child(n + 4) {
+      margin-top: 50px; } }
+  @media (min-width: 1210px) {
+    .solving-issues__item:nth-child(n + 4) {
+      margin-top: 62px; } }
+  .solving-issues__icon {
+    margin-bottom: 16.95px;
+    height: 161px;
+    -o-object-fit: contain;
+       object-fit: contain;
+    -o-object-position: center bottom;
+       object-position: center bottom; }
+  .solving-issues__text {
+    line-height: 1.75;
+    width: auto;
+    margin-bottom: 0;
+    color: #071639;
+    position: relative; }
+    .solving-issues__text--arrow:after {
+      position: relative;
+      left: 2px;
+      display: inline-block;
+      width: 0;
+      height: 0;
+      content: '';
+      border-top: 7px solid #1449db;
+      border-right: 7px solid transparent;
+      border-bottom: 2px solid transparent;
+      border-left: 7px solid transparent; }
 
 [data-tge-true] {
   display: none; }
