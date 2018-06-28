@@ -13,17 +13,28 @@
     padding-bottom: $block-p-lg * 2.215;
   }
 
+  &__bg {
+    background-image: url('../assets/imgs/bg-stages.png');
+    background-repeat: no-repeat;
+    background-size: 1360px;
+    background-position: left bottom;
+    background-position-y: bottom -25px;
+  }
+
   &__heading {
+    max-width: 790px;
     margin-bottom: $flow-m-lg * 1.5;
+
+    letter-spacing: 1.4px;
+
+    line-height: 1.45;
 
     @include respond-to(tablet) {
       margin-bottom: $flow-m-lg * 2.08;
     }
-
     @include respond-to(medium) {
       margin-bottom: $flow-m-lg * 2.24;
     }
-
     @include respond-to(large) {
       margin-bottom: $flow-m-lg * 1.96;
     }
@@ -42,6 +53,10 @@
 
       line-height: 1.75;
     };
+
+    &--no-spacing {
+      margin-bottom: 0;
+    }
 
     &--highlight {
       margin-bottom: $flow-m-lg * 2;
@@ -75,6 +90,10 @@
         line-height: 1.75;
       }
     }
+  }
+
+  &__paragraph {
+    margin-bottom: $flow-m-lg * 2.4;
   }
 
   &__block {

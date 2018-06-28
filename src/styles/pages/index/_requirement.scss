@@ -8,7 +8,9 @@
   background-position-y: bottom -30px;
 
   &__text {
-
+    &--highlight {
+      color: $deep-sky-blue;
+    }
   }
 
   &__paragraph {

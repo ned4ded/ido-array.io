@@ -3,7 +3,6 @@
   margin-left: -15px;
   margin-bottom: $block-p-md * 1.375;
 
-
   @media (max-width: 850px) {
     overflow: hidden;
   }
@@ -306,6 +305,25 @@
         @include respond-to(medium) {
           .stages__item--dark & {
             margin-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+
+  &--theme--straight {
+    & .stages {
+      &__item {
+        &:before {
+          transform: none;
+        }
+        &--align--center {
+          padding-bottom: 16px;
+          padding-left: 90px;
+
+          &:before {
+            width: 555px;
+            left: -84px;
           }
         }
       }

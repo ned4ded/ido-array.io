@@ -2,12 +2,28 @@
   padding-top: $block-p-lg * 2.3;
   padding-bottom: $block-p-lg * 2.3;
 
+  &--burnt-tokens {
+    & .idea {
+      &__heading {
+        font-size: 40px;
+      }
+    }
+  }
+
+  &__paragraph {
+    margin-bottom: $flow-m-lg * 3.28;
+  }
+
   &__bg {
     background-color: $light-000;
   }
 
   &__heading {
     margin-bottom: $flow-m-lg * 1.8;
+  }
+
+  &__text--highlight {
+    color: $midnight-express;
   }
 
   &__block {
@@ -35,6 +51,12 @@
   &__laptop-icon {
     width: 100%;
     max-width: 532px;
+    height: auto;
+  }
+
+  &__connection-icon {
+    width: 100%;
+    max-width: 472px;
     height: auto;
   }
 }
