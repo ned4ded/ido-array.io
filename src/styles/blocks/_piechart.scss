@@ -4,6 +4,7 @@
     display: flex;
     flex-flow: row wrap;
     align-items: center;
+    justify-content: space-between;
   }
 
   &__name {
@@ -19,7 +20,7 @@
 
     @include respond-to(medium) {
       width: 100%;
-      margin-bottom: $flow-m-sm;
+      margin-bottom: $flow-m-lg * 1.36;
     }
   }
 
@@ -31,7 +32,7 @@
     }
 
     @include respond-to(medium) {
-      width: 61%;
+      width: 64%;
       height: auto;
       margin-bottom: 0;
     }
@@ -53,13 +54,14 @@
     line-height: 1.55;
 
     @include respond-to(tablet) {
-      margin-bottom: $flow-m-lg * 1.44;
+      margin-top: $flow-m-sm;
     }
 
     @include respond-to(medium) {
       flex-flow: column nowrap;
-      width: 39%;
-      margin-bottom: $flow-m-sm * 1.15;
+      width: 30%;
+      margin-top: $flow-m-sm * 0.5;
+      margin-bottom: 0;
     }
 
     &-item {
@@ -131,4 +133,45 @@
     }
   }
 
+  &--theme--light {
+    & .piechart {
+      &__name {
+        color: $lightest;
+      }
+
+      &__legend {
+        color: $lightest;
+
+        &-item {
+          &--type {
+            &--investor {
+              color: $lightest;
+
+              & .piechart__legend-percent:before {
+                background-color: $lightest;
+                background-image: none;
+              }
+            }
+            &--project {
+              & .piechart__legend-percent:before {
+                top: calc(50%);
+                left: -13px;
+
+                width: 11px;
+                height: 11px;
+
+                border: dashed 1px rgb(255, 255, 255);
+                background-color: transparent;
+              }
+            }
+            &--founder {
+              & .piechart__legend-percent:before {
+                background-color:  #00fcdd;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }

@@ -1402,7 +1402,10 @@ body {
             flex-flow: row wrap;
     -webkit-box-align: center;
         -ms-flex-align: center;
-            align-items: center; } }
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; } }
 
 .piechart__name {
   font-size: 26px;
@@ -1416,7 +1419,7 @@ body {
   @media (min-width: 1000px) {
     .piechart__name {
       width: 100%;
-      margin-bottom: 15px; } }
+      margin-bottom: 34px; } }
 
 .piechart__img {
   margin-bottom: 23px; }
@@ -1425,7 +1428,7 @@ body {
       margin-bottom: 20px; } }
   @media (min-width: 1000px) {
     .piechart__img {
-      width: 61%;
+      width: 64%;
       height: auto;
       margin-bottom: 0; } }
 
@@ -1446,15 +1449,16 @@ body {
   line-height: 1.55; }
   @media (min-width: 780px) {
     .piechart__legend {
-      margin-bottom: 36px; } }
+      margin-top: 15px; } }
   @media (min-width: 1000px) {
     .piechart__legend {
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
           -ms-flex-flow: column nowrap;
               flex-flow: column nowrap;
-      width: 39%;
-      margin-bottom: 17.25px; } }
+      width: 30%;
+      margin-top: 7.5px;
+      margin-bottom: 0; } }
   .piechart__legend-item {
     width: 50%;
     padding-left: 15px; }
@@ -1494,6 +1498,26 @@ body {
   @media (min-width: 1000px) {
     .piechart__text {
       width: 100%; } }
+
+.piechart--theme--light .piechart__name {
+  color: white; }
+
+.piechart--theme--light .piechart__legend {
+  color: white; }
+  .piechart--theme--light .piechart__legend-item--type--investor {
+    color: white; }
+    .piechart--theme--light .piechart__legend-item--type--investor .piechart__legend-percent:before {
+      background-color: white;
+      background-image: none; }
+  .piechart--theme--light .piechart__legend-item--type--project .piechart__legend-percent:before {
+    top: calc(50%);
+    left: -13px;
+    width: 11px;
+    height: 11px;
+    border: dashed 1px white;
+    background-color: transparent; }
+  .piechart--theme--light .piechart__legend-item--type--founder .piechart__legend-percent:before {
+    background-color: #00fcdd; }
 
 .tooltip--theme--regular .tooltip-inner {
   position: relative;
@@ -3107,6 +3131,22 @@ body {
     .platform__extract-sign {
       padding-right: 31px;
       padding-left: 45px; }
+
+.token-dist {
+  padding-top: 144px;
+  padding-bottom: 294px;
+  background-image: url("../assets/imgs/bg-token-dist.png"), radial-gradient(circle at 51% 28%, #00a4ff, #1449db);
+  background-repeat: no-repeat;
+  background-position: top center, center; }
+  .token-dist__heading {
+    line-height: 1.5;
+    font-size: 38px;
+    letter-spacing: 1px;
+    margin-bottom: 46.25px; }
+  .token-dist__paragraph {
+    margin-bottom: 58px; }
+  .token-dist__text {
+    line-height: 2.15; }
 
 [data-tge-true] {
   display: none; }

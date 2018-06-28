@@ -1,0 +1,23 @@
+.token-dist {
+  padding-top: $block-p-lg * 2.4;
+  padding-bottom: $block-p-lg * 4.9;
+
+  background-image: url('../assets/imgs/bg-token-dist.png'), radial-gradient(circle at 51% 28%, #00a4ff, $persian-blue);
+  background-repeat: no-repeat;
+  background-position: top center, center;
+
+  &__heading {
+    line-height: 1.5;
+    font-size: 38px;
+    letter-spacing: 1px;
+    margin-bottom: $flow-m-lg * 1.85;
+  }
+
+  &__paragraph {
+    margin-bottom: $flow-m-lg * 2.32;
+  }
+
+  &__text {
+    line-height: 2.15;
+  }
+}
