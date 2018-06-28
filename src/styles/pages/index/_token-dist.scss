@@ -6,6 +6,10 @@
   background-repeat: no-repeat;
   background-position: top center, center;
 
+  &--facts-box {
+    padding-bottom: 0;
+  }
+
   &__heading {
     line-height: 1.5;
     font-size: 38px;
@@ -19,5 +23,9 @@
 
   &__text {
     line-height: 2.15;
+  }
+
+  &__piecharts {
+    margin-bottom: 10px;
   }
 }

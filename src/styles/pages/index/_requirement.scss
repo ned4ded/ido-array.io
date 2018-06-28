@@ -1,0 +1,32 @@
+.requirement {
+  padding-top: $block-p-lg * 4.3;
+  padding-bottom: $block-p-lg * 2.67;
+  background-image: url('../assets/imgs/bg-requirement.png');
+  background-position: right bottom;
+  background-repeat: no-repeat;
+  background-size: 1116px;
+  background-position-y: bottom -30px;
+
+  &__text {
+
+  }
+
+  &__paragraph {
+    margin-bottom: $flow-m-lg * 1.4;
+  }
+
+  &__link {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    transition: opacity .2s ease-in;
+
+    &:hover {
+      opacity: .7;
+    }
+
+    &:active {
+      opacity: .5;
+    }
+  }
+}
