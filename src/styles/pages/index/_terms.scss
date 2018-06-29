@@ -10,6 +10,57 @@
     padding-top: $block-p-md * 1.25;
   }
 
+  &__bg {
+    position: relative;
+    z-index: 0;
+
+    &:before {
+      position: absolute;
+      display: none;
+      content: '';
+      width: 100%;
+      height: 100%;
+      top: -170px;
+      left: 0;
+      background-image: url("../assets/imgs/bg-about-us__left-side.svg");
+      background-repeat: no-repeat;
+      background-position: top left;
+      z-index: -1;
+
+      @include respond-to(medium) {
+        display: block;
+        left: -100px;
+      }
+
+      @include respond-to(large) {
+        left: 0;
+      }
+    }
+
+    &:after{
+      position: absolute;
+      display: none;
+      content: '';
+      width: 100%;
+      height: calc(100% + 100px);
+      top: -100px;
+      right: 0;
+      background-image: url("../assets/imgs/bg-about-us__right-side.svg");
+      background-repeat: no-repeat;
+      background-position: top right;
+      z-index: -1;
+
+      @include respond-to(medium) {
+        display: block;
+      }
+
+      @include respond-to(large) {
+        height: calc(100% + 144px);
+        top: -144px;
+      }
+    }
+  }
+
   &__text {
 
   }

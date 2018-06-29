@@ -1,0 +1,49 @@
+.btn-more {
+  display: inline-block;
+
+  padding: 0;
+
+  border: none;
+  background-color: transparent;
+  padding: 1px 2px;
+
+  &__text {
+    color: $persian-blue;
+
+    font-family: $ff-sans;
+    font-size: $fz-md;
+    line-height: 100%;
+
+    transition: color .2s ease-in;
+  }
+
+  &__icon {
+    vertical-align: middle;
+    transform: rotate(0);
+    transition: transform .2s ease-in;
+
+    & use {
+      transition: fill .2s ease-in;
+      fill: $persian-blue;
+    }
+  }
+
+  &--active {
+    & .btn-more {
+      &__text {
+        color: $blue-contrast-200;
+
+        transition: color .2s ease-in;
+      }
+      &__icon {
+        transform: rotate(180deg);
+        transition: transform .2s ease-in;
+
+        & use {
+          transition: fill .2s ease-in;
+          fill: $blue-contrast-200;
+        }
+      }
+    }
+  }
+}

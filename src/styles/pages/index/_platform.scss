@@ -68,8 +68,8 @@
       url('../assets/imgs/bg-platform-highlight.png'),
       linear-gradient(84deg, #1084ff, #0f84ff);
       background-repeat: no-repeat;
-      background-position-x: right 13%, center, center;
-      background-position-y: center, bottom, center; 
+      background-position-x: 87%, center, center;
+      background-position-y: center, bottom, center;
 
       font-family: $ff-play;
       font-size: 72px;
@@ -79,8 +79,21 @@
     }
 
     &-sign {
-      padding-right: 31px;
-      padding-left: 45px;
+      display: inline-block;
+
+      width: 34px;
+      height: 46px;
+      margin-right: 31px;
+      margin-left: 45px;
+
+      vertical-align: middle;
+
+      background-image: url('../assets/imgs/icon__more-or-equal.png');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 100%;
+
+      font-size: 0;
     }
   }
 }

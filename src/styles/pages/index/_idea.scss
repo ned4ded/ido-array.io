@@ -11,6 +11,8 @@
   }
 
   &__paragraph {
+    position: relative;
+
     margin-bottom: $flow-m-lg * 3.28;
   }
 
@@ -22,8 +24,18 @@
     margin-bottom: $flow-m-lg * 1.8;
   }
 
-  &__text--highlight {
-    color: $midnight-express;
+  &__text {
+    &:not(last-child) {
+      margin-bottom: $flow-m-lg * 1.2;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &--highlight {
+      color: $midnight-express;
+    }
   }
 
   &__block {
@@ -39,10 +51,11 @@
       &--right {
         display: flex;
         flex-flow: row wrap;
-        justify-content: start;
+        justify-content: flex-start;
+        align-items: flex-start;
 
         @include respond-to(medium) {
-          justify-content: end;
+          justify-content: flex-end;
         }
       }
     }
@@ -52,11 +65,19 @@
     width: 100%;
     max-width: 532px;
     height: auto;
+    padding-top: 25px;
   }
 
   &__connection-icon {
     width: 100%;
     max-width: 472px;
     height: auto;
+    padding-top: 65px;
+  }
+
+  &__btn-more {
+    position: absolute;
+    right: 0;
+    bottom: -15px;
   }
 }

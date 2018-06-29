@@ -9,7 +9,7 @@
     }
 
     @include respond-to(tablet) {
-      &:nth-child(n + 3) {
+      &:nth-child(n + 1) {
         margin-top: $flow-m-lg * 1.5;
       }
     }

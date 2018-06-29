@@ -158,6 +158,10 @@
     }
   }
 
+  &__button-enroll {
+    margin-bottom: $flow-m-sm * 4;
+  }
+
   &__text {
     text-align: left;
 
@@ -168,11 +172,12 @@
       max-width: 420px;
       font-size: $fz-lg;
       line-height: 1.5;
-      margin-bottom: $flow-m-sm * 6;
+      margin-bottom: $flow-m-sm * 3;
     }
 
     @include respond-to(medium) {
       max-width: 350px;
+      margin-bottom: $flow-m-sm * 6;
     }
 
     @include respond-to(large) {

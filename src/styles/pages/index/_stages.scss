@@ -322,8 +322,15 @@
           padding-left: 90px;
 
           &:before {
-            width: 555px;
-            left: -84px;
+            @include respond-to(medium) {
+              width: 450px;
+              left: -57px;
+            }
+
+            @include respond-to(large) {
+              width: 555px;
+              left: -84px;
+            }
           }
         }
       }

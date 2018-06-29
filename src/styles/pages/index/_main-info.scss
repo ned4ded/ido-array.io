@@ -3,6 +3,7 @@
   flex-flow: column nowrap;
   width: 100%;
   position: relative;
+  z-index: 1;
 
   @include respond-to(medium) {
     // margin-top: 60px;
@@ -28,7 +29,7 @@
 
     .header--behavior--mobile-menu ~ & {
       margin-top: 59px;
-      
+
       @include respond-to(tablet) {
         margin-top: 96px;
       }
