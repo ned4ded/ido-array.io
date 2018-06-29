@@ -16,9 +16,13 @@
   &__bg {
     background-image: url('../assets/imgs/bg-stages.png');
     background-repeat: no-repeat;
-    background-size: 1360px;
+    background-size: 700px;
     background-position: left bottom;
     background-position-y: bottom -25px;
+
+    @include respond-to(tablet) {
+      background-size: 1360px;
+    }
   }
 
   &__heading {
