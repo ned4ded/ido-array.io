@@ -1,6 +1,11 @@
 .idea {
-  padding-top: $block-p-lg * 2.3;
-  padding-bottom: $block-p-lg * 2.3;
+  padding-top: $block-p-lg;
+  padding-bottom: $block-p-lg;
+
+  @include respond-to(tablet) {
+    padding-top: $block-p-lg * 2.3;
+    padding-bottom: $block-p-lg * 2.3;
+  }
 
   &--burnt-tokens {
     & .idea {

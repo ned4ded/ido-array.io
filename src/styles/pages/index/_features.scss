@@ -133,8 +133,11 @@
 
     &--position {
       &--left {
-        max-width: 200px;
         opacity: 1;
+
+        @include respond-to(medium) {
+          max-width: 200px;
+        }
       }
     }
 

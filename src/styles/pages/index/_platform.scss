@@ -52,17 +52,22 @@
   &__extract {
     display: flex;
     justify-content: center;
-    margin-bottom: $flow-m-lg * 1.84;
+    margin-bottom: $flow-m-lg * 1.28;
+
+    @include respond-to(tablet) {
+      margin-bottom: $flow-m-lg * 1.84;
+    }
 
     &-content {
       width: 100%;
       max-width: 945px;
+      margin-bottom: 0;
       padding-top: 20px;
-      padding-right: 43px;
       padding-bottom: 25px;
 
       text-align: center;
 
+      border-radius: 7px;
       background-image:
       url('../assets/imgs/icon__ethereum.png'),
       url('../assets/imgs/bg-platform-highlight.png'),
@@ -72,19 +77,23 @@
       background-position-y: center, bottom, center;
 
       font-family: $ff-play;
-      font-size: 72px;
+      font-size: 38px;
       font-weight: bold;
       line-height: 1;
-      border-radius: 7px;
+
+      @include respond-to(tablet) {
+        padding-right: 43px;
+        font-size: 72px;
+      }
     }
 
     &-sign {
       display: inline-block;
 
-      width: 34px;
-      height: 46px;
-      margin-right: 31px;
-      margin-left: 45px;
+      width: 20px;
+      height: 28px;
+      margin-right: 5px;
+      margin-left: 7px;
 
       vertical-align: middle;
 
@@ -94,6 +103,13 @@
       background-size: 100%;
 
       font-size: 0;
+
+      @include respond-to(tablet) {
+        width: 34px;
+        height: 46px;
+        margin-right: 31px;
+        margin-left: 45px;
+      }
     }
   }
 }

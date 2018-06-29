@@ -1,11 +1,17 @@
 .requirement {
-  padding-top: $block-p-lg * 4.3;
-  padding-bottom: $block-p-lg * 2.67;
+  padding-top: $block-p-lg;
+  padding-bottom: $block-p-lg;
   background-image: url('../assets/imgs/bg-requirement.png');
   background-position: right bottom;
   background-repeat: no-repeat;
-  background-size: 1116px;
+  background-size: 700px;
   background-position-y: bottom -30px;
+
+  @include respond-to(tablet) {
+    padding-top: $block-p-lg * 4.3;
+    padding-bottom: $block-p-lg * 2.67;
+    background-size: 1116px;
+  }
 
   &__text {
     &--highlight {

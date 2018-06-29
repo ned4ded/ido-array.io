@@ -1657,12 +1657,17 @@ body {
           align-items: center; }
   .facts-box__content {
     position: relative;
-    bottom: calc(-50% + 10px);
     width: 100%;
     max-width: 945px;
-    padding: 58px 95px 48px;
+    padding: 13px 22px;
     border-radius: 8px;
-    background-color: #f7f8f9; }
+    background-color: #f7f8f9;
+    margin-bottom: 25px; }
+    @media (min-width: 780px) {
+      .facts-box__content {
+        padding: 58px 95px 48px;
+        bottom: calc(-50% + 10px);
+        margin-bottom: 0; } }
   .facts-box__text {
     color: rgba(7, 22, 57, 0.9);
     line-height: 2.13; }
@@ -2328,8 +2333,10 @@ body {
       .features__text--wideness--narrow {
         max-width: 790px; } }
     .features__text--position--left {
-      max-width: 200px;
       opacity: 1; }
+      @media (min-width: 1000px) {
+        .features__text--position--left {
+          max-width: 200px; } }
     .features__text--color--dark {
       color: #02206e; }
     @media (min-width: 1210px) {
@@ -3149,7 +3156,7 @@ body {
   list-style: none;
   margin: 0;
   padding: 0; }
-  .solving-issues__item:nth-child(n + 1) {
+  .solving-issues__item:nth-child(n + 2) {
     margin-top: 25px; }
   @media (min-width: 780px) {
     .solving-issues__item:nth-child(n + 1) {
@@ -3182,8 +3189,12 @@ body {
     position: relative; }
 
 .idea {
-  padding-top: 138px;
-  padding-bottom: 138px; }
+  padding-top: 60px;
+  padding-bottom: 60px; }
+  @media (min-width: 780px) {
+    .idea {
+      padding-top: 138px;
+      padding-bottom: 138px; } }
   .idea--burnt-tokens .idea__heading {
     font-size: 40px; }
   .idea__paragraph {
@@ -3277,35 +3288,48 @@ body {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    margin-bottom: 46px; }
+    margin-bottom: 32px; }
+    @media (min-width: 780px) {
+      .platform__extract {
+        margin-bottom: 46px; } }
     .platform__extract-content {
       width: 100%;
       max-width: 945px;
+      margin-bottom: 0;
       padding-top: 20px;
-      padding-right: 43px;
       padding-bottom: 25px;
       text-align: center;
+      border-radius: 7px;
       background-image: url("../assets/imgs/icon__ethereum.png"), url("../assets/imgs/bg-platform-highlight.png"), linear-gradient(84deg, #1084ff, #0f84ff);
       background-repeat: no-repeat;
       background-position-x: 87%, center, center;
       background-position-y: center, bottom, center;
       font-family: "Play", sans-serif;
-      font-size: 72px;
+      font-size: 38px;
       font-weight: bold;
-      line-height: 1;
-      border-radius: 7px; }
+      line-height: 1; }
+      @media (min-width: 780px) {
+        .platform__extract-content {
+          padding-right: 43px;
+          font-size: 72px; } }
     .platform__extract-sign {
       display: inline-block;
-      width: 34px;
-      height: 46px;
-      margin-right: 31px;
-      margin-left: 45px;
+      width: 20px;
+      height: 28px;
+      margin-right: 5px;
+      margin-left: 7px;
       vertical-align: middle;
       background-image: url("../assets/imgs/icon__more-or-equal.png");
       background-repeat: no-repeat;
       background-position: center;
       background-size: 100%;
       font-size: 0; }
+      @media (min-width: 780px) {
+        .platform__extract-sign {
+          width: 34px;
+          height: 46px;
+          margin-right: 31px;
+          margin-left: 45px; } }
 
 .token-dist {
   padding-top: 144px;
@@ -3325,16 +3349,41 @@ body {
   .token-dist__text {
     line-height: 2.15; }
   .token-dist__piecharts {
-    margin-bottom: 10px; }
+    overflow-x: scroll;
+    margin-left: -15px;
+    margin-right: -15px;
+    margin-bottom: 25px; }
+    @media (min-width: 780px) {
+      .token-dist__piecharts {
+        overflow-x: auto;
+        margin-left: 0;
+        margin-right: 0; } }
+    @media (min-width: 780px) {
+      .token-dist__piecharts {
+        margin-bottom: 0; } }
+    .token-dist__piecharts-block {
+      min-width: 755px;
+      padding-bottom: 20px;
+      padding-left: 15px; }
+      @media (min-width: 780px) {
+        .token-dist__piecharts-block {
+          min-width: auto;
+          padding-bottom: 0;
+          padding-left: 0; } }
 
 .requirement {
-  padding-top: 258px;
-  padding-bottom: 160.2px;
+  padding-top: 60px;
+  padding-bottom: 60px;
   background-image: url("../assets/imgs/bg-requirement.png");
   background-position: right bottom;
   background-repeat: no-repeat;
-  background-size: 1116px;
+  background-size: 700px;
   background-position-y: bottom -30px; }
+  @media (min-width: 780px) {
+    .requirement {
+      padding-top: 258px;
+      padding-bottom: 160.2px;
+      background-size: 1116px; } }
   .requirement__text--highlight {
     color: #00aaff; }
   .requirement__paragraph {
