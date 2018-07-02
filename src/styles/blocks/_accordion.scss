@@ -59,6 +59,8 @@
 
     border-collapse: collapse;
 
+    overflow-y: hidden;
+
     @include respond-to(tablet) {
       min-width: auto;
       padding-right: 0;

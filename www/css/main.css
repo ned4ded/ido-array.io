@@ -1041,7 +1041,8 @@ body {
   min-width: 719px;
   padding-right: 15px;
   padding-bottom: 36px;
-  border-collapse: collapse; }
+  border-collapse: collapse;
+  overflow-y: hidden; }
   @media (min-width: 780px) {
     .accordion__table {
       min-width: auto;
@@ -3352,6 +3353,7 @@ body {
     line-height: 2.15; }
   .token-dist__piecharts {
     overflow-x: scroll;
+    overflow-y: hidden;
     margin-left: -15px;
     margin-right: -15px;
     margin-bottom: 25px; }
