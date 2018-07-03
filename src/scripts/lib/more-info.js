@@ -1,4 +1,4 @@
-(() => {
+function moreInfo() {
   const config = {
     btn: 'more-info-btn',
     name: 'more-info',
@@ -15,5 +15,4 @@
   //   els.$data.toggle();
   //   $( els.open ).toggle();
   // });
-
-})();
+}

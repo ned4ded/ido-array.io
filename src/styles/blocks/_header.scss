@@ -1,6 +1,7 @@
 .header {
   background-image: gradient-dark-blue();
-  position: relative;
+  position: sticky;
+
   z-index: 100;
   // overflow: hidden;
 
@@ -9,11 +10,59 @@
     background-image: none;
   }
 
-  &--behavior--mobile-menu {
-    overflow: hidden;
+  &:before {
     position: absolute;
+    content: '';
+    height: 100%;
     width: 100%;
-    // height: 100%;
+    opacity: 0;
+    background-image: linear-gradient(to right, rgb(0, 32, 114), rgb(0, 37, 131));
+    transition: opacity .2s ease-in;
+  }
+
+  &--behavior {
+    &--mobile-menu {
+      overflow: hidden;
+      position: absolute;
+      width: 100%;
+      // height: 100%;
+    }
+
+    &--sticky {
+      @keyframes sticky {
+        0% {
+          width: 40%;
+        }
+
+        100% {
+          width: 110%;
+        }
+      }
+
+      position: sticky;
+
+      top: 0;
+
+      &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -5%;
+        width: 110%;
+        height: 100%;
+        opacity: 1;
+        transform: skewX(155deg);
+
+        animation-name: sticky;
+        animation-duration: .2s;
+        // animation-fill-mode: forwards;
+      }
+
+      & .header__link {
+        transition: color .2s ease-in;
+        color: $lightest;
+      }
+    }
   }
 
   &__logo {
@@ -88,7 +137,8 @@
     line-height: 1.85;
     letter-spacing: 0.9px;
     text-transform: uppercase;
-    transition: opacity .1s ease-in;
+    transition: opacity .1s ease-in, color .1s ease-in;
+
 
     @include respond-to(medium) {
       font-size: 12px;

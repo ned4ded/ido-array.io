@@ -1,4 +1,4 @@
-// (() => {
+function mainInfoAnimation() {
   class Animation {
     constructor(element, toggler, settings) {
       if(!element) throw new Error("Passed element wasn't found");
@@ -83,5 +83,5 @@
     toggle: document.getElementById('jumbo-toggle'),
   };
 
-  const animations = new Animation( [els.bg, els.jumbo, els.infographic, els.toggle, els.logo, els.chart], els.toggle, settings);
-// })();
+  return new Animation( [els.bg, els.jumbo, els.infographic, els.toggle, els.logo, els.chart], els.toggle, settings);
+}

@@ -120,12 +120,11 @@ class ScrollRevealElement {
   }
 }
 
-(() => {
+function runScrollReveal(scroll) {
   const sr = ScrollReveal({
+    mobile: false,
     // viewOffset: { top: 64 }
   });
-
-  const scroll = new ScrollHandler();
 
   const config = {
     selector: '[data-scroll-reveal]',
@@ -288,5 +287,4 @@ class ScrollRevealElement {
       return;
     });
   });
-
-})();
+}

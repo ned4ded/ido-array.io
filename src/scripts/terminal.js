@@ -44,8 +44,18 @@ $(function () {
     return $other.tooltip('hide');
   });
 
-  $('#test').hover(() => console.log('hover'));
+  $( document ).ready(() => {
+    new SmoothScrolling($( selectors.smoothScroll ).get());
+    const scroll = new ScrollHandler();
 
-  $( document ).ready(() => new SmoothScrolling($( selectors.smoothScroll ).get()));
+    headerMobile();
+    const animations = mainInfoAnimation();
+    runHighcharts(animations);
+    moreInfo();
+    runScrollReveal(scroll);
+    runHeaderScroll(scroll);
+
+    return;
+  });
 
 });

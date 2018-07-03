@@ -303,15 +303,60 @@ body {
 
 .header {
   background-image: linear-gradient(62deg, #002685 0%, #00144f 95%);
-  position: relative;
+  position: -webkit-sticky;
+  position: sticky;
   z-index: 100; }
   @media (min-width: 1000px) {
     .header {
       background-image: none; } }
+  .header:before {
+    position: absolute;
+    content: '';
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    background-image: -webkit-gradient(linear, left top, right top, from(#002072), to(#002583));
+    background-image: linear-gradient(to right, #002072, #002583);
+    -webkit-transition: opacity .2s ease-in;
+    transition: opacity .2s ease-in; }
   .header--behavior--mobile-menu {
     overflow: hidden;
     position: absolute;
     width: 100%; }
+  .header--behavior--sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0; }
+
+@-webkit-keyframes sticky {
+  0% {
+    width: 40%; }
+  100% {
+    width: 110%; } }
+
+@keyframes sticky {
+  0% {
+    width: 40%; }
+  100% {
+    width: 110%; } }
+    .header--behavior--sticky:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -5%;
+      width: 110%;
+      height: 100%;
+      opacity: 1;
+      -webkit-transform: skewX(155deg);
+              transform: skewX(155deg);
+      -webkit-animation-name: sticky;
+              animation-name: sticky;
+      -webkit-animation-duration: .2s;
+              animation-duration: .2s; }
+    .header--behavior--sticky .header__link {
+      -webkit-transition: color .2s ease-in;
+      transition: color .2s ease-in;
+      color: white; }
   .header__logo {
     width: 100%;
     display: block; }
@@ -367,8 +412,8 @@ body {
     line-height: 1.85;
     letter-spacing: 0.9px;
     text-transform: uppercase;
-    -webkit-transition: opacity .1s ease-in;
-    transition: opacity .1s ease-in; }
+    -webkit-transition: opacity .1s ease-in, color .1s ease-in;
+    transition: opacity .1s ease-in, color .1s ease-in; }
     @media (min-width: 1000px) {
       .header__link {
         font-size: 12px; } }
@@ -3356,8 +3401,6 @@ body {
   .token-dist__piecharts {
     overflow-x: scroll;
     overflow-y: hidden;
-    margin-left: -15px;
-    margin-right: -15px;
     margin-bottom: 25px; }
     @media (min-width: 780px) {
       .token-dist__piecharts {

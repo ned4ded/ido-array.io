@@ -1,4 +1,4 @@
-(() => {
+function headerMobile() {
   const width = () => $( window ).width();
 
   const animation = (boolean) => {
@@ -44,4 +44,4 @@
       }, 520);
     }
   });
-})();
+}
