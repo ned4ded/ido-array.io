@@ -77,11 +77,9 @@ Name | Description
 `[data-project-received]` | walelts block. `p` tag 'Project received'
 `[data-project-spent]` | walelts block. `p` tag 'Project spent'
 `[data-project-event]` | walelts block, table. `tr` tag; use as parent
-`[data-project-event-age]` | walelts block, table. `td` tag; 
+`[data-project-event-age]` | walelts block, table. `td` tag;
 `[data-project-event-transfers]` | walelts block, table. `td` tag;
 `[data-project-event-quantity]` | walelts block, table. `td` tag;
-
-
 
 
 ### Token generation event
@@ -150,4 +148,33 @@ const config = {
 }
 ```
 
-For the best positioning try to use empty elements (`span`'s for xmpl) as tooltip initializers and add to any of their parent element attr `[data-tooltip-trigger]` or whatever you specified in config.
+For The container, in this case, used for determining the direction of appearance / disappearance of all group elements.the best positioning try to use empty elements (`span`'s for xmpl) as tooltip initializers and add to any of their parent element attr `[data-tooltip-trigger]` or whatever you specified in config.
+
+## SmoothScroll
+SmoothScroll script collects every `[data-scroll-reveal]` element and run [scrollreveal.js](https://scrollrevealjs.org/) on it.
+
+Also, it parses html `data-*` attributes to configure each element individually.
+
+The next attributes are supported:
+
+Name | Description
+--- | ---
+origin | direction of the first appearance, scrollreveal config
+opacity | scrollreveal config
+view-factor | scrollreveal config
+reset | scrollreveal config
+distance | scrollreveal config
+scale | scrollreveal config
+duration | scrollreveal config
+changeOrigin | boolean, used for determining of elements' origins' switching behavior depending on viewPort position, __default true, use false for elements with not-bottom origin__
+groupDelay | number, delay between appearance of next elements in a group sequence
+groupName | string, read "Setting up grouped elements"
+groupContainer | string, read "Setting up grouped elements"
+
+
+## Setting up grouped elements
+Grouped elements are used for delayed appearance of each next element in a group. To make a group you should use `[data-group-name="GROUP_NAME"]` attribute on each element of the group, replacing *GROUP_NAME* with unique name for the particular group.
+
+All other configuration attributes must be applied to the first element of a group. Attribute `[data-group-container="GROUP_NAME"]` is used for setting up container for named group, otherwise the first element will be used for this role.
+
+The container, in this case, used for determining the direction of appearance / disappearance of all group elements.
