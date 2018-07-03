@@ -123,7 +123,7 @@ class ScrollRevealElement {
 function runScrollReveal(scroll) {
   const sr = ScrollReveal({
     mobile: false,
-    // viewOffset: { top: 64 }
+    viewOffset: { top: 97 }
   });
 
   const config = {

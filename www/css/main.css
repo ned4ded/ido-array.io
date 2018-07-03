@@ -3254,6 +3254,7 @@ body {
     font-size: 40px; }
   .idea__paragraph {
     position: relative;
+    z-index: 0;
     margin-bottom: 82px; }
   .idea__bg {
     background-color: #f7f8f9; }
@@ -3302,7 +3303,8 @@ body {
   .idea__btn-more {
     position: absolute;
     right: 0;
-    bottom: -15px; }
+    bottom: -15px;
+    z-index: 1; }
 
 .platform {
   padding-top: 60px;
