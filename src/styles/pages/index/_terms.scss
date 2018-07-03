@@ -55,8 +55,9 @@
       }
 
       @include respond-to(large) {
-        height: calc(100% + 144px);
+        height: calc(100% + 300px);
         top: -144px;
+        background-size: 700px;
       }
     }
   }

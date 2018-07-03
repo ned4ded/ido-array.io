@@ -2238,8 +2238,9 @@ body {
           display: block; } }
       @media (min-width: 1210px) {
         .terms__bg:after {
-          height: calc(100% + 144px);
-          top: -144px; } }
+          height: calc(100% + 300px);
+          top: -144px;
+          background-size: 700px; } }
   .terms__heading {
     margin-bottom: 20px; }
     @media (min-width: 780px) {
@@ -2268,6 +2269,7 @@ body {
           padding-left: 0; } }
 
 .features {
+  position: relative;
   background-image: linear-gradient(-180deg, transparent 0%, rgba(11, 128, 235, 0.5) 62%), url("../assets/imgs/bg-features-mobile-color.png"), linear-gradient(190deg, #00c6ff 0%, #1449db 100%);
   background-repeat: no-repeat;
   background-position: center bottom, center bottom -180px, center center;

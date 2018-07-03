@@ -1,4 +1,6 @@
 .features {
+  position: relative;
+  
   background-image: linear-gradient(-180deg, transparent 0%, rgba(11,128,235,.5) 62%),
     url('../assets/imgs/bg-features-mobile-color.png'),
     gradient-contrast-blue-400($angle: 190deg);
