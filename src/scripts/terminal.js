@@ -47,13 +47,15 @@ $(function () {
   $( document ).ready(() => {
     new SmoothScrolling($( selectors.smoothScroll ).get());
     const scroll = new ScrollHandler();
-
     headerMobile();
     const animations = mainInfoAnimation();
     runHighcharts(animations);
     moreInfo();
     runScrollReveal(scroll);
-    runHeaderScroll(scroll);
+
+    if(window.innerWidth >= 1000) {
+      runHeaderScroll(scroll);
+    }
 
     return;
   });

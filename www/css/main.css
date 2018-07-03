@@ -357,6 +357,11 @@ body {
       -webkit-transition: color .2s ease-in;
       transition: color .2s ease-in;
       color: white; }
+      .header--behavior--sticky .header__link:hover {
+        color: white;
+        text-decoration: none; }
+      .header--behavior--sticky .header__link:active {
+        opacity: .75; }
   .header__logo {
     width: 100%;
     display: block; }

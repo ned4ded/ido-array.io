@@ -1,7 +1,7 @@
 class ScrollHandler {
   constructor() {
-    this.top = 0;
-    this.bottom = window.innerHeight;
+    this.top = window.pageYOffset || document.documentElement.scrollTop;
+    this.bottom = window.innerHeight + this.top;
     this.callbacks = [];
 
     this.fn = (ev) => {
