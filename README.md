@@ -178,3 +178,43 @@ Grouped elements are used for delayed appearance of each next element in a group
 All other configuration attributes must be applied to the first element of a group. Attribute `[data-group-container="GROUP_NAME"]` is used for setting up container for named group, otherwise the first element will be used for this role.
 
 The container, in this case, used for determining the direction of appearance / disappearance of all group elements.
+
+# Icon Animations
+
+To manage icons' animations the `AnimationObject` is presented. This module consists of several parts:
+- `AnimationModel`
+
+## AnimationModel
+`AnimationModel` class is created for an integration of an animatable svg-element with it's animating function. It uses simple EventEmmiter to maintain async animation functions.
+
+Example:
+``` javascript
+const model = new AnimationModel(null, (next, element) => {
+  console.log("animation's begining");
+  console.time()
+
+  setTimeout(() => {
+    console.log("animation's end");
+    console.timeEnd();
+    return next(); // Always run next function in the end of animation
+  }, 3000);
+});
+
+model.onStart((animation) => {
+  // `this` context of animation model is passed to callback
+  console.log('onStart event emmited');
+});
+
+model.onEnd((animation) => {
+  console.log('onEnd event emmited');
+});
+
+model.run();
+
+// Console:
+// onStart event emmited
+// animation's begining
+// animation's end
+// default: 3001ms
+// onEnd event emmited
+```
