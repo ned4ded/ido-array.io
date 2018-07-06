@@ -24,8 +24,8 @@ class AnimationModel {
   }
 }
 
-// class DelayModel extends AnimationModel {
-//   constructor(interval) {
-//     super(null, (instance, callback) => setTimeout(callback, this.interval));
-//   };
-// }
+class DelayModel extends AnimationModel {
+  constructor(interval) {
+    super(null, (next, element) => setTimeout(next, interval));
+  };
+}

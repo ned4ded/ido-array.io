@@ -1,9 +1,62 @@
 function iconAnimations() {
-  const part = $('[data-animation-element]').get(0);
+  const config = {
+    'weights' : weightsAnimationConfig,
+  }
 
-  const snaped = Snap( part );
+  const objects = $('[data-animation-object]').get().map((e => {
+    const name = $( e ).data('animationObject');
+    const conf = config[name];
 
-  snaped.animate({
-    d: 'M40.679,7.62a2.884,2.884,0,0,0,-2.564,-1.559a2.885,2.885,0,0,0,-2.565,1.559l-13.926,26.932a2.858,2.858,0,0,0,0,2.626l13.926,26.937a2.885,2.885,0,0,0,2.565,1.558c1.08,0,2.07,-0.6,2.564,-1.558l13.926,-26.937a2.858,2.858,0,0,0,0,-2.626l-13.926,-26.932z'
-  }, 2000);
+    const elements = $( e ).find('[data-animation-element]')
+      .get()
+      .reduce((acc, item) => acc.set($( item ).data('animationElement'), item), new Map());
+
+    const sequences = conf.map(item => {
+      const set = new SnapAnimationSet(elements.get(item.element), item.animations);
+
+      return new AnimationSequence(set, item.sequence);
+    });
+
+    return new AnimationObject(e, sequences);
+  }));
+
+  objects.forEach(obj => {
+    const element = obj.root;
+
+    let isAnimating = false;
+
+    const rec = () => {
+      if(!isAnimating) return;
+
+      obj.run();
+
+      obj.onEnd( rec );
+
+      return;
+    };
+
+    const mouseenterHl = () => {
+      $( element ).off('mouseenter', mouseenterHl);
+      $( element ).mouseleave(mouseleaveHl);
+
+      isAnimating = true;
+
+      rec();
+
+      return;
+    }
+
+    const mouseleaveHl = () => {
+      $( element ).off('mouseleave', mouseleaveHl);
+
+      isAnimating = false;
+
+      $( element ).mouseenter(mouseenterHl);
+
+      return;
+    }
+
+    $( element ).mouseenter(mouseenterHl);
+  });
+
 }

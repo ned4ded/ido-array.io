@@ -1,9 +1,9 @@
 function mainInfoAnimation() {
-  class Animation {
+  class CssAnimation {
     constructor(element, toggler, settings) {
       if(!element) throw new Error("Passed element wasn't found");
 
-      if(element instanceof Array) return element.map(n => new Animation(n, toggler, settings));
+      if(element instanceof Array) return element.map(n => new CssAnimation(n, toggler, settings));
 
       this.element = element;
       this.toggle = toggler;
@@ -83,5 +83,5 @@ function mainInfoAnimation() {
     toggle: document.getElementById('jumbo-toggle'),
   };
 
-  return new Animation( [els.bg, els.jumbo, els.infographic, els.toggle, els.logo, els.chart], els.toggle, settings);
+  return new CssAnimation( [els.bg, els.jumbo, els.infographic, els.toggle, els.logo, els.chart], els.toggle, settings);
 }

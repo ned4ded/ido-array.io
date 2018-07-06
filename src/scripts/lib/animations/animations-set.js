@@ -1,5 +1,5 @@
-class AnimationSetController {
-  constructor(instance, animations) {
+class AnimationSet {
+  constructor(element, animations) {
     this.element = element;
     this.state = false;
     this.current = null;
@@ -86,7 +86,7 @@ class AnimationSetController {
   run(name) {
     const animation = this.animations.get(name);
 
-    if(!animation) throw Error('AnimationSet: No animation was found');
+    if(!animation) throw Error(`AnimationSet: No animation was found. Passed name: ${name}`);
 
     if(this.isAnimating()) {
       this.getInQueue(animation);
