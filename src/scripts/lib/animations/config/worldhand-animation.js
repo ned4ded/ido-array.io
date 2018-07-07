@@ -1,6 +1,6 @@
 const worldhandAnimationConfig = (function() {
   const q = 29;
-  
+
   return [{
       element: 'white-hand',
       animations: {
@@ -53,7 +53,7 @@ const worldhandAnimationConfig = (function() {
           return;
         },
       },
-      sequence: (set) => set.delay(18 * q).run('stepOne').delay(3 * q).run('stepTwo').delay(5 * q).run('stepThree'),
+      sequence: (set) => set.delay(18 * q).run('stepOne').delay(3 * q).run('stepTwo').delay(5 * q).run('stepThree').recovery(),
     },
     {
       element: 'earth',

@@ -2,6 +2,7 @@ function iconAnimations() {
   const config = {
     'weights' : weightsAnimationConfig,
     'worldhand' : worldhandAnimationConfig,
+    'invest-charts' : investChartsAnimationConfig,
   }
 
   const objects = $('[data-animation-object]').get().map((e => {
