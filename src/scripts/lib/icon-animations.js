@@ -3,6 +3,7 @@ function iconAnimations() {
     'weights' : weightsAnimationConfig,
     'worldhand' : worldhandAnimationConfig,
     'invest-charts' : investChartsAnimationConfig,
+    'browser' : browserAnimationConfig,
   }
 
   const objects = $('[data-animation-object]').get().map((e => {

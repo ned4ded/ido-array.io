@@ -9,6 +9,12 @@ const weightsAnimationConfig = (function() {
 
   const seq = (set) => set.delay(frames.before).run('forward').delay(frames.pause).run('backward').delay(frames.afterall).recovery();
 
+  const getCenter = (element) => {
+    const { x, y, w, h } = element.getBBox();
+
+    return { x: x + ( w / 2 ), y: y + ( h / 2 ) };
+  }
+
   return [
     {
       element: 'left-blue-rhomb',
@@ -74,15 +80,19 @@ const weightsAnimationConfig = (function() {
       element: 'horizontal-line',
       animations: {
         backward: (next, element) => {
+          const { x, y } = getCenter(element);
+
           element.animate({
-            transform: 'r0',
+            transform: `r0,${x},${y}`,
           }, frames.animation, next);
 
           return;
         },
         forward: (next, element) => {
+          const { x, y } = getCenter(element);
+
           element.animate({
-            transform: 'r15',
+            transform: `r15,${x},${y}`,
           }, frames.animation, next);
 
           return;
