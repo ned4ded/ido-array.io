@@ -1,6 +1,7 @@
 function iconAnimations() {
   const config = {
     'weights' : weightsAnimationConfig,
+    'worldhand' : worldhandAnimationConfig,
   }
 
   const objects = $('[data-animation-object]').get().map((e => {
