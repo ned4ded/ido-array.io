@@ -4,6 +4,7 @@ function iconAnimations() {
     'worldhand' : worldhandAnimationConfig,
     'invest-charts' : investChartsAnimationConfig,
     'browser' : browserAnimationConfig,
+    'connection' : connectionAnimationConfig,
   }
 
   const objects = $('[data-animation-object]').get().map((e => {
