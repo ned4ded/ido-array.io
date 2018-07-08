@@ -51,7 +51,7 @@ $(function () {
     const animations = mainInfoAnimation();
     runHighcharts(animations);
     moreInfo();
-    // runScrollReveal(scroll);
+    runScrollReveal(scroll);
     iconAnimations();
 
     if(window.innerWidth >= 1000) {
