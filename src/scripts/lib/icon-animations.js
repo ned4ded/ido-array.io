@@ -5,6 +5,7 @@ function iconAnimations() {
     'invest-charts' : investChartsAnimationConfig,
     'browser' : browserAnimationConfig,
     'connection' : connectionAnimationConfig,
+    'scheme' : schemeAnimationConfig,
   }
 
   const objects = $('[data-animation-object]').get().map((e => {
